@@ -6,6 +6,7 @@ import { GameComponent } from './game/game.component';
 import { GameInputComponent } from './game-input/game-input.component';
 import { TravelComponent } from './travel/travel.component';
 import { WorkComponent } from './work/work.component';
+import { CoderComponent } from './coder/coder.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch:'full' },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'game', component: GameComponent },
   { path: 'game-input', component: GameInputComponent },
   { path: 'travel', component: TravelComponent },
-  { path: 'work', component: WorkComponent }
+  { path: 'work', component: WorkComponent },
+  { path: 'coder', component: CoderComponent }
 ];
 
 @NgModule({
