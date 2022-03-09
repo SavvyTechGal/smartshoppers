@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BrandComponent } from './brand/brand.component';
 import { GameComponent } from './game/game.component';
+import { GameInputComponent } from './game-input/game-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     BrandComponent,
-    GameComponent
+    GameComponent,
+    GameInputComponent
   ],
   imports: [
     BrowserModule,
