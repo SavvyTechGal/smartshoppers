@@ -12,6 +12,7 @@ import { TravelComponent } from './travel/travel.component';
 import { WorkComponent } from './work/work.component';
 import { CoderComponent } from './coder/coder.component';
 import { GraphicsComponent } from './graphics/graphics.component';
+import { MoviesComponent } from './movies/movies.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { GraphicsComponent } from './graphics/graphics.component';
     TravelComponent,
     WorkComponent,
     CoderComponent,
-    GraphicsComponent
+    GraphicsComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
