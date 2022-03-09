@@ -5,6 +5,7 @@ import { BrandComponent } from './brand/brand.component';
 import { GameComponent } from './game/game.component';
 import { GameInputComponent } from './game-input/game-input.component';
 import { TravelComponent } from './travel/travel.component';
+import { WorkComponent } from './work/work.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch:'full' },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'brand', component: BrandComponent },
   { path: 'game', component: GameComponent },
   { path: 'game-input', component: GameInputComponent },
-  { path: 'travel', component: TravelComponent }
+  { path: 'travel', component: TravelComponent },
+  { path: 'work', component: WorkComponent }
 ];
 
 @NgModule({

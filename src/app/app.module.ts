@@ -9,6 +9,7 @@ import { BrandComponent } from './brand/brand.component';
 import { GameComponent } from './game/game.component';
 import { GameInputComponent } from './game-input/game-input.component';
 import { TravelComponent } from './travel/travel.component';
+import { WorkComponent } from './work/work.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TravelComponent } from './travel/travel.component';
     BrandComponent,
     GameComponent,
     GameInputComponent,
-    TravelComponent
+    TravelComponent,
+    WorkComponent
   ],
   imports: [
     BrowserModule,
