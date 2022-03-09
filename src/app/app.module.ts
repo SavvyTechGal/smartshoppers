@@ -11,6 +11,7 @@ import { GameInputComponent } from './game-input/game-input.component';
 import { TravelComponent } from './travel/travel.component';
 import { WorkComponent } from './work/work.component';
 import { CoderComponent } from './coder/coder.component';
+import { GraphicsComponent } from './graphics/graphics.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CoderComponent } from './coder/coder.component';
     GameInputComponent,
     TravelComponent,
     WorkComponent,
-    CoderComponent
+    CoderComponent,
+    GraphicsComponent
   ],
   imports: [
     BrowserModule,
