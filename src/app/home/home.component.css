@@ -1,0 +1,39 @@
+.home-content {
+    background-color: #CDC8F2; 
+}
+
+#left-col {
+    padding-top:10%;
+    text-align: center;
+    background-color: #CDC8F2;
+    
+}
+
+#right-col {
+    padding:10%;
+    background-color: #CDC8F2;
+}
+
+.logo {
+    width:40%;
+    border-radius: 50px;
+}
+
+p.home-description {
+    text-align: center;
+    font-weight:700;
+    font-size:2vw;
+}
+
+.learn-more {
+    text-align: right;
+}
+
+
+#learn-more-button {
+    background-color: #FDFA82 ;
+    border-color:#FDFA82 ;
+    border-radius: 25px;
+    font-weight: 700;
+    margin: 0px 30px 15px;
+}
