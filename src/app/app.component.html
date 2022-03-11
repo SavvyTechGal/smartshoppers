@@ -1,1 +1,35 @@
-<app-person></app-person>
+<!--Navigation Bar-->
+<nav class="navbar navbar-expand-sm navbar-light">
+    <!--Web App Name-->
+    <a class="navbar-brand" style="font-weight: 700;" routerLink="/home">Smart Shoppers</a>
+  
+    <!--Links-->
+    <ul class="navbar-nav ml-auto">
+        <!--About Us-->
+        <li class="nav-item">
+            <button type="button" class="btn btn-round btn-sm">
+                <a class="nav-link about-us" href="#">About Us</a>
+                <!--change to router link to about us-->
+            </button>
+        </li>
+  
+        <!--Login-->     
+        <li class="nav-item">
+            <button type="button" class="btn btn-round btn-sm">
+                <a class="nav-link user-login" href="#">Login</a>
+                <!--change to router link to login-->
+            </button>
+        </li>
+    </ul>
+  </nav>
+  
+  <div>
+      <router-outlet></router-outlet>
+  </div>
+  
+  
+  
+  <!--Footer-->
+  <footer class="mt-auto" >
+    <p>Footer Here</p>
+  </footer>

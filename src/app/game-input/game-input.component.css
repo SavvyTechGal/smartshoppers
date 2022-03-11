@@ -1,0 +1,54 @@
+.body {
+    background-color: #EFD0A1;
+    
+}
+
+
+.btn-round.btn-lg {
+    background-color: #FFBB55 ;
+    border-color:#FFBB55;
+    border-radius: 25px;
+    font-weight: 700;
+    padding:5px 20px;
+    margin:10px 10px;
+}
+
+.question {
+    text-align: center;
+    padding:2.5%;
+    
+}
+
+
+.container {
+    background-color: #FCF2E3;
+    text-align: center;
+    padding: 4% 10% 4%;
+    border-radius: 25px;
+    
+}
+
+.form-inline {
+    justify-content: center;
+    margin:35px;
+}
+
+.icon {
+    width:115px;
+    height:115px;
+    margin:5px;
+    object-fit: cover;
+}
+
+.next {
+    padding-top: 2%;
+    text-align: right;
+}
+
+#next-button {
+    background-color: #FFAC30 ;
+    border-color:#FFAC30 ;
+    border-radius: 25px;
+    font-weight: 700;
+    margin:35px;
+}
