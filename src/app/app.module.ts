@@ -13,6 +13,7 @@ import { WorkComponent } from './work/work.component';
 import { CoderComponent } from './coder/coder.component';
 import { GraphicsComponent } from './graphics/graphics.component';
 import { MoviesComponent } from './movies/movies.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MoviesComponent } from './movies/movies.component';
     WorkComponent,
     CoderComponent,
     GraphicsComponent,
-    MoviesComponent
+    MoviesComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
