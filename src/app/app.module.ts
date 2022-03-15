@@ -16,6 +16,7 @@ import { GraphicsComponent } from './graphics/graphics.component';
 import { MoviesComponent } from './movies/movies.component';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
 import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LoginComponent } from './login/login.component';
     GraphicsComponent,
     MoviesComponent,
     DoughnutChartComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+.body {
+    background-color: #CDC8F2;
+}
+
+
+.col {
+    padding:4% 0% 4%;
+}
+
+.left {
+    margin-left:10%;
+}
+
+.right {
+    margin-right: 7%;  
+}
+
+
+
+
+
+.card {
+    max-width: 70%;
+}
