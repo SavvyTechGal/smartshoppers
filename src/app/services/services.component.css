@@ -1,0 +1,40 @@
+.services-content {
+    background-color: #93BBEB;
+    text-align: center;
+}
+
+#right-col {
+    padding-top:10%;
+    padding-bottom: 5%;
+}
+
+#left-col {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+p.services-description {
+    font-weight:500;
+    font-size:1.5vw;
+}
+
+.images {
+    /* vertical-align: middle; */
+    width: 400px;
+    height: 300px;
+    border-radius: 30%;
+}
+
+.button-container {
+    padding-top:5%;
+    padding-bottom: 5%;
+}
+
+#action-button {
+    background-color: #F0FA82;
+    border-color:#F0FA82 ;
+    border-radius: 50px;
+    padding: 15px 50px;
+    font-weight: 700;
+    font-size: larger;
+}
