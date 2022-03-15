@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from "@angular/forms"
+import { FormsModule } from "@angular/forms";
+import { NgChartsModule } from 'ng2-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { CoderComponent } from './coder/coder.component';
 import { GraphicsComponent } from './graphics/graphics.component';
 import { MoviesComponent } from './movies/movies.component';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +29,14 @@ import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.componen
     CoderComponent,
     GraphicsComponent,
     MoviesComponent,
-    DoughnutChartComponent
+    DoughnutChartComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

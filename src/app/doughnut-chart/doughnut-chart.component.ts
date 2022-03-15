@@ -15,7 +15,7 @@ export class DoughnutChartComponent {
   Userlabels: string[] = ['', '', '', '', ''];
   Userdata: number[] = [10,15,30,20,5];
 
-  salesData: ChartData<'doughnut'> = {
+  expenseData: ChartData<'doughnut'> = {
     labels: this.Userlabels,
     datasets: [ {
       data:this.Userdata
