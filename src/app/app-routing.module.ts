@@ -11,6 +11,7 @@ import { GraphicsComponent } from './graphics/graphics.component';
 import { MoviesComponent } from './movies/movies.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch:'full' },
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'graphics', component: GraphicsComponent },
   { path: 'movies', component: MoviesComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent }
+  { path: 'signup', component: SignupComponent },
+  { path: 'about', component: AboutComponent }
 ];
 
 @NgModule({

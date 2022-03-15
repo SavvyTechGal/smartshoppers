@@ -1,0 +1,25 @@
+.body {
+    
+    background-color: #9fd4bc;
+    
+}
+
+
+#about {
+    text-align: center;
+    padding:1%;
+    color:#12462e;
+    margin:0% 17% 0% 17%;
+    
+    
+}
+
+#meet-us {
+    background-color: #bde6d3;
+    text-align: center;
+    padding:1%;
+}
+
+.member {
+    padding:8%;
+}
