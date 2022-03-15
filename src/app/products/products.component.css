@@ -1,0 +1,27 @@
+.body {
+    background-color: rgb(182, 219, 252);
+}
+
+h2 {
+    text-align: center;
+    padding:3%;
+    
+}
+
+img {
+    width:350px;
+    height:275px;
+    object-fit: contain;
+}
+
+.products {
+    text-align: center;
+}
+
+.card {
+    width:350px;
+    height:485px;
+    text-align: left;
+}
+
+

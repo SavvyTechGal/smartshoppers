@@ -9,7 +9,12 @@ import { WorkComponent } from './work/work.component';
 import { CoderComponent } from './coder/coder.component';
 import { GraphicsComponent } from './graphics/graphics.component';
 import { MoviesComponent } from './movies/movies.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { AboutComponent } from './about/about.component';
+import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch:'full' },
@@ -22,7 +27,12 @@ const routes: Routes = [
   { path: 'coder', component: CoderComponent },
   { path: 'graphics', component: GraphicsComponent },
   { path: 'movies', component: MoviesComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'products', component: ProductsComponent },
   { path: 'services', component: ServicesComponent}
+
 ];
 
 @NgModule({

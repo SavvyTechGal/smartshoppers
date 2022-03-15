@@ -1,0 +1,15 @@
+<div class="body">
+    <h2>Here is what we found for you!</h2>
+
+    <div class="card-columns products">
+        <div class="card" *ngFor="let product of products">
+            <img src={{product.image}} class="card-img-top border" >
+            <div class="card-body">
+                <h4 class="card-title">{{product.name}}</h4>
+                <p class="card-text"><b>Brand:</b> {{product.brand}}</p>
+                <p class="card-text"><b>Price:</b> {{product.price | currency}}</p>
+                <p class="card-text">Click here for more information</p>
+            </div>
+        </div>
+    </div>
+</div>
