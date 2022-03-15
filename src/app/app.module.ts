@@ -18,6 +18,7 @@ import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.componen
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { AboutComponent } from './about/about.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AboutComponent } from './about/about.component';
     DoughnutChartComponent,
     LoginComponent,
     SignupComponent,
-    AboutComponent
+    AboutComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
