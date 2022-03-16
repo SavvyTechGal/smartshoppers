@@ -1,4 +1,4 @@
-<form>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
     <div class="form-group">
         <label for="username">Enter Username:</label>
         <input 
@@ -34,6 +34,6 @@
             </div>
         </div>
     </div>
-    <button class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
     
 </form>

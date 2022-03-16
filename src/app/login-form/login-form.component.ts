@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginFormComponent implements OnInit {
 
+  onSubmit(loginForm: { value: any; }) {
+    console.log(loginForm.value);  //object form
+    console.log(loginForm.value.username);
+    console.log(loginForm.value.password);
+  }
+
   constructor() { }
 
   ngOnInit(): void {
