@@ -20,6 +20,7 @@ import { SignupComponent } from './signup/signup.component';
 import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ServicesComponent } from './services/services.component';
     SignupComponent,
     AboutComponent,
     ProductsComponent,
-    ServicesComponent
+    ServicesComponent,
+    SignupFormComponent
   ],
   imports: [
     BrowserModule,
