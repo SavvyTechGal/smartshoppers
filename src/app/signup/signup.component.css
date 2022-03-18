@@ -2,23 +2,25 @@
     background-color: #CDC8F2;
 }
 
-
 .col {
     padding:4% 0% 4%;
 }
 
 .left {
-    margin-left:10%;
+    background-color: rgb(133, 194, 247);
+    display:flex;
+    justify-content: center;
 }
 
 .right {
-    margin-right: 7%;  
+    background-color: rgb(52, 128, 194);
+    display:flex;
+    justify-content: center;
 }
-
-
-
-
 
 .card {
-    max-width: 70%;
+    width:500px;
 }
+
+
+

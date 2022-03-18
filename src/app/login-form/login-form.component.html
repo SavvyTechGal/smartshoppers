@@ -1,0 +1,39 @@
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <div class="form-group">
+        <label for="username">Enter Username:</label>
+        <input 
+        required 
+        minlength="3" 
+        maxlength="20" 
+        ngModel name="username" 
+        #username="ngModel" 
+        id="username" 
+        type="text" 
+        class="form-control">
+        <div class="alert alert-danger" 
+        *ngIf="username.touched && !username.valid">
+            <div *ngIf="username.errors?.['required']">
+                Username is required.
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Enter Password:</label>
+        <input 
+        required 
+        minlength="8"
+        ngModel name="password"
+        #password="ngModel" 
+        id="password" 
+        type="text" 
+        class="form-control">
+        <div class="alert alert-danger" 
+        *ngIf="password.touched && !password.valid">
+            <div *ngIf="password.errors?.['required']">
+                Password is required.
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    
+</form>
