@@ -3,7 +3,13 @@ Install node -> if on mac: `brew install node`
 Install angular cli -> if on mac: 
 `npm install -g @angular/cli`
 `npm install`
+have to be in Angular folder to serve
 then test -> `ng serve`
+
+# Activate virtual environment:
+source ss/bin/activate
+pip install -r requirements.txt
+
 
 # SmartShoppers
 
