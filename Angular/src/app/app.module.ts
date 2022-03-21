@@ -22,6 +22,7 @@ import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { PersonComponent } from './person/person.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
     ProductsComponent,
     ServicesComponent,
     SignupFormComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,
