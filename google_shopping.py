@@ -10,7 +10,7 @@ params = {
   "hl": "en",
   "gl": "us",
   #api gateway to protect key
-  "api_key": "20af5a88173bef719901ac442b076d9fddc9d797bad5d808c2f0beddc10780da"
+  
 }
 
 search = GoogleSearch(params)
