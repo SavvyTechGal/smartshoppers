@@ -14,6 +14,7 @@ import { SignupComponent } from './signup/signup.component';
 import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -31,7 +32,8 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'about', component: AboutComponent },
   { path: 'products', component: ProductsComponent },
-  { path: 'services', component: ServicesComponent}
+  { path: 'services', component: ServicesComponent},
+  { path: 'profile', component: ProfileComponent}
 
 ];
 
