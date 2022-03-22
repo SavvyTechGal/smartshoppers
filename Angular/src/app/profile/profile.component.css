@@ -1,0 +1,21 @@
+.profile-content {
+    background-color: #ebaf50;
+    text-align: center;
+    justify-content: center;
+}
+
+#card-container{
+    margin: 0 auto; 
+    float: none;
+    margin-bottom: 10px;
+}
+
+
+#action-button {
+    background-color: #F0FA82;
+    border-color:#F0FA82 ;
+    border-radius: 50px;
+    padding: 15px 50px;
+    font-weight: 700;
+    font-size: larger;
+}
