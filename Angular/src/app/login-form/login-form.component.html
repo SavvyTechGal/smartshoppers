@@ -34,6 +34,11 @@
             </div>
         </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <re-captcha (resolved)="checkCaptcha($event)"
+        name="recaptchaReactive" ngModel siteKey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI">
+    </re-captcha>
+
+    <button [disabled]="!captchaResolved || password.errors?.['required'] || username.errors?.['required']" type="submit" class="btn btn-primary">Log in</button>
     
 </form>

@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupFormComponent implements OnInit {
 
+  public captchaResolved : boolean = false;
+
+  checkCaptcha(captchaResponse : string) {
+     this.captchaResolved = (captchaResponse && captchaResponse.length > 0) ? true : false
+  }
+
   onSubmit(signupForm: { value: any; }) {
     console.log(signupForm.value);  //object form
     console.log(signupForm.value.username);
