@@ -24,6 +24,9 @@ import { ServicesComponent } from './services/services.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { PersonComponent } from './person/person.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileService } from './profile.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -46,7 +49,8 @@ import { PersonComponent } from './person/person.component';
     ServicesComponent,
     SignupFormComponent,
     LoginFormComponent,
-    PersonComponent
+    PersonComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -54,9 +58,10 @@ import { PersonComponent } from './person/person.component';
     FormsModule,
     NgChartsModule,
     RecaptchaModule,
-    RecaptchaFormsModule
+    RecaptchaFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
