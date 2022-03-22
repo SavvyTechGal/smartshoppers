@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from "@angular/forms";
 import { NgChartsModule } from 'ng2-charts';
+import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -51,7 +52,9 @@ import { PersonComponent } from './person/person.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgChartsModule
+    NgChartsModule,
+    RecaptchaModule,
+    RecaptchaFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

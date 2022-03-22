@@ -1,5 +1,5 @@
 .body {
-    background-color: rgb(182, 219, 252);
+    background-color: rgb(211, 231, 248);
 }
 
 h2 {
@@ -9,7 +9,7 @@ h2 {
 }
 
 img {
-    width:350px;
+    width:385px;
     height:275px;
     object-fit: contain;
 }
@@ -19,9 +19,16 @@ img {
 }
 
 .card {
-    width:350px;
-    height:485px;
+    width:385px;
     text-align: left;
 }
 
+.card-footer {
+    display:flex;
+    justify-content: flex-start;
+}
 
+button {
+    margin:5px;
+    background-color: antiquewhite;
+}
