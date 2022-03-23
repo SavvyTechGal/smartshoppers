@@ -1,0 +1,35 @@
+<!--Navigation Bar-->
+<nav class="navbar navbar-expand-sm navbar-light">
+    <!--Web App Name-->
+    <a class="navbar-brand" style="font-weight: 700;" routerLink="/home">Smart Shoppers</a>
+  
+    <!--Links-->
+    <ul class="navbar-nav ml-auto">
+        <!--About Us-->
+        <li class="nav-item">
+            <button type="button" class="btn btn-round btn-sm">
+                <a class="nav-link about-us" routerLink="/about">About Us</a>
+          
+            </button>
+        </li>
+  
+        <!--Login    
+        <li class="nav-item">
+            <button type="button" class="btn btn-round btn-sm">
+                <a class="nav-link user-login" routerLink="/login">Login</a>
+                
+            </button>
+        </li>
+        --> 
+        <li class="nav-item">
+            <app-login-button 
+            *ngIf="(auth.isAuthenticated$ | async) === false"
+        ></app-login-button>
+        </li>
+
+        <li class="nav-item">
+            <app-logout-button *ngIf="auth.isAuthenticated$ | async"></app-logout-button>
+        </li>
+        
+    </ul>
+  </nav>
