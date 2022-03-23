@@ -38,6 +38,25 @@
 
 </div>
 
+<div class="container">
+    <h1>Profile Information from Auth0</h1>
+    <div *ngIf="auth.user$ | async as user">
+        <div class="profile-header">
+            <img [src]="user.picture" alt="user profile pic" class="rounded-circle img-fliud"/>
+            <h2>{{ user.name }} </h2>
+            <p>{{ user.email }} </p>
+            <div class="container" *ngIf="profileJson">
+                <p>given name: {{ user.given_name }} </p>
+                <p>family name: {{ user.family_name }} </p>
+                <p>nickname: {{ user.nickname }} </p>
+                <p>email: {{ user.email }} </p>
+                <p>locale: {{ user.locale }} </p>
+                <p>updated at: {{ user.updated_at }} </p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- <ul *ngFor = "let user of users">
     <li>{{user.name}}</li>
 </ul> -->
