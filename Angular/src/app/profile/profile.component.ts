@@ -12,6 +12,8 @@ export class ProfileComponent implements OnInit {
 
   profileJson: string = '';
 
+  userEmail: string = '';  //hold email value from auth0 token
+
   public users : any = []; //had to add any type
 
   constructor(
@@ -20,7 +22,11 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void { //remove void
     this.auth.user$.subscribe(
-      (profile) => (this.profileJson = JSON.stringify(profile))
+      (profile) => {
+        this.profileJson = JSON.stringify(profile);
+        this.userEmail = profile?.email as string;  //saving email to variable
+        //console.log(this.userEmail);
+      }
     )
 
     this._profileService.getUsers() //returns an observable 
