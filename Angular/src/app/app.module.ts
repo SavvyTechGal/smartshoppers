@@ -32,6 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginButtonComponent } from './login-button/login-button.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LogoutButtonComponent } from './logout-button/logout-button.component';
+import { SignupButtonComponent } from './signup-button/signup-button.component';
+import { UserService } from './user.service';
 
 
 @NgModule({
@@ -58,7 +60,8 @@ import { LogoutButtonComponent } from './logout-button/logout-button.component';
     ProfileComponent,
     LoginButtonComponent,
     NavbarComponent,
-    LogoutButtonComponent
+    LogoutButtonComponent,
+    SignupButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +76,7 @@ import { LogoutButtonComponent } from './logout-button/logout-button.component';
       clientId:"R7OD1fFGcK8XKOTdl6MfMuElZreDZlIG"
     }),
   ],
-  providers: [ProfileService],
+  providers: [ProfileService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

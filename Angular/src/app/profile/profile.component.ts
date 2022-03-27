@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../profile.service';
 import { Chart } from 'chart.js';
 import { AuthService } from '@auth0/auth0-angular';
+import { UserService } from '../user.service';
+
 
 @Component({ //need to actually display the users
   selector: 'app-profile',
@@ -12,25 +14,60 @@ export class ProfileComponent implements OnInit {
 
   profileJson: string = '';
 
-  userEmail: string = '';  //hold email value from auth0 token
+  userEmail: string = '';  
 
   public users : any = []; //had to add any type
 
+  newUser: boolean = false;
+
   constructor(
     private _profileService: ProfileService, 
-    public auth: AuthService) { }
+    public auth: AuthService,
+    public userService: UserService) 
+    { }
+
+  
+
+  //check if user email exists in table
+  //determines if user needs to edit account details
+  isNewUser(email: string): void {
+    console.log("isNewUser()------------------");
+    const returnedUser = this.userService.getUser(this.userEmail); //result from backend
+    returnedUser.displayUser();
+    if(true) {   //returnedUser is empty
+      console.log("yes new user--> display account details");
+      this.newUser=true; //set newUser 
+    }
+    else {      //not a new user
+      console.log("NOT a new user, --> display profile");
+      this.getUserData(this.userEmail); //returnedUser is user object, still needed saved product info
+      
+    }
+  }
+
+  getUserData(email: string) {
+    this.userService.getSavedData(email); //returns array of products
+  }
+
+  
 
   ngOnInit(): void { //remove void
-    this.auth.user$.subscribe(
-      (profile) => {
-        this.profileJson = JSON.stringify(profile);
-        this.userEmail = profile?.email as string;  //saving email to variable
-        //console.log(this.userEmail);
-      }
-    )
 
-    this._profileService.getUsers() //returns an observable 
-        .subscribe(data => this.users = data); //assign the data that arrives to users array
+    this.auth.user$.subscribe(
+       (profile) => {
+         this.profileJson = JSON.stringify(profile);
+         this.userEmail = profile?.email as string;  //saving email to variable
+         console.log(this.userEmail);
+         this.isNewUser(this.userEmail);  //check if new user
+        }
+    )
+    
+    
+    
+
+
+    //this._profileService.getUsers() //returns an observable 
+     //   .subscribe(data => this.users = data); //assign the data that arrives to users array
   }
 
 }

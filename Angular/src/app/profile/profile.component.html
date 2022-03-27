@@ -1,3 +1,15 @@
+<div class="body">
+
+
+<!--display form IF user doesn't exist in table-->
+<div *ngIf="newUser; else oldUser" class="container details"> 
+    <app-signup-form></app-signup-form>
+</div>
+
+<!--else show profile content-->
+<!--
+
+
 <div class="container-fluid profile-content">
     <h2>Hello {{users[0].name}}!</h2>
     <hr class="my-5">
@@ -37,24 +49,24 @@
 
 
 </div>
+
+-->
+<ng-template #oldUser>
+
 <!--info available from auth0 token-->
 <div class="container auth0-profile">
-    <h1>Profile Information from Auth0</h1>
+    <h1>Profile</h1>
     <div *ngIf="auth.user$ | async as user">
         <div class="profile-header">
             <img [src]="user.picture" alt="user profile pic" class="rounded-circle img-fliud"/>
-            <h2>{{ user.name }} </h2>
-            <p>{{ user.email }} </p>
-            <div class="container" *ngIf="profileJson">
-                <p>given name: {{ user.given_name }} </p>
-                <p>family name: {{ user.family_name }} </p>
-                <p>nickname: {{ user.nickname }} </p>
-                <p>email: {{ user.email }} </p>
-                <p>locale: {{ user.locale }} </p>
-                <p>updated at: {{ user.updated_at }} </p>
-            </div>
+            <p>Name: {{ user.name }} </p>
+            <p>Email: {{ user.email }} </p>
+            <p>Role: ""</p>            
         </div>
     </div>
+</div>
+</ng-template>
+
 </div>
 
 <!-- <ul *ngFor = "let user of users">

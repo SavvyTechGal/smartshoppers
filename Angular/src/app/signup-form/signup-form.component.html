@@ -1,49 +1,76 @@
-<form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+<div class="container">
+    <h2>Please Enter Account Details</h2>
+    <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
     <div class="form-group">
-        <label for="username">Create Username:</label>
+        <label for="firstName">Enter First Name:</label>
         <input 
         required 
-        minlength="3" 
+        minlength="2" 
         maxlength="20" 
-        ngModel name="username" 
-        #username="ngModel" 
-        id="username" 
+        ngModel name="firstname" 
+        #firstname="ngModel" 
+        id="firstname" 
         type="text" 
         class="form-control">
         <div class="alert alert-danger" 
-        *ngIf="username.touched && !username.valid">
-            <div *ngIf="username.errors?.['required']">
-                Username is required.
-            </div>
-            <div *ngIf="username.errors?.['minlength']">
-                Username should be minimum 3 characters.
+        *ngIf="firstname.touched && !firstname.valid">
+            <div *ngIf="firstname.errors?.['required']">
+                First Name is required.
             </div>
         </div>
     </div>
     <div class="form-group">
-        <label for="password">Create Password:</label>
+        <label for="lastName">Enter Last Name:</label>
         <input 
         required 
-        minlength="8"
-        ngModel name="password"
-        #password="ngModel" 
-        id="password" 
+        minlength="2" 
+        maxlength="20" 
+        ngModel name="lastname" 
+        #lastname="ngModel" 
+        id="lastname" 
         type="text" 
         class="form-control">
         <div class="alert alert-danger" 
-        *ngIf="password.touched && !password.valid">
-            <div *ngIf="password.errors?.['required']">
-                Password is required.
-            </div>
-            <div *ngIf="password.errors?.['minlength']">
-                Password should be minimum 8 characters.
+        *ngIf="lastname.touched && !lastname.valid">
+            <div *ngIf="lastname.errors?.['required']">
+                Last Name is required.
             </div>
         </div>
     </div>
+    <div class="form-group">
+        <label for="role"required>Select a role</label>
+        <select class="form-control" id="roleSel" ngModel name="roleSel" #roleSel="ngModel">
+            <option>Casual User</option>
+            <option>Student</option>
+            <option>Software Developer</option>
+            <option>Graphic Designer</option>
+            <option>Gamer</option>
+            <option>Other</option>
+        </select>
+        
+    </div>
+
+    
+    <br>
+
     <re-captcha (resolved)="checkCaptcha($event)"
         name="recaptchaReactive" ngModel siteKey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI">
     </re-captcha>
+    <p><small>Please complete reCAPTCHA.</small></p>
 
-    <button [disabled]="!captchaResolved || password.errors?.['required'] || username.errors?.['required']" type="submit" class="btn btn-primary">Create Account</button>
+    <button [disabled]="!captchaResolved || firstname.errors?.['required'] || lastname.errors?.['required'] || !roleSel.value" 
+            type="submit" 
+            class="btn btn-primary"
+            routerLink="/profile"
+            >
+            Save 
+    </button>
+    <p><small>Save to view profile.</small></p>
     
-</form>
+<!--
+    <app-signup-button *ngIf="captchaResolved"></app-signup-button>
+-->
+    
+    
+    </form>
+</div>
