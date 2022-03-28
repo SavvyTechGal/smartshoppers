@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../product';
-import { PRODUCTS } from '../sample-products';
-
+import { ProductClass } from '../product-class.model';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -11,23 +9,23 @@ import { ProductService } from '../product.service';
 })
 export class ProductsComponent implements OnInit {
 
-  products: Product[] = [];
+  products: ProductClass[] = [];
 
-  modalProduct: Product = {
-    name :'',
-    brand:'',
-    price:-1,
-    image:''
+  modalProduct: ProductClass = {
+    name: '',
+    price: -1,
+    image: ''
   }
 
   constructor(private _productService: ProductService) { }
 
-  handleModal(product: Product): void {
+  handleModal(product: ProductClass): void {
     this.modalProduct=product;
     //console.log(this.modalProduct)
   }
 
-  saveProduct(product: Product): void {
+  //save product to user's saved data
+  saveProduct(product: ProductClass): void {
     this._productService.saveProduct(product);
   //  .subscribe(data => console.log(data));
   }

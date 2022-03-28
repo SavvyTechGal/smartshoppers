@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product } from './product';
+import { ProductClass } from './product-class.model';
 
 @Injectable({
   providedIn: 'root'
@@ -18,12 +18,16 @@ export class ProductService {
   //  return this.http.post<Product>(this._someURL,body); 
   //}
 
-  saveProduct(product:Product): void {
-    console.log(product);
+  saveProduct(product:ProductClass): void {
+    
   }
 
-  getProducts(): Observable<Product[]> {
+  getSavedProducts() {   //return ProductClass[]
     
-    return this.http.get<Product[]>(this._url); 
+  }
+
+  getProducts(): Observable<ProductClass[]> {  //results from questionnaire
+    
+    return this.http.get<ProductClass[]>(this._url); 
   }
 }
