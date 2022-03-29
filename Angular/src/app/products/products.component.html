@@ -3,10 +3,12 @@
 <!--Product Results -->
     <div class="card-columns products">
         <div class="card" *ngFor="let product of products">
-            <img src={{product.image}} class="card-img-top border product-img" >
+            <img src={{product.thumbnail}} class="card-img-top border product-img" >
             <div class="card-body">
-                <h4 class="card-title">{{product.name}}</h4>
+                <h4 class="card-title">{{product.title}}</h4>
                 <p class="card-text"><b>Price:</b> {{product.price | currency}}</p>
+                <p class="card-text"><b>Rating: </b>{{product.rating}}</p>
+                <p class="card-text"><b>Source: </b><a href={{product.link}} target="_blank">{{product.source}}</a></p>
             </div>
             <div class="card-footer">
                 <button 
@@ -17,9 +19,12 @@
                     (click)="handleModal(product)">
                     Learn More
                 </button>
-                <button class="btn border" (click)="saveProduct(product)">
+                <button *ngIf="isSignedIn; else notSignedIn" class="btn border" (click)="saveProduct(product)">
                     Save
                 </button>
+                <ng-template #notSignedIn>
+                    <button class="btn" title="Sign in to Save"disabled>Save</button>
+                </ng-template>
             </div>   
             
             
@@ -36,46 +41,32 @@
         <div class="modal-content">
             <!--Modal Header-->
             <div class="modal-header">
-                <h4 class="modal-title">{{ modalProduct.name }} </h4>
+                <h4 class="modal-title">{{ modalProduct.title }} </h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <!--Modal body-->
             <div class="modal-body">
-                <img src={{modalProduct.image}} class="modal-img" >
+                <img src={{modalProduct.thumbnail}} class="modal-img" >
                 <table class="table">
                     <thead>
                       <tr>
-                        <th>Product Details</th>
+                        <th>Additional Product Details</th>
                         <th></th>
                         
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>OS</td>
-                        <td>...</td>
-                        
-                      </tr>
-                      <tr>
-                        <td>Screen Size</td>
+                      <tr *ngFor="let extention of modalProduct.extensions">
+                        <td>{{ extention }}</td>
                         <td>...</td>
                       </tr>
-                      <tr>
-                        <td>Memory</td>
-                        <td>...</td>
-                      </tr>
-                      <tr>
-                        <td>Processor Speed</td>
-                        <td>...</td>
-                      </tr>
+                      
                     </tbody>
                   </table>
             </div>
             <!--Modal footer-->
             <div class="modal-footer">
-                <button class="btn border" (click)="saveProduct(modalProduct)">
-                    Save
-                </button>
+                
                 <button class="btn border" data-dismiss="modal">Close</button>
             </div>
 

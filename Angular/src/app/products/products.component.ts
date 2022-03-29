@@ -9,32 +9,47 @@ import { ProductService } from '../product.service';
 })
 export class ProductsComponent implements OnInit {
 
+  userEmail:string='';
+
+  isSignedIn: boolean = true;  //only registered users can save
+
   products: ProductClass[] = [];
 
   modalProduct: ProductClass = {
-    name: '',
+    title: '',
     price: -1,
-    image: ''
+    thumbnail: '',
+    source: '',
+    rating: -1,
+    link: '#',
+    extensions: []
   }
 
   constructor(private _productService: ProductService) { }
 
+  
+
   handleModal(product: ProductClass): void {
     this.modalProduct=product;
-    //console.log(this.modalProduct)
+    console.log(this.modalProduct)
   }
 
   //save product to user's saved data
   saveProduct(product: ProductClass): void {
-    this._productService.saveProduct(product);
-  //  .subscribe(data => console.log(data));
+    this._productService.saveProduct(product,this.userEmail)
+    .subscribe(data => {
+      console.log(data);
+    });
+    console.log(product);
   }
 
   ngOnInit(): void {
-    this._productService.getProducts() 
+    //check if user is signed in with authservice
+    //set variable email to userEmail + isSignedIn = true
+
+    this._productService.getProducts() //calling service to get data from json
     .subscribe(data => {
       this.products = data;
-      console.log(data);
     }); 
 }
 

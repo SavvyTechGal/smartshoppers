@@ -1,12 +1,21 @@
 export class ProductClass {
-    public name: string;
+    public title: string;
     public price: number;
-    public image: string;
+    public thumbnail: string;
+    public source: string;
+    public rating: number;
+    public link: string;
+    public extensions: string[];
 
-    constructor(name: string, price: number, image: string) {
-        this.name = name;
+    constructor(title: string, price: number, thumbnail: string,
+        source: string, rating: number, link: string, extensions: string[]) {
+        this.title = title;
         this.price = price;
-        this.image = image;
+        this.thumbnail = thumbnail;
+        this.source = source;
+        this.rating = rating;
+        this.link = link;
+        this.extensions = extensions;
     }
 
 

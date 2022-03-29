@@ -1,33 +1,48 @@
 [
     {
-        "name": "Surface Laptop Go",
-        "brand": "Microsoft",
+        "title": "Surface Laptop Go",
         "price": "599.99",
-        "image": "./assets/img/product-samples/microsoft.jpg"
+        "thumbnail": "./assets/img/product-samples/microsoft.jpg",
+        "source": "Walmart",
+        "rating": "4.0",
+        "link": "#",
+        "extensions": ["feature 1", "feature 2", "feature 3", "feature 4"]
     },
     {
-        "name": "IdeaPad 3",
-        "brand": "Lenovo",
+        "title": "IdeaPad 3",
         "price": "499.99",
-        "image": "./assets/img/product-samples/lenovo.jpg"
+        "thumbnail": "./assets/img/product-samples/lenovo.jpg",
+        "source": "Walmart",
+        "rating": "4.0",
+        "link": "#",
+        "extensions": ["feature 1", "feature 2", "feature 3"]
     },
     {
-        "name": "Nitro 5",
-        "brand": "Acer",
+        "title": "Nitro 5",
         "price": "1049.99",
-        "image": "./assets/img/product-samples/acer.jpg"
+        "thumbnail": "./assets/img/product-samples/acer.jpg",
+        "source": "Best Buy",
+        "rating": "3.5",
+        "link": "#",
+        "extensions": ["feature 1", "feature 2", "feature 3"]
     },
     {
-        "name": "XPS",
-        "brand": "Dell",
+        "title": "XPS",
         "price": "1999.99",
-        "image": "./assets/img/product-samples/dell.jpg"
+        "thumbnail": "./assets/img/product-samples/dell.jpg",
+        "source": "Best Buy",
+        "rating": "3.5",
+        "link": "#",
+        "extensions": ["feature 1", "feature 2", "feature 3"]
     },
     {
-        "name": "Republic of Gamers Strix G15 Series Gaming Laptop",
-        "brand": "ASUS",
+        "title": "Republic of Gamers Strix G15 Series Gaming Laptop",
         "price": "999.99",
-        "image": "./assets/img/product-samples/asus.jpg"
+        "thumbnail": "./assets/img/product-samples/asus.jpg",
+        "source": "Best Buy",
+        "rating": "3.2",
+        "link": "#",
+        "extensions": ["feature 1", "feature 2"]
     }
 ]
 

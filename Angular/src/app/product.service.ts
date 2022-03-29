@@ -8,26 +8,18 @@ import { ProductClass } from './product-class.model';
 })
 export class ProductService {
 
-  private _url: string = "/assets/mock_data/products.json";
-  //private _someURL: string = "";
+  private _url: string = "/assets/mock_data/products.json"; //replace url for flask
+  private _someURL: string = ""; //replace url for flask
   constructor(private http: HttpClient) { }
 
-  
-  //saveProduct(product: Product): Observable<Product> {
-  //  const body = product;
-  //  return this.http.post<Product>(this._someURL,body); 
-  //}
-
-  saveProduct(product:ProductClass): void {
-    
+  //http post into savedProducts db
+  saveProduct(product:ProductClass, email:string): Observable<ProductClass> {
+    return this.http.post<ProductClass>(this._someURL,product);
   }
 
-  getSavedProducts() {   //return ProductClass[]
-    
-  }
 
-  getProducts(): Observable<ProductClass[]> {  //results from questionnaire
-    
+  //call backend w/ http get for product results from filters
+  getProducts(): Observable<ProductClass[]> {  
     return this.http.get<ProductClass[]>(this._url); 
   }
 }
