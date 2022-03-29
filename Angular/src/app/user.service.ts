@@ -7,36 +7,34 @@ import { AuthService } from '@auth0/auth0-angular';
 })
 export class UserService {
 
-  public newUser: any;
+  private newUser: any;
 
   constructor(public auth:AuthService) { }
 
+  //change to http get
   getUser(email: string): UserClass {
     //check if email is registered in table
     //if yes --> return user model object
     //if no --> return empty object?
     console.log("----------getUser-----------");
     let testUser = new UserClass("fname","lname",email,"role");
+    //return this.http.get<UserClass>(this._url);
     
     return testUser;
   }
 
-  createUser(firstName: string, lastName: string, role: string, email: string) {
-    console.log("createUser()----");
+  //change to http POST
+  addUser(firstName: string, lastName: string, role: string, email: string) {  
+    console.log("add user()-------")
     this.newUser = new UserClass(firstName, lastName,role, email);
-    //this.newUser.displayUser(); 
-    //this.putUser(this.newUser);
-    
+    this.newUser.displayUser();
+    //return this.http.post<UserClass>(this._url);
   }
 
-  putUser(user: UserClass) {
-    console.log("put user()-------")
-    //send to backend
-  }
-
-  //get user saved products
+  //change to http get
   getSavedData(email:string) {
     //call savedProducts backend
     //return array of products
+    //return this.http.get<ProductClass[]>(this._url);
   }
 }

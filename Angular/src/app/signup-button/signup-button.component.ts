@@ -14,11 +14,6 @@ export class SignupButtonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handleUserData(): void {
-    //put data in user model 
-    console.log("heelllo!!");
-  }
-
   loginWithRedirect(): void {
     this.auth.loginWithRedirect({ screen_hint: 'signup' });
   }

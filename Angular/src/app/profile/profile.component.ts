@@ -12,13 +12,15 @@ import { UserService } from '../user.service';
 })
 export class ProfileComponent implements OnInit {
 
-  profileJson: string = '';
+  private profileJson: string = '';
 
-  userEmail: string = '';  
+  public userEmail: string = '';  
 
   public users : any = []; //had to add any type
 
-  newUser: boolean = false;
+  newUser: any;
+
+  //savedProducts: ProductClass = [];
 
   constructor(
     private _profileService: ProfileService, 
@@ -26,13 +28,18 @@ export class ProfileComponent implements OnInit {
     public userService: UserService) 
     { }
 
-  
+  setNewUser(state: boolean) {
+    this.newUser = !state;
+    console.log(!state);
+  }
 
   //check if user email exists in table
   //determines if user needs to edit account details
   isNewUser(email: string): void {
+    
     console.log("isNewUser()------------------");
-    const returnedUser = this.userService.getUser(this.userEmail); //result from backend
+    console.log(this.newUser);
+    const returnedUser = this.userService.getUser(this.userEmail); //need to subscribe result from backend
     returnedUser.displayUser();
     if(true) {   //returnedUser is empty
       console.log("yes new user--> display account details");
@@ -47,6 +54,8 @@ export class ProfileComponent implements OnInit {
 
   getUserData(email: string) {
     this.userService.getSavedData(email); //returns array of products
+    //.subscribe
+    // (data) => savedProducts = data
   }
 
   

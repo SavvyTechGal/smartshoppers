@@ -3,7 +3,10 @@
 
 <!--display form IF user doesn't exist in table-->
 <div *ngIf="newUser; else oldUser" class="container details"> 
-    <app-signup-form></app-signup-form>
+    <app-signup-form 
+        [email]="this.userEmail"
+        (SignInEvent)="setNewUser($event)">
+    </app-signup-form>
 </div>
 
 <!--else show profile content-->
