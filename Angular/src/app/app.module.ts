@@ -34,6 +34,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LogoutButtonComponent } from './logout-button/logout-button.component';
 import { SignupButtonComponent } from './signup-button/signup-button.component';
 import { UserService } from './user.service';
+import { ProductService } from './product.service';
+
 
 
 @NgModule({
@@ -76,7 +78,7 @@ import { UserService } from './user.service';
       clientId:"R7OD1fFGcK8XKOTdl6MfMuElZreDZlIG"
     }),
   ],
-  providers: [ProfileService, UserService],
+  providers: [ProfileService, UserService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
