@@ -27,6 +27,7 @@ import { PersonComponent } from './person/person.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from './profile.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductService } from './product.service';
 
 
 @NgModule({
@@ -61,7 +62,7 @@ import { HttpClientModule } from '@angular/common/http';
     RecaptchaFormsModule,
     HttpClientModule
   ],
-  providers: [ProfileService],
+  providers: [ProfileService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
