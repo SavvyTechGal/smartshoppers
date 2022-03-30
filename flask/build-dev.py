@@ -4,7 +4,7 @@ import time
 
 CURRENT_DIRECTORY = os.getcwd()
 directories = os.listdir(CURRENT_DIRECTORY)
-NON_ANGULAR_DIRS = ['static', 'templates', 'venv']
+NON_ANGULAR_DIRS = ['static', 'templates', 'ss']
 
 for directory in directories:
     if "." not in directory and directory not in NON_ANGULAR_DIRS:

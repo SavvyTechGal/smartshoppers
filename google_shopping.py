@@ -20,7 +20,9 @@ shopping_results = results['shopping_results']
 filters = results['filters']
 # selector = json.loads(filters)
 for result in shopping_results:
-  print(f"Title: {result['title']}\nPrice: {result['price']}\nSupplier: {result['source']}\n")
+  print(f"rating: {result['rating']}\n")
+  # print(f"Thumbnail: {result['thumbnail']}\n Title: {result['title']}\nPrice: {result['price']}\nSupplier: {result['source']}\n Link: {result['link']}\n")
+# print(shopping_results)
 # print(selector["Type"]["Brand"])
 # for d in filters:
 #   if d['type'] == 'Brand':
