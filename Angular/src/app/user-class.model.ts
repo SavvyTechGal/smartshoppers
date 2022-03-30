@@ -11,7 +11,7 @@ export class UserClass {
         this.email = email;
     }
 
-    displayUser() {
+    displayUser() {   //for testing
         console.log("displayUser---");
         console.log(this.firstName);
         console.log(this.lastName);

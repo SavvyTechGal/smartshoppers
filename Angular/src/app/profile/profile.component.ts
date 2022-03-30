@@ -3,6 +3,7 @@ import { ProfileService } from '../profile.service';
 import { Chart } from 'chart.js';
 import { AuthService } from '@auth0/auth0-angular';
 import { UserService } from '../user.service';
+import { ProductClass } from '../product-class.model';
 
 
 @Component({ //need to actually display the users
@@ -20,7 +21,7 @@ export class ProfileComponent implements OnInit {
 
   newUser: any;
 
-  //savedProducts: ProductClass = [];
+  savedProducts: ProductClass[] = [];  
 
   constructor(
     private _profileService: ProfileService, 
@@ -37,23 +38,23 @@ export class ProfileComponent implements OnInit {
   //determines if user needs to edit account details
   isNewUser(email: string): void {
     
-    console.log("isNewUser()------------------");
-    console.log(this.newUser);
-    const returnedUser = this.userService.getUser(this.userEmail); //need to subscribe result from backend
-    returnedUser.displayUser();
+    const returnedUser = this.userService.getUser(this.userEmail); //should return observable later
+    //.subscribe...
+    returnedUser.displayUser();   //testing
     if(true) {   //returnedUser is empty
-      console.log("yes new user--> display account details");
+      console.log("yes new user--> display account details");     //testing
       this.newUser=true; //set newUser 
     }
     else {      //not a new user
-      console.log("NOT a new user, --> display profile");
+      console.log("NOT a new user, --> display profile");         //testing
       this.getUserData(this.userEmail); //returnedUser is user object, still needed saved product info
       
     }
   }
 
+  //retrieve user saved products
   getUserData(email: string) {
-    this.userService.getSavedData(email); //returns array of products
+    this.userService.getSavedData(email); 
     //.subscribe
     // (data) => savedProducts = data
   }
@@ -66,7 +67,6 @@ export class ProfileComponent implements OnInit {
        (profile) => {
          this.profileJson = JSON.stringify(profile);
          this.userEmail = profile?.email as string;  //saving email to variable
-         console.log(this.userEmail);
          this.isNewUser(this.userEmail);  //check if new user
         }
     )
