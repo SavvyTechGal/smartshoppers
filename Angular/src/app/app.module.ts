@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from "@angular/forms";
 import { NgChartsModule } from 'ng2-charts';
 import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment } from 'src/environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +29,13 @@ import { PersonComponent } from './person/person.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from './profile.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginButtonComponent } from './login-button/login-button.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { LogoutButtonComponent } from './logout-button/logout-button.component';
+import { SignupButtonComponent } from './signup-button/signup-button.component';
+import { UserService } from './user.service';
 import { ProductService } from './product.service';
+
 
 
 @NgModule({
@@ -51,7 +59,11 @@ import { ProductService } from './product.service';
     SignupFormComponent,
     LoginFormComponent,
     PersonComponent,
-    ProfileComponent
+    ProfileComponent,
+    LoginButtonComponent,
+    NavbarComponent,
+    LogoutButtonComponent,
+    SignupButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -60,9 +72,13 @@ import { ProductService } from './product.service';
     NgChartsModule,
     RecaptchaModule,
     RecaptchaFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AuthModule.forRoot({
+      domain:"dev-y9hgi5ks.us.auth0.com",
+      clientId:"R7OD1fFGcK8XKOTdl6MfMuElZreDZlIG"
+    }),
   ],
-  providers: [ProfileService, ProductService],
+  providers: [ProfileService, UserService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
