@@ -5,6 +5,7 @@ import { NgChartsModule } from 'ng2-charts';
 import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
 import { AuthModule } from '@auth0/auth0-angular';
 import { environment } from 'src/environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,7 +29,6 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { PersonComponent } from './person/person.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from './profile.service';
-import { HttpClientModule } from '@angular/common/http';
 import { LoginButtonComponent } from './login-button/login-button.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LogoutButtonComponent } from './logout-button/logout-button.component';
