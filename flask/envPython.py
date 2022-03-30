@@ -1,8 +1,8 @@
 import os
-
 if 'RDS_HOSTNAME' in os.environ:
     DATABASES = {
-        'default': {
+        'default': 
+        {
             'ENGINE': 'postgres',
             'NAME': os.environ['smart-shoppers'],
             'USER': os.environ['smartshoppers'],
