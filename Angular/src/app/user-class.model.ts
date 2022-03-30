@@ -18,7 +18,4 @@ export class UserClass {
         console.log(this.role);
         console.log(this.email);
     }
-
-    
-
 }

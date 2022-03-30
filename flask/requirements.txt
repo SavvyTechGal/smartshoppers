@@ -3,3 +3,5 @@ google-search-results
 flask
 psycopg2-binary
 marshmallow
+flask-cors
+python-dotenv

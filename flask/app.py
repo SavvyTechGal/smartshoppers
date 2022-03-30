@@ -1,27 +1,43 @@
 import os
 import psycopg2
-from flask import Flask, render_template
-import requests
+from flask import Flask, render_template, request
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+CORS(app, supports_credentials=True)
 
 def get_db_connection():
     conn = psycopg2.connect(
-        host = 'smart-shoppers.cqq5zn6lxhjd.us-east-1.rds.amazonaws.com',
-        user = 'smartshoppers',
-        password = 'Smartsho33ers2022',
+        host = os.environ['RDS_HOSTNAME'],
+        user = os.environ['RDS_USERNAME'],
+        password = os.environ['RDS_PASSWORD'],
         dbname = 'postgres',
         port = 5432
     )
     return conn
 
 
-@app.route('/users', methods=["POST"])
+@app.route('/users', methods=["POST", "GET"])
+@cross_origin()
 def insert_user():
-    conn = get_db_connection()
-    cur = conn.cursor()
-    print(requests.json)
-    email = requests.json("email")
-    print(email)
-    cur.close()
-    conn.close()
+    if request.method == 'POST':
+        params = request.get_json()
+        email, first_name, last_name, role = params['email'].strip(), params['firstName'].strip(), params['lastName'].strip(), params['role'].strip()
+        print(email)
+        conn = get_db_connection()
+        cur = conn.cursor()
+        #insert into RDS DATABASE -> CHECK TABLEPLUS 
+        cur.execute('INSERT INTO users (email, first_name, last_name, role)'
+            'VALUES (%s, %s, %s, %s)',
+            (email,
+             first_name,
+             last_name,
+             role)
+        )
+        conn.commit()
+        cur.close()
+        conn.close()
+        return 'welcome %s' % email
+    else:
+        return 'hi!'
+    
