@@ -26,13 +26,16 @@ export class UserService {
 
   //change to http POST (user db)
   addUser(firstName: string, lastName: string, role: string, email: string) { //: Observable<UserClass> 
-    //this.newUser = new UserClass(firstName, lastName,role, email);
+    // this.newUser = new UserClass(firstName, lastName,role, email);
     //this.newUser.displayUser();  //testing purposes
     //return this.http.post<UserClass>(this._url);
     let request =
     this.HttpClient.post(`http://127.0.0.1:5000/users`,
     {
       "email": email,
+      "firstName": firstName,
+      "lastName": lastName,
+      "role": role,
     })
 
     request.subscribe((data) => {

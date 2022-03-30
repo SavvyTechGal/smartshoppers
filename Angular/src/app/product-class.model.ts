@@ -8,7 +8,8 @@ export class ProductClass {
     public extensions: string[];
 
     constructor(title: string, price: number, thumbnail: string,
-        source: string, rating: number, link: string, extensions: string[]) {
+        source: string, rating: number, link: string, extensions: string[]) 
+    {
         this.title = title;
         this.price = price;
         this.thumbnail = thumbnail;

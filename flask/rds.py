@@ -23,11 +23,11 @@ cur = conn.cursor()
 #                                  )
 
 #How to insert into a table
-cur.execute('INSERT INTO users (first_name, last_name, email, role)'
+cur.execute('INSERT INTO users (email, first_name, last_name, role)'
             'VALUES (%s, %s, %s, %s)',
-            ('Savana',
+            ('savanahughes@gmail.com',
+             'Savana',
              'Jaz',
-             'savanahughes@gmail.com',
              'student')
             )
 conn.commit()
