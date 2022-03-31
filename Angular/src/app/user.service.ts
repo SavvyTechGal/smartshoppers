@@ -15,17 +15,28 @@ export class UserService {
   constructor(public auth:AuthService, public HttpClient:HttpClient) { }
 
   //change to http get (user db)
-  getUser(email: string): UserClass {  //change to : Observable<UserClass>
+  getUser(email: string) {  //change to : Observable<UserClass>
     //check if email is registered in table
     //if yes --> return user model object
     //if no --> return empty object?
-    let testUser = new UserClass("fname","lname",email,"role"); //for testing purposes
+    //let testUser = new UserClass("fname","lname",email,"role"); //for testing purposes
     //return this.http.get<UserClass>(this._url);
+
+    let request =
+    this.HttpClient.post(`http://127.0.0.1:5000/getusers`,
+    {
+      "email": email,
+    })
+
+    request.subscribe((data) => {
+      console.log(data); })
 
     
     
-    return testUser;
+    //return testUser;
+
   }
+  
 
   //change to http POST (user db)
   addUser(firstName: string, lastName: string, role: string, email: string) { //: Observable<UserClass> 
