@@ -19,12 +19,14 @@ export class UserService {
     //check if email is registered in table
     //if yes --> return user model object
     //if no --> return empty object?
-    let testUser = new UserClass("fname","lname",email,"role"); //for testing purposes
+    // let testUser = new UserClass("fname","lname",email,"role"); //for testing purposes
     //return this.http.get<UserClass>(this._url);
-
+    let request =
+    this.HttpClient.post(this._url,
+    {
+      "email": email,
+    })
     
-    
-    return testUser;
   }
 
   //change to http POST (user db)

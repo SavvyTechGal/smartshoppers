@@ -38,10 +38,37 @@ def users():
         cur.close()
         conn.close()
         return 'welcome %s' % email
-    # elif request.method == 'GET':
-    #     params = request.get_json()
-    #     email = params['email'].strip()
-    #     print(email)
+    else:
+        return 'hi!'
+
+@app.route('/getusers', methods=["POST", "GET"])
+@cross_origin()
+def get_users():
+    if request.method == 'POST':
+        params = request.get_json()
+        email = params['email'].strip()
+        print(email)
+        conn = get_db_connection()
+        cur = conn.cursor()
+        #quer from RDS DATABASE -> CHECK TABLEPLUS 
+        cur.execute(
+            """
+            SELECT 
+            email, 
+            first_name, 
+            last_name, 
+            role 
+            FROM users 
+            WHERE email = %s;
+            """,
+            [email,]
+        )
+        conn.commit()
+        cur.close()
+        conn.close()
+        result = cur.fetchone()
+        print(result)
+        return result
     else:
         return 'hi!'
 

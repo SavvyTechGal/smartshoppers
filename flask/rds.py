@@ -10,6 +10,35 @@ conn = psycopg2.connect(
 
 # Open a cursor to perform database operations
 cur = conn.cursor()
+# email = params['email'].strip()
+email = 'sanakurata1996@gmail.com'
+print(email)
+cur = conn.cursor()
+#quer from RDS DATABASE -> CHECK TABLEPLUS 
+cur.execute(
+    """
+    SELECT 
+    email, 
+    first_name, 
+    last_name, 
+    role 
+    FROM users 
+    WHERE email = %s;
+    """,
+    [email,]
+)
+conn.commit()
+result = cur.fetchone()
+print(result)
+cur.close()
+conn.close()
+
+# for row in results:
+#         print("email: {}".format(row['email']))
+#         print("firstName: {}".format(row['first_name']))
+#         print("lastName: {}".format(row['last_name']))
+#         print("role: {}".format(row['role']))
+
 
 #how to drop a table 
 # cur.execute('DROP TABLE IF EXISTS quiz_answers;')
@@ -30,7 +59,3 @@ cur = conn.cursor()
 #              'Jaz',
 #              'student')
 #             )
-conn.commit()
-
-cur.close()
-conn.close()
