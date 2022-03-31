@@ -3,18 +3,18 @@
     <h2 class="question">
         Are You Always On The Go?
     </h2>
-    <!-- {{quizanswers.value | json}}
-    <hr>
+    <!-- {{quizanswers.value | json}} -->
+    <!-- <hr>
     {{AnswersModel | json}} -->
     
     <!--Travel Input-->
-    <form #quizanswers = "ngForm" (ngSubmit)="addAnswer(quizanswers.value)">
+    <form #quizanswers = "ngForm" (ngSubmit)="addAnswer(quizanswers)">
         <div class="container">
             <img src="./assets/img/travel-icon.JPG" class="rounded mx-auto d-block" title="Traveling">
     
             <span class="switch">
-                <input type="checkbox" name= "traveler" id="switcher">
-                <label for="switcher"></label>
+                <input type="checkbox" ngModel name="answer" id="answer">
+                <label for="answer"></label>
             </span>
             
             <!--WILL NOT ROUTE ANYWHERE-->
@@ -25,12 +25,10 @@
         <!-- (SendAnswerEvent)="setNewUser($event)"> -->
     
     
-    
-    
-    
         <div class="next">
+            <button type="submit" id="next-button" class="btn">Submit</button>
             <button type="button" id="next-button" class="btn">
-                <a class="nav-link" routerLink="/home">NEXT</a>
+                <a class="nav-link" routerLink="/products">See Matches</a>
             </button>
         </div>
 

@@ -9,39 +9,26 @@ import { Output, EventEmitter } from '@angular/core';
   styleUrls: ['./travel.component.css']
 })
 export class TravelComponent implements OnInit {
-  @Output() SendAnswerEvent = new EventEmitter<boolean>();
+  // @Output() SendAnswerEvent = new EventEmitter<boolean>();
   AnswersModel = new Answers(false);
+  
   addAnswer(quizanswers: { value: any; }) {
-    console.log(quizanswers.value.traveler);  //object form
+    let newAnswer = quizanswers.value.answer;
+    console.log(newAnswer); //for testing
+    alert("Thank you for submitting!");
+    this.answerService.postAnswer("test@test.com", 1, newAnswer); //sample email and id, will retrieve email later
+    //.subscribe
+    
   }
 
-  newAnswer: any;
   constructor(
     public answerService: AnswersService
   ) { }
 
-  setNewUser(answer: boolean) {
-    this.newAnswer = answer;
-  }
 
-  // isNewUser(email: string): void {
-    
-  //   const returnedUser = this.userService.getUser(this.userEmail); //should return observable later
-  //   //.subscribe...
-  //   returnedUser.displayUser();   //testing
-  //   if(true) {   //returnedUser is empty
-  //     console.log("yes new user--> display account details");     //testing
-  //     this.newUser=true; //set newUser 
-  //   }
-  //   else {      //not a new user
-  //     console.log("NOT a new user, --> display profile");         //testing
-  //     this.getUserData(this.userEmail); //returnedUser is user object, still needed saved product info
-      
-  //   }
-  // }
 
   ngOnInit(): void {
-    this.answerService.addAnswer(this.newAnswer);
+    // this.answerService.addAnswer(this.newAnswer);
   }
 
 }
