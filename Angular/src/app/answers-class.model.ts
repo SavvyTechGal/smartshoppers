@@ -1,8 +1,8 @@
 export class Answers {
-    private traveler: boolean;
+    private answer: any;
 
-    constructor(traveler: boolean) {
-        this.traveler = traveler;
+    constructor(answer: any) {
+        this.answer = answer;
         }
 }
 // public justWork: boolean,
