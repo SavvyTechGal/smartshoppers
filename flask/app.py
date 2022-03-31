@@ -3,6 +3,7 @@ import psycopg2
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
 import json
+from google_shopping import gs_api
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
@@ -127,3 +128,38 @@ def get_answer():
         return json.dumps(result)
     else:
         return 'hi!'
+
+#get products endpoint
+@app.route('/getproducts', methods=["POST", "GET"])
+@cross_origin()
+def get_products():
+    if request.method == 'POST':
+        params = request.get_json()
+        email = params['email'].strip()
+        print(email)
+        conn = get_db_connection()
+        cur = conn.cursor()
+        #quer from RDS DATABASE -> CHECK TABLEPLUS 
+        cur.execute(
+            """
+            SELECT 
+            email, 
+            id, 
+            answer
+            FROM answers 
+            WHERE email = %s;
+            """,
+            [email,]
+        )
+        conn.commit()
+        answers = cur.fetchall()
+        print(answers)
+        cur.close()
+        conn.close() 
+        answers_json = json.dumps(answers)
+        products = gs_api(answers_json)
+        return products
+    else:
+        return 'hi!'
+
+
