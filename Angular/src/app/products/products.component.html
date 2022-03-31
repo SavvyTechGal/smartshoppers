@@ -6,7 +6,7 @@
             <img src={{product.thumbnail}} class="card-img-top border product-img" >
             <div class="card-body">
                 <h4 class="card-title">{{product.title}}</h4>
-                <p class="card-text"><b>Price:</b> {{product.price | currency}}</p>
+                <p class="card-text"><b>Price:</b> {{product.price}}</p>
                 <p class="card-text"><b>Rating: </b>{{product.rating}}</p>
                 <p class="card-text"><b>Source: </b><a href={{product.link}} target="_blank">{{product.source}}</a></p>
             </div>
@@ -58,7 +58,7 @@
                     <tbody>
                       <tr *ngFor="let extention of modalProduct.extensions">
                         <td>{{ extention }}</td>
-                        <td>...</td>
+                        <td> </td>
                       </tr>
                       
                     </tbody>
