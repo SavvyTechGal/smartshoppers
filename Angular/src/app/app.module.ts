@@ -35,6 +35,7 @@ import { LogoutButtonComponent } from './logout-button/logout-button.component';
 import { SignupButtonComponent } from './signup-button/signup-button.component';
 import { UserService } from './user.service';
 import { ProductService } from './product.service';
+import { AnswersService } from './answers.service';
 
 
 
@@ -78,7 +79,7 @@ import { ProductService } from './product.service';
       clientId:"R7OD1fFGcK8XKOTdl6MfMuElZreDZlIG"
     }),
   ],
-  providers: [ProfileService, UserService, ProductService],
+  providers: [ProfileService, UserService, ProductService, AnswersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
