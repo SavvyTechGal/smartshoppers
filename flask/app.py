@@ -152,10 +152,11 @@ def get_products():
         )
         conn.commit()
         answers = cur.fetchall()
-        print(answers)
+        
         cur.close()
         conn.close() 
         answers_json = json.dumps(answers)
+        print("test", answers_json)
         products = gs_api(answers_json)
         return products
     else:
