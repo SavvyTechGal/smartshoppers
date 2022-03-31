@@ -2,6 +2,7 @@ import os
 import psycopg2
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
+import json
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
@@ -38,10 +39,37 @@ def users():
         cur.close()
         conn.close()
         return 'welcome %s' % email
-    # elif request.method == 'GET':
-    #     params = request.get_json()
-    #     email = params['email'].strip()
-    #     print(email)
+    else:
+        return 'hi!'
+
+@app.route('/getusers', methods=["POST", "GET"])
+@cross_origin()
+def get_users():
+    if request.method == 'POST':
+        params = request.get_json()
+        email = params['email'].strip()
+        print(email)
+        conn = get_db_connection()
+        cur = conn.cursor()
+        #quer from RDS DATABASE -> CHECK TABLEPLUS 
+        cur.execute(
+            """
+            SELECT 
+            email, 
+            first_name, 
+            last_name, 
+            role 
+            FROM users 
+            WHERE email = %s;
+            """,
+            [email,]
+        )
+        conn.commit()
+        result = cur.fetchone()
+        cur.close()
+        conn.close() 
+        print(result)
+        return json.dumps(result)
     else:
         return 'hi!'
 
