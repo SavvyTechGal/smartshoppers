@@ -5,8 +5,7 @@ import json
 params = {
   "q": "laptop",
   "tbm": "shop",
-  # "tbs": "vw%3Ag%2Cprice%3A1%2Cppr_max%3A1000",
-  "location": "Dallas",
+  # "tbs": "vw:l,mr:1,pdtr0:703960%7C703961",
   "hl": "en",
   "gl": "us",
   #api gateway to protect key
@@ -18,13 +17,49 @@ search = GoogleSearch(params)
 results = search.get_dict()
 shopping_results = results['shopping_results']
 filters = results['filters']
-# selector = json.loads(filters)
+
+# print(json_formatted_str)
+array = []
 for result in shopping_results:
-  print(f"Title: {result['title']}\nPrice: {result['price']}\nSupplier: {result['source']}\n")
+    x = {
+      "title": "",
+      "price": "",
+      "thumbnail": "",
+      "source": "",
+      "rating": "",
+      "link": "",
+    }
+    if 'title' in result:
+      x['title'] = result['title']
+
+    if 'price' in result:
+      x['price'] = result['price']
+
+    if 'thumbnail' in result:
+      x['thumbnail'] = result['thumbnail']
+
+    if 'source' in result:
+      x['source'] = result['source']
+
+    if 'rating' in result:
+      x['rating'] = result['rating']
+
+    if 'link' in result:
+      x['link'] = result["link"]
+
+    if 'extensions' in result:
+      x['extensions'] = result["extensions"]
+
+    array.append(x)
+
+json_formatted_str = json.dumps(array, indent=2)
+print(json_formatted_str)
+
 # print(selector["Type"]["Brand"])
 # for d in filters:
 #   if d['type'] == 'Brand':
 #     for x in d['options']:
 #       if x['text'] == 'HP':
 #         print(x['tbs'])
+# weight of the product 
 

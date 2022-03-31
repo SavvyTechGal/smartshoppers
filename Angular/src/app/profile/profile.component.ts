@@ -40,9 +40,12 @@ export class ProfileComponent implements OnInit {
   //check if user email exists in table
   //determines if user needs to edit account details
   isNewUser(email: string): void {
+
     
-    this.userService.getUser(this.userEmail); //should return observable later
-    
+    const returnedUser = this.userService.getUser(this.userEmail); //should return observable later
+    //.subscribe...
+    // returnedUser.displayUser();   //testing
+
     if(true) {   //returnedUser is empty
       console.log("yes new user--> display account details");     //testing
       this.newUser=true; //set newUser 
