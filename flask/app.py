@@ -127,8 +127,7 @@ def get_answer():
         print(result)
         return json.dumps(result)
     else:
-        return 'hi!'
-
+        return 'hi'
 #get products endpoint
 @app.route('/getproducts', methods=["POST", "GET"])
 @cross_origin()
@@ -160,6 +159,6 @@ def get_products():
         products = gs_api(answers_json)
         return products
     else:
-        return 'hi!'
+        return gs_api('test')
 
 
