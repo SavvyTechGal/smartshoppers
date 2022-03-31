@@ -7,14 +7,14 @@
     <ul class="navbar-nav">
         <!--About Us-->
         <li class="nav-item">
-            <button type="button" class="btn btn-round btn-sm">
+            <button type="button" class="btn btn-round btn-sm" >
                 <a class="nav-link about-us" routerLink="/about">About Us</a>
           
             </button>
         </li>
 
         <li class="nav-item">
-            <button type="button" class="btn btn-round btn-sm">
+            <button type="button" class="btn btn-round btn-sm" *ngIf="auth.isAuthenticated$ | async">
                 <a class="nav-link profile" routerLink="/profile">Profile</a>
           
             </button>

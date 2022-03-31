@@ -3,8 +3,8 @@
     <h2 class="question">
         Do You Use Photoshop, Video Editing, Or Design Software?
     </h2>
-
-    <!--Graphics Input-->
+    <form #quizanswers = "ngForm">
+        <!--Graphics Input-->
     <div class="container graphics-content">
         <div class="row">
             <div class="col">
@@ -28,17 +28,20 @@
                 title="Vegas Pro"> 
             </div>
         </div>
-        <a routerLink="/movies">
-            <button type="button" class="btn btn-round btn-lg">Yes</button>
-        </a>
-        <a routerLink="/movies">
+        <span class="switch">
+            <input type="checkbox"id="switcher">
+            <label for="switcher"></label>
+        </span>
+        <!-- <a routerLink="/movies">
             <button type="button" class="btn btn-round btn-lg">No</button>
-        </a>
+        </a> -->
     </div>
 
     <div class="next">
         <button type="button" id="next-button" class="btn">
-            <a class="nav-link" routerLink="/movies">NEXT</a>
+            <a class="nav-link" routerLink="/travel">NEXT</a>
         </button>
     </div>
+    </form>
+
 </div>

@@ -17,6 +17,7 @@ import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 
 const routes: Routes = [
@@ -31,10 +32,15 @@ const routes: Routes = [
   { path: 'graphics', component: GraphicsComponent },
   { path: 'movies', component: MoviesComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent },
+  
   { path: 'about', component: AboutComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'services', component: ServicesComponent},
+  { 
+    path: 'signupform', 
+    component: SignupFormComponent,
+    canActivate:[AuthGuard] 
+  },
   { 
     path: 'profile', 
     component: ProfileComponent,

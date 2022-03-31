@@ -1,8 +1,8 @@
 export class UserClass {
-    private firstName: string;
-    private lastName: string;
-    private email: string;
-    private role: string;
+    public firstName: string;
+    public lastName: string;
+    public email: string;
+    public role: string;
 
     constructor(firstName: string, lastName: string, role: string, email: string) {
         this.firstName = firstName;
@@ -11,11 +11,11 @@ export class UserClass {
         this.email = email;
     }
 
-    displayUser() {   //for testing
-        console.log("displayUser---");
-        console.log(this.firstName);
-        console.log(this.lastName);
-        console.log(this.role);
-        console.log(this.email);
-    }
+    // displayUser() {   //for testing
+    //     console.log("displayUser---");
+    //     console.log(this.firstName);
+    //     console.log(this.lastName);
+    //     console.log(this.role);
+    //     console.log(this.email);
+    // }
 }
