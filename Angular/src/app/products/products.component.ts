@@ -53,14 +53,24 @@ export class ProductsComponent implements OnInit {
         if(this.userEmail) {
           this.isSignedIn = true;
         }
+        this._productService.getProducts(this.userEmail) //calling service to get data from json
+        .subscribe(data => {
+          //this.products = data;
+          console.log(data);
+        }); 
+        console.log("getproducts");
+        console.log(this.userEmail);
+
        }
    )
 
-    this._productService.getProducts(this.userEmail) //calling service to get data from json
-    .subscribe(data => {
-      //this.products = data;
-      console.log(data);
-    }); 
+    // this._productService.getProducts(this.userEmail) //calling service to get data from json
+    // .subscribe(data => {
+    //   //this.products = data;
+    //   console.log(data);
+    // }); 
+    // console.log("getproducts");
+    // console.log(this.userEmail);
 }
 
 }
