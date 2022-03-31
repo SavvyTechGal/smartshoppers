@@ -18,9 +18,9 @@ def get_db_connection():
     return conn
 
 #users endpoint
-@app.route('/users', methods=["POST", "GET"])
+@app.route('/adduser', methods=["POST", "GET"])
 @cross_origin()
-def users():
+def add_user():
     if request.method == 'POST':
         params = request.get_json()
         email, first_name, last_name, role = params['email'].strip(), params['firstName'].strip(), params['lastName'].strip(), params['role'].strip()
@@ -42,9 +42,9 @@ def users():
     else:
         return 'hi!'
 
-@app.route('/getusers', methods=["POST", "GET"])
+@app.route('/getuser', methods=["POST", "GET"])
 @cross_origin()
-def get_users():
+def get_user():
     if request.method == 'POST':
         params = request.get_json()
         email = params['email'].strip()
@@ -73,10 +73,10 @@ def get_users():
     else:
         return 'hi!'
 
-#answers endpoint
-@app.route('/answers', methods=["POST", "GET"])
+#add answer endpoint
+@app.route('/addanswer', methods=["POST", "GET"])
 @cross_origin()
-def answers():
+def add_answer():
     if request.method == 'POST':
         params = request.get_json()
         email, id, answer = params['email'].strip(), params['id'].strip(), params['answer'].strip()
@@ -94,10 +94,36 @@ def answers():
         cur.close()
         conn.close()
         return 
-    # elif request.method == 'GET':
-    #     params = request.get_json()
-    #     email = params['email'].strip()
-    #     print(email)
     else:
         return 'hi!'
-    
+
+#get answers endpoint
+@app.route('/getanswer', methods=["POST", "GET"])
+@cross_origin()
+def get_answer():
+    if request.method == 'POST':
+        params = request.get_json()
+        email = params['email'].strip()
+        print(email)
+        conn = get_db_connection()
+        cur = conn.cursor()
+        #quer from RDS DATABASE -> CHECK TABLEPLUS 
+        cur.execute(
+            """
+            SELECT 
+            email, 
+            id, 
+            answer
+            FROM answers 
+            WHERE email = %s;
+            """,
+            [email,]
+        )
+        conn.commit()
+        result = cur.fetchall()
+        cur.close()
+        conn.close() 
+        print(result)
+        return json.dumps(result)
+    else:
+        return 'hi!'
