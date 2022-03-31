@@ -49,3 +49,9 @@
     font-weight: 700;
     margin:35px;
 }
+
+img {
+    height:165px;
+    object-fit: cover;
+    
+}
