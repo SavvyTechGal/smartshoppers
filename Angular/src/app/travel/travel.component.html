@@ -3,21 +3,39 @@
     <h2 class="question">
         Are You Always On The Go?
     </h2>
-
+    {{quizanswers.value | json}}
+    <hr>
+    {{AnswersModel | json}}
+    
     <!--Travel Input-->
-    <div class="container">
-        <img src="./assets/img/travel-icon.JPG" class="rounded mx-auto d-block" title="Traveling">
-        <a routerLink="/work">
-            <button type="button" class="btn btn-round btn-lg">Yes</button>
-        </a>
-        <a routerLink="/work">
-            <button type="button" class="btn btn-round btn-lg">No</button>
-        </a>
-    </div>
+    <form #quizanswers = "ngForm" (ngSubmit)="onSubmit(quizanswers)">
+        <div class="container">
+            <img src="./assets/img/travel-icon.JPG" class="rounded mx-auto d-block" title="Traveling">
+    
+            <span class="switch">
+                <input type="checkbox"  [(ngModel)]="AnswersModel" name= "traveler" id="switcher">
+                <label for="switcher"></label>
+            </span>
+                <!-- <button type="button" class="btn btn-round btn-lg">Yes</button> -->
+            
+    
+            <!--WILL NOT ROUTE ANYWHERE-->
+            <!-- <a routerLink="/work">
+                <button type="button" class="btn btn-round btn-lg">No</button>
+            </a> -->
+        </div>
+    
+    
+    
+    
+    
+    
+        <div class="next">
+            <button type="submit" id="next-button" class="btn">
+                <!-- <a class="nav-link" routerLink="/work">NEXT</a> -->
+            </button>
+        </div>
 
-    <div class="next">
-        <button type="button" id="next-button" class="btn">
-            <a class="nav-link" routerLink="/work">NEXT</a>
-        </button>
-    </div>
+    </form>
+
 </div>

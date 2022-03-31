@@ -1,4 +1,0 @@
-Scrapy==2.6.0
-google-search-results
-flask
-psycopg2-binary==2.9.3

@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class UserService {
 
   private newUser: any;
+  private _url = `http://127.0.0.1:5000/users`
 
   constructor(public auth:AuthService, public HttpClient:HttpClient) { }
 
@@ -20,6 +21,7 @@ export class UserService {
     //if no --> return empty object?
     //let testUser = new UserClass("fname","lname",email,"role"); //for testing purposes
     //return this.http.get<UserClass>(this._url);
+
     let request =
     this.HttpClient.post(`http://127.0.0.1:5000/getusers`,
     {
@@ -28,18 +30,25 @@ export class UserService {
 
     request.subscribe((data) => {
       console.log(data); })
+
+    
+    
+    //return testUser;
+
   }
   
 
   //change to http POST (user db)
   addUser(firstName: string, lastName: string, role: string, email: string) { //: Observable<UserClass> 
-    //this.newUser = new UserClass(firstName, lastName,role, email);
+    // this.newUser = new UserClass(firstName, lastName,role, email);
     //this.newUser.displayUser();  //testing purposes
-    //return this.http.post<UserClass>(this._url);
     let request =
-    this.HttpClient.post(`http://127.0.0.1:5000/users`,
+    this.HttpClient.post(this._url,
     {
       "email": email,
+      "firstName": firstName,
+      "lastName": lastName,
+      "role": role,
     })
 
     request.subscribe((data) => {
