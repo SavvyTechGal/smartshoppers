@@ -56,10 +56,16 @@ export class ProductsComponent implements OnInit {
         this._productService.getProducts(this.userEmail) //calling service to get data from json
         .subscribe(data => {
           //this.products = data;
-          console.log(data);
+          console.log(data.length);
+          for(let i = 0; i < 5; i++) {
+            const newProduct = new ProductClass(data[i].title, data[i].price, 
+              data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
+            //console.log(newProduct);
+            this.products.push(newProduct);
+          }
         }); 
-        console.log("getproducts");
-        console.log(this.userEmail);
+        // console.log("getproducts");
+        // console.log(this.userEmail);
 
        }
    )
