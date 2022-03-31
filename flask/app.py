@@ -1,6 +1,6 @@
 import os
 import psycopg2
-from flask import Flask, render_template, request
+from flask import Flask, request
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
@@ -16,10 +16,10 @@ def get_db_connection():
     )
     return conn
 
-
+#users endpoint
 @app.route('/users', methods=["POST", "GET"])
 @cross_origin()
-def insert_user():
+def users():
     if request.method == 'POST':
         params = request.get_json()
         email, first_name, last_name, role = params['email'].strip(), params['firstName'].strip(), params['lastName'].strip(), params['role'].strip()
@@ -38,6 +38,38 @@ def insert_user():
         cur.close()
         conn.close()
         return 'welcome %s' % email
+    # elif request.method == 'GET':
+    #     params = request.get_json()
+    #     email = params['email'].strip()
+    #     print(email)
+    else:
+        return 'hi!'
+
+#answers endpoint
+@app.route('/answers', methods=["POST", "GET"])
+@cross_origin()
+def answers():
+    if request.method == 'POST':
+        params = request.get_json()
+        email, id, answer = params['email'].strip(), params['id'].strip(), params['answer'].strip()
+        conn = get_db_connection()
+        cur = conn.cursor()
+        #insert into RDS DATABASE -> CHECK TABLEPLUS 
+        cur.execute('INSERT INTO answers (email, id, answer)'
+            'VALUES (%s, %s, %s, %s)',
+            (email,
+             id,
+             answer
+            )
+        )
+        conn.commit()
+        cur.close()
+        conn.close()
+        return 
+    # elif request.method == 'GET':
+    #     params = request.get_json()
+    #     email = params['email'].strip()
+    #     print(email)
     else:
         return 'hi!'
     
