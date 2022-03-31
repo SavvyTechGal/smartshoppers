@@ -57,3 +57,4 @@ def gs_api(answers_json):
   products = json.dumps(array)
   return products
 
+# gs_api("hi")

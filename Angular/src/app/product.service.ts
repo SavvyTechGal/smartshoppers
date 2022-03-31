@@ -23,7 +23,7 @@ export class ProductService {
   getProducts(email: string): Observable<any> {  
     // return this.http.get<ProductClass[]>(this._url); 
     let request =
-    this.HttpClient.post(this.baseURL + `getProducts`,
+    this.HttpClient.post(this.baseURL + `getproducts`,
     {
       "email": email,
     });
