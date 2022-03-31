@@ -12,7 +12,7 @@ export class UserService {
 
   private jsonData: any;
   private newUser: any;
-  private _url = `http://127.0.0.1:5000/user`
+  private _url = `http://127.0.0.1:5000/`
 
   constructor(public auth:AuthService, public HttpClient:HttpClient) { }
 
@@ -22,7 +22,7 @@ export class UserService {
     console.log("userservice -- getUser");
 
     let request =
-    this.HttpClient.post(`http://127.0.0.1:5000/getuser`,
+    this.HttpClient.post(this._url + `getuser`,
     {
       "email": email,
     });
@@ -49,7 +49,7 @@ export class UserService {
     //this.newUser.displayUser();  //testing purposes
     console.log("addUser");
     let request =
-    this.HttpClient.post(this._url,
+    this.HttpClient.post(this._url + `adduser`,
     {
       "email": email,
       "firstName": firstName,

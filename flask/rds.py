@@ -13,17 +13,17 @@ cur = conn.cursor()
 cur.execute('INSERT INTO answers (email, id, answer)'
         'VALUES (%s, %s, %s)',
         #What operating system do you prefer? [Mac OS, Windows OS and Chrome OS]
-        ('savana.hughes28@myhunter.cuny.edu',1,'Windows OS')
+        ('savanatechtest@gmail.com',1,'Mac OS')
 )
 cur.execute('INSERT INTO answers (email, id, answer)'
         'VALUES (%s, %s, %s)',
         #Do You Use Photoshop, Video Editing, Or Design Software? [yes or no]
-        ('savana.hughes28@myhunter.cuny.edu',2,'no')
+        ('savanatechtest@gmail.com',2,'no')
 )
 cur.execute('INSERT INTO answers (email, id, answer)'
         'VALUES (%s, %s, %s)',
         #Are You Always On The Go? [yes or no]
-        ('savana.hughes28@myhunter.cuny.edu',3,'yes')
+        ('savanatechtest@gmail.com',3,'yes')
 )
 conn.commit()
 cur.close()
