@@ -2,12 +2,12 @@
 
 
 <!--display form IF user doesn't exist in table-->
-<div *ngIf="newUser; else oldUser" class="container details"> 
+<!-- <div *ngIf="newUser; else oldUser" class="container details"> 
     <app-signup-form 
         [email]="this.userEmail"
         (SignInEvent)="setNewUser($event)">
     </app-signup-form>
-</div>
+</div> -->
 
 <!--else show profile content-->
 <!--
@@ -54,22 +54,23 @@
 </div>
 
 -->
-<ng-template #oldUser>
+<!--<ng-template #oldUser> -->
 
 <!--info available from auth0 token-->
 <div class="container auth0-profile">
     <h1>Profile</h1>
+    <br>
     <div *ngIf="auth.user$ | async as user">
         <div class="profile-header">
            <!-- <img [src]="user.picture" alt="user profile pic" class="rounded-circle img-fliud"/>-->
-            <p>First Name: {{ returnedUser.firstName }} </p>
-            <p>Last Name: {{ returnedUser.lastName }} </p>
-            <p>Email: {{ returnedUser.email }} </p> 
-            <p>Role: {{ returnedUser.role }} </p>           
+            <p><b>First Name:</b> {{ returnedUser?.firstName }} </p>
+            <p><b>Last Name:</b> {{ returnedUser?.lastName }} </p>
+            <p><b>Email:</b> {{ returnedUser?.email }} </p> 
+            <p><b>Role:</b> {{ returnedUser?.role }} </p>           
         </div>
     </div>
 </div>
-</ng-template>
+<!--</ng-template> -->
 
 </div>
 

@@ -7,6 +7,7 @@ import { ProductClass } from '../product-class.model';
 import { UserClass } from '../user-class.model';
 
 
+
 @Component({ //need to actually display the users
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -24,7 +25,7 @@ export class ProfileComponent implements OnInit {
 
   savedProducts: ProductClass[] = [];  
 
-  returnedUser = new UserClass("","","","");
+  returnedUser: any;
 
   constructor(
     private _profileService: ProfileService, 
@@ -39,22 +40,39 @@ export class ProfileComponent implements OnInit {
 
   //check if user email exists in table
   //determines if user needs to edit account details
-  isNewUser(email: string): void {
+  getUser(email: string): void {
+
+    let fname:any;
+    let lname:any;
+    let role:any;
+    let newEmail:any;
+    this.userService.getUser(this.userEmail)
+    .subscribe((data) => {
+      console.log("subscribe data:");
+      console.log(data);
+      newEmail = Object.values(data)[0];
+      fname = Object.values(data)[1];
+      lname = Object.values(data)[2];
+      role = Object.values(data)[3];
+      this.returnedUser = new UserClass(fname,lname,role,newEmail);  //create user model + set to returnedUser
+      console.log(this.returnedUser);   
+
+      // if(false) {   //returnedUser is empty
+      //   console.log("yes new user--> display account details");     //testing
+      //   this.newUser=true; //set newUser 
+      // }
+      // else {      //not a new user
+      //   console.log("NOT a new user, --> display profile");         //testing
+      //   //this.getUserData(this.userEmail); //returnedUser is user object, still needed saved product info
+        
+      // }
+      
+    });
+    
+    
+    
 
     
-    const returnedUser = this.userService.getUser(this.userEmail); //should return observable later
-    //.subscribe...
-    // returnedUser.displayUser();   //testing
-
-    if(true) {   //returnedUser is empty
-      console.log("yes new user--> display account details");     //testing
-      this.newUser=true; //set newUser 
-    }
-    else {      //not a new user
-      console.log("NOT a new user, --> display profile");         //testing
-      this.getUserData(this.userEmail); //returnedUser is user object, still needed saved product info
-      
-    }
   }
 
   //retrieve user saved products
@@ -72,7 +90,9 @@ export class ProfileComponent implements OnInit {
        (profile) => {
          this.profileJson = JSON.stringify(profile);
          this.userEmail = profile?.email as string;  //saving email to variable
-         this.isNewUser(this.userEmail);  //check if new user
+         console.log("ngoninit profile");
+         console.log(this.userEmail);
+         this.getUser(this.userEmail);  //check if new user
         }
     )
     

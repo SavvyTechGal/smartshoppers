@@ -11,8 +11,8 @@ import { AuthService } from '@auth0/auth0-angular';
   styleUrls: ['./signup-form.component.css']
 })
 export class SignupFormComponent implements OnInit {
-  @Input() email = '';
-  @Output() SignInEvent = new EventEmitter<boolean>();
+  // @Input() email = '';
+  // @Output() SignInEvent = new EventEmitter<boolean>();
 
   public captchaResolved : boolean = false;
 
@@ -22,18 +22,18 @@ export class SignupFormComponent implements OnInit {
 
   public user: any;
 
+  public userEmail:string = '';
+
+  public userAdded: boolean = false;
+
   //takes form values + sends to backend to add user
   onSubmit(signupForm: { value: any; }) {  
     let fname = signupForm.value.firstname;
     let lname = signupForm.value.lastname;
     let role = signupForm.value.roleSel;
-    console.log(`email in signup: ${this.email}`);
-    this.userService.addUser(fname,lname,role,this.email);
-    //.subscribe
-    
-    let state: boolean = true;
-    this.SignInEvent.emit(state);
-    
+    console.log(`email in signup: ${this.userEmail}`);
+    this.userService.addUser(fname,lname,role,this.userEmail);
+    this.userAdded = true;
     
   }
 
@@ -41,6 +41,13 @@ export class SignupFormComponent implements OnInit {
   constructor(public auth: AuthService, public userService: UserService) { }
 
   ngOnInit(): void {
+    this.auth.user$.subscribe(
+      (profile) => { 
+        this.userEmail = profile?.email as string;  //saving email to variable
+        console.log(`ngonit`);
+        console.log(this.userEmail);
+       }
+   )
   }
 
 }
