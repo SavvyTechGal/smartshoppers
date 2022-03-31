@@ -4,6 +4,7 @@ import { Chart } from 'chart.js';
 import { AuthService } from '@auth0/auth0-angular';
 import { UserService } from '../user.service';
 import { ProductClass } from '../product-class.model';
+import { UserClass } from '../user-class.model';
 
 
 @Component({ //need to actually display the users
@@ -23,6 +24,8 @@ export class ProfileComponent implements OnInit {
 
   savedProducts: ProductClass[] = [];  
 
+  returnedUser = new UserClass("","","","");
+
   constructor(
     private _profileService: ProfileService, 
     public auth: AuthService,
@@ -38,9 +41,8 @@ export class ProfileComponent implements OnInit {
   //determines if user needs to edit account details
   isNewUser(email: string): void {
     
-    const returnedUser = this.userService.getUser(this.userEmail); //should return observable later
-    //.subscribe...
-    returnedUser.displayUser();   //testing
+    this.userService.getUser(this.userEmail); //should return observable later
+    
     if(true) {   //returnedUser is empty
       console.log("yes new user--> display account details");     //testing
       this.newUser=true; //set newUser 

@@ -61,10 +61,11 @@
     <h1>Profile</h1>
     <div *ngIf="auth.user$ | async as user">
         <div class="profile-header">
-            <img [src]="user.picture" alt="user profile pic" class="rounded-circle img-fliud"/>
-            <p>Name: {{ user.name }} </p>
-            <p>Email: {{ user.email }} </p>
-            <p>Role: ""</p>            
+           <!-- <img [src]="user.picture" alt="user profile pic" class="rounded-circle img-fliud"/>-->
+            <p>First Name: {{ returnedUser.firstName }} </p>
+            <p>Last Name: {{ returnedUser.lastName }} </p>
+            <p>Email: {{ returnedUser.email }} </p> 
+            <p>Role: {{ returnedUser.role }} </p>           
         </div>
     </div>
 </div>
