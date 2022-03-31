@@ -57,12 +57,22 @@ export class ProductsComponent implements OnInit {
         .subscribe(data => {
           //this.products = data;
           console.log(data.length);
-          for(let i = 0; i < 5; i++) {
-            const newProduct = new ProductClass(data[i].title, data[i].price, 
-              data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
-            //console.log(newProduct);
-            this.products.push(newProduct);
+          if(data.length > 5) {   //filter returns more than 5 products
+            for(let i = 0; i < 5; i++) {
+              const newProduct = new ProductClass(data[i].title, data[i].price, 
+                data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
+              //console.log(newProduct);
+              this.products.push(newProduct);
+            }
+          } else {      //5 or less products
+            for(let i = 0; i < data.length; i++) {
+              const newProduct = new ProductClass(data[i].title, data[i].price, 
+                data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
+              //console.log(newProduct);
+              this.products.push(newProduct);
+            }
           }
+          
         }); 
         // console.log("getproducts");
         // console.log(this.userEmail);
