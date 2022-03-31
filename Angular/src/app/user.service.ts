@@ -3,37 +3,42 @@ import { UserClass } from './user-class.model';
 import { AuthService } from '@auth0/auth0-angular';
 import { ProductClass } from './product-class.model';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
+  private jsonData: any;
   private newUser: any;
   private _url = `http://127.0.0.1:5000/users`
 
   constructor(public auth:AuthService, public HttpClient:HttpClient) { }
 
   //change to http get (user db)
-  getUser(email: string) {  //change to : Observable<UserClass>
-    //check if email is registered in table
-    //if yes --> return user model object
-    //if no --> return empty object?
-    //let testUser = new UserClass("fname","lname",email,"role"); //for testing purposes
-    //return this.http.get<UserClass>(this._url);
+  getUser(email: string): Observable<any> {
+    
+    console.log("userservice -- getUser");
 
     let request =
     this.HttpClient.post(`http://127.0.0.1:5000/getusers`,
     {
       "email": email,
-    })
-
-    request.subscribe((data) => {
-      console.log(data); })
-
+    });
+    return request;
+    // request.subscribe((data) => {
+    //   console.log(data); 
+      
+    //   let newEmail = Object.values(data)[0];
+    //   let fname = Object.values(data)[1];
+    //   let lname = Object.values(data)[2];
+    //   let role = Object.values(data)[3];
+    //   this.newUser = new UserClass(fname,lname,role,newEmail);
+    //   console.log(this.newUser);
+      
+    // });
     
-    
-    //return testUser;
 
   }
   
@@ -42,6 +47,7 @@ export class UserService {
   addUser(firstName: string, lastName: string, role: string, email: string) { //: Observable<UserClass> 
     // this.newUser = new UserClass(firstName, lastName,role, email);
     //this.newUser.displayUser();  //testing purposes
+    console.log("addUser");
     let request =
     this.HttpClient.post(this._url,
     {
@@ -49,11 +55,11 @@ export class UserService {
       "firstName": firstName,
       "lastName": lastName,
       "role": role,
-    })
+    });
 
     request.subscribe((data) => {
       console.log(data); })
-    }
+    };
 
   //change to http get (savedProducts db)
   getSavedData(email:string) {  //: Observable<ProductClass[]>

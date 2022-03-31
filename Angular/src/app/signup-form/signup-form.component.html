@@ -1,3 +1,4 @@
+<div class="body">
 <div class="container">
     <h2>Please Enter Account Details</h2>
     <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
@@ -61,11 +62,14 @@
     <button [disabled]="!captchaResolved || firstname.errors?.['required'] || lastname.errors?.['required'] || !roleSel.value" 
             type="submit" 
             class="btn btn-primary"
-            routerLink="/profile"
             >
             Save 
     </button>
     <p><small>Save to view profile.</small></p>
+
+    <!--after user is added-->
+    <button *ngIf="userAdded" type="button" class="btn btn-primary" routerLink="/profile">Continue to Profile</button>
      
     </form>
+</div>
 </div>
