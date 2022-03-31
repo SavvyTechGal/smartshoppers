@@ -37,11 +37,11 @@ export class ProductsComponent implements OnInit {
 
   //save product to user's saved data
   saveProduct(product: ProductClass): void {
-    this._productService.saveProduct(product,this.userEmail)
-    .subscribe(data => {
-      console.log(data);
-    });
-    console.log(product);
+    // this._productService.saveProduct(product,this.userEmail)
+    // .subscribe(data => {
+    //   console.log(data);
+    // });
+    // console.log(product);
   }
 
   ngOnInit(): void {
@@ -56,9 +56,10 @@ export class ProductsComponent implements OnInit {
        }
    )
 
-    this._productService.getProducts() //calling service to get data from json
+    this._productService.getProducts(this.userEmail) //calling service to get data from json
     .subscribe(data => {
-      this.products = data;
+      //this.products = data;
+      console.log(data);
     }); 
 }
 
