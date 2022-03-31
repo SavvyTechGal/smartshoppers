@@ -13,12 +13,12 @@ export class AnswersService {
 
 
   //change to http POST (user db)
-  addAnswer(email: string, id: number, answer: any) {
+  addAnswer(answer: any) {
     let request =
     this.HttpClient.post(`http://127.0.0.1:5000/answers`,
     {
-      "email": email,
-      "id" : id,
+      // "email": email,
+      // "id" : id,
       "answer" : answer
     })
 
