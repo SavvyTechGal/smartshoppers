@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Answers } from '../answers-class.model';
 import { AnswersService } from '../answers.service';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-travel',
@@ -8,14 +9,20 @@ import { AnswersService } from '../answers.service';
   styleUrls: ['./travel.component.css']
 })
 export class TravelComponent implements OnInit {
+  @Output() SendAnswerEvent = new EventEmitter<boolean>();
   AnswersModel = new Answers(false);
-  onSubmit(quizanswers: { value: any; }) {
-    console.log(quizanswers.value);  //object form
+  addAnswer(quizanswers: { value: any; }) {
+    console.log(quizanswers.value.traveler);  //object form
   }
+
+  newAnswer: any;
   constructor(
     public answerService: AnswersService
   ) { }
 
+  setNewUser(answer: boolean) {
+    this.newAnswer = answer;
+  }
 
   // isNewUser(email: string): void {
     
@@ -34,6 +41,7 @@ export class TravelComponent implements OnInit {
   // }
 
   ngOnInit(): void {
+    this.answerService.addAnswer(this.newAnswer);
   }
 
 }
