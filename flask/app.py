@@ -2,6 +2,7 @@ import os
 import psycopg2
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
+import json
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
@@ -64,11 +65,11 @@ def get_users():
             [email,]
         )
         conn.commit()
-        cur.close()
-        conn.close()
         result = cur.fetchone()
+        cur.close()
+        conn.close() 
         print(result)
-        return result
+        return json.dumps(result)
     else:
         return 'hi!'
 

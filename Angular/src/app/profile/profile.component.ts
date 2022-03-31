@@ -40,7 +40,7 @@ export class ProfileComponent implements OnInit {
     
     const returnedUser = this.userService.getUser(this.userEmail); //should return observable later
     //.subscribe...
-    returnedUser.displayUser();   //testing
+    // returnedUser.displayUser();   //testing
     if(true) {   //returnedUser is empty
       console.log("yes new user--> display account details");     //testing
       this.newUser=true; //set newUser 
