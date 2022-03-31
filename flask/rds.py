@@ -8,30 +8,53 @@ conn = psycopg2.connect(
         port = 5432
 )
 
-# Open a cursor to perform database operations
 cur = conn.cursor()
-# email = params['email'].strip()
-email = 'sanakurata1996@gmail.com'
-print(email)
-cur = conn.cursor()
-#quer from RDS DATABASE -> CHECK TABLEPLUS 
-cur.execute(
-    """
-    SELECT 
-    email, 
-    first_name, 
-    last_name, 
-    role 
-    FROM users 
-    WHERE email = %s;
-    """,
-    [email,]
+#insert into RDS DATABASE -> CHECK TABLEPLUS 
+cur.execute('INSERT INTO answers (email, id, answer)'
+        'VALUES (%s, %s, %s)',
+        #What operating system do you prefer? [Mac OS, Windows OS and Chrome OS]
+        ('savana.hughes28@myhunter.cuny.edu',1,'Windows OS')
+)
+cur.execute('INSERT INTO answers (email, id, answer)'
+        'VALUES (%s, %s, %s)',
+        #Do You Use Photoshop, Video Editing, Or Design Software? [yes or no]
+        ('savana.hughes28@myhunter.cuny.edu',2,'no')
+)
+cur.execute('INSERT INTO answers (email, id, answer)'
+        'VALUES (%s, %s, %s)',
+        #Are You Always On The Go? [yes or no]
+        ('savana.hughes28@myhunter.cuny.edu',3,'yes')
 )
 conn.commit()
-result = cur.fetchone()
-print(result)
 cur.close()
 conn.close()
+        
+# # Open a cursor to perform database operations
+# cur = conn.cursor()
+# # email = params['email'].strip()
+# email = 'sanakurata1996@gmail.com'
+# print(email)
+# cur = conn.cursor()
+# #quer from RDS DATABASE -> CHECK TABLEPLUS 
+# cur.execute(
+#     """
+#     SELECT 
+#     email, 
+#     first_name, 
+#     last_name, 
+#     role 
+#     FROM users 
+#     WHERE email = %s;
+#     """,
+#     [email,]
+# )
+# conn.commit()
+# result = cur.fetchone()
+# print(result)
+# cur.close()
+# conn.close()
+
+
 
 # for row in results:
 #         print("email: {}".format(row['email']))

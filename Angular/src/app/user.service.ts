@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class UserService {
 
   private newUser: any;
-  private _url = `http://127.0.0.1:5000/users`
+  private _url = `http://127.0.0.1:5000/user`
 
   constructor(public auth:AuthService, public HttpClient:HttpClient) { }
 
@@ -23,7 +23,7 @@ export class UserService {
     //return this.http.get<UserClass>(this._url);
 
     let request =
-    this.HttpClient.post(`http://127.0.0.1:5000/getusers`,
+    this.HttpClient.post(`http://127.0.0.1:5000/getuser`,
     {
       "email": email,
     })
