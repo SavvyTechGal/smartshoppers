@@ -157,7 +157,7 @@ def get_products():
         conn.close() 
         answers_json = json.dumps(answers)
         print("test", answers_json)
-        products = gs_api(answers_json)
+        products = gs_api('test')
         return products
     else:
         return gs_api('test')
