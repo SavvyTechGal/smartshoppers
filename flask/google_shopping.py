@@ -1,8 +1,8 @@
 from serpapi import GoogleSearch
 import json
 
-def gs_api(answers_json):
-  # answers_json = [["sanakurata1996@gmail.com", 1, "Mac OS"], ["sanakurata1996@gmail.com", 2, "no"], ["sanakurata1996@gmail.com", 3, "yes"]]
+def gs_api(test):
+  answers_json = [["sanakurata1996@gmail.com", 1, "Mac OS"], ["sanakurata1996@gmail.com", 2, "no"], ["sanakurata1996@gmail.com", 3, "yes"]]
   filter_json = []
   for answer in answers_json:
     x = {
