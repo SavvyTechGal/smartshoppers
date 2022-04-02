@@ -1,0 +1,74 @@
+<!--Product Results -->
+<div class="card-columns products">
+    <div class="card" *ngFor="let item of items">
+        <img src={{item.thumbnail}} class="card-img-top border product-img" >
+        <div class="card-body">
+            <h4 class="card-title">{{item.title}}</h4>
+            <p class="card-text"><b>Price:</b> {{item.price}}</p>
+            <p class="card-text"><b>Rating: </b>{{item.rating}}</p>
+            <p class="card-text"><b>Source: </b><a href={{item.link}} target="_blank">{{item.source}}</a></p>
+        </div>
+        <div class="card-footer">
+            <button 
+                type="button" 
+                class="btn border" 
+                data-toggle="modal" 
+                data-target="#productModal"
+                (click)="handleModal(item)">
+                Learn More
+            </button>
+            <button *ngIf="isSignedIn && !isSavedPage" class="btn border" (click)="saveProduct(item)"> <!--if product isnt saved-->
+                Save
+            </button>
+            <button *ngIf="isSignedIn && isSavedPage" class="btn border">
+                Unsave Product
+            </button>
+            
+            <button *ngIf="!isSignedIn" class="btn" title="Sign in to Save"disabled>Save</button>
+            
+        </div>   
+        
+        
+
+    </div>
+</div>
+
+<!-- Product Modal -->
+<div class="modal fade" id="productModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!--Modal Header-->
+            <div class="modal-header">
+                <h4 class="modal-title">{{ modalProduct.title }} </h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!--Modal body-->
+            <div class="modal-body">
+                <img src={{modalProduct.thumbnail}} class="modal-img" >
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Additional Product Details</th>
+                        <th></th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let extention of modalProduct.extensions">
+                        <td>{{ extention }}</td>
+                        <td> </td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+            </div>
+            <!--Modal footer-->
+            <div class="modal-footer">
+                
+                <button class="btn border" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>

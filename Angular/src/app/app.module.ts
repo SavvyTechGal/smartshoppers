@@ -36,6 +36,7 @@ import { SignupButtonComponent } from './signup-button/signup-button.component';
 import { UserService } from './user.service';
 import { ProductService } from './product.service';
 import { AnswersService } from './answers.service';
+import { ProductDisplayComponent } from './product-display/product-display.component';
 
 
 
@@ -64,7 +65,8 @@ import { AnswersService } from './answers.service';
     LoginButtonComponent,
     NavbarComponent,
     LogoutButtonComponent,
-    SignupButtonComponent
+    SignupButtonComponent,
+    ProductDisplayComponent
   ],
   imports: [
     BrowserModule,

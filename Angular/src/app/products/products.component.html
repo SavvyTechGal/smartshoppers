@@ -1,76 +1,15 @@
-<div class="body">
+<div *ngIf="loadedIn; else loading" class="body">
     <h2>Here is what we found for you!</h2>
-<!--Product Results -->
-    <div class="card-columns products">
-        <div class="card" *ngFor="let product of products">
-            <img src={{product.thumbnail}} class="card-img-top border product-img" >
-            <div class="card-body">
-                <h4 class="card-title">{{product.title}}</h4>
-                <p class="card-text"><b>Price:</b> {{product.price}}</p>
-                <p class="card-text"><b>Rating: </b>{{product.rating}}</p>
-                <p class="card-text"><b>Source: </b><a href={{product.link}} target="_blank">{{product.source}}</a></p>
-            </div>
-            <div class="card-footer">
-                <button 
-                    type="button" 
-                    class="btn border" 
-                    data-toggle="modal" 
-                    data-target="#productModal"
-                    (click)="handleModal(product)">
-                    Learn More
-                </button>
-                <button *ngIf="isSignedIn; else notSignedIn" class="btn border" (click)="saveProduct(product)">
-                    Save
-                </button>
-                <ng-template #notSignedIn>
-                    <button class="btn" title="Sign in to Save"disabled>Save</button>
-                </ng-template>
-            </div>   
-            
-            
 
-        </div>
-    </div>
-
-    
+   <app-product-display [items]="products" [userEmail]="userEmail" [isSignedIn]="isSignedIn" [isSavedPage]="isSavedPage">
+       
+   </app-product-display>
 </div>
 
-<!-- Product Modal -->
-<div class="modal fade" id="productModal">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <!--Modal Header-->
-            <div class="modal-header">
-                <h4 class="modal-title">{{ modalProduct.title }} </h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <!--Modal body-->
-            <div class="modal-body">
-                <img src={{modalProduct.thumbnail}} class="modal-img" >
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th>Additional Product Details</th>
-                        <th></th>
-                        
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr *ngFor="let extention of modalProduct.extensions">
-                        <td>{{ extention }}</td>
-                        <td> </td>
-                      </tr>
-                      
-                    </tbody>
-                  </table>
-            </div>
-            <!--Modal footer-->
-            <div class="modal-footer">
-                
-                <button class="btn border" data-dismiss="modal">Close</button>
-            </div>
-
-        </div>
-
+<ng-template #loading>
+    <div class="loading">
+        <h6>Currently loading in your results!</h6>
     </div>
-</div>
+</ng-template>
+
+
