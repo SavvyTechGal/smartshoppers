@@ -17,26 +17,29 @@ export class ProfileComponent implements OnInit {
 
   private profileJson: string = '';
 
-  public userEmail: string = '';  
+  userEmail: string = '';  
 
-  public users : any = []; //had to add any type
-
-  newUser: any;
+  newUser: boolean = false;  //if user is registered in db
 
   savedProducts: ProductClass[] = [];  
 
-  returnedUser: any;
+  isSavedPage: boolean = true;
+
+  returnedUser: any;  //user from db
+
+  profileLoadedIn: boolean = false;
+
+  loadedIn: boolean = false;
+
+  isSignedIn: boolean = false;
+
+  hasSavedProducts: boolean = true;
 
   constructor(
-    private _profileService: ProfileService, 
     public auth: AuthService,
     public userService: UserService) 
     { }
 
-  setNewUser(state: boolean) {
-    this.newUser = !state;
-    console.log(!state);
-  }
 
   //check if user email exists in table
   //determines if user needs to edit account details
@@ -46,40 +49,62 @@ export class ProfileComponent implements OnInit {
     let lname:any;
     let role:any;
     let newEmail:any;
+    console.log(email);
     this.userService.getUser(this.userEmail)
     .subscribe((data) => {
-      console.log("subscribe data:");
-      console.log(data);
+      //console.log("subscribe--getUser");
+      //console.log(data);
+      if(data == null) {
+        console.log("data is null");  //if user not found in db -> not registered yet -> direct to signupform
+        this.newUser = true;
+      }
+      else {    //if user returned --> load profile + saved
       newEmail = Object.values(data)[0];
       fname = Object.values(data)[1];
       lname = Object.values(data)[2];
       role = Object.values(data)[3];
       this.returnedUser = new UserClass(fname,lname,role,newEmail);  //create user model + set to returnedUser
       console.log(this.returnedUser);   
-
-      // if(false) {   //returnedUser is empty
-      //   console.log("yes new user--> display account details");     //testing
-      //   this.newUser=true; //set newUser 
-      // }
-      // else {      //not a new user
-      //   console.log("NOT a new user, --> display profile");         //testing
-      //   //this.getUserData(this.userEmail); //returnedUser is user object, still needed saved product info
-        
-      // }
+      this.profileLoadedIn = true;
+      this.isSignedIn = true;
+      this.getUserData(this.userEmail);
+      }
       
     });
-    
-    
-    
-
     
   }
 
   //retrieve user saved products
   getUserData(email: string) {
-    this.userService.getSavedData(email); 
-    //.subscribe
-    // (data) => savedProducts = data
+    this.userService.getSavedData(email)
+    .subscribe(data => {
+      if(data == null) {  //user has no saved products
+        this.hasSavedProducts = false;
+      }
+      else {
+        console.log(data.length);
+        if(data.length > 5) {   //filter returns more than 5 products
+          for(let i = 0; i < 5; i++) {
+            const newProduct = new ProductClass(data[i].title, data[i].price, 
+              data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
+            //console.log(newProduct);
+            this.savedProducts.push(newProduct);
+          }
+        } else {      //5 or less products
+          for(let i = 0; i < data.length; i++) {
+            const newProduct = new ProductClass(data[i].title, data[i].price, 
+              data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
+            //console.log(newProduct);
+            this.savedProducts.push(newProduct);
+          }
+        }
+      }
+
+      this.loadedIn = true;   //requests are finished loading --> ready to display
+      //console.log(this.products);
+      
+    });
+    
   }
 
   
@@ -90,18 +115,10 @@ export class ProfileComponent implements OnInit {
        (profile) => {
          this.profileJson = JSON.stringify(profile);
          this.userEmail = profile?.email as string;  //saving email to variable
-         console.log("ngoninit profile");
          console.log(this.userEmail);
-         this.getUser(this.userEmail);  //check if new user
+         this.getUser(this.userEmail);  
         }
     )
-    
-    
-    
-
-
-    //this._profileService.getUsers() //returns an observable 
-     //   .subscribe(data => this.users = data); //assign the data that arrives to users array
   }
 
 }

@@ -1,14 +1,5 @@
-.body {
-    background-color: rgb(211, 231, 248);
-}
 
-h2 {
-    text-align: center;
-    padding:3%;
-    
-}
-
-/* .product-img, .modal-img {
+.product-img, .modal-img {
     
     height:275px;
     object-fit: contain;
@@ -34,10 +25,4 @@ h2 {
 button {
     margin:5px;
     background-color: antiquewhite;
-} */
-
-.loading {
-    background-color: antiquewhite;
-    text-align: center;
-    padding:20%;
 }

@@ -3,7 +3,9 @@ import { UserClass } from './user-class.model';
 import { AuthService } from '@auth0/auth0-angular';
 import { ProductClass } from './product-class.model';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,57 +14,69 @@ export class UserService {
 
   private jsonData: any;
   private newUser: any;
-  private _url = `http://127.0.0.1:5000/`
+  
+  private baseURL = `http://127.0.0.1:5000/`
 
   constructor(public auth:AuthService, public HttpClient:HttpClient) { }
 
   //change to http get (user db)
   getUser(email: string): Observable<any> {
-    
     console.log("userservice -- getUser");
-
     let request =
-    this.HttpClient.post(this._url + `getuser`,
+    this.HttpClient.post(this.baseURL + `getuser`,
     {
       "email": email,
     });
-    return request;
-    // request.subscribe((data) => {
-    //   console.log(data); 
-      
-    //   let newEmail = Object.values(data)[0];
-    //   let fname = Object.values(data)[1];
-    //   let lname = Object.values(data)[2];
-    //   let role = Object.values(data)[3];
-    //   this.newUser = new UserClass(fname,lname,role,newEmail);
-    //   console.log(this.newUser);
-      
-    // });
-    
-
+    return request
+    .pipe(
+      catchError(this.handleError<UserClass>('getUser', { firstName: '', lastName: '', email: '', role: ''}))
+    );  //return empty user model if error
   }
   
 
   //change to http POST (user db)
-  addUser(firstName: string, lastName: string, role: string, email: string) { //: Observable<UserClass> 
-    // this.newUser = new UserClass(firstName, lastName,role, email);
-    //this.newUser.displayUser();  //testing purposes
+  addUser(firstName: string, lastName: string, role: string, email: string) { 
     console.log("addUser");
     let request =
-    this.HttpClient.post(this._url + `adduser`,
+    this.HttpClient.post(this.baseURL + `adduser`,
     {
       "email": email,
       "firstName": firstName,
       "lastName": lastName,
       "role": role,
     });
-
     request.subscribe((data) => {
       console.log(data); })
     };
 
   //change to http get (savedProducts db)
-  getSavedData(email:string) {  //: Observable<ProductClass[]>
-    //return this.http.get<ProductClass[]>(this._url);
+  getSavedData(email:string): Observable<any> {  
+    let request =
+    this.HttpClient.post(this.baseURL + `getproducts`,
+    {
+      "email": email,
+    });
+  return request;
   }
+
+//   /**
+//  * Handle Http operation that failed.
+//  * Let the app continue.
+//  *
+//  * @param operation - name of the operation that failed
+//  * @param result - optional value to return as the observable result
+//  */
+private handleError<T>(operation = 'operation', result?: T) {
+  return (error: any): Observable<T> => {
+
+    // TODO: send the error to remote logging infrastructure
+    console.error(error); // log to console instead
+
+    // TODO: better job of transforming error for user consumption
+    console.log(`${operation} failed: ${error.message}`);
+
+    // Let the app keep running by returning an empty result.
+    return of(result as T);
+  };
+}
 }
