@@ -32,7 +32,7 @@ export class ProductDisplayComponent implements OnInit {
 
   //save product to user's saved data
   saveProduct(product: ProductClass): void {
-    // this._productService.saveProduct(product,this.userEmail)
+    this._productService.saveProduct(product,this.userEmail);
     // .subscribe(data => {
     //   console.log(data);
     // });

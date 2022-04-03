@@ -16,8 +16,20 @@ export class ProductService {
 
   //http post into savedProducts db
   saveProduct(product:ProductClass, email:string) { //: Observable<ProductClass>
-    //return this.http.post<ProductClass>(this._someURL,product);
-  }
+    console.log(`saveProduct`);
+    console.log(`email: ${email} product: ${product.title}`);
+    // console.log("saveProduct");
+    // let request =
+    // this.HttpClient.post(this.baseURL + `...`,
+    // {
+    //   "email": email,
+    //   "product": product
+      
+    // });
+    // request.subscribe((data) => {
+    //   console.log(data); });
+  };
+  
 
 
   //call backend w/ http get for product results from filters
