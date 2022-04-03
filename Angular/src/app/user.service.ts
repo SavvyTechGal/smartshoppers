@@ -12,7 +12,8 @@ export class UserService {
 
   private jsonData: any;
   private newUser: any;
-  private _url = `http://127.0.0.1:5000/`
+  
+  private baseURL = `http://127.0.0.1:5000/`
 
   constructor(public auth:AuthService, public HttpClient:HttpClient) { }
 
@@ -22,7 +23,7 @@ export class UserService {
     console.log("userservice -- getUser");
 
     let request =
-    this.HttpClient.post(this._url + `getuser`,
+    this.HttpClient.post(this.baseURL + `getuser`,
     {
       "email": email,
     });
@@ -49,7 +50,7 @@ export class UserService {
     //this.newUser.displayUser();  //testing purposes
     console.log("addUser");
     let request =
-    this.HttpClient.post(this._url + `adduser`,
+    this.HttpClient.post(this.baseURL + `adduser`,
     {
       "email": email,
       "firstName": firstName,
@@ -62,7 +63,12 @@ export class UserService {
     };
 
   //change to http get (savedProducts db)
-  getSavedData(email:string) {  //: Observable<ProductClass[]>
-    //return this.http.get<ProductClass[]>(this._url);
+  getSavedData(email:string): Observable<any> {  
+    let request =
+  this.HttpClient.post(this.baseURL + `getproducts`,
+  {
+    "email": email,
+  });
+  return request;
   }
 }

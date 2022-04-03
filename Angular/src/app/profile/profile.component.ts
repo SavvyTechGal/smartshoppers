@@ -17,15 +17,21 @@ export class ProfileComponent implements OnInit {
 
   private profileJson: string = '';
 
-  public userEmail: string = '';  
+  userEmail: string = '';  
 
-  public users : any = []; //had to add any type
-
-  newUser: any;
+  newUser: any;  //boolean
 
   savedProducts: ProductClass[] = [];  
 
+  isSavedPage: boolean = true;
+
   returnedUser: any;
+
+  profileLoadedIn: boolean = false;
+
+  loadedIn: boolean = false;
+
+  isSignedIn: boolean = false;
 
   constructor(
     private _profileService: ProfileService, 
@@ -56,16 +62,9 @@ export class ProfileComponent implements OnInit {
       role = Object.values(data)[3];
       this.returnedUser = new UserClass(fname,lname,role,newEmail);  //create user model + set to returnedUser
       console.log(this.returnedUser);   
-
-      // if(false) {   //returnedUser is empty
-      //   console.log("yes new user--> display account details");     //testing
-      //   this.newUser=true; //set newUser 
-      // }
-      // else {      //not a new user
-      //   console.log("NOT a new user, --> display profile");         //testing
-      //   //this.getUserData(this.userEmail); //returnedUser is user object, still needed saved product info
-        
-      // }
+      this.profileLoadedIn = true;
+      this.isSignedIn = true;
+      this.getUserData(this.userEmail);
       
     });
     
@@ -77,9 +76,31 @@ export class ProfileComponent implements OnInit {
 
   //retrieve user saved products
   getUserData(email: string) {
-    this.userService.getSavedData(email); 
-    //.subscribe
-    // (data) => savedProducts = data
+    this.userService.getSavedData(email)
+    .subscribe(data => {
+      //this.products = data;
+      console.log(data.length);
+      if(data.length > 5) {   //filter returns more than 5 products
+        for(let i = 0; i < 5; i++) {
+          const newProduct = new ProductClass(data[i].title, data[i].price, 
+            data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
+          //console.log(newProduct);
+          this.savedProducts.push(newProduct);
+        }
+      } else {      //5 or less products
+        for(let i = 0; i < data.length; i++) {
+          const newProduct = new ProductClass(data[i].title, data[i].price, 
+            data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
+          //console.log(newProduct);
+          this.savedProducts.push(newProduct);
+        }
+      }
+
+      this.loadedIn = true;   //requests are finished loading --> ready to display
+      //console.log(this.products);
+      
+    });
+    
   }
 
   
@@ -90,7 +111,7 @@ export class ProfileComponent implements OnInit {
        (profile) => {
          this.profileJson = JSON.stringify(profile);
          this.userEmail = profile?.email as string;  //saving email to variable
-         console.log("ngoninit profile");
+         //console.log("ngoninit profile");
          console.log(this.userEmail);
          this.getUser(this.userEmail);  //check if new user
         }

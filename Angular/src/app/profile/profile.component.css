@@ -1,9 +1,13 @@
 .body {
-    background-color: rgb(250, 206, 220);
+    background-color: #facedc;
     padding:5%;
 }
 
-.profile-content {
+.savedSection {
+    background-color: #f7b4ca;
+    padding:5%;
+}
+/* .profile-content {
     background-color: #ebaf50;
     text-align: center;
     justify-content: center;
@@ -23,10 +27,25 @@
     padding: 15px 50px;
     font-weight: 700;
     font-size: larger;
-}
+} */
 
 .auth0-profile {
     background-color:white;
     padding:5%;
 }
 
+h2 {
+    text-align: center;
+}
+
+.loadingProfile {
+    background-color: white;
+    text-align: center;
+    padding:10%;
+}
+
+.loading {
+    background-color: #f7b4ca;
+    text-align: center;
+    padding:5%;
+}

@@ -1,8 +1,8 @@
 <div *ngIf="loadedIn; else loading" class="body">
     <h2>Here is what we found for you!</h2>
 
-   <app-product-display [items]="products" [userEmail]="userEmail" [isSignedIn]="isSignedIn" [isSavedPage]="isSavedPage">
-       
+   <app-product-display 
+        [items]="products" [userEmail]="userEmail" [isSignedIn]="isSignedIn" [isSavedPage]="isSavedPage">
    </app-product-display>
 </div>
 

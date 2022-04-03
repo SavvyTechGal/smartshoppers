@@ -1,4 +1,39 @@
 <div class="body">
+<!--info available from auth0 token-->
+<div *ngIf="profileLoadedIn; else loadingProfile" class="container auth0-profile">
+    <h1>Profile</h1>
+    <br>
+    <div *ngIf="auth.user$ | async as user">
+        <div class="profile-header">
+            <p><b>First Name:</b> {{ returnedUser?.firstName }} </p>
+            <p><b>Last Name:</b> {{ returnedUser?.lastName }} </p>
+            <p><b>Email:</b> {{ returnedUser?.email }} </p> 
+            <p><b>Role:</b> {{ returnedUser?.role }} </p>           
+        </div>
+    </div>
+</div>
+
+<ng-template #loadingProfile>
+    <div class="container loadingProfile">
+        <h6>Currently loading in your profile!</h6>
+    </div>
+</ng-template>
+
+</div>
+<!--Saved Products-->
+<div *ngIf="loadedIn; else loading" class="savedSection">
+    <h2>Saved Products</h2>
+
+   <app-product-display 
+        [items]="savedProducts" [userEmail]="userEmail" [isSignedIn]="isSignedIn" [isSavedPage]="isSavedPage">
+   </app-product-display>
+</div>
+
+<ng-template #loading>
+    <div class="loading">
+        <h6>Currently loading in your saved products!</h6>
+    </div>
+</ng-template>
 
 
 <!--display form IF user doesn't exist in table-->
@@ -54,26 +89,6 @@
 </div>
 
 -->
-<!--<ng-template #oldUser> -->
 
-<!--info available from auth0 token-->
-<div class="container auth0-profile">
-    <h1>Profile</h1>
-    <br>
-    <div *ngIf="auth.user$ | async as user">
-        <div class="profile-header">
-           <!-- <img [src]="user.picture" alt="user profile pic" class="rounded-circle img-fliud"/>-->
-            <p><b>First Name:</b> {{ returnedUser?.firstName }} </p>
-            <p><b>Last Name:</b> {{ returnedUser?.lastName }} </p>
-            <p><b>Email:</b> {{ returnedUser?.email }} </p> 
-            <p><b>Role:</b> {{ returnedUser?.role }} </p>           
-        </div>
-    </div>
-</div>
-<!--</ng-template> -->
 
-</div>
 
-<!-- <ul *ngFor = "let user of users">
-    <li>{{user.name}}</li>
-</ul> -->
