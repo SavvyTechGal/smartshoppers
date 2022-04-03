@@ -24,21 +24,30 @@
 
     </div>
     <!--Saved Products-->
-    <div *ngIf="loadedIn; else loading" class="savedSection">
-        <h2>Saved Products</h2>
+    <div *ngIf="hasSavedProducts; else nonSaved">
 
-    <app-product-display 
-            [items]="savedProducts" [userEmail]="userEmail" [isSignedIn]="isSignedIn" [isSavedPage]="isSavedPage">
-    </app-product-display>
-    </div>
+        <div *ngIf="loadedIn; else loading" class="savedSection">
+            <h2>Saved Products</h2>
 
-    <ng-template #loading>
-        <div class="loading">
-            <h6>Loading Saved Products!</h6>
-            <div class="spinner-border"></div>
+            <app-product-display 
+                    [items]="savedProducts" [userEmail]="userEmail" [isSignedIn]="isSignedIn" [isSavedPage]="isSavedPage">
+            </app-product-display>
         </div>
-    </ng-template>
 
+        <ng-template #loading>
+            <div class="loading">
+                <h6>Loading Saved Products!</h6>
+                <div class="spinner-border"></div>
+            </div>
+        </ng-template>
+    </div>
+    <!--if user has no saved products-->
+    <ng-template #nonSaved>  
+        <div class="nonSaved">
+            <p>No saved products currently.</p>
+        </div>
+        
+    </ng-template>
 
 </div>
 

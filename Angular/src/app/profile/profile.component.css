@@ -44,11 +44,13 @@ h2 {
     padding:10%;
 }
 
-.loading {
+.loading, .nonSaved {
     background-color: #f7b4ca;
     text-align: center;
     padding:5%;
 }
+
+
 
 .NewUser {
     text-align: center;
