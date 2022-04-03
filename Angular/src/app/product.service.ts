@@ -2,15 +2,16 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ProductClass } from './product-class.model';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  private _url: string = "/assets/mock_data/products.json"; //replace url for flask
+  //private _url: string = "/assets/mock_data/products.json"; //replace url for flask
   private baseURL = `http://127.0.0.1:5000/`
-  private _someURL: string = ""; //replace url for flask
+  
   constructor(private HttpClient: HttpClient) { }
 
   //http post into savedProducts db

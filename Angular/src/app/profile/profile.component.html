@@ -1,94 +1,54 @@
-<div class="body">
-<!--info available from auth0 token-->
-<div *ngIf="profileLoadedIn; else loadingProfile" class="container auth0-profile">
-    <h1>Profile</h1>
-    <br>
-    <div *ngIf="auth.user$ | async as user">
-        <div class="profile-header">
-            <p><b>First Name:</b> {{ returnedUser?.firstName }} </p>
-            <p><b>Last Name:</b> {{ returnedUser?.lastName }} </p>
-            <p><b>Email:</b> {{ returnedUser?.email }} </p> 
-            <p><b>Role:</b> {{ returnedUser?.role }} </p>           
+<div *ngIf="!newUser; else isNewUser" class="profilePage">
+
+    <div class="body">
+    <!--info available from auth0 token-->
+    <div *ngIf="profileLoadedIn; else loadingProfile" class="container auth0-profile">
+        <h1>Profile</h1>
+        <br>
+        <div *ngIf="auth.user$ | async as user">
+            <div class="profile-header">
+                <p><b>First Name:</b> {{ returnedUser?.firstName }} </p>
+                <p><b>Last Name:</b> {{ returnedUser?.lastName }} </p>
+                <p><b>Email:</b> {{ returnedUser?.email }} </p> 
+                <p><b>Role:</b> {{ returnedUser?.role }} </p>           
+            </div>
         </div>
     </div>
+
+    <ng-template #loadingProfile>
+        <div class="container loadingProfile">
+            <h6>Loading Profile!</h6>
+            <div class="spinner-border"></div>
+        </div>
+    </ng-template>
+
+    </div>
+    <!--Saved Products-->
+    <div *ngIf="loadedIn; else loading" class="savedSection">
+        <h2>Saved Products</h2>
+
+    <app-product-display 
+            [items]="savedProducts" [userEmail]="userEmail" [isSignedIn]="isSignedIn" [isSavedPage]="isSavedPage">
+    </app-product-display>
+    </div>
+
+    <ng-template #loading>
+        <div class="loading">
+            <h6>Loading Saved Products!</h6>
+            <div class="spinner-border"></div>
+        </div>
+    </ng-template>
+
+
 </div>
 
-<ng-template #loadingProfile>
-    <div class="container loadingProfile">
-        <h6>Currently loading in your profile!</h6>
+<ng-template #isNewUser>
+    <div class="NewUser">
+        <p>Oops! It seems you may have not finished setting up your profile...</p>
+        <p>Click to complete Account Setup</p>
+        <button class="btn btn-border" routerLink="/signupform" >Continue</button>
+
     </div>
 </ng-template>
-
-</div>
-<!--Saved Products-->
-<div *ngIf="loadedIn; else loading" class="savedSection">
-    <h2>Saved Products</h2>
-
-   <app-product-display 
-        [items]="savedProducts" [userEmail]="userEmail" [isSignedIn]="isSignedIn" [isSavedPage]="isSavedPage">
-   </app-product-display>
-</div>
-
-<ng-template #loading>
-    <div class="loading">
-        <h6>Currently loading in your saved products!</h6>
-    </div>
-</ng-template>
-
-
-<!--display form IF user doesn't exist in table-->
-<!-- <div *ngIf="newUser; else oldUser" class="container details"> 
-    <app-signup-form 
-        [email]="this.userEmail"
-        (SignInEvent)="setNewUser($event)">
-    </app-signup-form>
-</div> -->
-
-<!--else show profile content-->
-<!--
-
-
-<div class="container-fluid profile-content">
-    <h2>Hello {{users[0].name}}!</h2>
-    <hr class="my-5">
-
-    <div id="card-container" class="card text-white bg-dark" style="max-width: 50rem;">
-        <div class="card-header">Today</div>
-        <div class="card-body">
-            <h5 class="card-title">Apple Airpods</h5>
-            <p class="card-text text-white"> $899 </p>
-        </div>
-    </div>
-
-    <hr class="my-5">
-
-    <div id="card-container" class="card text-white bg-dark" style="max-width: 50rem;">
-        <div class="card-header">Mar 14</div>
-        <div class="card-body">
-            <h5 class="card-title">Groceries</h5>
-            <p class="card-text text-white"> $106 </p>
-            <h5 class="card-title">Commute</h5>
-            <p class="card-text text-white"> $45 </p>
-        </div>
-    </div>
-
-    <hr class="my-5">
-
-    <div id="card-container" class="card text-white bg-dark" style="max-width: 50rem;">
-        <div class="card-header">Mar 13</div>
-        <div class="card-body">
-            <h5 class="card-title">Mechanic</h5>
-            <p class="card-text text-white"> $200 </p>
-            <h5 class="card-title">Rent</h5>
-            <p class="card-text text-white"> $1000 </p>
-        </div>
-    </div>
-
-
-
-</div>
-
--->
-
 
 

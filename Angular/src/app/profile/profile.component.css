@@ -49,3 +49,14 @@ h2 {
     text-align: center;
     padding:5%;
 }
+
+.NewUser {
+    text-align: center;
+    background-color: #facedc;
+    padding:17%;
+}
+
+button {
+    margin:5px;
+    background-color: antiquewhite;
+}
