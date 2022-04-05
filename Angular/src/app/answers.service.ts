@@ -11,20 +11,18 @@ export class AnswersService {
 
   constructor(public auth:AuthService, public HttpClient:HttpClient) { }
 
-
-  //change to http POST (user db)
-  postAnswer(email: string, id: number, answer: any) {
+  postAnswer(email: string, id: string, answer: any) { //changed id from number to string; answers cannot be bools/numbers
     let request =
-    this.HttpClient.post(`http://127.0.0.1:5000/answers`,
+    this.HttpClient.post(`http://127.0.0.1:5000/addanswer`,
     {
       "email": email,
       "id" : id,
       "answer" : answer
-    })
+    });
 
     request.subscribe((data) => {
       console.log(data); })
-    }
+    };
 
   //change to http get (savedProducts db)
   getSavedData(email:string) {  //: Observable<ProductClass[]>

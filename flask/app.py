@@ -85,7 +85,7 @@ def add_answer():
         cur = conn.cursor()
         #insert into RDS DATABASE -> CHECK TABLEPLUS 
         cur.execute('INSERT INTO answers (email, id, answer)'
-            'VALUES (%s, %s, %s, %s)',
+            'VALUES (%s, %s, %s)', #removed one of the values
             (email,
              id,
              answer
