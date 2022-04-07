@@ -1,0 +1,84 @@
+<div class="body">
+    <div class="container">
+        <h2>Profile Details</h2>
+        <form #editForm="ngForm" (ngSubmit)="onSubmit(editForm)">
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input 
+            [(ngModel)]="fname"
+            required 
+            minlength="2" 
+            maxlength="20" 
+            ngModel name="firstname" 
+            #firstname="ngModel" 
+            id="firstname" 
+            type="text" 
+            class="form-control">
+            <div class="alert alert-danger" 
+            *ngIf="firstname.touched && !firstname.valid">
+                <div *ngIf="firstname.errors?.['required']">
+                    Input is invalid.
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input 
+            [(ngModel)]="lname"
+            required 
+            minlength="2" 
+            maxlength="20" 
+            ngModel name="lastname" 
+            #lastname="ngModel" 
+            id="lastname" 
+            type="text" 
+            class="form-control">
+            <div class="alert alert-danger" 
+            *ngIf="lastname.touched && !lastname.valid">
+                <div *ngIf="lastname.errors?.['required']">
+                    Input is invalid.
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input 
+            [(ngModel)]="userEmail" 
+            ngModel name="email"
+            #email="ngModel"
+            id="email"
+            type="text"
+            class="form-control" 
+            [disabled]=true>
+        </div>
+        <div class="form-group">
+            <label for="role" required>Role</label>
+            <select class="form-control" id="roleSel" [(ngModel)]="role" ngModel name="roleSel" #roleSel="ngModel">
+                <option>Casual User</option>
+                <option>Student</option>
+                <option>Software Developer</option>
+                <option>Graphic Designer</option>
+                <option>Gamer</option>
+                <option>Other</option>
+            </select>
+            
+        </div>
+    
+        
+        <br>
+    
+    
+        <button [disabled]="firstname.errors?.['required'] || lastname.errors?.['required'] || !roleSel.value" 
+                type="submit" 
+                class="btn btn-primary"
+                >
+                Save 
+        </button>
+        <br>
+        
+        <button *ngIf="saved" type="button" class="btn btn-primary" routerLink="/profile">Continue to Profile</button>
+         
+        </form>
+    </div>
+    </div>
+    

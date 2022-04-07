@@ -23,7 +23,7 @@ export class ProfileComponent implements OnInit {
 
   savedProducts: ProductClass[] = [];  
 
-  isSavedPage: boolean = true;
+  //isSavedPage: boolean = true;
 
   returnedUser: any;  //user from db
 

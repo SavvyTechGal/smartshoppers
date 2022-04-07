@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Output, EventEmitter } from '@angular/core';
 import { UserService } from '../user.service';
 import { AuthService } from '@auth0/auth0-angular';
 
@@ -11,8 +10,6 @@ import { AuthService } from '@auth0/auth0-angular';
   styleUrls: ['./signup-form.component.css']
 })
 export class SignupFormComponent implements OnInit {
-  // @Input() email = '';
-  // @Output() SignInEvent = new EventEmitter<boolean>();
 
   public captchaResolved : boolean = false;
 
@@ -20,7 +17,6 @@ export class SignupFormComponent implements OnInit {
      this.captchaResolved = (captchaResponse && captchaResponse.length > 0) ? true : false
   }
 
-  public user: any;
 
   public userEmail:string = '';
 

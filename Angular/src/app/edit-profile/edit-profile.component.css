@@ -1,0 +1,13 @@
+button {
+    margin-top: 15px;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    padding:20px;
+}
+
+.body {
+    background-color: rgb(250, 206, 240);
+    padding:5%;
+}

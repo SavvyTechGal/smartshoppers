@@ -58,6 +58,12 @@ h2 {
     padding:17%;
 }
 
+.edit {
+    float: right;
+    margin:5px;
+    background-color: antiquewhite;
+}
+
 button {
     margin:5px;
     background-color: antiquewhite;

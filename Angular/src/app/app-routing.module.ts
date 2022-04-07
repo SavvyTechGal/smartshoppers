@@ -18,6 +18,7 @@ import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 const routes: Routes = [
@@ -45,7 +46,13 @@ const routes: Routes = [
     path: 'profile', 
     component: ProfileComponent,
     canActivate: [AuthGuard],
+  },
+  {
+    path: 'edit-profile',
+    component: EditProfileComponent,
+    canActivate: [AuthGuard]
   }
+  
 ];
 
 @NgModule({
