@@ -39,6 +39,10 @@ export class ProfileComponent implements OnInit {
     public auth: AuthService,
     public userService: UserService) 
     { }
+  
+    updateSavedList(change:boolean) {
+      this.hasSavedProducts = change;
+    }
 
 
   //check if user email exists in table

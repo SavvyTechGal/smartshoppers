@@ -31,7 +31,11 @@
             <h2>Saved Products</h2>
 
             <app-product-display 
-                    [items]="savedProducts" [userEmail]="userEmail" [isSignedIn]="isSignedIn" [isSavedPage]=true>
+                    [items]="savedProducts" 
+                    [userEmail]="userEmail" 
+                    [isSignedIn]="isSignedIn" 
+                    [isSavedPage]=true
+                    (hasSavedProducts)="updateSavedList($event)">
             </app-product-display>
         </div>
 

@@ -20,8 +20,8 @@
             <button *ngIf="isSignedIn && !isSavedPage" class="btn border" (click)="saveProduct(item)"> <!--if product isnt saved-->
                 Save
             </button>
-            <button *ngIf="isSignedIn && isSavedPage" class="btn border">
-                Unsave Product
+            <button *ngIf="isSignedIn && isSavedPage" class="btn border" (click)="removeProduct(item)">
+                Unsave
             </button>
             
             <button *ngIf="!isSignedIn" class="btn" title="Sign in to Save"disabled>Save</button>

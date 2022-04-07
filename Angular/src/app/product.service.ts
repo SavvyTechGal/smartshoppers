@@ -32,7 +32,7 @@ export class ProductService {
 
   removeProduct(product: ProductClass, email: string) { //: Observable<any> 
     console.log('remove saved product');
-    console.log(`email: ${email} product: ${product.title}`);
+    //console.log(`email: ${email} product: ${product.title}`);
     // let request =
     // this.HttpClient.delete(this.baseURL + "...",
     // {

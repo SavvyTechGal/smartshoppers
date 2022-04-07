@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductClass } from '../product-class.model';
 import { ProductService } from '../product.service';
+import { Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -13,6 +14,8 @@ export class ProductDisplayComponent implements OnInit {
   @Input() userEmail: string = '';
   @Input() isSignedIn: boolean = false;
   @Input() isSavedPage: boolean = false;
+
+  @Output() hasSavedProducts = new EventEmitter<boolean>();
   
  
   modalProduct: ProductClass = {
@@ -27,7 +30,7 @@ export class ProductDisplayComponent implements OnInit {
 
   handleModal(product: ProductClass): void {
     this.modalProduct=product;
-    console.log(this.modalProduct)
+    //console.log(this.modalProduct)
   }
 
   //save product to user's saved data
@@ -37,6 +40,20 @@ export class ProductDisplayComponent implements OnInit {
     //   console.log(data);
     // });
     // console.log(product);
+  }
+
+  removeProduct(product: ProductClass): void {
+    console.log(`remove product: ${product.title}`);
+    this._productService.removeProduct(product,this.userEmail);
+    // .subscribe(data => {
+    //   console.log(data);
+    // });
+    // console.log(product);
+    const updated = this.items.filter(item => item !== product);
+    this.items = updated;
+    if(this.items.length == 0) {
+      this.hasSavedProducts.emit(false);
+    }
   }
 
   constructor(private _productService: ProductService) { }
