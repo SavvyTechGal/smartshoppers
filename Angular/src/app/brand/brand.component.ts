@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./brand.component.css']
 })
 export class BrandComponent implements OnInit {
+  public message = "";
 
   constructor() { }
 

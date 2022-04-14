@@ -38,7 +38,8 @@ import { ProductService } from './product.service';
 import { AnswersService } from './answers.service';
 import { ProductDisplayComponent } from './product-display/product-display.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
-
+import { OsComponent } from './os/os.component';
+import { SeveralAppsComponent } from './several-apps/several-apps.component';
 
 
 @NgModule({
@@ -68,7 +69,9 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     LogoutButtonComponent,
     SignupButtonComponent,
     ProductDisplayComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    OsComponent,
+    SeveralAppsComponent
   ],
   imports: [
     BrowserModule,

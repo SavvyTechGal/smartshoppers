@@ -19,7 +19,8 @@ import { ServicesComponent } from './services/services.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
-
+import { OsComponent } from './os/os.component';
+import { SeveralAppsComponent } from './several-apps/several-apps.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch:'full' },
@@ -37,6 +38,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'services', component: ServicesComponent},
+  { path: 'os', component: OsComponent},
+  { path: 'several-apps', component: SeveralAppsComponent},
   { 
     path: 'signupform', 
     component: SignupFormComponent,
