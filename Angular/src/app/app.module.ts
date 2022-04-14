@@ -37,6 +37,7 @@ import { UserService } from './user.service';
 import { ProductService } from './product.service';
 import { AnswersService } from './answers.service';
 import { ProductDisplayComponent } from './product-display/product-display.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 
@@ -66,7 +67,8 @@ import { ProductDisplayComponent } from './product-display/product-display.compo
     NavbarComponent,
     LogoutButtonComponent,
     SignupButtonComponent,
-    ProductDisplayComponent
+    ProductDisplayComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,

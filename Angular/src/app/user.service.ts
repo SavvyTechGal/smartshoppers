@@ -33,6 +33,19 @@ export class UserService {
     );  //return empty user model if error
   }
   
+  editUser(firstName: string, lastName: string, role: string, email: string) {
+    console.log("editUser");
+    console.log(`email: ${email}, fname: ${firstName}, lname: ${lastName}, role: ${role}`)
+    // let request =
+    // this.HttpClient.put(this.baseURL + `...`,  
+    // {
+    //   "email": email,
+    //   "firstName": firstName,
+    //   "lastName": lastName,
+    //   "role": role,
+    // });
+    // return request;
+  }
 
   //change to http POST (user db)
   addUser(firstName: string, lastName: string, role: string, email: string) { 
@@ -47,7 +60,7 @@ export class UserService {
     });
     request.subscribe((data) => {
       console.log(data); })
-    };
+  }
 
   //change to http get (savedProducts db)
   getSavedData(email:string): Observable<any> {  

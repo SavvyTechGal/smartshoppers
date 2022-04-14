@@ -23,12 +23,24 @@ export class ProductService {
     // this.HttpClient.post(this.baseURL + `...`,
     // {
     //   "email": email,
-    //   "product": product
+    //   "product": product.title
       
     // });
     // request.subscribe((data) => {
     //   console.log(data); });
   };
+
+  removeProduct(product: ProductClass, email: string) { //: Observable<any> 
+    console.log('remove saved product');
+    //console.log(`email: ${email} product: ${product.title}`);
+    // let request =
+    // this.HttpClient.delete(this.baseURL + "...",
+    // {
+    //   "email": email,
+    //   "product": product.title
+    // });
+    // return request;
+  }
   
 
 

@@ -13,6 +13,7 @@
                 <p><b>Role:</b> {{ returnedUser?.role }} </p>           
             </div>
         </div>
+        <button type="button" class="btn btn-border edit" routerLink="/edit-profile" >Edit Profile</button>
     </div>
 
     <ng-template #loadingProfile>
@@ -30,7 +31,11 @@
             <h2>Saved Products</h2>
 
             <app-product-display 
-                    [items]="savedProducts" [userEmail]="userEmail" [isSignedIn]="isSignedIn" [isSavedPage]="isSavedPage">
+                    [items]="savedProducts" 
+                    [userEmail]="userEmail" 
+                    [isSignedIn]="isSignedIn" 
+                    [isSavedPage]=true
+                    (hasSavedProducts)="updateSavedList($event)">
             </app-product-display>
         </div>
 
