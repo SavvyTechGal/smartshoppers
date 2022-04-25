@@ -1,0 +1,57 @@
+
+
+.body {
+    background-color: #EFD0A1;
+    
+}
+
+.question {
+    text-align: center;
+    padding:2.5%;
+    
+}
+
+
+
+.container {
+    background-color: #FCF2E3;
+    padding-top: 5%;
+    padding-bottom:5%;
+    border-radius: 25px;
+    
+}
+
+
+
+.icon {
+    width:115px;
+    height:115px;
+    margin:5px;
+    object-fit: cover;
+}
+
+
+.brand-selection {
+    padding: 1.5%;
+    text-align: center;
+}
+
+
+.next {
+    padding-top: 2%;
+    text-align: right;
+}
+
+#next-button {
+    background-color: #FFAC30 ;
+    border-color:#FFAC30 ;
+    border-radius: 25px;
+    font-weight: 700;
+    margin:35px;
+}
+
+img {
+    height:165px;
+    object-fit: cover;
+    
+}
