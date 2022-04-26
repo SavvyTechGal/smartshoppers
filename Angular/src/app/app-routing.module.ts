@@ -21,6 +21,7 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { OsComponent } from './os/os.component';
 import { SeveralAppsComponent } from './several-apps/several-apps.component';
+import { BudgetComponent } from './budget/budget.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch:'full' },
@@ -40,6 +41,7 @@ const routes: Routes = [
   { path: 'services', component: ServicesComponent},
   { path: 'os', component: OsComponent},
   { path: 'several-apps', component: SeveralAppsComponent},
+  { path: 'budget', component: BudgetComponent},
   { 
     path: 'signupform', 
     component: SignupFormComponent,

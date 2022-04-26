@@ -6,10 +6,11 @@
 </h2>
 
 <!--Brand Selection-->
+<form #quizanswers = "ngForm" (ngSubmit)="addAnswer(quizanswers)">
 <div class="container brand-content">
     <!--brand icons-->
     <div class="row brand-icons">
-        <div class="col">   
+        <div class="col"> 
             <img src="./assets/img/brand-icons/acer-icon.png" class="rounded-circle icon"
             title="Acer">
         </div>     
@@ -38,55 +39,106 @@
             title="Microsoft">
         </div>
     </div>
-    <div class="brand-selection">
-        <div class="form-check-inline">
+
+    <div class="brand-selection"> <!--make checkboxes into image selections to fix checkbox size problem-->
+          <div class="form-group form-check-inline">
             <label class="form-check-label p-4">
-              <input type="checkbox" class="form-check-input" value="">Acer
+              <input 
+              type="checkbox"
+              ngModel name="acer" 
+              #acer="ngModel" 
+              id="acer"
+              class="form-control form-check-input" 
+              value="" >Acer
             </label>
           </div>
-          <div class="form-check-inline">
+          
+          <div class="form-group form-check-inline">
             <label class="form-check-label p-4">
-              <input type="checkbox" class="form-check-input" value="">Apple
+              <input 
+              type="checkbox"
+              ngModel name="apple" 
+              #apple="ngModel" 
+              id="apple"
+              class="form-control form-check-input" 
+              value="" >Apple
             </label>
           </div>
-          <div class="form-check-inline">
+
+          <div class="form-group form-check-inline">
             <label class="form-check-label p-4">
-              <input type="checkbox" class="form-check-input" value="">ASUS
+              <input 
+              type="checkbox"
+              ngModel name="asus" 
+              #asus="ngModel" 
+              id="asus"
+              class="form-control form-check-input" 
+              value="" >Asus
             </label>
           </div>
-          <div class="form-check-inline">
+
+
+          <div class="form-group form-check-inline">
             <label class="form-check-label p-4">
-              <input type="checkbox" class="form-check-input" value="" >Dell
+              <input 
+              type="checkbox"
+              ngModel name="dell" 
+              #dell="ngModel" 
+              id="dell"
+              class="form-control form-check-input" 
+              value="" >Dell
             </label>
           </div>
-          <div class="form-check-inline">
+
+          
+          <div class="form-group form-check-inline">
             <label class="form-check-label p-4">
-              <input type="checkbox" class="form-check-input" value="" >HP
+              <input 
+              type="checkbox"
+              ngModel name="hp" 
+              #hp="ngModel" 
+              id="hp"
+              class="form-control form-check-input" 
+              value="" >HP
             </label>
           </div>
-          <div class="form-check-inline">
+
+
+          <div class="form-group form-check-inline">
             <label class="form-check-label p-4">
-              <input type="checkbox" class="form-check-input" value="" >Lenovo
+              <input 
+              type="checkbox"
+              ngModel name="lenovo" 
+              #lenovo="ngModel" 
+              id="lenovo"
+              class="form-control form-check-input" 
+              value="" >Lenovo
             </label>
           </div>
-          <div class="form-check-inline">
+
+
+          <div class="form-group form-check-inline">
             <label class="form-check-label p-4">
-              <input type="checkbox" class="form-check-input" value="" >Microsoft
+              <input 
+              type="checkbox"
+              ngModel name="microsoft" 
+              #microsoft="ngModel" 
+              id="microsoft"
+              class="form-control form-check-input" 
+              value="" >Microsoft
             </label>
           </div>
+
     </div>
     
         
 </div>
 
-<!-- <app-os> (childEvent)="message=$event"</app-os>
-<h3> {{message}} </h3> -->
-
-<!-- was game route -->
     <div class="next">
-        <button type="button" id="next-button" class="btn">
-            <a class="nav-link" routerLink="/coder">NEXT</a>
-        </button>
+        <button type="submit" id="next-button" class="btn"> Next </button>
     </div>
+  </form>
+    <!-- <button (click)="showSystems()"> See selected os systems</button> testing; see if data from OS Component was succcessfuly retrieved -->
+    <!-- <button (click)="showBrands()"> See selected os systems</button> see if answers were deleted after backtracking -->
 
 </div>

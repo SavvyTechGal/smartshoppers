@@ -40,6 +40,7 @@ import { ProductDisplayComponent } from './product-display/product-display.compo
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { OsComponent } from './os/os.component';
 import { SeveralAppsComponent } from './several-apps/several-apps.component';
+import { BudgetComponent } from './budget/budget.component';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { SeveralAppsComponent } from './several-apps/several-apps.component';
     ProductDisplayComponent,
     EditProfileComponent,
     OsComponent,
-    SeveralAppsComponent
+    SeveralAppsComponent,
+    BudgetComponent
   ],
   imports: [
     BrowserModule,

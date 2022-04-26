@@ -3,35 +3,30 @@
     <h2 class="question">
         Are You Always On The Go?
     </h2>
-    <!-- {{quizanswers.value | json}} -->
-    <!-- <hr>
-    {{AnswersModel | json}} -->
     
     <!--Travel Input-->
     <form #quizanswers = "ngForm" (ngSubmit)="addAnswer(quizanswers)">
         <div class="container">
             <img src="./assets/img/travel-icon.JPG" class="rounded mx-auto d-block" title="Traveling">
     
-            <span class="switch">
+            <!-- <span class="switch">
                 <input type="checkbox" ngModel name="answer" id="answer">
                 <label for="answer"></label>
-            </span>
+            </span> -->
+            <button type="button" (click)="chooseYes()" class="btn btn-round btn-lg">Yes</button>
+            <button type="button" (click)="chooseNo()" class="btn btn-round btn-lg">No</button>
             
-            <!--WILL NOT ROUTE ANYWHERE-->
-            <!-- <a routerLink="/work">
-                <button type="button" class="btn btn-round btn-lg">No</button>
-            </a> -->
         </div>
-        <!-- (SendAnswerEvent)="setNewUser($event)"> -->
     
     
         <div class="next">
-            <button type="submit" id="next-button" class="btn">Submit</button>
-            <button type="button" id="next-button" class="btn">
+            <!-- <button type="submit" id="next-button" class="btn">Submit</button> -->
+            <!-- <button type="button" id="next-button" class="btn">
                 <a class="nav-link" routerLink="/products">See Matches</a>
-            </button>
+            </button> -->
         </div>
 
     </form>
+    <!-- <button (click)="currentAnswers()"> OS, brands, several apps </button> testing; see if data from OS Component was succcessfuly retrieved -->
 
 </div>
