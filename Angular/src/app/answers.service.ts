@@ -8,6 +8,11 @@ import { UserClass } from './user-class.model';
   providedIn: 'root'
 })
 export class AnswersService {
+  //create a temporary hold for questionnaire answers before sending them to backend
+  osSystems: any[] = []; //rename
+  brandChoices: any[] = [];
+  severalAppsChoice: any[] = []; //has problem accepting single string
+  travelerChoice: any[] = [];
 
   constructor(public auth:AuthService, public HttpClient:HttpClient) { }
 
