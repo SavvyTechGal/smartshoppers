@@ -50,7 +50,9 @@ h2 {
     padding:5%;
 }
 
-
+.paginator {
+    padding:20px;
+}
 
 .NewUser {
     text-align: center;

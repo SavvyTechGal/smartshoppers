@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfileService } from '../profile.service';
-import { Chart } from 'chart.js';
 import { AuthService } from '@auth0/auth0-angular';
 import { UserService } from '../user.service';
 import { ProductClass } from '../product-class.model';
 import { UserClass } from '../user-class.model';
+import { PageEvent } from '@angular/material/paginator';
+import { ProductService } from '../product.service';
 
 
 
@@ -16,34 +16,65 @@ import { UserClass } from '../user-class.model';
 export class ProfileComponent implements OnInit {
 
   private profileJson: string = '';
-
   userEmail: string = '';  
-
   newUser: boolean = false;  //if user is registered in db
-
   savedProducts: ProductClass[] = [];  
-
   //isSavedPage: boolean = true;
-
   returnedUser: any;  //user from db
-
   profileLoadedIn: boolean = false;
-
   loadedIn: boolean = false;
-
-  isSignedIn: boolean = false;
-
+  //isSignedIn: boolean = false;
   hasSavedProducts: boolean = true;
+  public pageSlice: ProductClass[] = [];
+
+  OnPageChange(event: PageEvent) {
+    console.log(event);
+    const startIndex = event.pageIndex * event.pageSize;
+    let endIndex = startIndex + event.pageSize;
+    if(endIndex > this.savedProducts.length) {
+      endIndex = this.savedProducts.length;
+    }
+    this.pageSlice = this.savedProducts.slice(startIndex, endIndex);
+  }
+
+  modalProduct: ProductClass = {
+    title: '',
+    price: -1,
+    thumbnail: '',
+    source: '',
+    rating: -1,
+    link: '#',
+    extensions: []
+  }
+
+  handleModal(product: ProductClass): void {
+    this.modalProduct=product;
+    //console.log(this.modalProduct)
+  }
 
   constructor(
+    private _productService: ProductService,
     public auth: AuthService,
     public userService: UserService) 
     { }
   
-    updateSavedList(change:boolean) {
-      this.hasSavedProducts = change;
+  updateSavedList(change:boolean) {
+    this.hasSavedProducts = change;
+  }
+  removeProduct(product: ProductClass): void {
+    console.log(`remove product: ${product.title}`);
+    this._productService.removeProduct(product,this.userEmail);
+     // .subscribe(data => {
+      //   console.log(data);
+      // });
+      // console.log(product);
+    const updated = this.savedProducts.filter(item => item !== product);
+    this.pageSlice = this.pageSlice.filter(item => item !== product);
+    this.savedProducts = updated;
+    if(this.savedProducts.length == 0) {
+      this.hasSavedProducts = false;
     }
-
+  }
 
   //check if user email exists in table
   //determines if user needs to edit account details
@@ -70,7 +101,7 @@ export class ProfileComponent implements OnInit {
       this.returnedUser = new UserClass(fname,lname,role,newEmail);  //create user model + set to returnedUser
       console.log(this.returnedUser);   
       this.profileLoadedIn = true;
-      this.isSignedIn = true;
+      //this.isSignedIn = true;
       this.getUserData(this.userEmail);
       }
       
@@ -87,23 +118,23 @@ export class ProfileComponent implements OnInit {
       }
       else {
         console.log(data.length);
-        if(data.length > 5) {   //filter returns more than 5 products
-          for(let i = 0; i < 5; i++) {
-            const newProduct = new ProductClass(data[i].title, data[i].price, 
-              data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
-            //console.log(newProduct);
-            this.savedProducts.push(newProduct);
-          }
-        } else {      //5 or less products
+        // if(data.length > 20) {   //filter returns more than 5 products
+        //   for(let i = 0; i < 20; i++) {
+        //     const newProduct = new ProductClass(data[i].title, data[i].price, 
+        //       data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
+        //     //console.log(newProduct);
+        //     this.savedProducts.push(newProduct);
+        //   }
+        // } else {      //5 or less products
           for(let i = 0; i < data.length; i++) {
             const newProduct = new ProductClass(data[i].title, data[i].price, 
               data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
             //console.log(newProduct);
             this.savedProducts.push(newProduct);
           }
-        }
+        //}
       }
-
+      this.pageSlice =this.savedProducts.slice(0,5);
       this.loadedIn = true;   //requests are finished loading --> ready to display
       //console.log(this.products);
       

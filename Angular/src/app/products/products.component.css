@@ -8,7 +8,16 @@ h2 {
     
 }
 
-/* .product-img, .modal-img {
+.paginator {
+    padding:20px;
+}
+
+.loading {
+    background-color: antiquewhite;
+    text-align: center;
+    padding:20%;
+}
+.product-img, .modal-img {
     
     height:275px;
     object-fit: contain;
@@ -34,10 +43,4 @@ h2 {
 button {
     margin:5px;
     background-color: antiquewhite;
-} */
-
-.loading {
-    background-color: antiquewhite;
-    text-align: center;
-    padding:20%;
 }
