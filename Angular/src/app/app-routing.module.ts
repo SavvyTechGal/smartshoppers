@@ -35,7 +35,11 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   
   { path: 'about', component: AboutComponent },
-  { path: 'products', component: ProductsComponent },
+  { 
+    path: 'products', 
+    component: ProductsComponent,
+    canActivate: [AuthGuard]
+  },
   { path: 'services', component: ServicesComponent},
   { 
     path: 'signupform', 

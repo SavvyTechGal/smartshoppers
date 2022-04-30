@@ -70,13 +70,15 @@
     
         <button [disabled]="firstname.errors?.['required'] || lastname.errors?.['required'] || !roleSel.value" 
                 type="submit" 
-                class="btn btn-primary"
+                class="btn btn-border"
                 >
                 Save 
         </button>
+
+        <button type="button" routerLink="/profile" class="btn btn-border">Cancel</button>
         <br>
         
-        <button *ngIf="saved" type="button" class="btn btn-primary" routerLink="/profile">Continue to Profile</button>
+        <button *ngIf="saved" type="button" class="btn btn-border" routerLink="/profile">Continue to Profile</button>
          
         </form>
     </div>
