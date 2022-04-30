@@ -38,7 +38,8 @@ import { ProductService } from './product.service';
 import { AnswersService } from './answers.service';
 import { ProductDisplayComponent } from './product-display/product-display.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -77,11 +78,14 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     NgChartsModule,
     RecaptchaModule,
     RecaptchaFormsModule,
+    MatPaginatorModule,
     HttpClientModule,
     AuthModule.forRoot({
       domain:"dev-y9hgi5ks.us.auth0.com",
       clientId:"R7OD1fFGcK8XKOTdl6MfMuElZreDZlIG"
     }),
+    BrowserAnimationsModule,
+    
   ],
   providers: [ProfileService, UserService, ProductService, AnswersService],
   bootstrap: [AppComponent]
