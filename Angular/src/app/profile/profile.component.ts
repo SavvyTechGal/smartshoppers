@@ -26,6 +26,8 @@ export class ProfileComponent implements OnInit {
   //isSignedIn: boolean = false;
   hasSavedProducts: boolean = true;
   public pageSlice: ProductClass[] = [];
+  public currentStartIndex = 0;
+  public currentEndIndex = 5;
 
   OnPageChange(event: PageEvent) {
     console.log(event);
@@ -34,9 +36,13 @@ export class ProfileComponent implements OnInit {
     if(endIndex > this.savedProducts.length) {
       endIndex = this.savedProducts.length;
     }
+    console.log(`startIndex: ${startIndex} and endIndex: ${endIndex}`);
+    this.currentStartIndex = startIndex;
+    this.currentEndIndex = endIndex;
     this.pageSlice = this.savedProducts.slice(startIndex, endIndex);
   }
 
+    
   modalProduct: ProductClass = {
     title: '',
     price: -1,

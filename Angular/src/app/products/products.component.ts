@@ -12,16 +12,15 @@ import { PageEvent } from '@angular/material/paginator';
 export class ProductsComponent implements OnInit {
 
   userEmail:string='';
-
-  isSignedIn: boolean = false;  //only registered users can save
-
   loadedIn: boolean = false;
-
   products: ProductClass[] = [];
-
-  isSavedPage: boolean = false;
-
+  public currentSort = 'Best Fit'
   public pageSlice: ProductClass[] = [];
+  public currentStartIndex = 0;
+  public currentEndIndex = 5;
+  public bestFitSorted: ProductClass[] = [];  //set in ngoninit
+  public lowSorted: ProductClass[] =[]; //set when user chooses low to high
+  public highSorted: ProductClass[] = [];  //set when user chooses high to low
 
   OnPageChange(event: PageEvent) {
     console.log(event);
@@ -30,7 +29,64 @@ export class ProductsComponent implements OnInit {
     if(endIndex > this.products.length) {
       endIndex = this.products.length;
     }
+    
+    this.currentStartIndex = startIndex;
+    this.currentEndIndex = endIndex;
     this.pageSlice = this.products.slice(startIndex, endIndex);
+  }
+
+  onSubmit(sortForm: { value: any; }) {  //sorting form
+    let sort = sortForm.value.sortSel;
+    console.log(`chose: ${sort}`);
+    
+    if(sort == 'Best Fit') {
+      console.log('1');
+      this.products = [...this.bestFitSorted];
+      this.pageSlice = this.products.slice(this.currentStartIndex, this.currentEndIndex);
+    }
+    else if(sort == 'Price: Low to High') {
+      console.log('2');
+      if(this.lowSorted.length == 0) {  //not sorted yet
+        this.lowSorted = [...this.products];
+        this.lowSorted.sort(function(a,b) {
+          let priceA = (a.price).toString().substring(1);  //remove '$'
+          let priceB = (b.price).toString().substring(1);  //remove '$'
+          priceA = priceA.replace(/,/g,'');  //remove ','
+          priceB = priceB.replace(/,/g,'');  //remove ','
+          return parseFloat(priceA) - parseFloat(priceB);
+        });
+        this.products = [...this.lowSorted];
+        this.pageSlice = this.products.slice(this.currentStartIndex, this.currentEndIndex);
+      }
+      else {   //no need to run algo again if ran before
+        this.products = [...this.lowSorted];
+        this.pageSlice = this.products.slice(this.currentStartIndex, this.currentEndIndex);
+      }
+
+    }
+    else if(sort == 'Price: High to Low') {
+      console.log('3');
+      if(this.highSorted.length == 0) {  //not sorted yet
+        this.highSorted = [...this.products];
+        this.highSorted.sort(function(a,b) {
+          let priceA = (a.price).toString().substring(1);  //remove '$'
+          let priceB = (b.price).toString().substring(1);  //remove '$'
+          priceA = priceA.replace(/,/g,'');  //remove ','
+          priceB = priceB.replace(/,/g,'');  //remove ','
+          return parseFloat(priceB) - parseFloat(priceA);
+        });
+        this.products = [...this.highSorted];
+        this.pageSlice = this.products.slice(this.currentStartIndex, this.currentEndIndex);
+      }
+      else {   //no need to run algo again if ran before
+        this.products = [...this.highSorted];
+        this.pageSlice = this.products.slice(this.currentStartIndex, this.currentEndIndex);
+      }
+    }
+    else {
+      console.log('error');
+    }
+    
   }
 
   modalProduct: ProductClass = {
@@ -45,12 +101,13 @@ export class ProductsComponent implements OnInit {
 
   handleModal(product: ProductClass): void {
     this.modalProduct=product;
-    //console.log(this.modalProduct)
+
   }
 
   //save product to user's saved data
   saveProduct(product: ProductClass): void {
     this._productService.saveProduct(product,this.userEmail);
+    //console.log((product.price).substring(1));
     // .subscribe(data => {
     //   console.log(data);
     // });
@@ -64,37 +121,20 @@ export class ProductsComponent implements OnInit {
     this.auth.user$.subscribe(
       (profile) => {  
         this.userEmail = profile?.email as string;  //saving email to variable
-        if(this.userEmail) {
-          this.isSignedIn = true;
-        }
         this._productService.getProducts(this.userEmail) //calling service to get data from json
         .subscribe(data => {
           //this.products = data;
           console.log(data.length);
-          // if(data.length > 30) {   //filter returns more than 30 products
-          //   for(let i = 0; i < 30; i++) {
-          //     const newProduct = new ProductClass(data[i].title, data[i].price, 
-          //       data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
-          //     //console.log(newProduct);
-          //     this.products.push(newProduct);
-          //   }
-          // } else {      // less products
-            for(let i = 0; i < data.length; i++) {
-              const newProduct = new ProductClass(data[i].title, data[i].price, 
-                data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
-              //console.log(newProduct);
-              this.products.push(newProduct);
-            }
-          //}
+          for(let i = 0; i < data.length; i++) {
+            const newProduct = new ProductClass(data[i].title, data[i].price, 
+              data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
+            this.products.push(newProduct);
+          }
           this.pageSlice =this.products.slice(0,5);
           this.loadedIn = true;   //requests are finished loading --> ready to display
-          //console.log(this.products);
-          
+          this.bestFitSorted = [...this.products];  //initial sorted
         }); 
-
        }
    )
-
  }
-
 }

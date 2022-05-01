@@ -1,12 +1,27 @@
 <div *ngIf="loadedIn; else loading" class="body">
     <h2>Here is what we found for you!</h2>
+    <form class="form-inline" #sortForm="ngForm" (ngSubmit)="onSubmit(sortForm)">
+        <div class="form-group">
+            <label for="currentSort" required>Sort </label>
+            <select class="form-control" id="sortSel" [(ngModel)]="currentSort" ngModel name="sortSel" #sortSel="ngModel">
+                <option>Best Fit</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                
+            </select>
+            
+        </div>
+        <button type="submit" class="btn btn-border">
+            Go
+        </button>
+    </form>
 
    <!-- <app-product-display 
         [items]="pageSlice" [userEmail]="userEmail" [isSignedIn]="isSignedIn" [isSavedPage]="isSavedPage">
    </app-product-display> -->
 
    <!--Product Results -->
-<div class="card-columns products">
+<div class="card-deck products">
     <div class="card" *ngFor="let item of pageSlice">
         <img src={{item.thumbnail}} class="card-img-top border product-img" >
         <div class="card-body">
@@ -30,12 +45,7 @@
             
             
         </div>   
-        
-        
-
     </div>
-
-    
 </div>
 <div class="paginator">
     <mat-paginator

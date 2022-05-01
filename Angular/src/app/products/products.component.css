@@ -8,6 +8,18 @@ h2 {
     
 }
 
+form {
+    padding: 20px;
+}
+
+.card-deck{
+    margin-top: 10px;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: .5rem;
+}
+
 .paginator {
     padding:20px;
 }
