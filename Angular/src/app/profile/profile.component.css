@@ -1,33 +1,12 @@
 .body {
-    background-color: #facedc;
+    background-color: #c7d3f9;
     padding:5%;
 }
 
 .savedSection {
-    background-color: #f7b4ca;
+    background-color: #b4c4f7;
     padding:5%;
 }
-/* .profile-content {
-    background-color: #ebaf50;
-    text-align: center;
-    justify-content: center;
-}
-
-#card-container{
-    margin: 0 auto; 
-    float: none;
-    margin-bottom: 10px;
-}
-
-
-#action-button {
-    background-color: #F0FA82;
-    border-color:#F0FA82 ;
-    border-radius: 50px;
-    padding: 15px 50px;
-    font-weight: 700;
-    font-size: larger;
-} */
 
 .auth0-profile {
     background-color:white;
@@ -45,14 +24,47 @@ h2 {
 }
 
 .loading, .nonSaved {
-    background-color: #f7b4ca;
+    background-color: #b4c4f7;
     text-align: center;
     padding:5%;
+}
+
+.card-deck{
+    margin-top: 10px;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: .5rem;
 }
 
 .paginator {
     padding:20px;
 }
+
+
+.product-img, .modal-img {
+    
+    height:275px;
+    object-fit: contain;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.products {
+    text-align: center;
+}
+
+.card {
+    text-align: left;
+    margin: 10px;
+}
+
+.card-footer {
+    display:flex;
+    justify-content: flex-start;
+}
+
 
 .NewUser {
     text-align: center;

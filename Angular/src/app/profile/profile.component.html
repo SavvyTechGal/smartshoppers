@@ -28,85 +28,101 @@
     <div *ngIf="hasSavedProducts; else nonSaved">
 
         <div *ngIf="loadedIn; else loading" class="savedSection">
-            <h2>Saved Products</h2>
-
-            <!--Product Results -->
-<div class="card-columns products">
-    <div class="card" *ngFor="let item of pageSlice">
-        <img src={{item.thumbnail}} class="card-img-top border product-img" >
-        <div class="card-body">
-            <h4 class="card-title">{{item.title}}</h4>
-            <p class="card-text"><b>Price:</b> {{item.price}}</p>
-            <p class="card-text"><b>Rating: </b>{{item.rating}}</p>
-            <p class="card-text"><b>Source: </b><a href={{item.link}} target="_blank">{{item.source}}</a></p>
-        </div>
-        <div class="card-footer">
-            <button 
-                type="button" 
-                class="btn border" 
-                data-toggle="modal" 
-                data-target="#productModal"
-                (click)="handleModal(item)">
-                Learn More
-            </button>
-            <button class="btn border" (click)="removeProduct(item)">
-                Unsave
-            </button>
-            
-        </div>   
+        <h2>Saved Products</h2>
         
-        
-
-    </div>
-</div>
-<div class="paginator">
-    <mat-paginator
-        [length]="this.savedProducts.length"
-        [pageSize]="5"
-        [pageSizeOptions]="[5,10,20]"
-        (page)="OnPageChange($event)">
-    </mat-paginator>
-</div>
-
-<!-- Product Modal -->
-<div class="modal fade" id="productModal">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <!--Modal Header-->
-            <div class="modal-header">
-                <h4 class="modal-title">{{ modalProduct.title }} </h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <!--Modal body-->
-            <div class="modal-body">
-                <img src={{modalProduct.thumbnail}} class="modal-img" >
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th>Additional Product Details</th>
-                        <th></th>
-                        
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr *ngFor="let extention of modalProduct.extensions">
-                        <td>{{ extention }}</td>
-                        <td> </td>
-                      </tr>
-                      
-                    </tbody>
-                  </table>
-            </div>
-            <!--Modal footer-->
-            <div class="modal-footer">
+        <form class="form-inline" #sortForm="ngForm" (ngSubmit)="onSubmit(sortForm)">
+            <div class="form-group">
+                <label for="currentSort" required>Sort </label>
+                <select class="form-control" id="sortSel" ngModel name="sortSel" #sortSel="ngModel">
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    
+                </select>
                 
-                <button class="btn border" data-dismiss="modal">Close</button>
             </div>
+            <button type="submit" class="btn btn-border">
+                Go
+            </button>
+        </form>
 
+
+        <!--Product Results -->
+        <div class="card-deck products">
+            <div class="card" *ngFor="let item of pageSlice">
+                <img src={{item.thumbnail}} class="card-img-top border product-img" >
+                <div class="card-body">
+                    <h4 class="card-title">{{item.title}}</h4>
+                    <p class="card-text"><b>Price:</b> {{item.price}}</p>
+                    <p class="card-text"><b>Rating: </b>{{item.rating}}</p>
+                    <p class="card-text"><b>Source: </b><a href={{item.link}} target="_blank">{{item.source}}</a></p>
+                </div>
+                <div class="card-footer">
+                    <button 
+                        type="button" 
+                        class="btn border" 
+                        data-toggle="modal" 
+                        data-target="#productModal"
+                        (click)="handleModal(item)">
+                        Learn More
+                    </button>
+                    <button class="btn border" (click)="removeProduct(item)">
+                        Unsave
+                    </button>
+                    
+                </div>   
+                
+                
+
+            </div>
+        </div>
+        <div class="paginator">
+            <mat-paginator
+                [length]="this.savedProducts.length"
+                [pageSize]="5"
+                [pageSizeOptions]="[5,10,20]"
+                (page)="OnPageChange($event)">
+            </mat-paginator>
         </div>
 
-    </div>
-</div>
+        <!-- Product Modal -->
+        <div class="modal fade" id="productModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!--Modal Header-->
+                    <div class="modal-header">
+                        <h4 class="modal-title">{{ modalProduct.title }} </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!--Modal body-->
+                    <div class="modal-body">
+                        <img src={{modalProduct.thumbnail}} class="modal-img" >
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Additional Product Details</th>
+                                <th></th>
+                                
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let extention of modalProduct.extensions">
+                                <td>{{ extention }}</td>
+                                <td> </td>
+                            </tr>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--Modal footer-->
+                    <div class="modal-footer">
+                        
+                        <button class="btn border" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
         </div>
 
         <ng-template #loading>

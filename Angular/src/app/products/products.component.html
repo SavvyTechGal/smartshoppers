@@ -16,10 +16,6 @@
         </button>
     </form>
 
-   <!-- <app-product-display 
-        [items]="pageSlice" [userEmail]="userEmail" [isSignedIn]="isSignedIn" [isSavedPage]="isSavedPage">
-   </app-product-display> -->
-
    <!--Product Results -->
 <div class="card-deck products">
     <div class="card" *ngFor="let item of pageSlice">
@@ -47,6 +43,7 @@
         </div>   
     </div>
 </div>
+<br>
 <div class="paginator">
     <mat-paginator
         [length]="this.products.length"

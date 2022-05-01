@@ -19,15 +19,16 @@ export class ProfileComponent implements OnInit {
   userEmail: string = '';  
   newUser: boolean = false;  //if user is registered in db
   savedProducts: ProductClass[] = [];  
-  //isSavedPage: boolean = true;
   returnedUser: any;  //user from db
   profileLoadedIn: boolean = false;
   loadedIn: boolean = false;
-  //isSignedIn: boolean = false;
   hasSavedProducts: boolean = true;
+  public currentSort = '';
   public pageSlice: ProductClass[] = [];
   public currentStartIndex = 0;
   public currentEndIndex = 5;
+  public lowSorted: ProductClass[] =[]; //set when user chooses low to high
+  public highSorted: ProductClass[] = [];  //set when user chooses high to low
 
   OnPageChange(event: PageEvent) {
     console.log(event);
@@ -36,10 +37,59 @@ export class ProfileComponent implements OnInit {
     if(endIndex > this.savedProducts.length) {
       endIndex = this.savedProducts.length;
     }
-    console.log(`startIndex: ${startIndex} and endIndex: ${endIndex}`);
+    //console.log(`startIndex: ${startIndex} and endIndex: ${endIndex}`);
     this.currentStartIndex = startIndex;
     this.currentEndIndex = endIndex;
     this.pageSlice = this.savedProducts.slice(startIndex, endIndex);
+  }
+
+  onSubmit(sortForm: { value: any; }) {  //sorting form
+    let sort = sortForm.value.sortSel;
+    console.log(`chose: ${sort}`);
+    
+    if(sort == 'Price: Low to High') {
+      console.log('2');
+      if(this.lowSorted.length == 0) {  //not sorted yet
+        this.lowSorted = [...this.savedProducts];
+        this.lowSorted.sort(function(a,b) {
+          let priceA = (a.price).toString().substring(1);  //remove '$'
+          let priceB = (b.price).toString().substring(1);  //remove '$'
+          priceA = priceA.replace(/,/g,'');  //remove ','
+          priceB = priceB.replace(/,/g,'');  //remove ','
+          return parseFloat(priceA) - parseFloat(priceB);
+        });
+        this.savedProducts = [...this.lowSorted];
+        this.pageSlice = this.savedProducts.slice(this.currentStartIndex, this.currentEndIndex);
+      }
+      else {   //no need to run algo again if ran before
+        this.savedProducts = [...this.lowSorted];
+        this.pageSlice = this.savedProducts.slice(this.currentStartIndex, this.currentEndIndex);
+      }
+
+    }
+    else if(sort == 'Price: High to Low') {
+      console.log('3');
+      if(this.highSorted.length == 0) {  //not sorted yet
+        this.highSorted = [...this.savedProducts];
+        this.highSorted.sort(function(a,b) {
+          let priceA = (a.price).toString().substring(1);  //remove '$'
+          let priceB = (b.price).toString().substring(1);  //remove '$'
+          priceA = priceA.replace(/,/g,'');  //remove ','
+          priceB = priceB.replace(/,/g,'');  //remove ','
+          return parseFloat(priceB) - parseFloat(priceA);
+        });
+        this.savedProducts = [...this.highSorted];
+        this.pageSlice = this.savedProducts.slice(this.currentStartIndex, this.currentEndIndex);
+      }
+      else {   //no need to run algo again if ran before
+        this.savedProducts = [...this.highSorted];
+        this.pageSlice = this.savedProducts.slice(this.currentStartIndex, this.currentEndIndex);
+      }
+    }
+    else {
+      console.log('error');
+    }
+    
   }
 
     
