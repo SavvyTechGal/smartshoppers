@@ -1,0 +1,61 @@
+<div class="body">
+
+    <!--QUESTION-->
+       <h2 class="question">
+        <!-- What Brands Do You Prefer? -->
+        What Operating System Do You Prefer?
+    </h2>
+    
+    <!--Brand Selection-->
+    <form #quizanswers = "ngForm" (ngSubmit)="addAnswer(quizanswers)">
+    <div class="container brand-content">
+        <!--brand icons-->
+        <img src="./assets/img/os-image.jpg" class="rounded mx-auto d-block" title="systems">
+
+        <div class="brand-selection">
+              <div class="form-group form-check-inline">
+                <label class="form-check-label p-4">
+                  <input 
+                  type="checkbox"
+                  ngModel name="windows" 
+                  #windows="ngModel" 
+                  id="windows"
+                  class="form-control form-check-input" 
+                  value="" >Windows OS
+                </label>
+              </div>
+
+              <div class="form-group form-check-inline">
+                <label class="form-check-label p-4">
+                  <input 
+                  type="checkbox"
+                  ngModel name="mac" 
+                  #mac="ngModel" 
+                  id="mac"
+                  class="form-control form-check-input" 
+                  value="" >Mac OS
+                </label>
+              </div>
+              
+              <div class="form-group form-check-inline">
+                <label class="form-check-label p-4">
+                  <input 
+                  type="checkbox"
+                  ngModel name="chrome" 
+                  #chrome="ngModel" 
+                  id="chrome"
+                  class="form-control form-check-input" 
+                  value="" >Chrome OS
+                </label>
+              </div>
+              
+        </div>
+             
+    </div>
+    <!-- was game route -->
+        <div class="next">
+          <button type="submit" id="next-button" class="btn">Next</button>
+        </div>
+    </form>
+
+</div>

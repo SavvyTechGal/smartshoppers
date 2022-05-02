@@ -1,7 +1,7 @@
 <div class="body">
 
     <!--QUESTION-->
-    <h2 class="question">
+    <h2 class="question" data-toggle="tooltip" data-placement="top" title="Larger RAM storage and faster CPU">
         Are You A Coder?
     </h2>
 
@@ -18,11 +18,9 @@
 
     <div class="next">
         <button type="button" id="next-button" class="btn">
-            <a class="nav-link" routerLink="/graphics">NEXT</a>
+            <a class="nav-link" routerLink="/home">NEXT</a>
         </button>
     </div>
-
-
-
+    <button (click)="showSystems()">See selected OS and brands</button> <!--testing; see if data from OS and Brand Components was succcessfuly retrieved-->
 
 </div>

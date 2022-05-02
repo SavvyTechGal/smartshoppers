@@ -3,7 +3,6 @@
     
 }
 
-
 .btn-round.btn-lg {
     background-color: #FFBB55 ;
     border-color:#FFBB55;
@@ -47,26 +46,39 @@ img {
     margin:35px;
 }
 
-.tooltip {
+
+#slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 7px;
+    outline: none;
+    border-radius: 3px;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 3;
     position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 300px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-  
-    /* Position the tooltip */
+}
+
+#selector {
+    height: 104px;
+    width: 48px;
     position: absolute;
-    z-index: 1;
-  }
-  
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.SelectionBtn {
+    height: 48px;
+    width: 48px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    bottom: 0;
+}
