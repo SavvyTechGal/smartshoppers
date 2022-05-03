@@ -37,7 +37,11 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   
   { path: 'about', component: AboutComponent },
-  { path: 'products', component: ProductsComponent },
+  { 
+    path: 'products', 
+    component: ProductsComponent,
+    canActivate: [AuthGuard]
+  },
   { path: 'services', component: ServicesComponent},
   { path: 'os', component: OsComponent},
   { path: 'several-apps', component: SeveralAppsComponent},
