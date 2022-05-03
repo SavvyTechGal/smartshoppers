@@ -22,6 +22,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { OsComponent } from './os/os.component';
 import { SeveralAppsComponent } from './several-apps/several-apps.component';
 import { BudgetComponent } from './budget/budget.component';
+import { UserRoleComponent } from './user-role/user-role.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch:'full' },
@@ -46,6 +47,7 @@ const routes: Routes = [
   { path: 'os', component: OsComponent},
   { path: 'several-apps', component: SeveralAppsComponent},
   { path: 'budget', component: BudgetComponent},
+  { path: 'user-role', component: UserRoleComponent},
   { 
     path: 'signupform', 
     component: SignupFormComponent,

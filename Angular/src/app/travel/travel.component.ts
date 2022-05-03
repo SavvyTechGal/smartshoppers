@@ -26,6 +26,7 @@ export class TravelComponent implements OnInit {
 
   chooseYes(){ //using click actions to record answer
     this.traveler.push("Yes");
+    console.log(this.userEmail); //actually role
     console.log(this.traveler);
     this.router.navigateByUrl("/home"); //quick fix for duplicate additions to runApps
   }
@@ -37,8 +38,8 @@ export class TravelComponent implements OnInit {
   }
 
   currentAnswers() {
-    console.log(this.answerService.osSystems);
-    console.log(this.answerService.brandChoices);
+    console.log(this.answerService.arrayObject.osSelections.os, "<-- new change");
+    console.log(this.answerService.arrayObject.brandSelections.brands, "<-- new change");
     console.log(this.answerService.severalAppsChoice);
   }
 

@@ -12,43 +12,16 @@ export class BrandComponent implements OnInit {
   brandsArray: any[] = [];
 
   addAnswer(quizanswers: { value: any; }) {
-    let selectAcer = quizanswers.value.acer;
-    if (!selectAcer) { selectAcer = false;}
-    else {this.brandsArray.push("Acer")};
-    console.log(selectAcer);
-
-    let selectApple = quizanswers.value.apple;
-    if (!selectApple) { selectApple = false;}
-    else {this.brandsArray.push("Apple")};
-    console.log(selectApple);
-
-    let selectAsus = quizanswers.value.asus;
-    if (!selectAsus) { selectAsus = false;}
-    else {this.brandsArray.push("Asus")};
-    console.log(selectAsus);
-
-    let selectDell = quizanswers.value.dell;
-    if (!selectDell) { selectDell = false;}
-    else {this.brandsArray.push("Dell")};
-    console.log(selectDell);
-
-    let selectHP = quizanswers.value.hp;
-    if (!selectHP) { selectHP = false;}
-    else {this.brandsArray.push("HP")};
-    console.log(selectHP);
-
-    let selectLenovo = quizanswers.value.lenovo;
-    if (!selectLenovo) { selectLenovo = false;}
-    else {this.brandsArray.push("Lenovo")};
-    console.log(selectLenovo);
-
-    let selectMicrosoft = quizanswers.value.microsoft;
-    if (!selectMicrosoft) { selectMicrosoft = false;}
-    else {this.brandsArray.push("Microsoft")};
-    console.log(selectMicrosoft);
-
-    alert("Thank you for submitting!");
-    this.router.navigateByUrl("/several-apps"); //no longer routes to coder 
+    console.log (quizanswers.value);
+    for (let key in quizanswers.value) //looping over form object
+    {
+      if((quizanswers.value)[key] === true)
+      {
+        console.log(key);
+        this.brandsArray.push(key); //add the brands that were selected to brandsArray
+      }
+    }
+    this.router.navigateByUrl("/home"); //no longer routes to several-apps
   }
 
   showSystems() {
@@ -62,6 +35,7 @@ export class BrandComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectedSystems = this.answerService.osSystems; //retrieve OS selections from OS Component
-    this.answerService.brandChoices = this.brandsArray; //store brand selections in answer service
+    // this.answerService.brandChoices = this.brandsArray;
+    this.answerService.arrayObject.brandSelections.brands = this.brandsArray; //store brand selections in answer service
   }
 }
