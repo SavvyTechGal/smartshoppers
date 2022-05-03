@@ -9,12 +9,39 @@ import { UserClass } from './user-class.model';
 })
 export class AnswersService {
   //create a temporary hold for questionnaire answers before sending them to backend
-  osSystems: any[] = []; //rename
+  osSystems: any[] = []; 
   brandChoices: any[] = [];
   severalAppsChoice: any[] = []; //has problem accepting single string
   travelerChoice: any[] = [];
 
-  constructor(public auth:AuthService, public HttpClient:HttpClient) { }
+  jsonFormat: JSON;
+  arrayObject: any = {
+   userRole: {
+      id: 1,
+      role: ""
+    },
+
+    userBudget: {
+      id: 2,
+      budget: ""
+    },
+
+    osSelections: {
+      id: 3,
+      os: [],
+      rank: 0
+    },
+
+    brandSelections: {
+      id: 4,
+      brands: [],
+      rank: 0
+    }
+};
+
+  constructor(public auth:AuthService, public HttpClient:HttpClient) { 
+    this.jsonFormat = <JSON>this.arrayObject; //convert object into json format
+  }
 
   postAnswer(email: string, id: string, answer: any) { //changed id from number to string; answers cannot be bools/numbers
     let request =

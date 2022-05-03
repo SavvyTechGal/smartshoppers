@@ -43,6 +43,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { OsComponent } from './os/os.component';
 import { SeveralAppsComponent } from './several-apps/several-apps.component';
 import { BudgetComponent } from './budget/budget.component';
+import { UserRoleComponent } from './user-role/user-role.component';
 
 
 @NgModule({
@@ -75,7 +76,8 @@ import { BudgetComponent } from './budget/budget.component';
     EditProfileComponent,
     OsComponent,
     SeveralAppsComponent,
-    BudgetComponent
+    BudgetComponent,
+    UserRoleComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,30 @@
+<div class="body">
+
+    <div *ngIf="!displayRole">
+        <h2 class="question">
+            Let's confirm your role
+            <button class="btn btn-round btn-lg" (click)="confirmRole()">OK!</button>
+        </h2>
+    </div>
+
+    <div *ngIf="displayRole">
+        <h2 class="question">
+            Is this your role?
+        </h2>
+        <div class="container">
+            <h3>{{currentRole}}</h3>
+
+            <button type="button" class="btn btn-round btn-lg" (click)="correctRole()">Yes</button>
+            <a routerLink="/home">
+                <button type="button" class="btn btn-round btn-lg">No</button>
+            </a>
+        </div>
+    
+        <div class="next">
+            <button type="button" id="next-button" class="btn">
+                <a class="nav-link" routerLink="/home">NEXT</a>
+            </button>
+        </div>
+    </div>
+
+</div>
