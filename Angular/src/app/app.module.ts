@@ -44,6 +44,7 @@ import { OsComponent } from './os/os.component';
 import { SeveralAppsComponent } from './several-apps/several-apps.component';
 import { BudgetComponent } from './budget/budget.component';
 import { UserRoleComponent } from './user-role/user-role.component';
+import { EditQuestionnaireComponent } from './edit-questionnaire/edit-questionnaire.component';
 
 
 @NgModule({
@@ -77,7 +78,8 @@ import { UserRoleComponent } from './user-role/user-role.component';
     OsComponent,
     SeveralAppsComponent,
     BudgetComponent,
-    UserRoleComponent
+    UserRoleComponent,
+    EditQuestionnaireComponent
   ],
   imports: [
     BrowserModule,

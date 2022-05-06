@@ -1,0 +1,114 @@
+<div class="body">
+    <div class="container">
+        <h2>Edit Your Questionnaire Form</h2>
+        <form #editQuestionForm="ngForm" (ngSubmit)="onSubmit(editQuestionForm)">
+        <div class="form-group">
+            <label for="budget">What is your Budget?</label>
+            <input 
+            required  
+            ngModel name="budget" 
+            [(ngModel)]="dummyUserData.budget"
+            #budget="ngModel" 
+            id="budget" 
+            type="text" 
+            class="form-control">
+            <div class="alert alert-danger" 
+            *ngIf="budget.touched && !budget.valid">
+                <div *ngIf="budget.errors?.['required']">
+                    Input is invalid.
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="OS">What Operating System Do You Prefer?</label>
+            <br>
+                <input type="checkbox" class="checkbox" name="Windows" value="Windows" #Windows="ngModel" 
+                id="Windows" [ngModel]="dummyUserData.os.includes('Windows')" ngModel>Windows OS
+                <input type="checkbox" class="checkbox" name="Mac" value="Mac" #Mac="ngModel" 
+                id="Mac" [ngModel]="dummyUserData.os.includes('Mac')" ngModel>Mac OS
+                <input type="checkbox" class="checkbox" name="Chrome" value="Chrome" #Chrome="ngModel" 
+                id="Chrome" [ngModel]="dummyUserData.os.includes('Chrome')" ngModel>Chrome OS
+        </div>
+        <div class="form-group">
+            <label for="brand">What Brands Do You Prefer?</label>
+            <br>
+                <input type="checkbox" class="checkbox" name="Acer" value="Acer" #Acer="ngModel" 
+                id="Acer" [ngModel]="dummyUserData.brands.includes('Acer')" ngModel>Acer
+                <input type="checkbox" class="checkbox" name="Apple" value="Apple" #Apple="ngModel" 
+                id="Apple" [ngModel]="dummyUserData.brands.includes('Apple')" ngModel>Apple
+                <input type="checkbox" class="checkbox" name="ASUS" value="ASUS" #ASUS="ngModel" 
+                id="ASUS" [ngModel]="dummyUserData.brands.includes('ASUS')" ngModel>ASUS
+                <input type="checkbox" class="checkbox" name="Dell" value="Dell" #Dell="ngModel" 
+                id="Dell" [ngModel]="dummyUserData.brands.includes('Dell')" ngModel>Dell
+                <input type="checkbox" class="checkbox" name="HP" value="HP" #HP="ngModel" 
+                id="HP" [ngModel]="dummyUserData.brands.includes('HP')" ngModel>HP
+                <input type="checkbox" class="checkbox" name="Lenovo" value="Lenovo" #Lenovo="ngModel" 
+                id="Lenovo" [ngModel]="dummyUserData.brands.includes('Lenovo')" ngModel>Lenovo
+                <input type="checkbox" class="checkbox" name="Microsoft" value="Microsoft" #Microsoft="ngModel" 
+                id="Microsoft" [ngModel]="dummyUserData.brands.includes('Microsoft')" ngModel>Microsoft
+        </div>
+        <div class="form-group">
+            <label for="coder">Are You a Coder?</label>
+            <br>
+                <input type="checkbox" class="checkbox" name="coder" value="Yes" #Yes="ngModel" 
+                id="Yes" [(ngModel)]="dummyUserData.coder" ngModel>Select if Yes, else Ignore
+                
+        </div>
+        <div class="form-group">
+            <label for="coder">Are You a Gamer?</label>
+            <br>
+                <input type="checkbox" class="checkbox" name="gamer" value="Yes" #Yes="ngModel" 
+                id="Yes" [(ngModel)]="dummyUserData.gamer" ngModel>Select if Yes, else Ignore
+                
+        </div>
+
+        <div class="form-group">
+            <label for="design">Will you be using programs for drawing/editing/modeling/designing?</label>
+            <br>
+                <input type="checkbox" class="checkbox" name="design" value="Yes" #Yes="ngModel" 
+                id="Yes" [(ngModel)]="dummyUserData.design" ngModel>Select if Yes, else Ignore
+                
+        </div>
+        <div class="form-group">
+            <label for="stream">Will you be streaming movies and/or video content?</label>
+            <br>
+                <input type="checkbox" class="checkbox" name="stream" value="Yes" #Yes="ngModel" 
+                id="Yes" [(ngModel)]="dummyUserData.stream" ngModel>Select if Yes, else Ignore
+                
+        </div>
+        <div class="form-group">
+            <label for="severalApps">Will you be running multiple applications at a time?</label>
+            <br>
+                <input type="checkbox" class="checkbox" name="severalApps" value="Yes" #Yes="ngModel" 
+                id="Yes" [(ngModel)]="dummyUserData.severalApps" ngModel>Select if Yes, else Ignore
+                
+        </div>
+        <div class="form-group">
+            <label for="travel">Will you often be traveling or on the go?</label>
+            <br>
+                <input type="checkbox" class="checkbox" name="travel" value="Yes" #Yes="ngModel" 
+                id="Yes" [(ngModel)]="dummyUserData.travel" ngModel>Select if Yes, else Ignore
+                
+        </div>
+        <div class="form-group">
+            <label for="work">Will this laptop strictly be for work use?</label>
+            <br>
+                <input type="checkbox" class="checkbox" name="work" value="Yes" #Yes="ngModel" 
+                id="Yes" [(ngModel)]="dummyUserData.work" ngModel>Select if Yes, else Ignore
+                
+        </div>
+        
+    
+        
+        <br>
+    
+    
+        <button type="submit" 
+                class="btn btn-border"
+                >
+                Save 
+        </button>
+        </form>
+    </div>
+</div>
+    

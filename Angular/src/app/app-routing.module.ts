@@ -23,6 +23,7 @@ import { OsComponent } from './os/os.component';
 import { SeveralAppsComponent } from './several-apps/several-apps.component';
 import { BudgetComponent } from './budget/budget.component';
 import { UserRoleComponent } from './user-role/user-role.component';
+import { EditQuestionnaireComponent } from './edit-questionnaire/edit-questionnaire.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch:'full' },
@@ -61,6 +62,11 @@ const routes: Routes = [
   {
     path: 'edit-profile',
     component: EditProfileComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'edit-questionnaire',
+    component: EditQuestionnaireComponent,
     canActivate: [AuthGuard]
   }
   
