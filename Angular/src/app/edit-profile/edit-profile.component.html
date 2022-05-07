@@ -13,7 +13,8 @@
             #firstname="ngModel" 
             id="firstname" 
             type="text" 
-            class="form-control">
+            class="form-control"
+            [disabled]=saved>
             <div class="alert alert-danger" 
             *ngIf="firstname.touched && !firstname.valid">
                 <div *ngIf="firstname.errors?.['required']">
@@ -32,7 +33,8 @@
             #lastname="ngModel" 
             id="lastname" 
             type="text" 
-            class="form-control">
+            class="form-control"
+            [disabled]=saved>
             <div class="alert alert-danger" 
             *ngIf="lastname.touched && !lastname.valid">
                 <div *ngIf="lastname.errors?.['required']">
@@ -53,7 +55,7 @@
         </div>
         <div class="form-group">
             <label for="role" required>Role</label>
-            <select class="form-control" id="roleSel" [(ngModel)]="role" ngModel name="roleSel" #roleSel="ngModel">
+            <select class="form-control" id="roleSel" [(ngModel)]="role" ngModel [disabled]=saved name="roleSel" #roleSel="ngModel">
                 <option>Casual User</option>
                 <option>Student</option>
                 <option>Software Developer</option>
@@ -68,14 +70,14 @@
         <br>
     
     
-        <button [disabled]="firstname.errors?.['required'] || lastname.errors?.['required'] || !roleSel.value" 
+        <button *ngIf="!saved" [disabled]="firstname.errors?.['required'] || lastname.errors?.['required'] || !roleSel.value" 
                 type="submit" 
                 class="btn btn-border"
                 >
                 Save 
         </button>
 
-        <button type="button" routerLink="/profile" class="btn btn-border">Cancel</button>
+        <button *ngIf="!saved" type="button" routerLink="/profile" class="btn btn-border">Cancel</button>
         <br>
         
         <button *ngIf="saved" type="button" class="btn btn-border" routerLink="/profile">Continue to Profile</button>

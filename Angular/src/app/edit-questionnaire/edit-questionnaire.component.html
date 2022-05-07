@@ -6,6 +6,7 @@
             <label for="budget">What is your Budget?</label>
             <input 
             required  
+            [disabled]=resubmitted
             ngModel name="budget" 
             [(ngModel)]="dummyUserData.budget"
             #budget="ngModel" 
@@ -23,42 +24,42 @@
             <label for="OS">What Operating System Do You Prefer?</label>
             <br>
                 <input type="checkbox" class="checkbox" name="Windows" value="Windows" #Windows="ngModel" 
-                id="Windows" [ngModel]="dummyUserData.os.includes('Windows')" ngModel>Windows OS
+                id="Windows" [ngModel]="dummyUserData.os.includes('Windows')" [disabled]=resubmitted ngModel>Windows OS
                 <input type="checkbox" class="checkbox" name="Mac" value="Mac" #Mac="ngModel" 
-                id="Mac" [ngModel]="dummyUserData.os.includes('Mac')" ngModel>Mac OS
+                id="Mac" [ngModel]="dummyUserData.os.includes('Mac')" [disabled]=resubmitted ngModel>Mac OS
                 <input type="checkbox" class="checkbox" name="Chrome" value="Chrome" #Chrome="ngModel" 
-                id="Chrome" [ngModel]="dummyUserData.os.includes('Chrome')" ngModel>Chrome OS
+                id="Chrome" [ngModel]="dummyUserData.os.includes('Chrome')" [disabled]=resubmitted ngModel>Chrome OS
         </div>
         <div class="form-group">
             <label for="brand">What Brands Do You Prefer?</label>
             <br>
                 <input type="checkbox" class="checkbox" name="Acer" value="Acer" #Acer="ngModel" 
-                id="Acer" [ngModel]="dummyUserData.brands.includes('Acer')" ngModel>Acer
+                id="Acer" [ngModel]="dummyUserData.brands.includes('Acer')" [disabled]=resubmitted ngModel>Acer
                 <input type="checkbox" class="checkbox" name="Apple" value="Apple" #Apple="ngModel" 
-                id="Apple" [ngModel]="dummyUserData.brands.includes('Apple')" ngModel>Apple
+                id="Apple" [ngModel]="dummyUserData.brands.includes('Apple')" [disabled]=resubmitted ngModel>Apple
                 <input type="checkbox" class="checkbox" name="ASUS" value="ASUS" #ASUS="ngModel" 
-                id="ASUS" [ngModel]="dummyUserData.brands.includes('ASUS')" ngModel>ASUS
+                id="ASUS" [ngModel]="dummyUserData.brands.includes('ASUS')" [disabled]=resubmitted ngModel>ASUS
                 <input type="checkbox" class="checkbox" name="Dell" value="Dell" #Dell="ngModel" 
-                id="Dell" [ngModel]="dummyUserData.brands.includes('Dell')" ngModel>Dell
+                id="Dell" [ngModel]="dummyUserData.brands.includes('Dell')" [disabled]=resubmitted ngModel>Dell
                 <input type="checkbox" class="checkbox" name="HP" value="HP" #HP="ngModel" 
-                id="HP" [ngModel]="dummyUserData.brands.includes('HP')" ngModel>HP
+                id="HP" [ngModel]="dummyUserData.brands.includes('HP')" [disabled]=resubmitted ngModel>HP
                 <input type="checkbox" class="checkbox" name="Lenovo" value="Lenovo" #Lenovo="ngModel" 
-                id="Lenovo" [ngModel]="dummyUserData.brands.includes('Lenovo')" ngModel>Lenovo
+                id="Lenovo" [ngModel]="dummyUserData.brands.includes('Lenovo')" [disabled]=resubmitted ngModel>Lenovo
                 <input type="checkbox" class="checkbox" name="Microsoft" value="Microsoft" #Microsoft="ngModel" 
-                id="Microsoft" [ngModel]="dummyUserData.brands.includes('Microsoft')" ngModel>Microsoft
+                id="Microsoft" [ngModel]="dummyUserData.brands.includes('Microsoft')" [disabled]=resubmitted ngModel>Microsoft
         </div>
         <div class="form-group">
             <label for="coder">Are You a Coder?</label>
             <br>
                 <input type="checkbox" class="checkbox" name="coder" value="Yes" #Yes="ngModel" 
-                id="Yes" [(ngModel)]="dummyUserData.coder" ngModel>Select if Yes, else Ignore
+                id="Yes" [(ngModel)]="dummyUserData.coder" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
                 
         </div>
         <div class="form-group">
             <label for="coder">Are You a Gamer?</label>
             <br>
                 <input type="checkbox" class="checkbox" name="gamer" value="Yes" #Yes="ngModel" 
-                id="Yes" [(ngModel)]="dummyUserData.gamer" ngModel>Select if Yes, else Ignore
+                id="Yes" [(ngModel)]="dummyUserData.gamer" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
                 
         </div>
 
@@ -66,35 +67,35 @@
             <label for="design">Will you be using programs for drawing/editing/modeling/designing?</label>
             <br>
                 <input type="checkbox" class="checkbox" name="design" value="Yes" #Yes="ngModel" 
-                id="Yes" [(ngModel)]="dummyUserData.design" ngModel>Select if Yes, else Ignore
+                id="Yes" [(ngModel)]="dummyUserData.design" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
                 
         </div>
         <div class="form-group">
             <label for="stream">Will you be streaming movies and/or video content?</label>
             <br>
                 <input type="checkbox" class="checkbox" name="stream" value="Yes" #Yes="ngModel" 
-                id="Yes" [(ngModel)]="dummyUserData.stream" ngModel>Select if Yes, else Ignore
+                id="Yes" [(ngModel)]="dummyUserData.stream" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
                 
         </div>
         <div class="form-group">
             <label for="severalApps">Will you be running multiple applications at a time?</label>
             <br>
                 <input type="checkbox" class="checkbox" name="severalApps" value="Yes" #Yes="ngModel" 
-                id="Yes" [(ngModel)]="dummyUserData.severalApps" ngModel>Select if Yes, else Ignore
+                id="Yes" [(ngModel)]="dummyUserData.severalApps" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
                 
         </div>
         <div class="form-group">
             <label for="travel">Will you often be traveling or on the go?</label>
             <br>
                 <input type="checkbox" class="checkbox" name="travel" value="Yes" #Yes="ngModel" 
-                id="Yes" [(ngModel)]="dummyUserData.travel" ngModel>Select if Yes, else Ignore
+                id="Yes" [(ngModel)]="dummyUserData.travel" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
                 
         </div>
         <div class="form-group">
             <label for="work">Will this laptop strictly be for work use?</label>
             <br>
                 <input type="checkbox" class="checkbox" name="work" value="Yes" #Yes="ngModel" 
-                id="Yes" [(ngModel)]="dummyUserData.work" ngModel>Select if Yes, else Ignore
+                id="Yes" [(ngModel)]="dummyUserData.work" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
                 
         </div>
         
@@ -103,11 +104,15 @@
         <br>
     
     
-        <button type="submit" 
+        <button *ngIf="!resubmitted" type="submit" 
                 class="btn btn-border"
                 >
                 Save 
         </button>
+        <button *ngIf="!resubmitted" type="button" routerLink="/profile" class="btn btn-border">Cancel</button>
+        <br>
+        <button *ngIf="resubmitted" type="button" class="btn btn-border" routerLink="/profile">View Results!</button>
+        
         </form>
     </div>
 </div>

@@ -8,6 +8,7 @@ import { AuthService } from '@auth0/auth0-angular';
 })
 export class EditQuestionnaireComponent implements OnInit {
   public userEmail:string = '';  //used to get previous responses of user
+  public resubmitted: boolean = false;
 
   //keys used for accessing form values
   public OSKeys:any[] = ['Windows', 'Mac', 'Chrome'];  
@@ -56,7 +57,6 @@ export class EditQuestionnaireComponent implements OnInit {
         this.TestanswersObject.os.push(key);
       }
     }
-    
     if(editQuestionForm.value.coder) {
       this.TestanswersObject.coder = true;
     }
@@ -80,7 +80,9 @@ export class EditQuestionnaireComponent implements OnInit {
     }
     console.log('testing');
     console.log(this.TestanswersObject);
-    
+
+    //PUT request to backend + redirect to product display page
+    this.resubmitted = true;
   }
 
   //GET responses
@@ -97,6 +99,8 @@ export class EditQuestionnaireComponent implements OnInit {
        }
    )
    //this.getUserResponses(this.userEmail)
+   
+
   
    
 
