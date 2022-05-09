@@ -15,6 +15,7 @@ export class EditQuestionnaireComponent implements OnInit {
   public brandKeys:any[] = ['Acer','Apple','ASUS', 'Dell','HP','Lenovo','Microsoft'];
 
   public TestanswersObject: any = {  //will hold edited responses onSubmit
+    role:'',
     budget: '',
     os:[],
     brands:[],
@@ -28,6 +29,7 @@ export class EditQuestionnaireComponent implements OnInit {
   }
 
   public dummyUserData:any = {   //user's previous response data
+    role:'Software Developer',
     budget:'100-300',
     os:['Windows', 'Mac', 'Chrome'],
     brands:['Acer','Apple', 'Dell','HP','Microsoft'],
@@ -44,6 +46,7 @@ export class EditQuestionnaireComponent implements OnInit {
 
   onSubmit(editQuestionForm: { value: any; }) {  
     //console.log(editQuestionForm.value);
+    this.TestanswersObject.role = editQuestionForm.value.role;
     this.TestanswersObject.budget = editQuestionForm.value.budget;
     for(const brand in this.brandKeys) {
       let key = this.brandKeys[brand];
@@ -82,11 +85,17 @@ export class EditQuestionnaireComponent implements OnInit {
     console.log(this.TestanswersObject);
 
     //PUT request to backend + redirect to product display page
+    //this.updateUserResponses(email,answers)
     this.resubmitted = true;
   }
 
-  //GET responses
+  //GET previous responses
   getUserResponses() {
+    //.....
+  }
+
+  //PUT updated responses
+  updateUserResponses() {
     //.....
   }
 

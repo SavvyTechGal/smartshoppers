@@ -3,6 +3,18 @@
         <h2>Edit Your Questionnaire Form</h2>
         <form #editQuestionForm="ngForm" (ngSubmit)="onSubmit(editQuestionForm)">
         <div class="form-group">
+            <label required for="role">What is your Role?</label>
+            <br>
+            <select class="form-control" id="role" [(ngModel)]="dummyUserData.role" ngModel [disabled]=resubmitted name="role" #role="ngModel">
+                <option>Casual User</option>
+                <option>Student</option>
+                <option>Software Developer</option>
+                <option>Graphic Designer</option>
+                <option>Gamer</option>
+                <option>Other</option>
+            </select>   
+        </div>
+        <div class="form-group">
             <label for="budget">What is your Budget?</label>
             <input 
             required  
