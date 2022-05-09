@@ -1,5 +1,5 @@
 .body {
-    background-color: rgb(211, 231, 248);
+    background-color: #d3e7f8;
 }
 
 h2 {
@@ -26,7 +26,7 @@ form {
 }
 
 .loading {
-    background-color: antiquewhite;
+    background-color: #d3e7f8;
     text-align: center;
     padding:20%;
 }
