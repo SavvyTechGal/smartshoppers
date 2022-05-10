@@ -1,5 +1,6 @@
 .home-content {
     background-color: #CDC8F2; 
+    
 }
 
 #left-col {
@@ -10,13 +11,13 @@
 }
 
 #right-col {
-    padding:10%;
+    padding:10% 10% 15% 10%;
     background-color: #CDC8F2;
 }
 
 .logo {
-    width:40%;
-    border-radius: 50px;
+    width:45%;
+    
 }
 
 p.home-description {
@@ -36,5 +37,6 @@ p.home-description {
     border-color:#FDFA82 ;
     border-radius: 25px;
     font-weight: 700;
-    margin: 0px 30px 15px;
+    margin: 0px 30px 25px;
+
 }
