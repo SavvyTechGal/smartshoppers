@@ -24,26 +24,12 @@
 
     <ul class="navbar-nav ml-auto">
 
-        <li class="nav-item">
-            <!--
-            <button type="button" class="btn btn-round btn-sm"
-            *ngIf="(auth.isAuthenticated$ | async) === false"
-            >
-                <a class="nav-link create" routerLink="/signup">Create Account</a>
-          
-            </button>
-            -->
+        <!-- <li class="nav-item">
+            
             <app-signup-button *ngIf="(auth.isAuthenticated$ | async) === false"></app-signup-button>
-        </li>
+        </li> -->
   
-        <!--Login    
-        <li class="nav-item">
-            <button type="button" class="btn btn-round btn-sm">
-                <a class="nav-link user-login" routerLink="/login">Login</a>
-                
-            </button>
-        </li>
-        --> 
+        
         <li class="nav-item">
             <app-login-button 
             *ngIf="(auth.isAuthenticated$ | async) === false"
