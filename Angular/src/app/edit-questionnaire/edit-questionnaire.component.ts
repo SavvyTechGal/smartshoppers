@@ -24,11 +24,12 @@ export class EditQuestionnaireComponent implements OnInit {
     design:false,
     stream:false,
     severalApps:false,
+    ports:false,
     travel:false,
     work:false
   }
 
-  public dummyUserData:any = {   //user's previous response data
+  public dummyUserData:any = {   // will hold user's previous response data
     role:'Software Developer',
     budget:'100-300',
     os:['Windows', 'Mac', 'Chrome'],
@@ -38,6 +39,7 @@ export class EditQuestionnaireComponent implements OnInit {
     design:true,
     stream:false,
     severalApps:true,
+    ports: true,
     travel:true,
     work:true
   }
@@ -74,6 +76,9 @@ export class EditQuestionnaireComponent implements OnInit {
     }
     if(editQuestionForm.value.severalApps) {
       this.TestanswersObject.severalApps = true;
+    }
+    if(editQuestionForm.value.ports) {
+      this.TestanswersObject.ports = true;
     }
     if(editQuestionForm.value.travel) {
       this.TestanswersObject.travel = true;

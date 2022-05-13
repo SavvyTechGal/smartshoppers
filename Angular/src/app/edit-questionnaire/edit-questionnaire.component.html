@@ -61,14 +61,14 @@
                 id="Microsoft" [ngModel]="dummyUserData.brands.includes('Microsoft')" [disabled]=resubmitted ngModel>Microsoft
         </div>
         <div class="form-group">
-            <label for="coder">Are You a Coder?</label>
+            <label for="coder">Will you be coding/programming?</label>
             <br>
                 <input type="checkbox" class="checkbox" name="coder" value="Yes" #Yes="ngModel" 
                 id="Yes" [(ngModel)]="dummyUserData.coder" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
                 
         </div>
         <div class="form-group">
-            <label for="coder">Are You a Gamer?</label>
+            <label for="coder">Will you be running games?</label>
             <br>
                 <input type="checkbox" class="checkbox" name="gamer" value="Yes" #Yes="ngModel" 
                 id="Yes" [(ngModel)]="dummyUserData.gamer" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
@@ -94,6 +94,13 @@
             <br>
                 <input type="checkbox" class="checkbox" name="severalApps" value="Yes" #Yes="ngModel" 
                 id="Yes" [(ngModel)]="dummyUserData.severalApps" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
+                
+        </div>
+        <div class="form-group">
+            <label for="ports">Will you be using external devices such as mouse, keyboard or headset?</label>
+            <br>
+                <input type="checkbox" class="checkbox" name="ports" value="Yes" #Yes="ngModel" 
+                id="Yes" [(ngModel)]="dummyUserData.ports" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
                 
         </div>
         <div class="form-group">
