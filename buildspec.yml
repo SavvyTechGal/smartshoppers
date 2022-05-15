@@ -13,8 +13,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - ng build
-      - ng test
+      - npm build
+      - npm test
   post_build:
     commands:
       - echo Build completed on `date`
