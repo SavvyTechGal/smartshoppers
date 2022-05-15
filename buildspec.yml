@@ -14,13 +14,12 @@ phases:
     commands:
       - echo Build started on `date`
       - npm build
-      - npm test
   post_build:
     commands:
       - echo Build completed on `date`
 # Include only the files required for your application to run.
 artifacts:
   files:
-    - Angular/src/*
-    - Angular/package.json
-    - Angular/node_modules/**/*
+    - "**/*"
+  discard-paths: no
+  base-directory: Angular/dist/smart-shoppers
