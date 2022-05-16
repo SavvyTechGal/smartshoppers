@@ -21,10 +21,13 @@
                   #windows="ngModel" 
                   id="windows"
                   class="form-control form-check-input" 
-                  value="" >Windows OS
+                  value="" 
+                  [checked]="windowsChecked" 
+                  
+                  >Windows OS
                 </label>
               </div>
-
+              
               <div class="form-group form-check-inline">
                 <label class="form-check-label p-4">
                   <input 
@@ -59,3 +62,5 @@
     </form>
 
 </div>
+
+<!-- (change)="windowCheck(true)" -->

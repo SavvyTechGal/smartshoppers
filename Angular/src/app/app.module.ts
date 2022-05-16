@@ -44,6 +44,8 @@ import { OsComponent } from './os/os.component';
 import { SeveralAppsComponent } from './several-apps/several-apps.component';
 import { BudgetComponent } from './budget/budget.component';
 import { UserRoleComponent } from './user-role/user-role.component';
+import { CompletionComponent } from './completion/completion.component';
+import { SingleViewComponent } from './single-view/single-view.component';
 
 
 @NgModule({
@@ -77,7 +79,9 @@ import { UserRoleComponent } from './user-role/user-role.component';
     OsComponent,
     SeveralAppsComponent,
     BudgetComponent,
-    UserRoleComponent
+    UserRoleComponent,
+    CompletionComponent,
+    SingleViewComponent
   ],
   imports: [
     BrowserModule,

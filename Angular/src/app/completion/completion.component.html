@@ -1,0 +1,49 @@
+<div class="body">
+
+    <!--QUESTION-->
+    <h2 class="question">
+        Please confirm your answers and rank the specs
+    </h2>
+
+    <!--Coding Input-->
+    <div class="container code-content">
+        <div>
+            <h3>
+                Is This Your Role? : {{userRole}}
+            </h3>
+            <hr>
+            <h3>
+                What Is Your Budget? : {{Budget}}
+            </h3>
+            <hr>
+            <h3>
+                What Operating System Do You Prefer? : 
+                <li *ngFor="let os of userOS">
+                    {{os}}
+                </li>
+            </h3>
+            <label for="osRank">
+                Rank:
+                <input type="number">
+            </label>
+            <hr>
+            <h3>
+                What Brands Do You Prefer? :
+                <li *ngFor="let brand of userBrands">
+                    {{brand}}
+                </li>
+            </h3>
+            Rank:
+            <label for="brandsRank">
+                <input type="number">
+            </label>
+        </div>
+    </div>
+
+    <div class="next">
+        <button type="button" id="next-button" class="btn">
+            <a class="nav-link" routerLink="/home">NEXT</a>
+        </button>
+    </div>
+
+</div>

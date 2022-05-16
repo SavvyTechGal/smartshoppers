@@ -8,6 +8,7 @@ import { UserClass } from './user-class.model';
   providedIn: 'root'
 })
 export class AnswersService {
+  //IGNORE START
   //create a temporary hold for questionnaire answers before sending them to backend
   osSystems: any[] = []; 
   brandChoices: any[] = [];
@@ -21,7 +22,7 @@ export class AnswersService {
       role: ""
     },
 
-    userBudget: {
+    userBudget: { //id, answer, rank
       id: 2,
       budget: ""
     },
@@ -38,18 +39,20 @@ export class AnswersService {
       rank: 0
     }
 };
+//IGNORE END
 
   constructor(public auth:AuthService, public HttpClient:HttpClient) { 
     this.jsonFormat = <JSON>this.arrayObject; //convert object into json format
   }
 
-  postAnswer(email: string, id: string, answer: any) { //changed id from number to string; answers cannot be bools/numbers
+  postAnswer(email: string, id: string, answer: any, rank: string) { //changed id from number to string; answers cannot be bools/numbers
     let request =
     this.HttpClient.post(`http://127.0.0.1:5000/addanswer`,
     {
       "email": email,
       "id" : id,
-      "answer" : answer
+      "answer" : answer,
+      "rank" : rank //I haven't changed this in the app.py
     });
 
     request.subscribe((data) => {

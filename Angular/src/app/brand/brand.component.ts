@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class BrandComponent implements OnInit {
   selectedSystems: any[] = [];
   brandsArray: any[] = [];
+  oldAnswers: any[] = [];
+  acerPresent: boolean = false;
 
   addAnswer(quizanswers: { value: any; }) {
     console.log (quizanswers.value);
@@ -21,7 +23,7 @@ export class BrandComponent implements OnInit {
         this.brandsArray.push(key); //add the brands that were selected to brandsArray
       }
     }
-    this.router.navigateByUrl("/home"); //no longer routes to several-apps
+    this.router.navigateByUrl("/completion"); //no longer routes to several-apps
   }
 
   showSystems() {
@@ -31,11 +33,19 @@ export class BrandComponent implements OnInit {
     console.log(this.answerService.brandChoices);
   }
 
-  constructor(public answerService: AnswersService, public router: Router) { }
+  constructor(public answerService: AnswersService, public router: Router) { 
+    this.oldAnswers = this.answerService.arrayObject.brandSelections.brands;
+  }
 
   ngOnInit(): void {
     this.selectedSystems = this.answerService.osSystems; //retrieve OS selections from OS Component
     // this.answerService.brandChoices = this.brandsArray;
     this.answerService.arrayObject.brandSelections.brands = this.brandsArray; //store brand selections in answer service
+    console.log(this.answerService.arrayObject.brandSelections.brands);
+    console.log('tired', this.oldAnswers);
+    if(this.oldAnswers[0] === 'acer')
+    {
+      this.acerPresent = true;
+    }
   }
 }
