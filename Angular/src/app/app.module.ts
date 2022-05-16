@@ -45,6 +45,8 @@ import { SeveralAppsComponent } from './several-apps/several-apps.component';
 import { BudgetComponent } from './budget/budget.component';
 import { UserRoleComponent } from './user-role/user-role.component';
 import { EditQuestionnaireComponent } from './edit-questionnaire/edit-questionnaire.component';
+import { CompletionComponent } from './completion/completion.component';
+import { SingleViewComponent } from './single-view/single-view.component';
 
 
 @NgModule({
@@ -79,7 +81,9 @@ import { EditQuestionnaireComponent } from './edit-questionnaire/edit-questionna
     SeveralAppsComponent,
     BudgetComponent,
     UserRoleComponent,
-    EditQuestionnaireComponent
+    EditQuestionnaireComponent,
+    CompletionComponent,
+    SingleViewComponent
   ],
   imports: [
     BrowserModule,

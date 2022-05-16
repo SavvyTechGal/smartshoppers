@@ -24,6 +24,9 @@ import { SeveralAppsComponent } from './several-apps/several-apps.component';
 import { BudgetComponent } from './budget/budget.component';
 import { UserRoleComponent } from './user-role/user-role.component';
 import { EditQuestionnaireComponent } from './edit-questionnaire/edit-questionnaire.component';
+import { CompletionComponent } from './completion/completion.component';
+import { SingleViewComponent } from './single-view/single-view.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch:'full' },
@@ -49,6 +52,8 @@ const routes: Routes = [
   { path: 'several-apps', component: SeveralAppsComponent},
   { path: 'budget', component: BudgetComponent},
   { path: 'user-role', component: UserRoleComponent},
+  { path: 'completion', component: CompletionComponent},
+  { path: 'single-view', component: SingleViewComponent},
   { 
     path: 'signupform', 
     component: SignupFormComponent,

@@ -10,10 +10,15 @@ import { UserService } from '../user.service';
   styleUrls: ['./os.component.css']
 })
 export class OsComponent implements OnInit {
-
+  public windowsChecked: boolean = false;
   public userEmail: string = '';
   answerArray: any[] = [];
 
+//   public windowCheck(checkbox:boolean){
+//     this.windowsChecked = checkbox;
+//     console.log(checkbox);
+//     console.log(this.windowsChecked);
+// }
   addAnswer(quizanswers: { value: any; }) {
     console.log (quizanswers.value);
 
@@ -37,5 +42,12 @@ export class OsComponent implements OnInit {
   ngOnInit(): void {
     // this.answerService.osSystems = this.answerArray;
     this.answerService.arrayObject.osSelections.os = this.answerArray; //store OS selections in answer service
+    console.log(this.windowsChecked);
+    console.log(this.answerService.arrayObject.osSelections.os);
+    
+    if(this.answerService.arrayObject.osSelections.os.length !== 0){
+      this.windowsChecked = true;
+      console.log("yes we have info in service");
+    }
   }
 }
