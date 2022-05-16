@@ -1,0 +1,306 @@
+<div class="body">
+    
+    <h1 class="question">
+        Answer the Following Questions
+    </h1>
+    <h2> When answering the questions, rank each spec on a scale of 1-4 </h2>
+
+    <!--Spec Questions for Software Dev-->
+    <form #quizanswers = "ngForm" (ngSubmit)="onSubmit(quizanswers)">
+        <div class="container code-content">
+            <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            <h3>
+                Do you run several applications at once?
+            </h3>
+            <button type="button" class="btn btn-round btn-lg" (click)="yesApps()">Yes</button>
+            <button type="button" class="btn btn-round btn-lg" (click)="noApps()">No</button>
+            <label>
+              <input 
+              type="text"
+              ngModel name="appsRank"
+              #appsRank="ngModel" 
+              id="appsRank"
+              class="form-control" 
+              value="" >Rank
+            </label>
+        </div>
+
+        <hr>
+
+        <div class="container code-content">
+            <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            <h3>
+                Do you travel often?
+            </h3>
+            <button type="button" class="btn btn-round btn-lg" (click)="yesTravel()">Yes</button>
+            <button type="button" class="btn btn-round btn-lg" (click)="noTravel()">No</button>
+            <label>
+              <input 
+              type="text"
+              ngModel name="travelerRank"
+              #travelerRank="ngModel" 
+              id="travelerRank"
+              class="form-control" 
+              value="" >Rank
+            </label>
+        </div>
+
+        <hr>
+
+        <div class="container code-content">
+            <h3>
+                What operating system(s) do you prefer?
+            </h3>
+            <div class="brand-selection">
+                <div class="form-group form-check-inline">
+                  <label class="form-check-label p-4">
+                    <input 
+                    type="checkbox"
+                    ngModel name="windows" 
+                    #windows="ngModel" 
+                    id="windows"
+                    class="form-control form-check-input" 
+                    value=""
+                    >Windows OS
+                  </label>
+                </div>
+                
+                <div class="form-group form-check-inline">
+                  <label class="form-check-label p-4">
+                    <input 
+                    type="checkbox"
+                    ngModel name="mac" 
+                    #mac="ngModel" 
+                    id="mac"
+                    class="form-control form-check-input" 
+                    value="" >Mac OS
+                  </label>
+                </div>
+                
+                <div class="form-group form-check-inline">
+                  <label class="form-check-label p-4">
+                    <input 
+                    type="checkbox"
+                    ngModel name="chrome" 
+                    #chrome="ngModel" 
+                    id="chrome"
+                    class="form-control form-check-input" 
+                    value="" >Chrome OS
+                  </label>
+                </div>
+
+                <label>
+                  <input 
+                  type="text"
+                  ngModel name="osRank"
+                  #osRank="ngModel" 
+                  id="osRank"
+                  class="form-control" 
+                  value="" >Rank
+                </label>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="container code-content">
+            <h3>
+                What brand(s) do you prefer?
+            </h3>
+            <div class="container brand-content">
+                <div class="brand-selection"> <!--make checkboxes into image selections to fix checkbox size problem-->
+                      <div class="form-group form-check-inline">
+                        <label class="form-check-label p-4">
+                          <input
+                          type="checkbox"
+                          ngModel name="acer" 
+                          #acer="ngModel" 
+                          id="acer"
+                          class="form-control form-check-input" 
+                          value="" >Acer
+                        </label>
+                      </div>
+                      
+                      <div class="form-group form-check-inline">
+                        <label class="form-check-label p-4">
+                          <input 
+                          type="checkbox"
+                          ngModel name="apple" 
+                          #apple="ngModel" 
+                          id="apple"
+                          class="form-control form-check-input" 
+                          value="" >Apple
+                        </label>
+                      </div>
+            
+                      <div class="form-group form-check-inline">
+                        <label class="form-check-label p-4">
+                          <input 
+                          type="checkbox"
+                          ngModel name="asus" 
+                          #asus="ngModel" 
+                          id="asus"
+                          class="form-control form-check-input" 
+                          value="" >Asus
+                        </label>
+                      </div>
+            
+            
+                      <div class="form-group form-check-inline">
+                        <label class="form-check-label p-4">
+                          <input 
+                          type="checkbox"
+                          ngModel name="dell" 
+                          #dell="ngModel" 
+                          id="dell"
+                          class="form-control form-check-input" 
+                          value="" >Dell
+                        </label>
+                      </div>
+            
+                      
+                      <div class="form-group form-check-inline">
+                        <label class="form-check-label p-4">
+                          <input 
+                          type="checkbox"
+                          ngModel name="hp" 
+                          #hp="ngModel" 
+                          id="hp"
+                          class="form-control form-check-input" 
+                          value="" >HP
+                        </label>
+                      </div>
+            
+            
+                      <div class="form-group form-check-inline">
+                        <label class="form-check-label p-4">
+                          <input 
+                          type="checkbox"
+                          ngModel name="lenovo"
+                          #lenovo="ngModel" 
+                          id="lenovo"
+                          class="form-control form-check-input" 
+                          value="" >Lenovo
+                        </label>
+                      </div>
+            
+            
+                      <div class="form-group form-check-inline">
+                        <label class="form-check-label p-4">
+                          <input 
+                          type="checkbox"
+                          ngModel name="microsoft" 
+                          #microsoft="ngModel" 
+                          id="microsoft"
+                          class="form-control form-check-input" 
+                          value="" >Microsoft
+                        </label>
+                      </div>
+
+                      <label>
+                        <input 
+                        type="text"
+                        ngModel name="brandsRank"
+                        #brandsRank="ngModel" 
+                        id="brandsRank"
+                        class="form-control" 
+                        value="" >Rank
+                      </label>
+
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <h2>The following questions are about issues with your previous/current device:</h2>
+
+        <div class="container code-content">
+            <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            <h3>
+                Do you often run out of storage?
+            </h3>
+            <button type="button" class="btn btn-round btn-lg" (click)="yesStorage()">Yes</button>
+            <button type="button" class="btn btn-round btn-lg" (click)="noStorage()">No</button>
+            <label>
+              <input 
+              type="text"
+              ngModel name="storageRank"
+              #storageRank="ngModel" 
+              id="storageRank"
+              class="form-control" 
+              value="" >Rank
+            </label>
+        </div>
+
+        <hr>
+
+        <div class="container code-content">
+            <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            <h3>
+                Are constant charges a problem?
+            </h3>
+            <button type="button" class="btn btn-round btn-lg" (click)="yesCharges()">Yes</button>
+            <button type="button" class="btn btn-round btn-lg" (click)="noCharges()">No</button>
+            <label>
+              <input 
+              type="text"
+              ngModel name="chargesRank"
+              #chargesRank="ngModel" 
+              id="chargesRank"
+              class="form-control" 
+              value="" >Rank
+            </label>
+        </div>
+
+        <hr>
+
+        <div class="container code-content">
+            <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            <h3>
+                Is your work hindered by your device's speed?
+            </h3>
+            <button type="button" class="btn btn-round btn-lg" (click)="yesSpeed()">Yes</button>
+            <button type="button" class="btn btn-round btn-lg" (click)="noSpeed()">No</button>
+            <label>
+              <input 
+              type="text"
+              ngModel name="speedRank"
+              #speedRank="ngModel" 
+              id="speedRank"
+              class="form-control" 
+              value="" >Rank
+            </label>
+        </div>
+
+        <hr>
+
+        <div class="container code-content">
+            <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            <h3>
+                Does your device become uncomfortably heated?
+            </h3>
+            <button type="button" class="btn btn-round btn-lg" (click)="yesHeated()">Yes</button>
+            <button type="button" class="btn btn-round btn-lg" (click)="noHeated()">No</button>
+            <label>
+              <input 
+              type="text"
+              ngModel name="heatedRank"
+              #heatedRank="ngModel" 
+              id="heatedRank"
+              class="form-control" 
+              value="" >Rank
+            </label>
+        </div>
+
+        <div class="next">
+          <button type="submit" id="next-button" class="btn">Done</button>
+        </div>
+    </form>
+
+    <div class="next">
+        <button type="button" id="next-button" class="btn">
+            <a class="nav-link" routerLink="/home">NEXT</a>
+        </button>
+    </div>
+
+</div>

@@ -43,6 +43,14 @@
     <div class="brand-selection"> <!--make checkboxes into image selections to fix checkbox size problem-->
           <div class="form-group form-check-inline">
             <label class="form-check-label p-4">
+              <input *ngIf= 'acerPresent'
+              type="checkbox"
+              ngModel name="acer" 
+              #acer="ngModel" 
+              [ngModel]="true"
+              id="acer"
+              class="form-control form-check-input" 
+              value="" >Acer
               <input 
               type="checkbox"
               ngModel name="acer" 
@@ -108,7 +116,8 @@
             <label class="form-check-label p-4">
               <input 
               type="checkbox"
-              ngModel name="lenovo" 
+              ngModel name="lenovo"
+              [ngModel]="true"
               #lenovo="ngModel" 
               id="lenovo"
               class="form-control form-check-input" 

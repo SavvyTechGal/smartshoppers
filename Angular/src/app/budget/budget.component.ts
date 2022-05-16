@@ -10,11 +10,12 @@ import { UserService } from '../user.service';
   styleUrls: ['./budget.component.css']
 })
 export class BudgetComponent implements OnInit {
-  budgetRange: string = "";
+  budgetRange: any;
 
   addAnswer(quizanswers: { value: any; }) {
     console.log(quizanswers.value.budget);
     this.budgetRange = quizanswers.value.budget;
+    this.answerService.arrayObject.userBudget.budget = this.budgetRange; //store budget text in answer service
     this.router.navigateByUrl("/os");
   }
   constructor(
@@ -22,7 +23,8 @@ export class BudgetComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.answerService.arrayObject.userBudget.budget = this.budgetRange; //store budget text in answer service
+    
+    console.log(this.answerService.arrayObject.userBudget.budget);
   }
 
 }
