@@ -2,26 +2,65 @@
 <div class="container-fluid home-content">
     <div class="row">
         <div id="left-col" class="col-lg-6">
-            <img src="./assets/img/ss-logo.png" class="logo">
+            <img class="logo" src="./assets/img/ss-logo.png" >
         </div>
         <div id="right-col" class="col-lg-6">
             <p class="home-description">Navigating tech is hard enough without having to 
                 scroll through tech specs.  Let's help you find the best electronics
-                without breaking the bank.  Explore our services below.
+                without breaking the bank.  
             </p>
+            <p class="home-description">
+                Explore our services below.
+            </p>
+
+            <p id="guide-link" style="text-align:center; font-weight:200; margin-top: 5%;">
+                If you would like to learn the terminology, 
+                feel free to check out our guide 
+                <a routerLink="/about">
+                    <u>here!</u>
+                </a>
+            </p>
+            
 
             
         </div>
 
     </div>
-
-    <div class="learn-more">
-        <button type="button" id="learn-more-button" class="btn">
-            <a class="nav-link" routerLink="/services">LEARN MORE</a>
-        </button>
+</div>
+<div class="about-section">
+    <div class ="container about-content">
+        <h1>Our Services</h1>
+        <h5>We provide an easy and simple method of matching laptops best suited
+            to your needs.
+        </h5>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <img class="about-img" src="./assets/img/temp-logo.jpg">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h1 class="card-text" style="color: white; padding:8%"><b>Our Laptop Matching Questionnaire</b></h1>
+                        <h3 class="card-text" style="font-weight:bolder">We ask you a series of questions without
+                            all the technology lingo.
+                        </h3>
+                        <h3 class="card-text" style="font-weight:bolder">Then we take your responses to find laptops
+                            that we think are the best fit for you.
+                        </h3>
+                        <h3 class="card-text" style="font-weight:bolder">You can save the laptops you like and view them later
+                            in your profile.
+                        </h3>
+                        <div class="learn-more">
+                            <button type="button" id="learn-more-button" class="btn">
+                                <a style="color:#ff952c;"class="nav-link" routerLink="/services">LEARN MORE</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-
 </div>
 
