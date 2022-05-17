@@ -2,120 +2,72 @@ import { Component, OnInit } from '@angular/core';
 import { AnswersService } from '../answers.service';
 import { AuthService } from '@auth0/auth0-angular';
 import { UserService } from '../user.service';
+import { DevQuizComponent } from './dev-quiz/dev-quiz.component';
+import { BudgetRangeComponent } from './budget-range/budget-range.component';
+import { Options, LabelType } from "@angular-slider/ngx-slider";
 
 @Component({
   selector: 'app-single-view',
   templateUrl: './single-view.component.html',
-  styleUrls: ['./single-view.component.css']
+  styleUrls: ['./single-view.component.css'],
+  providers: [
+    DevQuizComponent, // added class in the providers,
+    BudgetRangeComponent
+  ]
 })
 export class SingleViewComponent implements OnInit {
   userEmail: string = '';
-  severalApps: string = ''; //value changed by button click functions
-  appsRank: string = '';
-  
-  traveler: string = '';
-  travelerRank: string = '';
-  
-  storage: string = '';
-  storageRank: string = '';
 
-  manyCharges: string = '';
-  chargesRank: string = '';
+  newUser: boolean = false;  //if user is registered in db
+  public currentRole: any;
 
-  speed: string = '';
-  speedRank: string = '';
+  displayRole = false; //to render the user's role in the view
+  entireQuiz = false; //to render a version of the questionnaire in the view
 
-  heated: string = '';
-  heatedRank: string = '';
+  //bools to check which quiz version to display
+  casualUser = false;
 
-  brandsArray: string[] = [];
-
-  yesApps(){
-    this.severalApps = 'Yes';
-  }
-  noApps(){
-    this.severalApps = 'No';
-  }
-
-  yesTravel(){
-    this.traveler = 'Yes';
-  }
-  noTravel(){
-    this.traveler = 'No';
+  confirmRole() {
+    this.userInfo.getUser(this.userEmail) //retrieve user's role
+    .subscribe((data) => {
+      if(data == null) {
+        console.log("data is null");  //if user not found in db -> not registered yet -> direct to signupform
+        this.newUser = true;
+      }
+      else {    //if user returned 
+        this.currentRole = Object.values(data)[3];
+        console.log(Object.values(data)[3]);
+        console.log(this.currentRole);
+      }
+    });
+    this.displayRole = true;
   }
 
-  yesStorage(){
-    this.storage = 'Yes';
-  }
-  noStorage(){
-    this.storage = 'No';
-  }
-  
-  yesCharges(){
-    this.manyCharges = 'Yes';
-  }
-  noCharges(){
-    this.manyCharges = 'No';
+  correctRole() { //render the correct version of the questionnaire according to user's role
+    this.entireQuiz = true;
+    if(this.currentRole === 'Casual User') {
+      this.casualUser = true;
+    }
   }
 
-  yesSpeed(){
-    this.speed = 'Yes';
-  }
-  noSpeed(){
-    this.speed = 'No';
-  }
-
-  yesHeated(){
-    this.heated = 'Yes';
-  }
-  noHeated(){
-    this.heated = 'No';
-  }
-
-  onSubmit(quizanswers: { value: any; }) //takes in all answers (just checkboxes) from the questionnaire
-  {
-    console.log('User email: ', this.userEmail);
-    console.log('question 1:');
-    console.log(quizanswers.value.appsRank);
-    console.log(this.severalApps);
-
-    console.log('question 2:');
-    console.log(quizanswers.value.travelerRank);
-    console.log(this.traveler);
-
-    console.log('question 3 and 4:');
-    for (let key in quizanswers.value) //looping over form object
-    {
-      if((quizanswers.value)[key] === true)
-      {
-        console.log(key);
-        this.brandsArray.push(key); //add os AND brand choices to brandsArray (CAN FIX IF THIS IS A PROBLEM)
+  minValue: number = 100;
+  maxValue: number = 400;
+  options: Options = {
+    floor: 0,
+    ceil: 500,
+    translate: (value: number, label: LabelType): string => {
+      switch (label) {
+        case LabelType.Low:
+          return "<b>Min price:</b> $" + value;
+        case LabelType.High:
+          return "<b>Max price:</b> $" + value;
+        default:
+          return "$" + value;
       }
     }
-    console.log(this.brandsArray);
-    console.log(quizanswers.value.osRank);
-    console.log(quizanswers.value.brandsRank);
-    
-    console.log('question 5:');
-    console.log(quizanswers.value.storageRank);
-    console.log(this.storage);
+  };
 
-    console.log('question 6:');
-    console.log(quizanswers.value.chargesRank);
-    console.log(this.manyCharges);
-
-    console.log('question 7:');
-    console.log(quizanswers.value.speedRank);
-    console.log(this.speed);
-
-    console.log('question 8:');
-    console.log(quizanswers.value.heatedRank);
-    console.log(this.heated);
-    // this.answerService.postAnswer(this.userEmail, '1', this.severalApps, this.appsRank);
-
-  }
-
-  constructor( public answerService: AnswersService, public auth: AuthService, public userInfo: UserService) { }
+  constructor( public answerService: AnswersService, public auth: AuthService, public userInfo: UserService, public softwareDevQuiz: DevQuizComponent) { }
 
   ngOnInit(): void {
     this.auth.user$.subscribe(
