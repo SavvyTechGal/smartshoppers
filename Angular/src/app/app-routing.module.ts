@@ -23,11 +23,13 @@ import { OsComponent } from './os/os.component';
 import { SeveralAppsComponent } from './several-apps/several-apps.component';
 import { BudgetComponent } from './budget/budget.component';
 import { UserRoleComponent } from './user-role/user-role.component';
+import { EditQuestionnaireComponent } from './edit-questionnaire/edit-questionnaire.component';
 import { CompletionComponent } from './completion/completion.component';
 import { SingleViewComponent } from './single-view/single-view.component';
 import { DevQuizComponent } from './single-view/dev-quiz/dev-quiz.component';
 import { BudgetRangeComponent } from './single-view/budget-range/budget-range.component';
 import { combineLatestInit } from 'rxjs/internal/observable/combineLatest';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch:'full' },
@@ -70,6 +72,11 @@ const routes: Routes = [
   {
     path: 'edit-profile',
     component: EditProfileComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'edit-questionnaire',
+    component: EditQuestionnaireComponent,
     canActivate: [AuthGuard]
   }
   

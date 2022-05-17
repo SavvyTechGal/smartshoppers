@@ -1,307 +1,307 @@
 
 <div class="body">
     
-    <h1 class="question">
+    <h1 class="header" style="text-align:center">
         Answer the Following Questions
     </h1>
-    <h2> When answering the questions, rank each spec on a scale of 1-4 </h2>
+    <h3 style="text-align:center"> When answering the questions, rank the priority of each spec on a scale of 1-8 </h3>
 
     <!--Spec Questions for Software Dev-->
     <form #quizanswers = "ngForm" (ngSubmit)="onSubmit(quizanswers)">
         <div class="container code-content">
-            <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
-            <h3>
-                Do you run several applications at once?
-            </h3>
-            <button type="button" class="btn btn-round btn-lg" (click)="yesApps()">Yes</button>
-            <button type="button" class="btn btn-round btn-lg" (click)="noApps()">No</button>
-            <label>
-              <input 
-              type="text"
-              ngModel name="appsRank"
-              #appsRank="ngModel" 
-              id="appsRank"
-              class="form-control" 
-              value="" >Rank
-            </label>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="severalApps"><h2>Will you be running multiple applications at a time?</h2></label>
+                  <br>
+                      <input type="checkbox" class="checkbox" name="severalApps" value="Yes" #Yes="ngModel" 
+                      id="Yes" [disabled]=submitted ngModel>Select if Yes, else Ignore
+                  
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="severalAppsRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                  <br>
+                  <select style="width:50%" class="form-control" id="severalAppsRank" required [disabled]=submitted ngModel name="severalAppsRank" #severalAppsRank="ngModel">
+                      <option value=""></option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                  </select>   
+              </div>
+              </div>
+              <div class="col-lg-6">
+                <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+              </div>
+            </div>
+            
         </div>
 
-        <hr>
-
         <div class="container code-content">
-            <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
-            <h3>
-                Do you travel often?
-            </h3>
-            <button type="button" class="btn btn-round btn-lg" (click)="yesTravel()">Yes</button>
-            <button type="button" class="btn btn-round btn-lg" (click)="noTravel()">No</button>
-            <label>
-              <input 
-              type="text"
-              ngModel name="travelerRank"
-              #travelerRank="ngModel" 
-              id="travelerRank"
-              class="form-control" 
-              value="" >Rank
-            </label>
-        </div>
-
-        <hr>
-
-        <div class="container code-content">
-            <h3>
-                What operating system(s) do you prefer?
-            </h3>
-            <div class="brand-selection">
-                <div class="form-group form-check-inline">
-                  <label class="form-check-label p-4">
-                    <input 
-                    type="checkbox"
-                    ngModel name="windows" 
-                    #windows="ngModel" 
-                    id="windows"
-                    class="form-control form-check-input" 
-                    value=""
-                    >Windows OS
-                  </label>
-                </div>
-                
-                <div class="form-group form-check-inline">
-                  <label class="form-check-label p-4">
-                    <input 
-                    type="checkbox"
-                    ngModel name="mac" 
-                    #mac="ngModel" 
-                    id="mac"
-                    class="form-control form-check-input" 
-                    value="" >Mac OS
-                  </label>
-                </div>
-                
-                <div class="form-group form-check-inline">
-                  <label class="form-check-label p-4">
-                    <input 
-                    type="checkbox"
-                    ngModel name="chrome" 
-                    #chrome="ngModel" 
-                    id="chrome"
-                    class="form-control form-check-input" 
-                    value="" >Chrome OS
-                  </label>
-                </div>
-
-                <label>
-                  <input 
-                  type="text"
-                  ngModel name="osRank"
-                  #osRank="ngModel" 
-                  id="osRank"
-                  class="form-control" 
-                  value="" >Rank
-                </label>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="travel"><h2>Will you often be traveling or on the go?</h2></label>
+                <br>
+                    <input type="checkbox" class="checkbox" name="travel" value="Yes" #Yes="ngModel" 
+                    id="Yes" [disabled]=submitted ngModel>Select if Yes, else Ignore
+                   
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="travelRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                <br>
+                <select style="width:50%" class="form-control" id="travelRank" required [disabled]=submitted ngModel name="travelRank" #travelRank="ngModel">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>   
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            </div>
           </div>
         </div>
 
-        <hr>
-
         <div class="container code-content">
-            <h3>
-                What brand(s) do you prefer?
-            </h3>
-            <div class="container brand-content">
-                <div class="brand-selection"> <!--make checkboxes into image selections to fix checkbox size problem-->
-                      <div class="form-group form-check-inline">
-                        <label class="form-check-label p-4">
-                          <input
-                          type="checkbox"
-                          ngModel name="acer" 
-                          #acer="ngModel" 
-                          id="acer"
-                          class="form-control form-check-input" 
-                          value="" >Acer
-                        </label>
-                      </div>
-                      
-                      <div class="form-group form-check-inline">
-                        <label class="form-check-label p-4">
-                          <input 
-                          type="checkbox"
-                          ngModel name="apple" 
-                          #apple="ngModel" 
-                          id="apple"
-                          class="form-control form-check-input" 
-                          value="" >Apple
-                        </label>
-                      </div>
-            
-                      <div class="form-group form-check-inline">
-                        <label class="form-check-label p-4">
-                          <input 
-                          type="checkbox"
-                          ngModel name="asus" 
-                          #asus="ngModel" 
-                          id="asus"
-                          class="form-control form-check-input" 
-                          value="" >Asus
-                        </label>
-                      </div>
-            
-            
-                      <div class="form-group form-check-inline">
-                        <label class="form-check-label p-4">
-                          <input 
-                          type="checkbox"
-                          ngModel name="dell" 
-                          #dell="ngModel" 
-                          id="dell"
-                          class="form-control form-check-input" 
-                          value="" >Dell
-                        </label>
-                      </div>
-            
-                      
-                      <div class="form-group form-check-inline">
-                        <label class="form-check-label p-4">
-                          <input 
-                          type="checkbox"
-                          ngModel name="hp" 
-                          #hp="ngModel" 
-                          id="hp"
-                          class="form-control form-check-input" 
-                          value="" >HP
-                        </label>
-                      </div>
-            
-            
-                      <div class="form-group form-check-inline">
-                        <label class="form-check-label p-4">
-                          <input 
-                          type="checkbox"
-                          ngModel name="lenovo"
-                          #lenovo="ngModel" 
-                          id="lenovo"
-                          class="form-control form-check-input" 
-                          value="" >Lenovo
-                        </label>
-                      </div>
-            
-            
-                      <div class="form-group form-check-inline">
-                        <label class="form-check-label p-4">
-                          <input 
-                          type="checkbox"
-                          ngModel name="microsoft" 
-                          #microsoft="ngModel" 
-                          id="microsoft"
-                          class="form-control form-check-input" 
-                          value="" >Microsoft
-                        </label>
-                      </div>
-
-                      <label>
-                        <input 
-                        type="text"
-                        ngModel name="brandsRank"
-                        #brandsRank="ngModel" 
-                        id="brandsRank"
-                        class="form-control" 
-                        value="" >Rank
-                      </label>
-
-                </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="OS"><h2>What operating system(s) do you prefer?</h2></label>
+                <br>
+                    <input type="checkbox" class="checkbox" name="Windows" value="Windows" #Windows="ngModel" 
+                    id="Windows" [disabled]=submitted ngModel>Windows OS
+                    <input type="checkbox" class="checkbox" name="Mac" value="Mac" #Mac="ngModel" 
+                    id="Mac" [disabled]=submitted ngModel>Mac OS
+                    <input type="checkbox" class="checkbox" name="Chrome" value="Chrome" #Chrome="ngModel" 
+                    id="Chrome" [disabled]=submitted ngModel>Chrome OS
+              </div>
+              <div class="form-group">
+                <label for="osRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                <br>
+                <select style="width:50%" class="form-control" id="osRank" required [disabled]=submitted ngModel name="osRank" #osRank="ngModel">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>   
+              </div>
             </div>
+            <div class="col-lg-6">
+              <img src="./assets/img/os-image.jpg"  class="rounded mx-auto d-block" >
+            </div>
+          </div>
         </div>
-
-        <hr>
-        <h2>The following questions are about issues with your previous/current device:</h2>
 
         <div class="container code-content">
-            <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
-            <h3>
-                Do you often run out of storage?
-            </h3>
-            <button type="button" class="btn btn-round btn-lg" (click)="yesStorage()">Yes</button>
-            <button type="button" class="btn btn-round btn-lg" (click)="noStorage()">No</button>
-            <label>
-              <input 
-              type="text"
-              ngModel name="storageRank"
-              #storageRank="ngModel" 
-              id="storageRank"
-              class="form-control" 
-              value="" >Rank
-            </label>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="brand"><h2>What Brands Do You Prefer?</h2></label>
+                <br>
+                    <input type="checkbox" class="checkbox" name="Acer" value="Acer" #Acer="ngModel" 
+                    id="Acer" [disabled]=submitted ngModel>Acer
+                    <input type="checkbox" class="checkbox" name="Apple" value="Apple" #Apple="ngModel" 
+                    id="Apple" [disabled]=submitted ngModel>Apple
+                    <input type="checkbox" class="checkbox" name="ASUS" value="ASUS" #ASUS="ngModel" 
+                    id="ASUS" [disabled]=submitted ngModel>ASUS
+                    <input type="checkbox" class="checkbox" name="Dell" value="Dell" #Dell="ngModel" 
+                    id="Dell" [disabled]=submitted ngModel>Dell
+                    <input type="checkbox" class="checkbox" name="HP" value="HP" #HP="ngModel" 
+                    id="HP" [disabled]=submitted  ngModel>HP
+                    <input type="checkbox" class="checkbox" name="Lenovo" value="Lenovo" #Lenovo="ngModel" 
+                    id="Lenovo" [disabled]=submitted ngModel>Lenovo
+                    <input type="checkbox" class="checkbox" name="Microsoft" value="Microsoft" #Microsoft="ngModel" 
+                    id="Microsoft" [disabled]=submitted ngModel>Microsoft
+            </div>
+              <div class="form-group">
+                <label for="brandRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                <br>
+                <select style="width:50%" class="form-control" id="brandRank" required [disabled]=submitted ngModel name="brandRank" #brandRank="ngModel">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>   
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="./assets/img/os-image.jpg"  class="rounded mx-auto d-block" >
+            </div>
+          </div>
         </div>
 
-        <hr>
+
+        <h2 style="text-align:center; margin:2%;">The following questions are about issues with your previous/current device:</h2>
 
         <div class="container code-content">
-            <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
-            <h3>
-                Are constant charges a problem?
-            </h3>
-            <button type="button" class="btn btn-round btn-lg" (click)="yesCharges()">Yes</button>
-            <button type="button" class="btn btn-round btn-lg" (click)="noCharges()">No</button>
-            <label>
-              <input 
-              type="text"
-              ngModel name="chargesRank"
-              #chargesRank="ngModel" 
-              id="chargesRank"
-              class="form-control" 
-              value="" >Rank
-            </label>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="storage"><h2>Do you often run out of storage?</h2></label>
+                <br>
+                    <input type="checkbox" class="checkbox" name="storage" value="Yes" #Yes="ngModel" 
+                    id="Yes" [disabled]=submitted ngModel>Select if Yes, else Ignore
+                   
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="storageRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                <br>
+                <select style="width:50%" class="form-control" id="storageRank" required [disabled]=submitted ngModel name="storageRank" #storageRank="ngModel">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>   
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            </div>
+          </div>
         </div>
-
-        <hr>
 
         <div class="container code-content">
-            <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
-            <h3>
-                Is your work hindered by your device's speed?
-            </h3>
-            <button type="button" class="btn btn-round btn-lg" (click)="yesSpeed()">Yes</button>
-            <button type="button" class="btn btn-round btn-lg" (click)="noSpeed()">No</button>
-            <label>
-              <input 
-              type="text"
-              ngModel name="speedRank"
-              #speedRank="ngModel" 
-              id="speedRank"
-              class="form-control" 
-              value="" >Rank
-            </label>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="charges"><h2>Are constant charges a problem?</h2></label>
+                <br>
+                    <input type="checkbox" class="checkbox" name="charges" value="Yes" #Yes="ngModel" 
+                    id="Yes" [disabled]=submitted ngModel>Select if Yes, else Ignore
+                   
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="chargesRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                <br>
+                <select style="width:50%" class="form-control" id="chargesRank" required [disabled]=submitted ngModel name="chargesRank" #chargesRank="ngModel">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>   
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            </div>
+          </div>
         </div>
-
-        <hr>
 
         <div class="container code-content">
-            <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
-            <h3>
-                Does your device become uncomfortably heated?
-            </h3>
-            <button type="button" class="btn btn-round btn-lg" (click)="yesHeated()">Yes</button>
-            <button type="button" class="btn btn-round btn-lg" (click)="noHeated()">No</button>
-            <label>
-              <input 
-              type="text"
-              ngModel name="heatedRank"
-              #heatedRank="ngModel" 
-              id="heatedRank"
-              class="form-control" 
-              value="" >Rank
-            </label>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="speed"><h2>Is your work hindered by your device's speed?</h2></label>
+                <br>
+                    <input type="checkbox" class="checkbox" name="speed" value="Yes" #Yes="ngModel" 
+                    id="Yes" [disabled]=submitted ngModel>Select if Yes, else Ignore
+                   
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="speedRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                <br>
+                <select style="width:50%" class="form-control" id="speedRank" required [disabled]=submitted ngModel name="speedRank" #speedRank="ngModel">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>   
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            </div>
+          </div>
         </div>
 
-        <div class="next">
-          <button type="submit" id="next-button" class="btn">Done</button>
+        <div class="container code-content">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="heated"><h2>Does your device become uncomfortably heated?</h2></label>
+                <br>
+                    <input type="checkbox" class="checkbox" name="heated" value="Yes" #Yes="ngModel" 
+                    id="Yes" [disabled]=submitted ngModel>Select if Yes, else Ignore
+                   
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="heatedRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                <br>
+                <select style="width:50%" class="form-control" id="heatedRank" required [disabled]=submitted ngModel name="heatedRank" #heatedRank="ngModel">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>   
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            </div>
+          </div>
         </div>
+
+        <p style="margin-left:5%;" *ngIf="!submitted">Please make sure all required<span style="color:red">*</span> fields are filled</p>
+        <button *ngIf="!submitted" type="submit" class="btn btn-border" 
+            [disabled]=" severalAppsRank.errors?.['required'] || travelRank.errors?.['required'] || osRank.errors?.['required'] 
+            || brandRank.errors?.['required'] || storageRank.errors?.['required'] || chargesRank.errors?.['required'] 
+            || speedRank.errors?.['required'] || heatedRank.errors?.['required']"
+        >
+                Submit 
+        </button>
+        <button *ngIf="submitted" type="button" class="btn btn-border" routerLink="/profile">View Results!</button>
+        
     </form>
 
-    <div class="next">
-        <button type="button" id="next-button" class="btn">
+        <!-- <button type="button" id="next-button" class="btn">
             <a class="nav-link" routerLink="/home">NEXT</a>
-        </button>
-    </div>
+        </button> -->
 
 </div>

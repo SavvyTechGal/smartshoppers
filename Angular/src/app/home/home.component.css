@@ -1,40 +1,108 @@
 .home-content {
     background-color: #CDC8F2; 
+    
 }
 
 #left-col {
-    padding-top:10%;
+    padding-top:3%;
     text-align: center;
-    background-color: #CDC8F2;
+    background-color: #c4bdf7;
     
 }
 
 #right-col {
-    padding:10%;
-    background-color: #CDC8F2;
+    padding:8%;
+    background-color: #c4bdf7;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 .logo {
-    width:40%;
-    border-radius: 50px;
+    width:35%;
+    animation-name: fadeIn;
+    animation-duration: 2.5s;
+
 }
+
 
 p.home-description {
     text-align: center;
     font-weight:700;
     font-size:2vw;
     line-height: 1;
+    color: black;
+    animation-name: fadeIn;
+    animation-duration: 4s;
+}
+
+#guide-link {
+    animation-name: fadeIn;
+    animation-duration: 4s;  
 }
 
 .learn-more {
-    text-align: right;
+    text-align: center;
 }
 
 
-#learn-more-button {
-    background-color: #FDFA82 ;
-    border-color:#FDFA82 ;
-    border-radius: 25px;
-    font-weight: 700;
-    margin: 0px 30px 15px;
+
+button {
+    background-color: #ffffff ;
+    border-color:#fdae5e ;
+    border-radius: 10px;
+    font-weight: 500;
+    margin:15px;
+
 }
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(254, 254, 254, 0.318), 0 17px 50px 0 rgba(255, 255, 255, 0.334);
+    
+}
+
+.about-section {
+    background-color: #a198e0; 
+    /* background-color: #ffffff;  */
+    padding-top:5%;
+    padding-bottom:5%;
+    
+}
+
+.about-content {
+    /* background-color: rgb(220, 238, 253); */
+    background-color: white;
+    padding:3%;
+    margin:auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+    text-align: center;
+    font-weight:700;
+    padding-top: 2%;
+    font-size:xx-large ;
+}
+h5 {
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ffbf80;
+    /* border-color: #ffbb0f;
+    border-width: 5px; */
+    animation-name: fadeIn;
+    animation-duration: 4s;
+    height:100%;
+    
+}
+
+.about-img {
+    
+    object-fit: contain;
+}
+

@@ -1,56 +1,403 @@
-<div class="body">
-
-    <div id="about">
-        <h2 id="our-mission">OUR MISSION</h2>
-        <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        </p>
-
-        <h3 id="about">About</h3>
-        <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-sed do eiusmod tempor incididunt ut labore et dolore magna 
-aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-aute irure dolor in reprehenderit in voluptate velit esse cillum 
-dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-        </p>
-    </div>
-    <div id="meet-us">
-        <h3>-Meet Us-</h3>
-        <div class="row">
-            <div class="col member">
-                <h6>Name</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna 
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<div id="top" class="body">
+    <div class="container-fluid head-section">
+        <div class="container head-content">
+            <div class="row">
+                <div class="col">
+                    <p><i>For those who want to enlighten themselves...</i></p>
+                    <h1 style="font-size:xx-large; padding:15px 0px 15px">Learn the Lingo</h1>
+                    <p><i>Here is our short and simple guide to some of the most common
+                        words used when shopping for computers and laptops!</i>
+                    </p>
+                </div>
+                <div class="col" style="text-align:center">
+                    <img class="about-img" src="./assets/img/laptops.webp">
+                </div>
             </div>
-            <div class="col member">
-                <h6>Name</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna 
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col member">
-                <h6>Name</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna 
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            <div class="col member">
-                <h6>Name</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna 
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
+            
+            
         </div>
     </div>
+    <div class="container-fluid search">
+        <h1 style="text-align:center">Search Term</h1>
+        <button class="jump-link">
+            <a href="/about#cpu">CPU</a>
+        </button>
+        <button class="jump-link">
+            <a href="/about#ram">RAM</a>
+        </button>
+        <button class="jump-link">
+            <a href="/about#storage">Storage</a>
+        </button>
+        <button class="jump-link">
+            <a href="/about#gpu">GPU</a>
+        </button>
+        <button class="jump-link">
+            <a href="/about#resolution">Resolution</a>
+        </button>
+        <button class="jump-link">
+            <a href="/about#refresh">Refresh Rate</a>
+        </button>
+        <button class="jump-link">
+            <a href="/about#panel">Panel</a>
+        </button>
+        <button class="jump-link">
+            <a href="/about#port">Ports</a>
+        </button>
+        
+    </div>
+    <div class="container-fluid guide-content">
+        <div id="cpu" class="container term">
+            <h1>Central Processing Unit (CPU)</h1>
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li>
+                            A central processing unit, in short, is responsible 
+                        for the<b> computing power and handles data processing
+                        operations.</b> 
+                        </li>
+                        <li>
+                            A computer with a good CPU will operate 
+                        faster and can handle more intensive applications.
+                        </li>
+                    </ul>
+                    <h2>Processor Speed</h2>
+                    <ul>
+                        <li>
+                            <b>Measures how fast or slow your computer recieves information 
+                                and processes it
+                            </b>
+                        </li>
+                        <li>This is determined by both processor cores and clock speed.</li>
+                    </ul>
+                    <h2>Clock Speed</h2>
+                    <ul>
+                        <li><b>Number of calculations per second</b></li>
+                        <li>Clock speed is measured in Gigahertz (GHz).</li>
+                        <li>1 GHz = 1 billion calculations per second.</li>
+                        <li>The higher the clock speed, the faster your computer completes tasks.</li>
+                    </ul>
+                    <h2>Processor Cores</h2>
+                    <ul>
+                        <li>
+                            <b>These are individual processing units within the computer's CPU that take
+                            intructions for a single task.</b>
+                        </li>
+                        <li>Having multiple cores allow the computer to multi-task.</li>
+                    </ul>
+                </div>
+                <div class="col" style="text-align:center">
+                    <img class="guide-img" src="./assets/img/guide-icons/cpu.webp">
+                </div>
+            </div>
+            
+        </div>
+        <div id="ram" class="container term">
+            <h1>Random Access Memory (RAM)</h1>
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li>
+                            This is where your computer <b>temporarily stores information/applications</b> and allows it
+                            to complete everyday tasks.
+                        </li>
+                        <li>
+                            RAM provides <b>fast access</b> which allows the user to switch between many apps quickly.
+                        </li>
+                        <li>The more applications users need to run, the more RAM is needed.</li>
+                        <li>Generally the more complex programs, such as games or design software, 
+                            will take up the most RAM.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col" style="text-align:center">
+                    <img class="guide-img" src="./assets/img/guide-icons/ram.jpg">
+                </div>
 
+                
+                
+            </div>
+            
+        </div>
+        <div id="storage" class="container term">
+            <h1>Storage</h1>
+            <div class="row">
+                <div class="col">
+                    <h4>Solid State Drive (SSD)</h4>
+                    <ul>
+                        <li>
+                            Uses flash-based memory
+                        </li>
+                        <li>
+                            No moving parts, which allows for more compactability
+                            and faster access
+                        </li>
+                        <li>
+                            Faster operations (booting PC, launching applications)
+                        </li>
+                        <li>
+                            Recommended for optimizing performance
+                        </li>
+                        <li>
+                            Significant performance improvement over HDD, but much
+                            more expensive.
+                        </li>
+                    </ul>
+                    <h4>Hard Disk Drive (HDD)</h4>
+                    <ul>
+                        <li>
+                            spinning disk that stores data and 
+                            the information is accessed using
+                            a reading arm that scans the surface
+                        </li>
+                        <li>
+                            Cheaper medium of storage, but is much slower
+                        </li>
+                       
+                        <li>Recommended for data that does not need to be
+                            accessed frequently or quickly.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col" style="text-align:center">
+                    <img class="guide-img" src="./assets/img/guide-icons/storage.webp">
+                </div>
+            </div>
+            
+        </div>
+        <div id="gpu" class="container term">
+            <h1>Graphics Processing Unit (GPU)</h1>
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li>
+                            <b>processor specifically for rendering graphics and video</b>
+                        </li>
+                        <li>often used for creative production, machine learning/AI</li>
+                        <li>Recommended for advanced visual effects and gaming</li>
+                    </ul>
+                    <h2>Integrated GPU</h2>
+                        <ul>
+                            <li>
+                                when the GPU is <b>integrated with the CPU</b>
+                            </li>
+                            <li>
+                                allows for more light and compact systems and lower
+                                costs
+                            </li>
+                        </ul>
+                    <h2>Discrete GPU</h2>
+                    <ul>
+                        <li>
+                            when the GPU is <b>separate from the CPU</b>
+                        </li>
+                        <li>
+                            recommended for more intensive applications, like
+                            gaming and video creation
+                        </li>
+                    </ul>
+                </div>
+                <div class="col" style="text-align:center">
+                    <img class="guide-img" src="./assets/img/guide-icons/gpu.jpg">
+                </div>
+            </div>
+        </div>
+        <div id="resolution" class="container term">
+            <h1>Display Resolution</h1>
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li>
+                            <b>amount of pixels in the monitor to display an 
+                            image </b>
+                        </li>
+                        <li>
+                            measured in height and width
+                        </li>
+                        <li>
+                            The higher the resolution, the more pixels there are
+                            and the more high-quality sharp image you will get.
+                        </li>
+                        <li>
+                            Most common resolution: 1920 x 1080 Full HD
+                        </li>
+        
+                    </ul>
+                </div>
+                <div class="col" style="text-align:center">
+                    <img class="guide-img" src="./assets/img/guide-icons/resolution.jpg">
+                </div>
+            </div>
+            
+        </div>
+        <div id="refresh" class="container term">
+            <h1>Refresh Rate</h1>
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li>
+                            <b>How many times the monitor refreshes the image within one second.</b>
+                        </li>
+                        <li>
+                            The standard rate is 60Hz, in which the screen refreshes 60 times in one second.  
+                            Rates can go up to 144Hz, 240Hz, etc.
+                        </li>
+                        <li>
+                            Higher refresh rates may be desirable for smoother gaming experiences.
+                        </li>
+                        <li>To get the full benefit of fast refresh rates, you may want to consider getting a CPU or GPU
+                            that is fast enough to handle instructions.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col" style="text-align:center">
+                    <img class="guide-img" src="./assets/img/guide-icons/refresh.webp">
+                </div>
+            </div>
+            
+            
+        </div>
+        <div id="panel" class="container term">
+            <h1>Display Panel</h1>
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li><b>Determines how information is grouped together to be displayed
+                            to the user</b>
+                        </li>
+                        <li>Affects how images are displayed on a monitor screen</li>
+                    </ul>
+                    <h2>Panel Types</h2>
+                    <h4>TN (Twisted Nematic) Panel</h4>
+                    <ul>
+                        <li>Cheapest and most common type</li>
+                        <li>(+) Fast responsiveness</li>
+                        <li>(-) Poor color quality and viewing angles. 
+                            Not recommended for professional color work.
+                        </li>
+
+                    </ul>
+                    <h4>IPS (In-Plane Switching) Panel</h4>
+                    <ul>
+                        <li>Most expensive type</li>
+                        <li>(+) Best viewing angles and color accuracy</li>
+                        <li>(-) Poor contrast (not good with dark
+                            images).
+                        </li>
+                        <li>Most recommended for professional work.</li>
+                    </ul>
+                    <h4>VA (Vertical Alignment) Panel</h4>
+                    <ul>
+                        <li>
+                            Considered the middle standard
+                        </li>
+                        <li>
+                            (+) Adequate viewing angles and color accuracy 
+                            (not as good as IPS) </li>
+                        <li>
+                            (+) Best for dark colors/scenes
+                        </li>
+                    </ul>
+                </div>
+                <div class="col" style="text-align:center">
+                    <img class="guide-img" src="./assets/img/guide-icons/panel.jpg">
+                </div>
+            </div>
+        </div>
+        <div id="port" class="container term">
+            <h1>Ports</h1>
+            <ul>
+                <li>
+                    Allow connection between computer and peripheral devices
+                    (mouse, keyboard, headphones, etc)
+                </li>
+            </ul>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card"> 
+                        <img class="card-img-top" style="width:100%"src="./assets/img/guide-icons/usb.jpg">
+                        <div class="card-body">
+                            <div class="card-text">
+                                <p>Universal Serial Bus (USB)</p>
+                                <ul>
+                                    <li>
+                                        the most common port   
+                                    </li>
+                                    <li>
+                                        allows connection to devices such as other computers, storage drives,
+                                        phones for file transfer, charging, etc
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>      
+                </div>
+                <div class="col-lg-3">
+                    <div class="card"> 
+                        <img class="card-img-top" style="width:100%"src="./assets/img/guide-icons/hdmi.jpg">
+                        <div class="card-body">
+                            <div class="card-text">
+                                <p>HDMI Port</p>
+                                <ul>
+                                    <li>
+                                        sends video and audio signals
+                                    </li>
+                                    <li>
+                                        commonly used to connect to display 
+                                        monitors, soundbars, game consoles, etc.
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-3">
+                    <div class="card"> 
+                        <img class="card-img-top" style="width:100%"src="./assets/img/guide-icons/ethernet.jpg">
+                        <div class="card-body">
+                            <div class="card-text">
+                                <p>Ethernet</p>
+                                <ul>
+                                    <li>
+                                        allows direct connection to wired networks
+                                    </li>
+                                    <li>
+                                        recommended option if wireless connection signal
+                                        is poor
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card"> 
+                        <img class="card-img-top" style="width:100%"src="./assets/img/guide-icons/audio-jack.webp">
+                        <div class="card-body">
+                            <div class="card-text">
+                                <p>Audio-Jack</p>
+                                <ul>
+                                    <li>
+                                        allows connection to headphones, mic and speakers
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>    
+                </div>
+                
+            </div>
+            
+        </div>
+        <button class="jump-link">
+            <a href="/about#top">TOP</a>
+        </button>
+    </div>
     
+   
 </div>

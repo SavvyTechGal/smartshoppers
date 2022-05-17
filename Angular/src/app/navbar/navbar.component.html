@@ -1,14 +1,17 @@
 <!--Navigation Bar-->
 <nav class="navbar navbar-expand-sm navbar-light">
     <!--Web App Name-->
-    <a class="navbar-brand" style="font-weight: 700;" routerLink="/home">Smart Shoppers</a>
+    <a class="navbar-brand" style="font-weight: 700;" routerLink="/home">
+        <img src="./assets/img/ss-logo.png" style="width: 20px;">
+        Smart Shoppers
+    </a>
   
     <!--Links-->
     <ul class="navbar-nav">
         <!--About Us-->
         <li class="nav-item">
             <button type="button" class="btn btn-round btn-sm" >
-                <a class="nav-link about-us" routerLink="/about">About Us</a>
+                <a class="nav-link about-us" routerLink="/about">Guide</a>
           
             </button>
         </li>
@@ -24,26 +27,12 @@
 
     <ul class="navbar-nav ml-auto">
 
-        <li class="nav-item">
-            <!--
-            <button type="button" class="btn btn-round btn-sm"
-            *ngIf="(auth.isAuthenticated$ | async) === false"
-            >
-                <a class="nav-link create" routerLink="/signup">Create Account</a>
-          
-            </button>
-            -->
+        <!-- <li class="nav-item">
+            
             <app-signup-button *ngIf="(auth.isAuthenticated$ | async) === false"></app-signup-button>
-        </li>
+        </li> -->
   
-        <!--Login    
-        <li class="nav-item">
-            <button type="button" class="btn btn-round btn-sm">
-                <a class="nav-link user-login" routerLink="/login">Login</a>
-                
-            </button>
-        </li>
-        --> 
+        
         <li class="nav-item">
             <app-login-button 
             *ngIf="(auth.isAuthenticated$ | async) === false"

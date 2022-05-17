@@ -1,6 +1,6 @@
 .body {
     background-color: #EFD0A1;
-    
+    padding:5%;
 }
 
 
@@ -13,36 +13,35 @@
     margin:20px 50px;
 }
 
-.question {
-    text-align: center;
-    padding:2.5%;
+
+img {
+    width:65%;
+    object-fit: cover;
+    margin:auto;
     
 }
 
-img {
-    height:165px;
-    object-fit: cover;
-    
+label {
+    text-align: left;
+    font-weight: bold;
 }
+
+.checkbox {
+    margin: 5px;
+}
+
 
 
 .container {
-    background-color: #FCF2E3;
-    text-align: center;
-    padding: 4% 0% 4%;
-    border-radius: 25px;
-    
+    /* background-color: #FCF2E3; */
+    background-color: white;
+    padding: 4%;
+    margin:4%;
 }
 
-.next {
-    padding-top: 2%;
-    text-align: right;
-}
 
-#next-button {
-    background-color: #FFAC30 ;
-    border-color:#FFAC30 ;
-    border-radius: 25px;
-    font-weight: 700;
-    margin:35px;
+button {
+    margin-left:5%;
+    margin-bottom: 5px;
+    background-color: antiquewhite;
 }
