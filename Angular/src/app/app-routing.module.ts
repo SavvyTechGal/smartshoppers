@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '@auth0/auth0-angular';
 
@@ -26,6 +26,9 @@ import { UserRoleComponent } from './user-role/user-role.component';
 import { EditQuestionnaireComponent } from './edit-questionnaire/edit-questionnaire.component';
 import { CompletionComponent } from './completion/completion.component';
 import { SingleViewComponent } from './single-view/single-view.component';
+import { DevQuizComponent } from './single-view/dev-quiz/dev-quiz.component';
+import { BudgetRangeComponent } from './single-view/budget-range/budget-range.component';
+import { combineLatestInit } from 'rxjs/internal/observable/combineLatest';
 
 
 const routes: Routes = [
@@ -54,6 +57,8 @@ const routes: Routes = [
   { path: 'user-role', component: UserRoleComponent},
   { path: 'completion', component: CompletionComponent},
   { path: 'single-view', component: SingleViewComponent},
+  { path: 'dev-quiz', component: DevQuizComponent},
+  { path: 'budget-range', component: BudgetRangeComponent},
   { 
     path: 'signupform', 
     component: SignupFormComponent,
