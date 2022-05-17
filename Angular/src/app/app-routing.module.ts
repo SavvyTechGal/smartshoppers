@@ -29,6 +29,10 @@ import { SingleViewComponent } from './single-view/single-view.component';
 import { DevQuizComponent } from './single-view/dev-quiz/dev-quiz.component';
 import { BudgetRangeComponent } from './single-view/budget-range/budget-range.component';
 import { combineLatestInit } from 'rxjs/internal/observable/combineLatest';
+import { GamerQuizComponent } from './single-view/gamer-quiz/gamer-quiz.component';
+import { DesignerQuizComponent } from './single-view/designer-quiz/designer-quiz.component';
+import { StudentQuizComponent } from './single-view/student-quiz/student-quiz.component';
+import { CasualQuizComponent } from './single-view/casual-quiz/casual-quiz.component';
 
 
 const routes: Routes = [
@@ -59,6 +63,10 @@ const routes: Routes = [
   { path: 'single-view', component: SingleViewComponent},
   { path: 'dev-quiz', component: DevQuizComponent},
   { path: 'budget-range', component: BudgetRangeComponent},
+  { path: 'gamer-quiz', component: GamerQuizComponent},
+  { path: 'designer-quiz', component: DesignerQuizComponent},
+  { path: 'student-quiz', component: StudentQuizComponent},
+  { path: 'casual-quiz', component: CasualQuizComponent},
   { 
     path: 'signupform', 
     component: SignupFormComponent,
