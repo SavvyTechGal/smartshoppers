@@ -50,6 +50,10 @@ import { SingleViewComponent } from './single-view/single-view.component';
 import { DevQuizComponent } from './single-view/dev-quiz/dev-quiz.component';
 import { BudgetRangeComponent } from './single-view/budget-range/budget-range.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { GamerQuizComponent } from './single-view/gamer-quiz/gamer-quiz.component';
+import { DesignerQuizComponent } from './single-view/designer-quiz/designer-quiz.component';
+import { StudentQuizComponent } from './single-view/student-quiz/student-quiz.component';
+import { CasualQuizComponent } from './single-view/casual-quiz/casual-quiz.component';
 
 
 @NgModule({
@@ -88,7 +92,11 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     CompletionComponent,
     SingleViewComponent,
     DevQuizComponent,
-    BudgetRangeComponent
+    BudgetRangeComponent,
+    GamerQuizComponent,
+    DesignerQuizComponent,
+    StudentQuizComponent,
+    CasualQuizComponent
   ],
   imports: [
     BrowserModule,
