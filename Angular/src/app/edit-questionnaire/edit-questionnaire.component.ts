@@ -19,14 +19,22 @@ export class EditQuestionnaireComponent implements OnInit {
     budget: '',
     os:[],
     brands:[],
-    coder:false,
-    gamer:false,
-    design:false,
-    stream:false,
-    severalApps:false,
-    ports:false,
-    travel:false,
-    work:false
+    coder:'no',
+    codeRank:'',
+    gamer:'no',
+    gamerRank:'',
+    design:'no',
+    designRank:'',
+    stream:'no',
+    streamRank:'',
+    severalApps:'no',
+    severalAppsRank:'',
+    ports:'no',
+    portsRank:'',
+    travel:'no',
+    travelRank:'',
+    work:'no',
+    workRank:''
   }
 
   public dummyUserData:any = {   // will hold user's previous response data
@@ -63,30 +71,55 @@ export class EditQuestionnaireComponent implements OnInit {
       }
     }
     if(editQuestionForm.value.coder) {
-      this.TestanswersObject.coder = true;
+      this.TestanswersObject.coder = 'yes';
     }
+
+    this.TestanswersObject.codeRank = (editQuestionForm.value.codeRank).toString();
+    
+
     if(editQuestionForm.value.gamer) {
-      this.TestanswersObject.gamer = true;
+      this.TestanswersObject.gamer = 'yes';
     }
+
+    this.TestanswersObject.gamerRank = (editQuestionForm.value.gamerRank).toString();
+
     if(editQuestionForm.value.design) {
-      this.TestanswersObject.design = true;
+      this.TestanswersObject.design = 'yes';
     }
+
+    this.TestanswersObject.designRank = (editQuestionForm.value.designRank).toString();
+
     if(editQuestionForm.value.stream) {
-      this.TestanswersObject.stream = true;
+      this.TestanswersObject.stream = 'yes';
     }
+
+    this.TestanswersObject.streamRank = (editQuestionForm.value.streamRank).toString();
+
     if(editQuestionForm.value.severalApps) {
-      this.TestanswersObject.severalApps = true;
+      this.TestanswersObject.severalApps = 'yes';
     }
+
+    this.TestanswersObject.severalAppsRank = (editQuestionForm.value.severalAppsRank).toString();
+
     if(editQuestionForm.value.ports) {
-      this.TestanswersObject.ports = true;
+      this.TestanswersObject.ports = 'yes';
     }
+
+    this.TestanswersObject.portsRank = (editQuestionForm.value.portsRank).toString();
+
     if(editQuestionForm.value.travel) {
-      this.TestanswersObject.travel = true;
+      this.TestanswersObject.travel = 'yes';
     }
+
+    this.TestanswersObject.travelRank = (editQuestionForm.value.travelRank).toString();
+
     if(editQuestionForm.value.work) {
-      this.TestanswersObject.work = true;
+      this.TestanswersObject.work = 'yes';
     }
-    console.log('testing');
+
+    this.TestanswersObject.workRank = (editQuestionForm.value.workRank).toString();
+
+    console.log('printing answers -----');
     console.log(this.TestanswersObject);
 
     //PUT request to backend + redirect to product display page
