@@ -3,6 +3,8 @@ import { AnswersService } from '../answers.service';
 import { AuthService } from '@auth0/auth0-angular';
 import { UserService } from '../user.service';
 import { DevQuizComponent } from './dev-quiz/dev-quiz.component';
+import { StudentQuizComponent } from './student-quiz/student-quiz.component';
+import { CasualQuizComponent } from './casual-quiz/casual-quiz.component';
 import { BudgetRangeComponent } from './budget-range/budget-range.component';
 import { Options, LabelType } from "@angular-slider/ngx-slider";
 
@@ -12,7 +14,9 @@ import { Options, LabelType } from "@angular-slider/ngx-slider";
   styleUrls: ['./single-view.component.css'],
   providers: [
     DevQuizComponent, // added class in the providers,
-    BudgetRangeComponent
+    BudgetRangeComponent,
+    StudentQuizComponent,
+    CasualQuizComponent
   ]
 })
 export class SingleViewComponent implements OnInit {
