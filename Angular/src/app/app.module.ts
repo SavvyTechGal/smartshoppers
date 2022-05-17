@@ -46,6 +46,9 @@ import { BudgetComponent } from './budget/budget.component';
 import { UserRoleComponent } from './user-role/user-role.component';
 import { CompletionComponent } from './completion/completion.component';
 import { SingleViewComponent } from './single-view/single-view.component';
+import { DevQuizComponent } from './single-view/dev-quiz/dev-quiz.component';
+import { BudgetRangeComponent } from './single-view/budget-range/budget-range.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 
 @NgModule({
@@ -81,7 +84,9 @@ import { SingleViewComponent } from './single-view/single-view.component';
     BudgetComponent,
     UserRoleComponent,
     CompletionComponent,
-    SingleViewComponent
+    SingleViewComponent,
+    DevQuizComponent,
+    BudgetRangeComponent
   ],
   imports: [
     BrowserModule,
@@ -92,6 +97,7 @@ import { SingleViewComponent } from './single-view/single-view.component';
     RecaptchaFormsModule,
     MatPaginatorModule,
     HttpClientModule,
+    NgxSliderModule,
     AuthModule.forRoot({
       domain:"dev-y9hgi5ks.us.auth0.com",
       clientId:"R7OD1fFGcK8XKOTdl6MfMuElZreDZlIG"
