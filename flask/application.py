@@ -23,7 +23,7 @@ def get_db_connection():
     return conn
 
 #users endpoint
-@app.route('/adduser', methods=["POST", "GET"])
+@application.route('/adduser', methods=["POST", "GET"])
 @cross_origin()
 def add_user():
     if request.method == 'POST':
@@ -47,7 +47,7 @@ def add_user():
     else:
         return 'hi!'
 
-@app.route('/getuser', methods=["POST", "GET"])
+@application.route('/getuser', methods=["POST", "GET"])
 @cross_origin()
 def get_user():
     if request.method == 'POST':
@@ -79,7 +79,7 @@ def get_user():
         return 'hi!'
 
 #add answer endpoint
-@app.route('/addanswer', methods=["POST", "GET"])
+@application.route('/addanswer', methods=["POST", "GET"])
 @cross_origin()
 def add_answer():
     if request.method == 'POST':
@@ -103,7 +103,7 @@ def add_answer():
         return 'hi!'
 
 #get answers endpoint
-@app.route('/getanswer', methods=["POST", "GET"])
+@application.route('/getanswer', methods=["POST", "GET"])
 @cross_origin()
 def get_answer():
     if request.method == 'POST':
@@ -133,7 +133,7 @@ def get_answer():
     else:
         return 'hi'
 #get products endpoint
-@app.route('/getproducts', methods=["POST", "GET"])
+@application.route('/getproducts', methods=["POST", "GET"])
 @cross_origin()
 def get_products():
     if request.method == 'POST':
