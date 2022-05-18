@@ -48,7 +48,7 @@ export class AnswersService {
 
   postAnswer(email: string, id: string, answer: any, rank: string) { //changed id from number to string; answers cannot be bools/numbers
     let request =
-    this.HttpClient.post(`http://127.0.0.1:5000/addanswer`,
+    this.HttpClient.post(`http://smartshoppersflask.us-east-1.elasticbeanstalk.com/addanswer`,
     {
       "email": email,
       "id" : id,

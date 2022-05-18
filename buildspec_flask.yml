@@ -1,0 +1,20 @@
+version: 0.2
+env:
+  
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+
+  pre_build:
+    commands:
+      - echo change to flask directory 
+      - cd flask
+      - echo Installing source Python dependencies
+      - pip install -r requirements.txt
+
+artifacts:
+  files:
+    - '**/**'
+  discard-paths: yes
+  base-directory: 'flask'
