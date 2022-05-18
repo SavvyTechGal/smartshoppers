@@ -1,6 +1,6 @@
 {
   "name": "smart-shoppers",
-  "version": "0.0.0",
+  "version": "14",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
@@ -39,8 +39,8 @@
     "ng2-charts": "^3.0.8",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "typescript": "~4.5.2",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "typescript": "~4.5.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.5",
