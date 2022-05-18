@@ -22,4 +22,3 @@ phases:
     commands:
       - echo Build started on `date`
       - ng build --prod --aot
-      - flask run
