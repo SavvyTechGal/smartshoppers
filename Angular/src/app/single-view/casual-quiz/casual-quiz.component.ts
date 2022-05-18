@@ -107,6 +107,8 @@ export class CasualQuizComponent implements OnInit {
       this.AnswersObject.heated = 'yes';
     }
     this.AnswersObject.heatedRank = (quizanswers.value.heatedRank).toString();
+
+    this.AnswersObject.budget = this.answerService.confirmedBudget; //get user's budget from answer service
     
     this.submitted = true;
     console.log(this.AnswersObject); //print out responses

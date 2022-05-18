@@ -40,6 +40,7 @@ export class AnswersService {
     }
 };
 //IGNORE END
+  confirmedBudget: string = ''; //to receive budget from budget-range component, and share it with any component
 
   constructor(public auth:AuthService, public HttpClient:HttpClient) { 
     this.jsonFormat = <JSON>this.arrayObject; //convert object into json format
