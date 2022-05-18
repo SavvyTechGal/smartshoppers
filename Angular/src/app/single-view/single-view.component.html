@@ -1,0 +1,35 @@
+<!--Before quiz starts-->
+<div *ngIf="!displayRole" class="body">
+  <h2 class="question">
+      Let's confirm your role
+      <button class="btn btn-round btn-lg" (click)="confirmRole()">OK!</button> <!--fetch user's role-->
+  </h2>
+</div>
+
+<div *ngIf="displayRole && !entireQuiz" class="body">
+  <h2 class="question">
+    Please enter your budget
+  </h2>
+  <h2 class="question">
+      Is this your role?
+  </h2>
+  <div class="container">
+      <h3>{{currentRole}}</h3>
+
+      <button type="button" class="btn btn-round btn-lg" (click)="correctRole()">Yes</button>
+      <a routerLink="/home">
+          <button type="button" class="btn btn-round btn-lg">No</button>
+      </a>
+  </div>
+</div>
+
+<!--Quiz starts-->
+<div *ngIf="casualUser">
+  hey, this is the casual user quiz
+  <!-- <app-casual-quiz></app-casual-quiz> -->
+  <!-- <app-student-quiz> </app-student-quiz> -->
+</div>
+
+<div *ngIf="entireQuiz && !casualUser" class="body">
+  <app-dev-quiz> </app-dev-quiz>
+</div>

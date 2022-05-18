@@ -1,0 +1,302 @@
+<div class="body">
+    
+    <h1 class="header" style="text-align:center">
+        Answer the Following Questions
+    </h1>
+    <h3 style="text-align:center"> When answering the questions, rank the priority of each spec on a scale of 1-8 </h3>
+
+    <!--Spec Questions for Student-->
+    <form #quizanswers = "ngForm" (ngSubmit)="onSubmit(quizanswers)">
+        <div class="container code-content">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="longCommute"><h2>Do you have a long commute to classes?</h2></label>
+                  <br>
+                      <input type="checkbox" class="checkbox" name="longCommute" value="Yes" #Yes="ngModel" 
+                      id="Yes" [disabled]=submitted ngModel>Select if Yes, else Ignore
+                  
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="longCommuteRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                  <br>
+                  <select style="width:50%" class="form-control" id="longCommuteRank" required [disabled]=submitted ngModel name="longCommuteRank" #longCommuteRank="ngModel">
+                      <option value=""></option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                  </select>   
+              </div>
+              </div>
+              <div class="col-lg-6">
+                <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+              </div>
+            </div>
+            
+        </div>
+
+        <div class="container code-content">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="videoComms"><h2>Do you use video communication software such as Zoom?</h2></label>
+                <br>
+                    <input type="checkbox" class="checkbox" name="videoComms" value="Yes" #Yes="ngModel" 
+                    id="Yes" [disabled]=submitted ngModel>Select if Yes, else Ignore
+                   
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="videoCommsRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                <br>
+                <select style="width:50%" class="form-control" id="videoCommsRank" required [disabled]=submitted ngModel name="videoCommsRank" #videoCommsRank="ngModel">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>   
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            </div>
+          </div>
+        </div>
+
+        <div class="container code-content">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="OS"><h2>What operating system(s) do you prefer?</h2></label>
+                <br>
+                    <input type="checkbox" class="checkbox" name="Windows" value="Windows" #Windows="ngModel" 
+                    id="Windows" [disabled]=submitted ngModel>Windows OS
+                    <input type="checkbox" class="checkbox" name="Mac" value="Mac" #Mac="ngModel" 
+                    id="Mac" [disabled]=submitted ngModel>Mac OS
+                    <input type="checkbox" class="checkbox" name="Chrome" value="Chrome" #Chrome="ngModel" 
+                    id="Chrome" [disabled]=submitted ngModel>Chrome OS
+              </div>
+              <div class="form-group">
+                <label for="osRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                <br>
+                <select style="width:50%" class="form-control" id="osRank" required [disabled]=submitted ngModel name="osRank" #osRank="ngModel">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>   
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="./assets/img/os-image.jpg"  class="rounded mx-auto d-block" >
+            </div>
+          </div>
+        </div>
+
+        <div class="container code-content">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="brand"><h2>What Brands Do You Prefer?</h2></label>
+                <br>
+                    <input type="checkbox" class="checkbox" name="Acer" value="Acer" #Acer="ngModel" 
+                    id="Acer" [disabled]=submitted ngModel>Acer
+                    <input type="checkbox" class="checkbox" name="Apple" value="Apple" #Apple="ngModel" 
+                    id="Apple" [disabled]=submitted ngModel>Apple
+                    <input type="checkbox" class="checkbox" name="ASUS" value="ASUS" #ASUS="ngModel" 
+                    id="ASUS" [disabled]=submitted ngModel>ASUS
+                    <input type="checkbox" class="checkbox" name="Dell" value="Dell" #Dell="ngModel" 
+                    id="Dell" [disabled]=submitted ngModel>Dell
+                    <input type="checkbox" class="checkbox" name="HP" value="HP" #HP="ngModel" 
+                    id="HP" [disabled]=submitted  ngModel>HP
+                    <input type="checkbox" class="checkbox" name="Lenovo" value="Lenovo" #Lenovo="ngModel" 
+                    id="Lenovo" [disabled]=submitted ngModel>Lenovo
+                    <input type="checkbox" class="checkbox" name="Microsoft" value="Microsoft" #Microsoft="ngModel" 
+                    id="Microsoft" [disabled]=submitted ngModel>Microsoft
+            </div>
+              <div class="form-group">
+                <label for="brandRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                <br>
+                <select style="width:50%" class="form-control" id="brandRank" required [disabled]=submitted ngModel name="brandRank" #brandRank="ngModel">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>   
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="./assets/img/os-image.jpg"  class="rounded mx-auto d-block" >
+            </div>
+          </div>
+        </div>
+
+
+        <h2 style="text-align:center; margin:2%;">The following questions are about issues with your previous/current device:</h2>
+
+        <div class="container code-content">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="storage"><h2>Do you often run out of storage?</h2></label>
+                <br>
+                    <input type="checkbox" class="checkbox" name="storage" value="Yes" #Yes="ngModel" 
+                    id="Yes" [disabled]=submitted ngModel>Select if Yes, else Ignore
+                   
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="storageRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                <br>
+                <select style="width:50%" class="form-control" id="storageRank" required [disabled]=submitted ngModel name="storageRank" #storageRank="ngModel">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>   
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            </div>
+          </div>
+        </div>
+
+        <div class="container code-content">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="charges"><h2>Are constant charges a problem?</h2></label>
+                <br>
+                    <input type="checkbox" class="checkbox" name="charges" value="Yes" #Yes="ngModel" 
+                    id="Yes" [disabled]=submitted ngModel>Select if Yes, else Ignore
+                   
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="chargesRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                <br>
+                <select style="width:50%" class="form-control" id="chargesRank" required [disabled]=submitted ngModel name="chargesRank" #chargesRank="ngModel">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>   
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            </div>
+          </div>
+        </div>
+
+        <div class="container code-content">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="speed"><h2>Is your work hindered by your device's speed?</h2></label>
+                <br>
+                    <input type="checkbox" class="checkbox" name="speed" value="Yes" #Yes="ngModel" 
+                    id="Yes" [disabled]=submitted ngModel>Select if Yes, else Ignore
+                   
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="speedRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                <br>
+                <select style="width:50%" class="form-control" id="speedRank" required [disabled]=submitted ngModel name="speedRank" #speedRank="ngModel">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>   
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            </div>
+          </div>
+        </div>
+
+        <div class="container code-content">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="heated"><h2>Does your device become uncomfortably heated?</h2></label>
+                <br>
+                    <input type="checkbox" class="checkbox" name="heated" value="Yes" #Yes="ngModel" 
+                    id="Yes" [disabled]=submitted ngModel>Select if Yes, else Ignore
+                   
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="heatedRank"><h3>Input a priority rank for this question<span style="color:red">*</span></h3></label>
+                <br>
+                <select style="width:50%" class="form-control" id="heatedRank" required [disabled]=submitted ngModel name="heatedRank" #heatedRank="ngModel">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>   
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="./assets/img/coder.jpg" class="rounded mx-auto d-block" title="Coder">
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-left:5%;" *ngIf="!submitted">Please make sure all required<span style="color:red">*</span> fields are filled</p>
+        <button *ngIf="!submitted" type="submit" class="btn btn-border" 
+            [disabled]=" longCommuteRank.errors?.['required'] || videoCommsRank.errors?.['required'] || osRank.errors?.['required'] 
+            || brandRank.errors?.['required'] || storageRank.errors?.['required'] || chargesRank.errors?.['required'] 
+            || speedRank.errors?.['required'] || heatedRank.errors?.['required']"
+        >
+                Submit 
+        </button>
+        <button *ngIf="submitted" type="button" class="btn btn-border" routerLink="/profile">View Results!</button>
+        
+    </form>
+
+</div>

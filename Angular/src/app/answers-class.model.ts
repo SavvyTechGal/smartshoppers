@@ -1,9 +1,14 @@
 export class Answers {
-    private answer: any;
+    public id: string;
+    public answer: any;
+    public rank: string;
 
-    constructor(answer: any) {
+    constructor(id: string, answer: any, rank: string) {
+        this.id = id;
         this.answer = answer;
-        }
+        this.rank = rank;
+    }
+
 }
 // public justWork: boolean,
         // public coder: boolean,

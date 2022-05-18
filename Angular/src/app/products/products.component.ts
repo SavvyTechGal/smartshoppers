@@ -21,6 +21,7 @@ export class ProductsComponent implements OnInit {
   public bestFitSorted: ProductClass[] = [];  //set in ngoninit
   public lowSorted: ProductClass[] =[]; //set when user chooses low to high
   public highSorted: ProductClass[] = [];  //set when user chooses high to low
+  public ratingSorted: ProductClass[] = []  //set when user chooses rating
 
   OnPageChange(event: PageEvent) {
     console.log(event);
@@ -83,6 +84,21 @@ export class ProductsComponent implements OnInit {
         this.pageSlice = this.products.slice(this.currentStartIndex, this.currentEndIndex);
       }
     }
+    else if(sort == 'High Rating') {
+      console.log('4');
+      if(this.ratingSorted.length == 0) {  //not sorted yet
+        this.ratingSorted = [...this.products];
+        this.ratingSorted.sort(function(a,b) {
+          return b.rating-a.rating;
+        });
+        this.products = [...this.ratingSorted];
+        this.pageSlice = this.products.slice(this.currentStartIndex, this.currentEndIndex); 
+      }
+      else {
+        this.products = [...this.ratingSorted];
+        this.pageSlice = this.products.slice(this.currentStartIndex, this.currentEndIndex); 
+      }
+    }
     else {
       console.log('error');
     }
@@ -107,7 +123,7 @@ export class ProductsComponent implements OnInit {
   //save product to user's saved data
   saveProduct(product: ProductClass): void {
     this._productService.saveProduct(product,this.userEmail);
-    //console.log((product.price).substring(1));
+    console.log(product.rating);
     // .subscribe(data => {
     //   console.log(data);
     // });

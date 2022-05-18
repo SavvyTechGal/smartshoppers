@@ -1,0 +1,309 @@
+<div class="body">
+    <div class="container">
+        <h2>Edit Your Questionnaire Form</h2>
+        <form #editQuestionForm="ngForm" (ngSubmit)="onSubmit(editQuestionForm)">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label required for="role">What is your Role?</label>
+                    <br>
+                    <select class="form-control" id="role" [(ngModel)]="dummyUserData.role" ngModel [disabled]=resubmitted name="role" #role="ngModel">
+                        <option>Casual User</option>
+                        <option>Student</option>
+                        <option>Software Developer</option>
+                        <option>Graphic Designer</option>
+                        <option>Gamer</option>
+                        <option>Other</option>
+                    </select>   
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="budget">What is your Budget?<span style="color:red">*</span></label>
+                    <input 
+                    required  
+                    [disabled]=resubmitted
+                    ngModel name="budget" 
+                    [(ngModel)]="dummyUserData.budget"
+                    #budget="ngModel" 
+                    id="budget" 
+                    type="text" 
+                    class="form-control">
+                    <div class="alert alert-danger" 
+                    *ngIf="budget.touched && !budget.valid">
+                        <div *ngIf="budget.errors?.['required']">
+                            Input is invalid.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="OS">What Operating System Do You Prefer?</label>
+                    <br>
+                        <input type="checkbox" class="checkbox" name="Windows" value="Windows" #Windows="ngModel" 
+                        id="Windows" [ngModel]="dummyUserData.os.includes('Windows')" [disabled]=resubmitted ngModel>Windows OS
+                        <input type="checkbox" class="checkbox" name="Mac" value="Mac" #Mac="ngModel" 
+                        id="Mac" [ngModel]="dummyUserData.os.includes('Mac')" [disabled]=resubmitted ngModel>Mac OS
+                        <input type="checkbox" class="checkbox" name="Chrome" value="Chrome" #Chrome="ngModel" 
+                        id="Chrome" [ngModel]="dummyUserData.os.includes('Chrome')" [disabled]=resubmitted ngModel>Chrome OS
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="brand">What Brands Do You Prefer?</label>
+                    <br>
+                        <input type="checkbox" class="checkbox" name="Acer" value="Acer" #Acer="ngModel" 
+                        id="Acer" [ngModel]="dummyUserData.brands.includes('Acer')" [disabled]=resubmitted ngModel>Acer
+                        <input type="checkbox" class="checkbox" name="Apple" value="Apple" #Apple="ngModel" 
+                        id="Apple" [ngModel]="dummyUserData.brands.includes('Apple')" [disabled]=resubmitted ngModel>Apple
+                        <input type="checkbox" class="checkbox" name="ASUS" value="ASUS" #ASUS="ngModel" 
+                        id="ASUS" [ngModel]="dummyUserData.brands.includes('ASUS')" [disabled]=resubmitted ngModel>ASUS
+                        <input type="checkbox" class="checkbox" name="Dell" value="Dell" #Dell="ngModel" 
+                        id="Dell" [ngModel]="dummyUserData.brands.includes('Dell')" [disabled]=resubmitted ngModel>Dell
+                        <input type="checkbox" class="checkbox" name="HP" value="HP" #HP="ngModel" 
+                        id="HP" [ngModel]="dummyUserData.brands.includes('HP')" [disabled]=resubmitted ngModel>HP
+                        <input type="checkbox" class="checkbox" name="Lenovo" value="Lenovo" #Lenovo="ngModel" 
+                        id="Lenovo" [ngModel]="dummyUserData.brands.includes('Lenovo')" [disabled]=resubmitted ngModel>Lenovo
+                        <input type="checkbox" class="checkbox" name="Microsoft" value="Microsoft" #Microsoft="ngModel" 
+                        id="Microsoft" [ngModel]="dummyUserData.brands.includes('Microsoft')" [disabled]=resubmitted ngModel>Microsoft
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="coder">Will you be coding/programming?</label>
+                    <br>
+                        <input type="checkbox" class="checkbox" name="coder" value="Yes" #Yes="ngModel" 
+                        id="Yes" [(ngModel)]="dummyUserData.coder" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
+                        
+                </div> 
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="codeRank">Input a priority rank for this question<span style="color:red">*</span></label>
+                    <br>
+                    <select class="form-control" id="codeRank" required  ngModel [disabled]=resubmitted name="codeRank" #codeRank="ngModel">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>   
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="coder">Will you be running games?</label>
+                    <br>
+                        <input type="checkbox" class="checkbox" name="gamer" value="Yes" #Yes="ngModel" 
+                        id="Yes" [(ngModel)]="dummyUserData.gamer" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
+                        
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="gamerRank">Input a priority rank for this question<span style="color:red">*</span></label>
+                    <br>
+                    <select class="form-control" id="gamerRank" required  ngModel [disabled]=resubmitted name="gamerRank" #gamerRank="ngModel">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>   
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="design">Will you be using programs for drawing/editing/modeling/designing?</label>
+                    <br>
+                        <input type="checkbox" class="checkbox" name="design" value="Yes" #Yes="ngModel" 
+                        id="Yes" [(ngModel)]="dummyUserData.design" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
+                        
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="designRank">Input a priority rank for this question<span style="color:red">*</span></label>
+                    <br>
+                    <select class="form-control" id="designRank" required  ngModel [disabled]=resubmitted name="designRank" #designRank="ngModel">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>   
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="stream">Will you be streaming movies and/or video content?</label>
+                    <br>
+                        <input type="checkbox" class="checkbox" name="stream" value="Yes" #Yes="ngModel" 
+                        id="Yes" [(ngModel)]="dummyUserData.stream" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
+                        
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="streamRank">Input a priority rank for this question<span style="color:red">*</span></label>
+                    <br>
+                    <select class="form-control" id="streamRank" required  ngModel [disabled]=resubmitted name="streamRank" #streamRank="ngModel">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>   
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="severalApps">Will you be running multiple applications at a time?</label>
+                    <br>
+                        <input type="checkbox" class="checkbox" name="severalApps" value="Yes" #Yes="ngModel" 
+                        id="Yes" [(ngModel)]="dummyUserData.severalApps" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
+                        
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="severalAppsRank">Input a priority rank for this question<span style="color:red">*</span></label>
+                    <br>
+                    <select class="form-control" id="severalAppsRank" required  ngModel [disabled]=resubmitted name="severalAppsRank" #severalAppsRank="ngModel">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>   
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="ports">Will you be using external devices such as mouse, keyboard or headset?</label>
+                    <br>
+                        <input type="checkbox" class="checkbox" name="ports" value="Yes" #Yes="ngModel" 
+                        id="Yes" [(ngModel)]="dummyUserData.ports" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
+                        
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="portsRank">Input a priority rank for this question<span style="color:red">*</span></label>
+                    <br>
+                    <select class="form-control" id="portsRank" required  ngModel [disabled]=resubmitted name="portsRank" #portsRank="ngModel">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>   
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="travel">Will you often be traveling or on the go?</label>
+                    <br>
+                        <input type="checkbox" class="checkbox" name="travel" value="Yes" #Yes="ngModel" 
+                        id="Yes" [(ngModel)]="dummyUserData.travel" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
+                        
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="travelRank">Input a priority rank for this question<span style="color:red">*</span></label>
+                    <br>
+                    <select class="form-control" id="travelRank" required  ngModel [disabled]=resubmitted name="travelRank" #travelRank="ngModel">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>   
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="work">Will this laptop strictly be for work use?</label>
+                    <br>
+                        <input type="checkbox" class="checkbox" name="work" value="Yes" #Yes="ngModel" 
+                        id="Yes" [(ngModel)]="dummyUserData.work" [disabled]=resubmitted ngModel>Select if Yes, else Ignore
+                        
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="workRank">Input a priority rank for this question<span style="color:red">*</span></label>
+                    <br>
+                    <select class="form-control" id="workRank" required  ngModel [disabled]=resubmitted name="workRank" #workRank="ngModel">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>   
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <br>
+    
+        <p *ngIf="!resubmitted">Please make sure all required<span style="color:red">*</span> fields are filled</p>
+        <button *ngIf="!resubmitted" type="submit" class="btn btn-border" 
+            [disabled]=" budget.errors?.['required'] || codeRank.errors?.['required'] || gamerRank.errors?.['required'] 
+            || designRank.errors?.['required'] || streamRank.errors?.['required'] || severalAppsRank.errors?.['required'] 
+            || portsRank.errors?.['required'] || travelRank.errors?.['required'] || workRank.errors?.['required']"
+        >
+                Save 
+        </button>
+        <button *ngIf="!resubmitted" type="button" routerLink="/profile" class="btn btn-border">Cancel</button>
+        
+        <br>
+        <button *ngIf="resubmitted" type="button" class="btn btn-border" routerLink="/profile">View Results!</button>
+        
+        </form>
+    </div>
+</div>
+    

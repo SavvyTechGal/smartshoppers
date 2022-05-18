@@ -27,7 +27,7 @@ export class SignupFormComponent implements OnInit {
     let fname = signupForm.value.firstname;
     let lname = signupForm.value.lastname;
     let role = signupForm.value.roleSel;
-    console.log(`email in signup: ${this.userEmail}`);
+    //console.log(`email in signup: ${this.userEmail}`);
     this.userService.addUser(fname,lname,role,this.userEmail);
     this.userAdded = true;
     
@@ -40,8 +40,8 @@ export class SignupFormComponent implements OnInit {
     this.auth.user$.subscribe(
       (profile) => { 
         this.userEmail = profile?.email as string;  //saving email to variable
-        console.log(`ngonit`);
-        console.log(this.userEmail);
+        //console.log(`ngonit`);
+        //console.log(this.userEmail);
        }
    )
   }

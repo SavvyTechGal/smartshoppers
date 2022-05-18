@@ -44,6 +44,16 @@ import { OsComponent } from './os/os.component';
 import { SeveralAppsComponent } from './several-apps/several-apps.component';
 import { BudgetComponent } from './budget/budget.component';
 import { UserRoleComponent } from './user-role/user-role.component';
+import { EditQuestionnaireComponent } from './edit-questionnaire/edit-questionnaire.component';
+import { CompletionComponent } from './completion/completion.component';
+import { SingleViewComponent } from './single-view/single-view.component';
+import { DevQuizComponent } from './single-view/dev-quiz/dev-quiz.component';
+import { BudgetRangeComponent } from './single-view/budget-range/budget-range.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { GamerQuizComponent } from './single-view/gamer-quiz/gamer-quiz.component';
+import { DesignerQuizComponent } from './single-view/designer-quiz/designer-quiz.component';
+import { StudentQuizComponent } from './single-view/student-quiz/student-quiz.component';
+import { CasualQuizComponent } from './single-view/casual-quiz/casual-quiz.component';
 
 
 @NgModule({
@@ -77,7 +87,16 @@ import { UserRoleComponent } from './user-role/user-role.component';
     OsComponent,
     SeveralAppsComponent,
     BudgetComponent,
-    UserRoleComponent
+    UserRoleComponent,
+    EditQuestionnaireComponent,
+    CompletionComponent,
+    SingleViewComponent,
+    DevQuizComponent,
+    BudgetRangeComponent,
+    GamerQuizComponent,
+    DesignerQuizComponent,
+    StudentQuizComponent,
+    CasualQuizComponent
   ],
   imports: [
     BrowserModule,
@@ -88,6 +107,7 @@ import { UserRoleComponent } from './user-role/user-role.component';
     RecaptchaFormsModule,
     MatPaginatorModule,
     HttpClientModule,
+    NgxSliderModule,
     AuthModule.forRoot({
       domain:"dev-y9hgi5ks.us.auth0.com",
       clientId:"R7OD1fFGcK8XKOTdl6MfMuElZreDZlIG"
