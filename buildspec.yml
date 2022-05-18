@@ -18,8 +18,8 @@ phases:
       - echo Installing source Python dependencies
       - pip install -r requirements.txt
       - echo Installing source Python dependencies
-      - flask run
   build:
     commands:
       - echo Build started on `date`
       - ng build --prod --aot
+      - flask run
