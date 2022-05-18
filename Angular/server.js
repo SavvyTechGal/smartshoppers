@@ -26,9 +26,9 @@ const options = {
 const app = express();
 
 
-const httpport = process.env.PORT || 8080;
+const httpport_local = process.env.PORT || 8080;
 
-const httpsport = process.env.PORT || 8443;
+const httpsport_local = process.env.PORT || 8443;
 
 app.use(express.static(__dirname + '/dist/smart-shoppers'));
 
@@ -38,6 +38,6 @@ const httpserver = http.createServer(app);
 const httpsserver = https.createServer(options, app);
 
 
-httpserver.listen(httpport, () => console.log(`App running on: http://localhost:${httpport}`));
+// httpserver.listen(httpport, () => console.log(`App running on: http://localhost:${httpport}`));
 
-httpsserver.listen(httpsport, () => console.log(`App running on: https://localhost:${httpsport}`));
+// httpsserver.listen(httpsport, () => console.log(`App running on: https://localhost:${httpsport}`));
