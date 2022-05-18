@@ -18,22 +18,26 @@ phases:
       - cd Angular
       - echo Build started on `date`
       # - ng build --prod --aot
-      - ng build
+      - ng build --prod
   
-  post_build:
-    commands:
-      - echo build process finished, we should upload to S3 now
-      - echo "$PWD"
-      - cd dist/smart-shoppers
-      - ls -la
-      - aws s3 sync . s3://smart-shoppers-ang --delete
-  
+  # post_build:
+  #   commands:
+  #     - echo build process finished, we should upload to S3 now
+  #     - echo "$PWD"
+  #     - cd dist/smart-shoppers
+  #     - ls -la
+  #     - aws s3 sync . s3://smart-shoppers-ang --delete
+
 artifacts:
   files:
-    - 'dist/smart-shoppers/*.html'
-    - 'dist/smart-shoppers/*.js'
-    - 'dist/smart-shoppers/*.css'
-    - 'dist/smart-shoppers/*.ico'
+    # - 'dist/smart-shoppers/*.html'
+    # - 'dist/smart-shoppers/*.js'
+    # - 'dist/smart-shoppers/*.css'
+    # - 'dist/smart-shoppers/*.ico'
+    - 'dist/smart-shoppers/**'
     - 'package.json'
+    - 'server.js'
+    - 'cert.pem'
+    - 'key.pem'
   discard-paths: yes
   base-directory: 'Angular'
