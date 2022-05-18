@@ -4,18 +4,21 @@ phases:
     runtime-versions:
       nodejs: 14
 
-  pre_build:
-    commands:
-      - echo change to Angular directory 
-      - cd Angular 
-      - echo Installing source NPM dependencies
-      - npm install 
-      - npm install -g @angular/cli
-      - echo change to root directory 
-      - cd .. 
+  # pre_build:
+  #   commands:
+  #     - echo change to Angular directory 
+  #     - cd Angular 
+  #     - echo Installing source NPM dependencies
+  #     - npm install 
+  #     - npm install -g @angular/cli
+  #     - echo change to root directory 
+  #     - cd .. 
   build:
     commands:
       - cd Angular
+      - echo Installing source NPM dependencies
+      - npm install 
+      - npm install -g @angular/cli
       - echo Build started on `date`
       # - ng build --prod --aot
       - ng build --prod
