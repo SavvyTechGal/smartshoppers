@@ -1,0 +1,36 @@
+.body {
+    background-color: #f3d7fa;
+    padding:5%;
+}
+
+img {
+    width:65%;
+    object-fit: cover;
+    margin:auto;  
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.checkbox {
+    margin: 5px;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    padding: 4%;
+    margin-bottom: 4%;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+
+button {
+    margin-left:8%;
+    margin-bottom: 5px;
+    background-color: antiquewhite;
+}

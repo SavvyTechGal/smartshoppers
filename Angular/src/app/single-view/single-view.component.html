@@ -1,35 +1,56 @@
 <!--Before quiz starts-->
-<div *ngIf="!displayRole" class="body">
+
+<!-- <div *ngIf="!displayRole" class="body">
   <h2 class="question">
       Let's confirm your role
-      <button class="btn btn-round btn-lg" (click)="confirmRole()">OK!</button> <!--fetch user's role-->
+      <button class="btn btn-round btn-lg" (click)="confirmRole()">OK!</button> 
   </h2>
-</div>
+</div> -->
 
 <div *ngIf="displayRole && !entireQuiz" class="body">
-  <h2 class="question">
-    Please enter your budget
-  </h2>
-  <h2 class="question">
-      Is this your role?
-  </h2>
+  <h1 style="text-align:center">Please answer the following to proceed to the questionnaire.</h1>
   <div class="container">
-      <h3>{{currentRole}}</h3>
+    <h2 class="question">
+      Please enter your budget
+    </h2>
+  </div>
+  
+ 
+  <div class="container">
+    <h2 class="question">
+      Is this your role?
+    </h2>
+    <h3>{{currentRole}}</h3>
 
       <button type="button" class="btn btn-round btn-lg" (click)="correctRole()">Yes</button>
-      <a routerLink="/home">
+      <a routerLink="/edit-profile">
           <button type="button" class="btn btn-round btn-lg">No</button>
       </a>
   </div>
 </div>
 
 <!--Quiz starts-->
-<div *ngIf="casualUser">
-  hey, this is the casual user quiz
-  <!-- <app-casual-quiz></app-casual-quiz> -->
-  <!-- <app-student-quiz> </app-student-quiz> -->
+
+<div *ngIf="softwareDev && entireQuiz">
+  <app-dev-quiz></app-dev-quiz>
 </div>
 
-<div *ngIf="entireQuiz && !casualUser" class="body">
-  <app-dev-quiz> </app-dev-quiz>
+<div *ngIf="gamer && entireQuiz">
+  <app-gamer-quiz></app-gamer-quiz>
 </div>
+
+<div *ngIf="designer && entireQuiz">
+  <app-designer-quiz></app-designer-quiz>
+</div>
+
+<div *ngIf="casualUser && entireQuiz">
+  <app-casual-quiz></app-casual-quiz>
+</div>
+
+<div *ngIf="student && entireQuiz">
+  <app-student-quiz></app-student-quiz>
+</div>
+
+
+
+

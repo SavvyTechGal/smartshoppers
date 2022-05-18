@@ -6,9 +6,10 @@ button {
 .container {
     background-color: rgb(255, 255, 255);
     padding:20px;
+    margin-bottom: 4%;
 }
 
 .body {
-    background-color: rgb(250, 206, 240);
+    background-color: rgb(206, 226, 250);
     padding:5%;
 }
