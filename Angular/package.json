@@ -1,10 +1,10 @@
 {
   "name": "smart-shoppers",
-  "version": "14",
+  "version": "16.0.0",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build --prod",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI"
   },
