@@ -18,6 +18,8 @@ phases:
       - cd Angular
       - echo Installing source NPM dependencies
       - npm install 
+      - ng update
+      - npm update
       - npm install -g @angular/cli
       - echo Build started on `date`
       # - ng build --prod --aot
