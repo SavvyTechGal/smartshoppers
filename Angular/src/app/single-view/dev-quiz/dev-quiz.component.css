@@ -4,16 +4,6 @@
 }
 
 
-.btn-round.btn-lg {
-    background-color: #FFBB55 ;
-    border-color:#FFBB55;
-    border-radius: 15px;
-    font-weight: 700;
-    padding:5px 40px;
-    margin:20px 50px;
-}
-
-
 img {
     width:65%;
     object-fit: cover;
@@ -46,5 +36,5 @@ label {
 button {
     margin-left:8%;
     margin-bottom: 5px;
-    background-color: antiquewhite;
+    background-color: #FFBB55 ;
 }
