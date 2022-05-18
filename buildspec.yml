@@ -1,0 +1,25 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14.x
+      python: 3.8.6
+  pre_build:
+    commands:
+      - echo change to Angular directory 
+      - cd Angular 
+      - echo Installing source NPM dependencies
+      - npm install 
+      - npm install -g @angular/cli
+      - echo change to root directory 
+      - cd .. 
+      - echo change to flask directory 
+      - cd flask
+      - echo Installing source Python dependencies
+      - pip install -r requirements.txt
+      - echo Installing source Python dependencies
+      - flask run app.py
+  build:
+    commands:
+      - echo Build started on `date`
+      - ng build --prod --aot
