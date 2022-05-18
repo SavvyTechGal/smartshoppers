@@ -1,12 +1,16 @@
 import os
 import psycopg2
-from flask import Flask, request
+from flask import Flask, request, render_template
 from flask_cors import CORS, cross_origin
 import json
 from google_shopping import gs_api
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    return "HELLO WORLD"
 
 def get_db_connection():
     conn = psycopg2.connect(
