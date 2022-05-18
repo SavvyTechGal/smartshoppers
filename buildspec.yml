@@ -20,5 +20,7 @@ phases:
       - echo Installing source Python dependencies
   build:
     commands:
+      - cd ..
+      - cd Angular
       - echo Build started on `date`
       - ng build --prod --aot
