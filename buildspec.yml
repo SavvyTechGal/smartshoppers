@@ -23,4 +23,5 @@ phases:
       - cd ..
       - cd Angular
       - echo Build started on `date`
-      - ng build --prod --aot
+      # - ng build --prod --aot
+      - ng build --source-map
