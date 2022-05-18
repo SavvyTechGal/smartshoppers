@@ -2,20 +2,14 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 16
-    commands:
-      - cd Angular
-      - echo Installing source NPM dependencies...
-      - npm install -y npm@latest
-      - npm install -g @angular/cli
-      - rm package-lock.json
-      - cd ..
+      nodejs: 14
   pre_build:
     commands:
       - cd Angular
       - echo Installing source NPM dependencies
+      - npm install --save-dev @angular-devkit/build-angular
       - npm install 
-      - npm install -g @angular/cli
+      - npm install -g @angular/cli@latest
       - cd ..
   build:
     commands:
