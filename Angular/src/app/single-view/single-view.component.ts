@@ -29,7 +29,12 @@ export class SingleViewComponent implements OnInit {
   entireQuiz = false; //to render a version of the questionnaire in the view
 
   //bools to check which quiz version to display
+  softwareDev = false;
+  gamer = false;
+  designer = false;
   casualUser = false;
+  student = false;
+
 
   confirmRole() {
     this.userInfo.getUser(this.userEmail) //retrieve user's role
@@ -49,8 +54,21 @@ export class SingleViewComponent implements OnInit {
 
   correctRole() { //render the correct version of the questionnaire according to user's role
     this.entireQuiz = true;
+    if(this.currentRole === 'Software Developer') {
+      this.softwareDev = true;
+    }
+    if(this.currentRole === 'Gamer') {
+      this.gamer = true;
+    }
+    if(this.currentRole === 'Graphic Designer') {
+      this.designer = true;
+    }
+    
     if(this.currentRole === 'Casual User') {
       this.casualUser = true;
+    }
+    if(this.currentRole === 'Student') {
+      this.student = true;
     }
   }
 
@@ -77,8 +95,12 @@ export class SingleViewComponent implements OnInit {
     this.auth.user$.subscribe(
       (profile) => { 
         this.userEmail = profile?.email as string;  //retrieve email from auth service
+        this.confirmRole();
        }
+       
+       
    )
+   
   }
 
 }
