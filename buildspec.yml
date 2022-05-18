@@ -14,14 +14,8 @@ phases:
       - npm install -g @angular/cli
       - echo change to root directory 
       - cd .. 
-      - echo change to flask directory 
-      - cd flask
-      - echo Installing source Python dependencies
-      - pip install -r requirements.txt
-      - echo Installing source Python dependencies
   build:
     commands:
-      - cd ..
       - cd Angular
       - echo Build started on `date`
       # - ng build --prod --aot
