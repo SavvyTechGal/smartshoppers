@@ -5,10 +5,10 @@ from flask_cors import CORS, cross_origin
 import json
 from google_shopping import gs_api
 
-app = Flask(__name__)
-CORS(app, supports_credentials=True)
+application = Flask(__name__)
+CORS(application, supports_credentials=True)
 
-@app.route('/', methods=['GET', 'POST'])
+@application.route('/', methods=['GET', 'POST'])
 def index():
     return "HELLO WORLD"
 
