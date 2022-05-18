@@ -22,8 +22,9 @@ phases:
   
   post_build:
     commands:
-      - echo build process finished, we should uplload to S3 now
-      - cd Angular/dist/smart-shoppers
+      - echo build process finished, we should upload to S3 now
+      - echo "$PWD"
+      - cd dist/smart-shoppers
       - ls -la
       - aws s3 sync . s3://smart-shoppers-ang --delete
   
