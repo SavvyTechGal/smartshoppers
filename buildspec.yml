@@ -23,9 +23,9 @@ phases:
   post_build:
     commands:
       - echo build process finished, we should uplload to S3 now
-      - cd dist/smart-shoppers
+      - cd Angular/dist/smart-shoppers
       - ls -la
-      - aws s3 sync . s3://smart-shoppers-ang --delete
+      - aws s3 sync . s3://arn:aws:s3:::smart-shoppers-ang --delete
   
 artifacts:
   files:
