@@ -22,9 +22,10 @@ phases:
   
 artifacts:
   files:
-    - '**/*.html'
-    - '**/*.js'
-    - '**/*.css'
-    - '**/*.ico'
+    - 'dist/smart-shoppers/*.html'
+    - 'dist/smart-shoppers/*.js'
+    - 'dist/smart-shoppers/*.css'
+    - 'dist/smart-shoppers/*.ico'
+    - 'package.json'
   discard-paths: yes
-  base-directory: 'Angular/dist/smart-shoppers'
+  base-directory: 'Angular'
