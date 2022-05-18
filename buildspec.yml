@@ -25,3 +25,12 @@ phases:
       - echo Build started on `date`
       # - ng build --prod --aot
       - ng build --source-map
+  
+  artifacts:
+    files:
+      - '**/*.html'
+      - '**/*.js'
+      - '**/*.css'
+      - '**/*.ico'
+    discard-paths: yes
+    base-directory: 'Angular/dist/smart-shoppers'
