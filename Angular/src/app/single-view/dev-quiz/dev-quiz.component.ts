@@ -39,25 +39,6 @@ export class DevQuizComponent implements OnInit {
     heated:'no',
     heatedRank:''
   }
-  // severalApps: string = ''; //value changed by button click functions
-  // appsRank: string = '';
-  
-  // traveler: string = '';
-  // travelerRank: string = '';
-  
-  // storage: string = '';
-  // storageRank: string = '';
-
-  // manyCharges: string = '';
-  // chargesRank: string = '';
-
-  // speed: string = '';
-  // speedRank: string = '';
-
-  // heated: string = '';
-  // heatedRank: string = '';
-
-  // brandsArray: string[] = [];
 
   newUser: boolean = false;  //if user is registered in db
   public currentRole: any;
@@ -67,48 +48,6 @@ export class DevQuizComponent implements OnInit {
 
   //bools to check which quiz version to display
   casualUser = false;
-
-  // yesApps(){
-  //   this.severalApps = 'Yes';
-  // }
-  // noApps(){
-  //   this.severalApps = 'No';
-  // }
-
-  // yesTravel(){
-  //   this.traveler = 'Yes';
-  // }
-  // noTravel(){
-  //   this.traveler = 'No';
-  // }
-
-  // yesStorage(){
-  //   this.storage = 'Yes';
-  // }
-  // noStorage(){
-  //   this.storage = 'No';
-  // }
-  
-  // yesCharges(){
-  //   this.manyCharges = 'Yes';
-  // }
-  // noCharges(){
-  //   this.manyCharges = 'No';
-  // }
-
-  // yesSpeed(){
-  //   this.speed = 'Yes';
-  // }
-  // noSpeed(){
-  //   this.speed = 'No';
-  // }
-
-  // yesHeated(){
-  //   this.heated = 'Yes';
-  // }
-  // noHeated(){
-  //   this.heated = 'No';
-  // }
 
   onSubmit(quizanswers: { value: any; }) //takes in all answers (just checkboxes) from the questionnaire
   {
@@ -170,45 +109,14 @@ export class DevQuizComponent implements OnInit {
     this.submitted = true;
     console.log(this.AnswersObject); //print out responses
 
-    // console.log('question 1:');
-    // console.log(quizanswers.value.appsRank);
-    // console.log(this.severalApps);
-
-    // console.log('question 2:');
-    // console.log(quizanswers.value.travelerRank);
-    // console.log(this.traveler);
-
-    // console.log('question 3 and 4:');
-    // for (let key in quizanswers.value) //looping over form object
-    // {
-    //   if((quizanswers.value)[key] === true)
-    //   {
-    //     console.log(key);
-    //     this.brandsArray.push(key); //add os AND brand choices to brandsArray (CAN FIX IF THIS IS A PROBLEM)
-    //   }
-    // }
-    // console.log(this.brandsArray);
-    // console.log(quizanswers.value.osRank);
-    // console.log(quizanswers.value.brandsRank);
-    
-    // console.log('question 5:');
-    // console.log(quizanswers.value.storageRank);
-    // console.log(this.storage);
-
-    // console.log('question 6:');
-    // console.log(quizanswers.value.chargesRank);
-    // console.log(this.manyCharges);
-
-    // console.log('question 7:');
-    // console.log(quizanswers.value.speedRank);
-    // console.log(this.speed);
-
-    // console.log('question 8:');
-    // console.log(quizanswers.value.heatedRank);
-    // console.log(this.heated);
-
-
-    // this.answerService.postAnswer(this.userEmail, '1', this.severalApps, this.appsRank);
+    // this.answerService.postAnswer(this.userEmail, '1', this.AnswersObject.severalApps, this.AnswersObject.severalAppsRank);
+    // this.answerService.postAnswer(this.userEmail, '2', this.AnswersObject.travel, this.AnswersObject.travelRank);
+    // this.answerService.postAnswer(this.userEmail, '3', this.AnswersObject.os, this.AnswersObject.osRank);
+    // this.answerService.postAnswer(this.userEmail, '4', this.AnswersObject.brands, this.AnswersObject.brandRank);
+    // this.answerService.postAnswer(this.userEmail, '5', this.AnswersObject.storage, this.AnswersObject.storageRank);
+    // this.answerService.postAnswer(this.userEmail, '6', this.AnswersObject.charges, this.AnswersObject.chargesRank);
+    // this.answerService.postAnswer(this.userEmail, '7', this.AnswersObject.speed, this.AnswersObject.speedRank);
+    // this.answerService.postAnswer(this.userEmail, '8', this.AnswersObject.heated, this.AnswersObject.heatedRank);
 
   }
 
