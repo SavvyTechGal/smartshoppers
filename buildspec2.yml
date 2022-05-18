@@ -3,22 +3,24 @@ phases:
   install:
     runtime-versions:
       nodejs: 14
-    commands:
-      - cd Angular
-      - echo Installing source NPM dependencies...
-      - npm install -y npm@latest
-      - npm install -g @angular/cli
-      - rm package-lock.json
-      - cd ..
-  pre_build:
+
+  # pre_build:
+  #   commands:
+  #     - echo change to Angular directory 
+  #     - cd Angular 
+  #     - echo Installing source NPM dependencies
+  #     - npm install 
+  #     - npm install -g @angular/cli
+  #     - echo change to root directory 
+  #     - cd .. 
+  build:
     commands:
       - cd Angular
       - echo Installing source NPM dependencies
       - npm install 
-      - cd ..
-  build:
-    commands:
-      - cd Angular
+      - ng update
+      - npm update
+      - npm install -g @angular/cli
       - echo Build started on `date`
       # - ng build --prod --aot
       - ng build --prod
