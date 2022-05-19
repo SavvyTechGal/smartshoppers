@@ -51,38 +51,30 @@ def add_user():
 @cross_origin()
 def get_user():
     if request.method == 'POST':
-        # params = request.get_json()
-        # email = params['email'].strip()
-        # print(email)
-        # conn = get_db_connection()
-        # cur = conn.cursor()
-        # #quer from RDS DATABASE -> CHECK TABLEPLUS 
-        # cur.execute(
-        #     """
-        #     SELECT 
-        #     email, 
-        #     first_name, 
-        #     last_name, 
-        #     role 
-        #     FROM users 
-        #     WHERE email = %s;
-        #     """,
-        #     [email,]
-        # )
-        # conn.commit()
-        # result = cur.fetchone()
-        # cur.close()
-        # conn.close() 
-        # print(result)
-        # return json.dumps(result)
-
-        x = {
-        "email": "petersandy@example.com",
-        "first_name": "Peter",
-        "last_name": "Sandy",
-        "role": "Graphic Designer"
-        }
-        return json.dumps(x)
+        params = request.get_json()
+        email = params['email'].strip()
+        print(email)
+        conn = get_db_connection()
+        cur = conn.cursor()
+        #quer from RDS DATABASE -> CHECK TABLEPLUS 
+        cur.execute(
+            """
+            SELECT 
+            email, 
+            first_name, 
+            last_name, 
+            role 
+            FROM users 
+            WHERE email = %s;
+            """,
+            [email,]
+        )
+        conn.commit()
+        result = cur.fetchone()
+        cur.close()
+        conn.close() 
+        print(result)
+        return json.dumps(result)
     else:
         return 'hi!'
 
