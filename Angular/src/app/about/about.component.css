@@ -1,7 +1,5 @@
 .body {
-    
     background-color: white;
-    
 }
 
 @keyframes fadeIn {
@@ -52,7 +50,6 @@ a {
 }
 
 .guide-content {
-    /* background-color: #E8E8E8; */
     background-image: linear-gradient(to bottom right, #cdcac7 , #E8E8E8);
     padding:5%;
     text-align: center;

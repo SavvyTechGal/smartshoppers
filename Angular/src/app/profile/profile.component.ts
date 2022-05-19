@@ -31,7 +31,7 @@ export class ProfileComponent implements OnInit {
   public highSorted: ProductClass[] = [];  //set when user chooses high to low
 
   OnPageChange(event: PageEvent) {
-    console.log(event);
+    //console.log(event);
     const startIndex = event.pageIndex * event.pageSize;
     let endIndex = startIndex + event.pageSize;
     if(endIndex > this.savedProducts.length) {
@@ -45,10 +45,7 @@ export class ProfileComponent implements OnInit {
 
   onSubmit(sortForm: { value: any; }) {  //sorting form
     let sort = sortForm.value.sortSel;
-    console.log(`chose: ${sort}`);
-    
     if(sort == 'Price: Low to High') {
-      console.log('2');
       if(this.lowSorted.length == 0) {  //not sorted yet
         this.lowSorted = [...this.savedProducts];
         this.lowSorted.sort(function(a,b) {
@@ -68,7 +65,6 @@ export class ProfileComponent implements OnInit {
 
     }
     else if(sort == 'Price: High to Low') {
-      console.log('3');
       if(this.highSorted.length == 0) {  //not sorted yet
         this.highSorted = [...this.savedProducts];
         this.highSorted.sort(function(a,b) {
@@ -118,7 +114,7 @@ export class ProfileComponent implements OnInit {
     this.hasSavedProducts = change;
   }
   removeProduct(product: ProductClass): void {
-    console.log(`remove product: ${product.title}`);
+    //console.log(`remove product: ${product.title}`);
     this._productService.removeProduct(product,this.userEmail);
      // .subscribe(data => {
       //   console.log(data);
@@ -140,11 +136,8 @@ export class ProfileComponent implements OnInit {
     let lname:any;
     let role:any;
     let newEmail:any;
-    console.log(email);
     this.userService.getUser(this.userEmail)
     .subscribe((data) => {
-      //console.log("subscribe--getUser");
-      //console.log(data);
       if(data == null) {
         console.log("data is null");  //if user not found in db -> not registered yet -> direct to signupform
         this.newUser = true;
@@ -155,7 +148,7 @@ export class ProfileComponent implements OnInit {
       lname = Object.values(data)[2];
       role = Object.values(data)[3];
       this.returnedUser = new UserClass(fname,lname,role,newEmail);  //create user model + set to returnedUser
-      console.log(this.returnedUser);   
+      //console.log(this.returnedUser);   
       this.profileLoadedIn = true;
       //this.isSignedIn = true;
       this.getUserData(this.userEmail);
@@ -173,26 +166,16 @@ export class ProfileComponent implements OnInit {
         this.hasSavedProducts = false;
       }
       else {
-        console.log(data.length);
-        // if(data.length > 20) {   //filter returns more than 5 products
-        //   for(let i = 0; i < 20; i++) {
-        //     const newProduct = new ProductClass(data[i].title, data[i].price, 
-        //       data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
-        //     //console.log(newProduct);
-        //     this.savedProducts.push(newProduct);
-        //   }
-        // } else {      //5 or less products
+        //console.log(data.length);
           for(let i = 0; i < data.length; i++) {
             const newProduct = new ProductClass(data[i].title, data[i].price, 
               data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);
-            //console.log(newProduct);
             this.savedProducts.push(newProduct);
           }
         //}
       }
       this.pageSlice =this.savedProducts.slice(0,5);
       this.loadedIn = true;   //requests are finished loading --> ready to display
-      //console.log(this.products);
       
     });
     
@@ -205,8 +188,7 @@ export class ProfileComponent implements OnInit {
     this.auth.user$.subscribe(
        (profile) => {
          this.profileJson = JSON.stringify(profile);
-         this.userEmail = profile?.email as string;  //saving email to variable
-         console.log(this.userEmail);
+         this.userEmail = profile?.email as string;  //saving email to variable       
          this.getUser(this.userEmail);  
         }
     )

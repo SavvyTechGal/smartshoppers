@@ -54,7 +54,6 @@ export class DesignerQuizComponent implements OnInit {
 
   onSubmit(quizanswers: { value: any; }) //takes in all answers (just checkboxes) from the questionnaire
   {
-    console.log('User email: ', this.userEmail);
     for(const brand in this.brandKeys) {
       let key = this.brandKeys[brand];
       if((quizanswers.value)[key]) {
@@ -131,7 +130,7 @@ export class DesignerQuizComponent implements OnInit {
     this.AnswersObject.budget = this.answerService.confirmedBudget; //get user's budget from answer service
     
     this.submitted = true;
-    console.log(this.AnswersObject); //print out responses
+    //console.log(this.AnswersObject); //print out responses
 
     // this.answerService.postAnswer(this.userEmail, '11', this.AnswersObject.storeDesign, this.AnswersObject.storeDesignRank);
     // this.answerService.postAnswer(this.userEmail, '12', this.AnswersObject.severalEditors, this.AnswersObject.severalEditors);

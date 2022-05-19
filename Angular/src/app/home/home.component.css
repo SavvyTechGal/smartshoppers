@@ -65,14 +65,12 @@ button:hover {
 
 .about-section {
     background-color: #a198e0; 
-    /* background-color: #ffffff;  */
     padding-top:5%;
     padding-bottom:5%;
     
 }
 
 .about-content {
-    /* background-color: rgb(220, 238, 253); */
     background-color: white;
     padding:3%;
     margin:auto;
@@ -93,8 +91,6 @@ h5 {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: #ffbf80;
-    /* border-color: #ffbb0f;
-    border-width: 5px; */
     animation-name: fadeIn;
     animation-duration: 4s;
     height:100%;
@@ -102,7 +98,6 @@ h5 {
 }
 
 .about-img {
-    
     object-fit: contain;
 }
 

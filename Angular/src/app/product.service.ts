@@ -16,9 +16,6 @@ export class ProductService {
 
   //http post into savedProducts db
   saveProduct(product:ProductClass, email:string) { //: Observable<ProductClass>
-    console.log(`saveProduct`);
-    console.log(`email: ${email} product: ${product.title}`);
-    // console.log("saveProduct");
     // let request =
     // this.HttpClient.post(this.baseURL + `...`,
     // {
@@ -31,8 +28,6 @@ export class ProductService {
   };
 
   removeProduct(product: ProductClass, email: string) { //: Observable<any> 
-    console.log('remove saved product');
-    //console.log(`email: ${email} product: ${product.title}`);
     // let request =
     // this.HttpClient.delete(this.baseURL + "...",
     // {

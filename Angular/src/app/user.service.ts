@@ -21,7 +21,6 @@ export class UserService {
 
   //change to http get (user db)
   getUser(email: string): Observable<any> {
-    console.log("userservice -- getUser");
     let request =
     this.HttpClient.post(this.baseURL + `getuser`,
     {
@@ -34,8 +33,6 @@ export class UserService {
   }
   
   editUser(firstName: string, lastName: string, role: string, email: string) {
-    console.log("editUser");
-    console.log(`email: ${email}, fname: ${firstName}, lname: ${lastName}, role: ${role}`)
     // let request =
     // this.HttpClient.put(this.baseURL + `...`,  
     // {
@@ -49,7 +46,6 @@ export class UserService {
 
   //change to http POST (user db)
   addUser(firstName: string, lastName: string, role: string, email: string) { 
-    console.log("addUser");
     let request =
     this.HttpClient.post(this.baseURL + `adduser`,
     {
@@ -59,7 +55,8 @@ export class UserService {
       "role": role,
     });
     request.subscribe((data) => {
-      console.log(data); })
+      //console.log(data); 
+    })
   }
 
   //change to http get (savedProducts db)

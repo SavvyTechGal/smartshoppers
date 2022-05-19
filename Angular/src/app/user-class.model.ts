@@ -10,12 +10,4 @@ export class UserClass {
         this.role = role;
         this.email = email;
     }
-
-    // displayUser() {   //for testing
-    //     console.log("displayUser---");
-    //     console.log(this.firstName);
-    //     console.log(this.lastName);
-    //     console.log(this.role);
-    //     console.log(this.email);
-    // }
 }
