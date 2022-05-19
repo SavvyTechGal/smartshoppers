@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'dist/smart-shoppers/assets')));
 
 //Any routes will be redirected to the angular app
 app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'dist/smart-shoppers/index.html'));
+    res.sendFile(path.join(__dirname, 'dist/smart-shoppers'));
 });
 
 //Starting server on port 8081
