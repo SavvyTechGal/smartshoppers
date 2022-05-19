@@ -17,7 +17,7 @@ export class BudgetRangeComponent implements OnInit {
   maxValue: number = 900;
   options: Options = {
     floor: 0,
-    ceil: 3000,
+    ceil: 10000, //new budget limit of $10,000
     translate: (value: number, label: LabelType): string => {
       switch (label) {
         case LabelType.Low:
