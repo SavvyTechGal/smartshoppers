@@ -16,6 +16,8 @@ export class UserService {
   private newUser: any;
   
   private baseURL = `https://smartshoppersflaskv2.us-east-1.elasticbeanstalk.com/`
+  // private baseURL = `http://127.0.0.1:5000/`
+
 
   constructor(public auth:AuthService, public HttpClient:HttpClient) { }
 

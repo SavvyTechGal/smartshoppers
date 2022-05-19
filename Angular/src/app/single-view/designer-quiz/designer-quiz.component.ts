@@ -130,20 +130,20 @@ export class DesignerQuizComponent implements OnInit {
     this.AnswersObject.budget = this.answerService.confirmedBudget; //get user's budget from answer service
     
     this.submitted = true;
-    //console.log(this.AnswersObject); //print out responses
+    console.log(this.AnswersObject); //print out responses
 
-    // this.answerService.postAnswer(this.userEmail, '11', this.AnswersObject.storeDesign, this.AnswersObject.storeDesignRank);
-    // this.answerService.postAnswer(this.userEmail, '12', this.AnswersObject.severalEditors, this.AnswersObject.severalEditors);
-    // this.answerService.postAnswer(this.userEmail, '13', this.AnswersObject.tablet, this.AnswersObject.tabletRank);
-    // this.answerService.postAnswer(this.userEmail, '14', this.AnswersObject.convertible, this.AnswersObject.convertibleRank);
-    // this.answerService.postAnswer(this.userEmail, '2', this.AnswersObject.travel, this.AnswersObject.travelRank);
-    // this.answerService.postAnswer(this.userEmail, '3', this.AnswersObject.os, this.AnswersObject.osRank);
-    // this.answerService.postAnswer(this.userEmail, '4', this.AnswersObject.brands, this.AnswersObject.brandRank);
-    // this.answerService.postAnswer(this.userEmail, '5', this.AnswersObject.storage, this.AnswersObject.storageRank);
-    // this.answerService.postAnswer(this.userEmail, '6', this.AnswersObject.charges, this.AnswersObject.chargesRank);
-    // this.answerService.postAnswer(this.userEmail, '7', this.AnswersObject.speed, this.AnswersObject.speedRank);
-    // this.answerService.postAnswer(this.userEmail, '8', this.AnswersObject.heated, this.AnswersObject.heatedRank);
-    // this.answerService.postAnswer(this.userEmail, '21', this.AnswersObject.budget, '1');
+    this.answerService.postAnswer(this.userEmail, '11', this.AnswersObject.storeDesign, this.AnswersObject.storeDesignRank);
+    this.answerService.postAnswer(this.userEmail, '12', this.AnswersObject.severalEditors, this.AnswersObject.severalEditors);
+    this.answerService.postAnswer(this.userEmail, '13', this.AnswersObject.tablet, this.AnswersObject.tabletRank);
+    this.answerService.postAnswer(this.userEmail, '14', this.AnswersObject.convertible, this.AnswersObject.convertibleRank);
+    this.answerService.postAnswer(this.userEmail, '2', this.AnswersObject.travel, this.AnswersObject.travelRank);
+    this.answerService.postAnswer(this.userEmail, '3', this.AnswersObject.os, this.AnswersObject.osRank);
+    this.answerService.postAnswer(this.userEmail, '4', this.AnswersObject.brands, this.AnswersObject.brandRank);
+    this.answerService.postAnswer(this.userEmail, '5', this.AnswersObject.storage, this.AnswersObject.storageRank);
+    this.answerService.postAnswer(this.userEmail, '6', this.AnswersObject.charges, this.AnswersObject.chargesRank);
+    this.answerService.postAnswer(this.userEmail, '7', this.AnswersObject.speed, this.AnswersObject.speedRank);
+    this.answerService.postAnswer(this.userEmail, '8', this.AnswersObject.heated, this.AnswersObject.heatedRank);
+    this.answerService.postAnswer(this.userEmail, '21', this.AnswersObject.budget, '1');
     
 
   }

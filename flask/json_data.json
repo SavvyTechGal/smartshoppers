@@ -1,0 +1,564 @@
+[
+  {
+    "type": "Show only",
+    "options": [
+      {
+        "text": "Buy on Google",
+        "tbs": "mr:1,buy:g"
+      },
+      {
+        "text": "Available nearby",
+        "tbs": "mr:1,local_avail:1,ss:55"
+      },
+      {
+        "text": "On sale",
+        "tbs": "mr:1,sales:1"
+      },
+      {
+        "text": "Smaller stores",
+        "tbs": "mr:1,smb:1"
+      }
+    ]
+  },
+  {
+    "type": "Price",
+    "options": [
+      {
+        "text": "Up to $200",
+        "tbs": "mr:1,price:1,ppr_max:200"
+      },
+      {
+        "text": "$200 \u2013 $450",
+        "tbs": "mr:1,price:1,ppr_min:200,ppr_max:450"
+      },
+      {
+        "text": "$450 \u2013 $900",
+        "tbs": "mr:1,price:1,ppr_min:450,ppr_max:900"
+      },
+      {
+        "text": "Over $900",
+        "tbs": "mr:1,price:1,ppr_min:900"
+      }
+    ]
+  },
+  {
+    "type": "Brand",
+    "options": [
+      {
+        "text": "HP",
+        "tbs": "mr:1,pdtr0:703960%7C703961"
+      },
+      {
+        "text": "Dell",
+        "tbs": "mr:1,pdtr0:703960%7C875261"
+      },
+      {
+        "text": "ASUS",
+        "tbs": "mr:1,pdtr0:703960%7C703971"
+      },
+      {
+        "text": "Lenovo",
+        "tbs": "mr:1,pdtr0:703960%7C703962"
+      },
+      {
+        "text": "Acer",
+        "tbs": "mr:1,pdtr0:703960%7C703967"
+      },
+      {
+        "text": "Microsoft",
+        "tbs": "mr:1,pdtr0:703960%7C991069"
+      },
+      {
+        "text": "Apple",
+        "tbs": "mr:1,pdtr0:703960%7C703973"
+      }
+    ]
+  },
+  {
+    "type": "Operating System",
+    "options": [
+      {
+        "text": "Windows OS",
+        "tbs": "mr:1,pdtr0:703981%7C764396"
+      },
+      {
+        "text": "Chrome OS",
+        "tbs": "mr:1,pdtr0:703981%7C731875"
+      },
+      {
+        "text": "Mac OS",
+        "tbs": "mr:1,pdtr0:703981%7C703985"
+      }
+    ]
+  },
+  {
+    "type": "Screen Size",
+    "options": [
+      {
+        "text": "< 12.4 inches",
+        "tbs": "mr:1,pdtr0:1020486%7C%2431.496000289916992"
+      },
+      {
+        "text": "12.4 \u2013 14 inches",
+        "tbs": "mr:1,pdtr0:1020486%7C31.496000289916992%2435.560001373291016"
+      },
+      {
+        "text": "14 \u2013 15.6 inches",
+        "tbs": "mr:1,pdtr0:1020486%7C35.560001373291016%2439.624000549316406"
+      },
+      {
+        "text": "> 15.6 inches",
+        "tbs": "mr:1,pdtr0:1020486%7C39.624000549316406%24"
+      }
+    ]
+  },
+  {
+    "type": "Color",
+    "options": [
+      {
+        "text": "Black",
+        "tbs": "mr:1,pdtr0:1716119%7C1716121"
+      },
+      {
+        "text": "Blue",
+        "tbs": "mr:1,pdtr0:1716119%7C1716129"
+      },
+      {
+        "text": "Silver",
+        "tbs": "mr:1,pdtr0:1716119%7C1716122"
+      },
+      {
+        "text": "Platinum",
+        "tbs": "mr:1,pdtr0:1716119%7C1716120"
+      },
+      {
+        "text": "Gray",
+        "tbs": "mr:1,pdtr0:1716119%7C1716124"
+      },
+      {
+        "text": "Matte Black",
+        "tbs": "mr:1,pdtr0:1716119%7C1002509263"
+      },
+      {
+        "text": "Snowflake White",
+        "tbs": "mr:1,pdtr0:1716119%7C1006826808"
+      }
+    ]
+  },
+  {
+    "type": "Installed Memory",
+    "options": [
+      {
+        "text": "1 GB RAM",
+        "tbs": "mr:1,pdtr0:1020720%7C1.0%241.0"
+      },
+      {
+        "text": "2 GB RAM",
+        "tbs": "mr:1,pdtr0:1020720%7C2.0%242.0"
+      },
+      {
+        "text": "3 GB RAM",
+        "tbs": "mr:1,pdtr0:1020720%7C3.0%243.0"
+      },
+      {
+        "text": "4 GB RAM",
+        "tbs": "mr:1,pdtr0:1020720%7C4.0%244.0"
+      },
+      {
+        "text": "6 GB RAM",
+        "tbs": "mr:1,pdtr0:1020720%7C6.0%246.0"
+      },
+      {
+        "text": "8 GB RAM",
+        "tbs": "mr:1,pdtr0:1020720%7C8.0%248.0"
+      },
+      {
+        "text": "12 GB RAM",
+        "tbs": "mr:1,pdtr0:1020720%7C12.0%2412.0"
+      }
+    ]
+  },
+  {
+    "type": "Processor Brand",
+    "options": [
+      {
+        "text": "Intel CPU",
+        "tbs": "mr:1,pdtr0:703997%7C703998"
+      },
+      {
+        "text": "AMD CPU",
+        "tbs": "mr:1,pdtr0:703997%7C703999"
+      }
+    ]
+  },
+  {
+    "type": "Drive Type",
+    "options": [
+      {
+        "text": "Solid State Drive",
+        "tbs": "mr:1,pdtr0:960913%7C960915"
+      },
+      {
+        "text": "Hard Disk Drive",
+        "tbs": "mr:1,pdtr0:960913%7C960914"
+      }
+    ]
+  },
+  {
+    "type": "Graphics Processor",
+    "options": [
+      {
+        "text": "AMD GPU",
+        "tbs": "mr:1,pdtr0:733074%7C733176"
+      },
+      {
+        "text": "Intel GPU",
+        "tbs": "mr:1,pdtr0:733074%7C733177"
+      },
+      {
+        "text": "NVIDIA GPU",
+        "tbs": "mr:1,pdtr0:733074%7C733178"
+      }
+    ]
+  },
+  {
+    "type": "Weight",
+    "options": [
+      {
+        "text": "< 2.4 lb",
+        "tbs": "mr:1,pdtr0:1020386%7C%241.111301302909851"
+      },
+      {
+        "text": "2.4 \u2013 2.9 lb",
+        "tbs": "mr:1,pdtr0:1020386%7C1.111301302909851%241.3018101453781128"
+      },
+      {
+        "text": "2.9 \u2013 3.3 lb",
+        "tbs": "mr:1,pdtr0:1020386%7C1.3018101453781128%241.5"
+      },
+      {
+        "text": "3.3 \u2013 3.6 lb",
+        "tbs": "mr:1,pdtr0:1020386%7C1.5%241.6510761976242065"
+      },
+      {
+        "text": "3.6 \u2013 4 lb",
+        "tbs": "mr:1,pdtr0:1020386%7C1.6510761976242065%241.8143694400787354"
+      },
+      {
+        "text": "4 \u2013 4.4 lb",
+        "tbs": "mr:1,pdtr0:1020386%7C1.8143694400787354%242.0"
+      },
+      {
+        "text": "> 4.4 lb",
+        "tbs": "mr:1,pdtr0:1020386%7C2.0%24"
+      }
+    ]
+  },
+  {
+    "type": "Processor Speed",
+    "options": [
+      {
+        "text": "< 1.1 GHz",
+        "tbs": "mr:1,pdtr0:1020721%7C%241.100000023841858"
+      },
+      {
+        "text": "1.1 \u2013 1.6 GHz",
+        "tbs": "mr:1,pdtr0:1020721%7C1.100000023841858%241.600000023841858"
+      },
+      {
+        "text": "1.6 \u2013 2.4 GHz",
+        "tbs": "mr:1,pdtr0:1020721%7C1.600000023841858%242.4000000953674316"
+      },
+      {
+        "text": "2.4 \u2013 3 GHz",
+        "tbs": "mr:1,pdtr0:1020721%7C2.4000000953674316%243.0"
+      },
+      {
+        "text": "> 3 GHz",
+        "tbs": "mr:1,pdtr0:1020721%7C3.0%24"
+      }
+    ]
+  },
+  {
+    "type": "Available Ports",
+    "options": [
+      {
+        "text": "HDMI",
+        "tbs": "mr:1,pdtr0:4094604%7C4094607"
+      },
+      {
+        "text": "USB-C",
+        "tbs": "mr:1,pdtr0:4094604%7C4094606"
+      },
+      {
+        "text": "3.5 mm Jack",
+        "tbs": "mr:1,pdtr0:4094604%7C4094610"
+      },
+      {
+        "text": "Ethernet",
+        "tbs": "mr:1,pdtr0:4094604%7C4094608"
+      }
+    ]
+  },
+  {
+    "type": "Resolution",
+    "options": [
+      {
+        "text": "3840 x 2160",
+        "tbs": "mr:1,pdtr0:703936%7C4060151"
+      },
+      {
+        "text": "1920 x 1200",
+        "tbs": "mr:1,pdtr0:703936%7C703937"
+      },
+      {
+        "text": "1920 x 1080",
+        "tbs": "mr:1,pdtr0:703936%7C703948"
+      },
+      {
+        "text": "1366 x 768",
+        "tbs": "mr:1,pdtr0:703936%7C703942"
+      }
+    ]
+  },
+  {
+    "type": "Refresh Rate",
+    "options": [
+      {
+        "text": "300Hz",
+        "tbs": "mr:1,pdtr0:4094571%7C4094616"
+      },
+      {
+        "text": "144Hz",
+        "tbs": "mr:1,pdtr0:4094571%7C4094614"
+      },
+      {
+        "text": "120Hz",
+        "tbs": "mr:1,pdtr0:4094571%7C4094613"
+      },
+      {
+        "text": "60Hz",
+        "tbs": "mr:1,pdtr0:4094571%7C4094612"
+      }
+    ]
+  },
+  {
+    "type": "Number of Cores",
+    "options": [
+      {
+        "text": "Octa Core",
+        "tbs": "mr:1,pdtr0:1337889%7C4192014"
+      },
+      {
+        "text": "Hexa Core",
+        "tbs": "mr:1,pdtr0:1337889%7C4192013"
+      },
+      {
+        "text": "Quad Core",
+        "tbs": "mr:1,pdtr0:1337889%7C1337892"
+      },
+      {
+        "text": "Dual Core",
+        "tbs": "mr:1,pdtr0:1337889%7C1337890"
+      }
+    ]
+  },
+  {
+    "type": "Battery Life",
+    "options": [
+      {
+        "text": "< 6 hours",
+        "tbs": "mr:1,pdtr0:1020723%7C%246.0"
+      },
+      {
+        "text": "6 \u2013 8 hours",
+        "tbs": "mr:1,pdtr0:1020723%7C6.0%248.0"
+      },
+      {
+        "text": "8 \u2013 9 hours",
+        "tbs": "mr:1,pdtr0:1020723%7C8.0%249.0"
+      },
+      {
+        "text": "9 \u2013 11 hours",
+        "tbs": "mr:1,pdtr0:1020723%7C9.0%2411.0"
+      },
+      {
+        "text": "11 \u2013 13 hours",
+        "tbs": "mr:1,pdtr0:1020723%7C11.0%2413.0"
+      },
+      {
+        "text": "13 \u2013 15 hours",
+        "tbs": "mr:1,pdtr0:1020723%7C13.0%2415.0"
+      },
+      {
+        "text": "> 15 hours",
+        "tbs": "mr:1,pdtr0:1020723%7C15.0%24"
+      }
+    ]
+  },
+  {
+    "type": "Drive Capacity",
+    "options": [
+      {
+        "text": "< 64 GB",
+        "tbs": "mr:1,pdtr0:1020484%7C%2464.0"
+      },
+      {
+        "text": "64 \u2013 128 GB",
+        "tbs": "mr:1,pdtr0:1020484%7C64.0%24128.0"
+      },
+      {
+        "text": "128 \u2013 256 GB",
+        "tbs": "mr:1,pdtr0:1020484%7C128.0%24256.0"
+      },
+      {
+        "text": "256 \u2013 512 GB",
+        "tbs": "mr:1,pdtr0:1020484%7C256.0%24512.0"
+      },
+      {
+        "text": "512 GB \u2013 1 TB",
+        "tbs": "mr:1,pdtr0:1020484%7C512.0%241000.0"
+      },
+      {
+        "text": "> 1 TB",
+        "tbs": "mr:1,pdtr0:1020484%7C1000.0%24"
+      }
+    ]
+  },
+  {
+    "type": "Max Supported RAM",
+    "options": [
+      {
+        "text": "4 \u2013 8 GB Supported",
+        "tbs": "mr:1,pdtr0:1337908%7C4.0%248.0"
+      },
+      {
+        "text": "8 \u2013 16 GB Supported",
+        "tbs": "mr:1,pdtr0:1337908%7C8.0%2416.0"
+      },
+      {
+        "text": "16 \u2013 32 GB Supported",
+        "tbs": "mr:1,pdtr0:1337908%7C16.0%2432.0"
+      },
+      {
+        "text": "> 32 GB Supported",
+        "tbs": "mr:1,pdtr0:1337908%7C32.0%24"
+      }
+    ]
+  },
+  {
+    "type": "Biometric Security",
+    "options": [
+      {
+        "text": "Fingerprint Scan",
+        "tbs": "mr:1,pdtr0:4099622%7C4099624"
+      },
+      {
+        "text": "Facial Recognition",
+        "tbs": "mr:1,pdtr0:4099622%7C4099623"
+      }
+    ]
+  },
+  {
+    "type": "EPEAT Rating",
+    "options": [
+      {
+        "text": "Silver Rated",
+        "tbs": "mr:1,pdtr0:4958255%7C4958257"
+      },
+      {
+        "text": "Gold Rated",
+        "tbs": "mr:1,pdtr0:4958255%7C4958256"
+      }
+    ]
+  },
+  {
+    "type": "Shipping & returns",
+    "options": [
+      {
+        "text": "Free returns",
+        "tbs": "mr:1,free_return:1"
+      },
+      {
+        "text": "1-3 day delivery",
+        "tbs": "mr:1,shipspeed:3"
+      },
+      {
+        "text": "Free shipping",
+        "tbs": "mr:1,ship:1"
+      }
+    ]
+  },
+  {
+    "type": "Discover",
+    "options": [
+      {
+        "text": "Black-owned businesses",
+        "tbs": "mr:1,dei:1"
+      },
+      {
+        "text": "Women-owned businesses",
+        "tbs": "mr:1,dei:2"
+      },
+      {
+        "text": "Veteran-owned businesses",
+        "tbs": "mr:1,dei:3"
+      }
+    ]
+  },
+  {
+    "type": "Product rating",
+    "options": [
+      {
+        "text": "4 and up",
+        "tbs": "mr:1,avg_rating:400"
+      }
+    ]
+  },
+  {
+    "type": "Condition",
+    "options": [
+      {
+        "text": "New items",
+        "tbs": "mr:1,new:1"
+      },
+      {
+        "text": "Used items",
+        "tbs": "mr:1,new:3"
+      }
+    ]
+  },
+  {
+    "type": "Seller",
+    "options": [
+      {
+        "text": "Best Buy",
+        "tbs": "mr:1,merchagg:g7187155%7Cm1311674"
+      },
+      {
+        "text": "eBay",
+        "tbs": "mr:1,merchagg:g6296794%7Cm6296724"
+      },
+      {
+        "text": "Mercari",
+        "tbs": "mr:1,merchagg:g126339810%7Cm126358573"
+      },
+      {
+        "text": "Newegg.com - DemProductSales",
+        "tbs": "mr:1,merchagg:g8277688%7Cm105636805%7Cm102661549%7Cm438561167%7Cm8438988%7Cm474244749"
+      },
+      {
+        "text": "Shopping.com",
+        "tbs": "mr:1,merchagg:g8425608%7Cm8507138"
+      },
+      {
+        "text": "Target",
+        "tbs": "mr:1,merchagg:g784994%7Cm10046"
+      },
+      {
+        "text": "Walmart",
+        "tbs": "mr:1,merchagg:g8299768%7Cm8175035%7Cm282920259%7Cm136045465%7Cm136833795%7Cm115068119"
+      }
+    ]
+  }
+]

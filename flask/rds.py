@@ -9,26 +9,23 @@ conn = psycopg2.connect(
 )
 
 cur = conn.cursor()
-#insert into RDS DATABASE -> CHECK TABLEPLUS 
-cur.execute('INSERT INTO answers (email, id, answer)'
-        'VALUES (%s, %s, %s)',
-        #What operating system do you prefer? [Mac OS, Windows OS and Chrome OS]
-        ('sanakurata1996@gmail.com',1,'Mac OS')
-)
-cur.execute('INSERT INTO answers (email, id, answer)'
-        'VALUES (%s, %s, %s)',
-        #Do You Use Photoshop, Video Editing, Or Design Software? [yes or no]
-        ('sanakurata1996@gmail.com',2,'no')
-)
-cur.execute('INSERT INTO answers (email, id, answer)'
-        'VALUES (%s, %s, %s)',
-        #Are You Always On The Go? [yes or no]
-        ('sanakurata1996@gmail.com',3,'yes')
-)
-conn.commit()
-cur.close()
-conn.close()
-        
+# #insert into RDS DATABASE -> CHECK TABLEPLUS 
+# cur.execute('INSERT INTO answers (email, id, answer)'
+#         'VALUES (%s, %s, %s)',
+#         #What operating system do you prefer? [Mac OS, Windows OS and Chrome OS]
+#         ('sanakurata1996@gmail.com',1,'Mac OS')
+# )
+# cur.execute('INSERT INTO answers (email, id, answer)'
+#         'VALUES (%s, %s, %s)',
+#         #Do You Use Photoshop, Video Editing, Or Design Software? [yes or no]
+#         ('sanakurata1996@gmail.com',2,'no')
+# )
+# cur.execute('INSERT INTO answers (email, id, answer)'
+#         'VALUES (%s, %s, %s)',
+#         #Are You Always On The Go? [yes or no]
+#         ('sanakurata1996@gmail.com',3,'yes')
+# )
+
 # # Open a cursor to perform database operations
 # cur = conn.cursor()
 # # email = params['email'].strip()
@@ -63,16 +60,22 @@ conn.close()
 #         print("role: {}".format(row['role']))
 
 
-#how to drop a table 
-# cur.execute('DROP TABLE IF EXISTS quiz_answers;')
+# how to drop a table 
+# cur.execute('DROP TABLE IF EXISTS answers;')
 
-# how to create a table 
+# # how to create a table 
 # cur.execute('CREATE TABLE answers (email varchar (150) NOT NULL,'
 #                                  'id INTEGER NOT NULL,'
 #                                  'answer varchar (150) NOT NULL,'
+#                                  'rank INTEGER NOT NULL,'
 #                                  'PRIMARY KEY (email, id),' #composite primary key
 #                                  'date_added date DEFAULT CURRENT_TIMESTAMP);'
 #                                  )
+
+# conn.commit()
+# cur.close()
+# conn.close()
+        
 
 #How to insert into a table
 # cur.execute('INSERT INTO users (email, first_name, last_name, role)'

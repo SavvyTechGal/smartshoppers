@@ -11,6 +11,8 @@ export class ProductService {
 
   //private _url: string = "/assets/mock_data/products.json"; //replace url for flask
   private baseURL = `https://smartshoppersflaskv2.us-east-1.elasticbeanstalk.com/`
+  // private baseURL = `http://127.0.0.1:5000/`
+
   
   constructor(private HttpClient: HttpClient) { }
 

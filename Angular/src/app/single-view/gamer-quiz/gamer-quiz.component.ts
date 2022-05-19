@@ -115,17 +115,18 @@ export class GamerQuizComponent implements OnInit {
     this.AnswersObject.budget = this.answerService.confirmedBudget; //get user's budget from answer service
     
     this.submitted = true;
-    //console.log(this.AnswersObject); //print out responses
+    console.log(this.AnswersObject); //print out responses
 
-    // this.answerService.postAnswer(this.userEmail, '9', this.AnswersObject.stream, this.AnswersObject.streamRank);
-    // this.answerService.postAnswer(this.userEmail, '10', this.AnswersObject.ports, this.AnswersObject.portsRank);
-    // this.answerService.postAnswer(this.userEmail, '2', this.AnswersObject.travel, this.AnswersObject.travelRank);
-    // this.answerService.postAnswer(this.userEmail, '3', this.AnswersObject.os, this.AnswersObject.osRank);
-    // this.answerService.postAnswer(this.userEmail, '4', this.AnswersObject.brands, this.AnswersObject.brandRank);
-    // this.answerService.postAnswer(this.userEmail, '5', this.AnswersObject.storage, this.AnswersObject.storageRank);
-    // this.answerService.postAnswer(this.userEmail, '6', this.AnswersObject.charges, this.AnswersObject.chargesRank);
-    // this.answerService.postAnswer(this.userEmail, '7', this.AnswersObject.speed, this.AnswersObject.speedRank);
-    // this.answerService.postAnswer(this.userEmail, '8', this.AnswersObject.heated, this.AnswersObject.heatedRank);
+    this.answerService.postAnswer(this.userEmail, '9', this.AnswersObject.stream, this.AnswersObject.streamRank);
+    this.answerService.postAnswer(this.userEmail, '10', this.AnswersObject.ports, this.AnswersObject.portsRank);
+    this.answerService.postAnswer(this.userEmail, '2', this.AnswersObject.travel, this.AnswersObject.travelRank);
+    this.answerService.postAnswer(this.userEmail, '3', this.AnswersObject.os, this.AnswersObject.osRank);
+    this.answerService.postAnswer(this.userEmail, '4', this.AnswersObject.brands, this.AnswersObject.brandRank);
+    this.answerService.postAnswer(this.userEmail, '5', this.AnswersObject.storage, this.AnswersObject.storageRank);
+    this.answerService.postAnswer(this.userEmail, '6', this.AnswersObject.charges, this.AnswersObject.chargesRank);
+    this.answerService.postAnswer(this.userEmail, '7', this.AnswersObject.speed, this.AnswersObject.speedRank);
+    this.answerService.postAnswer(this.userEmail, '8', this.AnswersObject.heated, this.AnswersObject.heatedRank);
+    this.answerService.postAnswer(this.userEmail, '21', this.AnswersObject.budget, '1');
 
   }
 

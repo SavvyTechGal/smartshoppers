@@ -1,0 +1,1027 @@
+{
+    "search_metadata": {
+        "id": "6286b599116a552d909599ef",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/1524e95b5687eca2/6286b599116a552d909599ef.json",
+        "created_at": "2022-05-19 21:24:41 UTC",
+        "processed_at": "2022-05-19 21:24:41 UTC",
+        "google_url": "https://www.google.com/search?q=laptop&oq=laptop&hl=en&gl=us&tbm=shop&tbs=mr:1,pdtr2:4094571%7C4094616!4094614,pdtr3:1337908%7C16.0%2432.0,pdtr4:1337908%7C32.0%24,pdtr5:1020723%7C10.0%2413.0&sourceid=chrome&ie=UTF-8",
+        "raw_html_file": "https://serpapi.com/searches/1524e95b5687eca2/6286b599116a552d909599ef.html",
+        "total_time_taken": 0.82
+    },
+    "search_parameters": {
+        "engine": "google",
+        "q": "laptop",
+        "google_domain": "google.com",
+        "hl": "en",
+        "gl": "us",
+        "device": "desktop",
+        "tbm": "shop",
+        "tbs": "mr:1,pdtr2:4094571%7C4094616!4094614,pdtr3:1337908%7C16.0%2432.0,pdtr4:1337908%7C32.0%24,pdtr5:1020723%7C10.0%2413.0"
+    },
+    "search_information": {
+        "shopping_results_state": "Results for exact spelling",
+        "query_displayed": "laptop"
+    },
+    "ads": [
+        {
+            "position": 1,
+            "block_position": "bottom",
+            "title": "Mac - Apple Official Site",
+            "link": "https://www.apple.com/mac/",
+            "displayed_link": "www.apple.com/",
+            "tracking_link": "https://www.google.com/aclk?sa=l&ai=DChcSEwi1uIuEwOz3AhVo9uMHHQrwARQYABBBGgJ5bQ&sig=AOD64_2_0ezEoANsn0CztR9oKBq9tSSceA&q&adurl",
+            "extensions": [
+                "\u200eCompare all Mac Models \u00b7 \u200eRefurbished Mac \u00b7 \u200eBuy Mac \u00b7 \u200eTech Specs"
+            ],
+            "description": "MacBook Air, MacBook Pro, Mac mini, iMac 24\", and the all-new Mac Studio & Studio Display. Turn the device you have into the one you want. Which Mac is right for you? Supercharged for pros. M1 Max or M1 Ultra Chip. Accessibility features. Incredible power.",
+            "sitelinks": [
+                {
+                    "title": "Compare all Mac Models",
+                    "link": "https://www.google.com/aclk?sa=l&ai=DChcSEwi1uIuEwOz3AhVo9uMHHQrwARQYABBCGgJ5bQ&sig=AOD64_06h6iBNCcpIYmGIkL--Gfey2QWZg&q=&ved=2ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQpigoAHoECAAQBQ&adurl="
+                },
+                {
+                    "title": "Refurbished Mac",
+                    "link": "https://www.google.com/aclk?sa=l&ai=DChcSEwi1uIuEwOz3AhVo9uMHHQrwARQYABBDGgJ5bQ&sig=AOD64_3yJDA4p0BP8Q5GPjA1BKD1Mhlgpg&q=&ved=2ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQpigoAXoECAAQBg&adurl="
+                },
+                {
+                    "title": "Buy Mac",
+                    "link": "https://www.google.com/aclk?sa=l&ai=DChcSEwi1uIuEwOz3AhVo9uMHHQrwARQYABBEGgJ5bQ&sig=AOD64_2KbW5iv9AoNSYTuMBPlCSq3TgmWw&q=&ved=2ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQpigoAnoECAAQBw&adurl="
+                },
+                {
+                    "title": "Tech Specs",
+                    "link": "https://www.google.com/aclk?sa=l&ai=DChcSEwi1uIuEwOz3AhVo9uMHHQrwARQYABBFGgJ5bQ&sig=AOD64_3rKkd_tONIkRulbwdqV2lQjW490g&q=&ved=2ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQpigoA3oECAAQCA&adurl="
+                }
+            ]
+        }
+    ],
+    "filters": [
+        {
+            "type": "Show only",
+            "options": [
+                {
+                    "text": "Buy on Google",
+                    "tbs": "mr:1,buy:g,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "On sale",
+                    "tbs": "mr:1,sales:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Smaller stores",
+                    "tbs": "mr:1,smb:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                }
+            ]
+        },
+        {
+            "type": "Refresh Rate",
+            "options": [
+                {
+                    "text": "300Hz",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "144Hz",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "120Hz",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614!4094613,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "60Hz",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614!4094612,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                }
+            ]
+        },
+        {
+            "type": "Battery Life",
+            "options": [
+                {
+                    "text": "10 \u2013 13 hours",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0"
+                }
+            ]
+        },
+        {
+            "type": "Max Supported RAM",
+            "options": [
+                {
+                    "text": "> 32 GB Supported",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1020723%7C10.0%2413.0,pdtr2:1337908%7C32.0%24"
+                }
+            ]
+        },
+        {
+            "type": "Price",
+            "options": [
+                {
+                    "text": "Up to $1,000",
+                    "tbs": "mr:1,price:1,ppr_max:1000,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "$1,000 \u2013 $1,500",
+                    "tbs": "mr:1,price:1,ppr_min:1000,ppr_max:1500,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Over $1,500",
+                    "tbs": "mr:1,price:1,ppr_min:1500,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                }
+            ]
+        },
+        {
+            "type": "Brand",
+            "options": [
+                {
+                    "text": "Acer",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:703960%7C703967,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "ASUS",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:703960%7C703971,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Lenovo",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:703960%7C703962,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "GIGABYTE",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:703960%7C1043405,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                }
+            ]
+        },
+        {
+            "type": "Screen Size",
+            "options": [
+                {
+                    "text": "15.6 inches",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0,pdtr3:1020486%7C39.624000549316406%2439.624000549316406"
+                },
+                {
+                    "text": "17.3 inches",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0,pdtr3:1020486%7C43.94200134277344%2443.94200134277344"
+                }
+            ]
+        },
+        {
+            "type": "Color",
+            "options": [
+                {
+                    "text": "Original Black",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1716119%7C1008467019,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Fortress Gray",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1716119%7C1015671459,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                }
+            ]
+        },
+        {
+            "type": "Installed Memory",
+            "options": [
+                {
+                    "text": "8 GB RAM",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0,pdtr3:1020720%7C8.0%248.0"
+                },
+                {
+                    "text": "16 GB RAM",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0,pdtr3:1020720%7C16.0%2416.0"
+                },
+                {
+                    "text": "32 GB RAM",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0,pdtr3:1020720%7C32.0%2432.0"
+                }
+            ]
+        },
+        {
+            "type": "Processor Brand",
+            "options": [
+                {
+                    "text": "Intel CPU",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:703997%7C703998,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "AMD CPU",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:703997%7C703999,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                }
+            ]
+        },
+        {
+            "type": "Drive Type",
+            "options": [
+                {
+                    "text": "Solid State Drive",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:960913%7C960915,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Hard Disk Drive",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:960913%7C960914,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                }
+            ]
+        },
+        {
+            "type": "Graphics Processor",
+            "options": [
+                {
+                    "text": "Intel GPU",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:733074%7C733177,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "NVIDIA GPU",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:733074%7C733178,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                }
+            ]
+        },
+        {
+            "type": "Processor Speed",
+            "options": [
+                {
+                    "text": "< 2.6 GHz",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0,pdtr3:1020721%7C%242.5999999046325684"
+                },
+                {
+                    "text": "2.6 \u2013 2.9 GHz",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0,pdtr3:1020721%7C2.5999999046325684%242.9000000953674316"
+                },
+                {
+                    "text": "2.9 \u2013 3.2 GHz",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0,pdtr3:1020721%7C2.9000000953674316%243.200000047683716"
+                },
+                {
+                    "text": "> 3.2 GHz",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0,pdtr3:1020721%7C3.200000047683716%24"
+                }
+            ]
+        },
+        {
+            "type": "Available Ports",
+            "options": [
+                {
+                    "text": "USB-C",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:4094604%7C4094606,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Ethernet",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:4094604%7C4094608,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "HDMI",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:4094604%7C4094607,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "3.5 mm Jack",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:4094604%7C4094610,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                }
+            ]
+        },
+        {
+            "type": "Resolution",
+            "options": [
+                {
+                    "text": "2560 x 1440",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:703936%7C4060149,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "1920 x 1080",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:703936%7C703948,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                }
+            ]
+        },
+        {
+            "type": "Number of Cores",
+            "options": [
+                {
+                    "text": "Octa Core",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337889%7C4192014,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Hexa Core",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337889%7C4192013,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Quad Core",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337889%7C1337892,pdtr2:1337908%7C16.0%2432.0,pdtr3:1020723%7C10.0%2413.0"
+                }
+            ]
+        },
+        {
+            "type": "Drive Capacity",
+            "options": [
+                {
+                    "text": "256 GB",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0,pdtr3:1020484%7C256.0%24256.0"
+                },
+                {
+                    "text": "512 GB",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0,pdtr3:1020484%7C512.0%24512.0"
+                },
+                {
+                    "text": "1 TB",
+                    "tbs": "mr:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0,pdtr3:1020484%7C1000.0%241000.0"
+                }
+            ]
+        },
+        {
+            "type": "Shipping & returns",
+            "options": [
+                {
+                    "text": "Free returns",
+                    "tbs": "mr:1,free_return:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "1-3 day delivery",
+                    "tbs": "mr:1,shipspeed:3,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                }
+            ]
+        },
+        {
+            "type": "Discover",
+            "options": [
+                {
+                    "text": "Black-owned businesses",
+                    "tbs": "mr:1,dei:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Women-owned businesses",
+                    "tbs": "mr:1,dei:2,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Veteran-owned businesses",
+                    "tbs": "mr:1,dei:3,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                }
+            ]
+        },
+        {
+            "type": "Product rating",
+            "options": [
+                {
+                    "text": "4 and up",
+                    "tbs": "mr:1,avg_rating:400,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                }
+            ]
+        },
+        {
+            "type": "Condition",
+            "options": [
+                {
+                    "text": "New items",
+                    "tbs": "mr:1,new:1,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Used items",
+                    "tbs": "mr:1,new:3,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                }
+            ]
+        },
+        {
+            "type": "Seller",
+            "options": [
+                {
+                    "text": "antonline.com",
+                    "tbs": "mr:1,merchagg:m46586,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Back Market",
+                    "tbs": "mr:1,merchagg:g565756787%7Cm118622995,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Discount Bandit - Gadgets Galore",
+                    "tbs": "mr:1,merchagg:g280560407%7Cm321624821,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Newegg Business",
+                    "tbs": "mr:1,merchagg:g9473453%7Cm7931933,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Newegg.com",
+                    "tbs": "mr:1,merchagg:g8277688%7Cm8438988,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "NextWarehouse.com",
+                    "tbs": "mr:1,merchagg:g102555442%7Cm5737234,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                },
+                {
+                    "text": "Shopping.com",
+                    "tbs": "mr:1,merchagg:g8425608%7Cm8507138,pdtr0:4094571%7C4094616!4094614,pdtr1:1337908%7C16.0%2432.0,pdtr2:1020723%7C10.0%2413.0"
+                }
+            ]
+        }
+    ],
+    "inline_shopping_results": [
+        {
+            "position": 1,
+            "block_position": "top",
+            "title": "Lenovo Legion Y540 15.6\" Full HD 60Hz Gaming Notebook Computer, Intel Core i7-9750H 2.6GHz, 16GB RAM, 256GB SSD, NVIDIA GeForce GTX 1660 Ti 6GB,",
+            "price": "$979.00",
+            "extracted_price": 979.0,
+            "link": "https://www.google.com/aclk?sa=L&ai=DChcSEwi1uIuEwOz3AhVo9uMHHQrwARQYABA-GgJ5bQ&sig=AOD64_0BCQBpbl8vQiEoGwB0Aea9ftabEA&ctype=5&q=&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQ9A4Iow0&adurl=",
+            "source": "Amazon.com",
+            "shipping": "Free shipping",
+            "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRRlHUQrLJAA8ZOvyf3o_2ILyfMKaTk0a2eV5_jHJaIfTxBiwR9AyaUtllelRCnsRi8jxA1j8iEuH8aotREufd8dBQx6QVKoW6y95OWfHI0&usqp=CAE"
+        },
+        {
+            "position": 2,
+            "block_position": "top",
+            "title": "Acer Nitro 5 An515-45 An515-45-R1jf 15.6\" Gaming Notebook - Full Hd - 1920 X 1080 - Amd Ryzen 7 5800h Octa-Core 8 Core 3.20 Ghz - 16 Gb Ram - 256 Gb ",
+            "price": "$1,046.96",
+            "extracted_price": 1046.96,
+            "link": "https://www.google.com/aclk?sa=l&ai=DChcSEwi1uIuEwOz3AhVo9uMHHQrwARQYABBAGgJ5bQ&sig=AOD64_1A4cNavTj_GBqqRQpZTe2aK2Nc1A&ctype=5&q=&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQ9A4Ipg0&adurl=",
+            "source": "PCNation",
+            "shipping": "Free shipping",
+            "rating": 4.5,
+            "reviews": 4040,
+            "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSXittB0Snhoo-UyxzvMRDhi8MtswpsLyYk9mdht0s_7QL_g1_wtmihFquLlE_SoZTlyIccp1zHKbjlZUGM0-MU0ynDB5_65csElVkvpZlu&usqp=CAE"
+        }
+    ],
+    "shopping_results": [
+        {
+            "position": 1,
+            "title": "Asus ROG G15 Advantage Laptop (amd Ryzen 9 5900HX, 16GB Ram, 512gb Ssd, AMD RX ...",
+            "link": "https://www.google.com/url?url=https://www.bestbuy.com/site/asus-rog-strix-g15-advantage-edition-15-6-fhd-gaming-laptop-amd-ryzen-9-5900hx-16gb-memory-radeonrx-6800m-512gb-ssd/6466550.p%3FskuId%3D6466550%26ref%3DNS%26loc%3D101%26extStoreId%3D142&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQ_uQECPQI&usg=AOvVaw36zInzwL-hvhmnj0MT8CKW",
+            "product_link": "https://www.google.com/shopping/product/8855745501563239775",
+            "product_id": "8855745501563239775",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=8855745501563239775",
+            "source": "Best Buy",
+            "price": "$1,649.99",
+            "extracted_price": 1649.99,
+            "rating": 4.3,
+            "reviews": 1147,
+            "extensions": [
+                "Touchscreen",
+                "1920 x 1080"
+            ],
+            "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTW-JxOy8ASVoW-BA6Bi0y2wj46JaDR1mt5KF-TXKQuVPgPWevgA1-mzUMfRmSB-5kyV-qfTu6vyvzGokfGF5nVvn0Dzop6-qyQL298-dg&usqp=CAE",
+            "tag": "CURBSIDE",
+            "delivery": "35.2 mi \u00b7 In stock"
+        },
+        {
+            "position": 2,
+            "title": "Asus ROG Strix G15 15.6\" Laptop, AMD Ryzen 7, 16GB Memory, 1TB Ssd, Windows 10 ...",
+            "link": "https://www.google.com/url?url=https://www.officedepot.com/a/products/3150940/ASUS-ROG-Strix-G15-G513QE-ES76/%3Futm_source%3Dgoogle%26utm_medium%3Dsag&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECIgJ&usg=AOvVaw39i4bY9wvRjaPC4gyIeWJY",
+            "product_link": "https://www.google.com/shopping/product/3496731086545078126",
+            "product_id": "3496731086545078126",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=3496731086545078126",
+            "source": "Office Depot",
+            "price": "$1,299.00",
+            "extracted_price": 1299.0,
+            "rating": 4.4,
+            "reviews": 313,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQobB_zOO2SYR0dWZNYHIPNSUsFSIFT3Tl_lfLGG1WZPFFh-__ydhHbT-QcH9JzbSXuVkl6vZioGzpkzzv8zmETblOqksGDfI1BSJrBljTj&usqp=CAE",
+            "delivery": "Free delivery"
+        },
+        {
+            "position": 3,
+            "title": "Acer Nitro 5 15.6 inch Full HD Laptop 8GB 512gb SSD Windows 10 Home - Black",
+            "link": "https://www.google.com/url?url=https://www.walmart.com/ip/Acer-AN5155555M1-Nitro-5-15-6-inch-Full-HD-Laptop-8GB-512GB-SSD-Windows-10-Home-Black/650997499%3Fwmlspartner%3Dwlpa%26selectedSellerId%3D14771&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECJgJ&usg=AOvVaw1t8-6t5-jQ6JNa4Fkuqs-o",
+            "product_link": "https://www.google.com/shopping/product/7751262405293292732",
+            "product_id": "7751262405293292732",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=7751262405293292732",
+            "source": "Walmart - Hooray Tech Inc",
+            "price": "$815.00",
+            "extracted_price": 815.0,
+            "rating": 4.3,
+            "reviews": 4040,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTyRh0dCpajY8SFpTbRfKbp7J6hySoNL34LpqidQ1K6xVC4lvemzJQ8DYWARIkaXaAxOj4pMuYqmeB0KWpdxyq8CqR6O7_zl2gA0kPbKPVZ&usqp=CAE",
+            "delivery": "Free delivery"
+        },
+        {
+            "position": 4,
+            "title": "Acer Nitro 5 - 15.6\" Laptop Intel Core i5-10300H 2.5GHz 16GB Ram 512gb SSD W10H ...",
+            "link": "https://www.google.com/url?url=https://www.staples.com/acer-nitro-5-an515-55-56ap-15-6-refurbished-laptop-intel-i5-16gb-memory-512gb-ssd-windows-10/product_24520367&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECKkJ&usg=AOvVaw0g9EUIS9nrmYK7JF2ehIbp",
+            "product_link": "https://www.google.com/shopping/product/8923962122162509827",
+            "product_id": "8923962122162509827",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=8923962122162509827",
+            "source": "Staples",
+            "price": "$815.99",
+            "extracted_price": 815.99,
+            "rating": 4.3,
+            "reviews": 4040,
+            "extensions": [
+                "Windows OS",
+                "Quad Core"
+            ],
+            "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS4YFl9h3Nayh_jTwy5pspMQfmM3maHp1ZgQ_3XpP1n8tmx5hvYSSVlWTUPuhcoBH88kJGzTRs0kSW62W2zDiirrSbvLeFcmYqbYZLdqLL1eW1bS9P8i-WM&usqp=CAE",
+            "delivery": "Free delivery"
+        },
+        {
+            "position": 5,
+            "title": "Acer Nitro 5 AN515-55-53E5 Gaming Laptop | Intel Core i5-10300H | Nvidia GeForce ...",
+            "link": "https://www.google.com/url?url=https://www.newegg.com/p/2WC-000K-00XZ5%3Fitem%3D9SIB32ZHZ80632%26nm_mc%3Dknc-googleadwords%26cm_mmc%3Dknc-googleadwords-_-gaming%2520laptops-_-acer%2520america-_-9SIB32ZHZ80632%26source%3Dregion&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECLsJ&usg=AOvVaw0AIDx3VbtwP9nFR20ZJsqr",
+            "product_link": "https://www.google.com/shopping/product/13109901888171620086",
+            "product_id": "13109901888171620086",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=13109901888171620086",
+            "source": "Newegg.com - DISCOUNT TECH",
+            "price": "$798.00",
+            "extracted_price": 798.0,
+            "rating": 4.3,
+            "reviews": 4040,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTEhVpIY8szxtOabGUV8DV1BcEbKXNkW3tPGhtw0oGOXzTaMYsYMJHllK_gCPg2LRAc4K4080y2SEM-Cr2mLsJLTr8MpFSqM8rCFfm3NxVA&usqp=CAE",
+            "delivery": "Free delivery"
+        },
+        {
+            "position": 6,
+            "title": "Asus TUF Gaming F15 TUF506HM-ES76 - 15.6-inch - Core i7 11800H - 16 GB Ram - 1 TB SSD",
+            "link": "https://www.google.com/url?url=https://www.excaliberpc.com/761502/product.html&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECMsJ&usg=AOvVaw0I86ie_4tYF0ooVbuhlYzh",
+            "product_link": "https://www.google.com/shopping/product/6760269604279279626",
+            "product_id": "6760269604279279626",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=6760269604279279626",
+            "source": "EXcaliberPC.com",
+            "price": "$1,414.99",
+            "extracted_price": 1414.99,
+            "rating": 3.5,
+            "reviews": 6,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRkpDQolgSCsy6aX-3kC76WJO-KBHmUxvk292d4yzWRIJfy1iUU_94cxednIaiup9AfcgBH1W5cxsrE-bPHsl2G_dymc-fFU8BwauRSFS4&usqp=CAE",
+            "delivery": "Free delivery"
+        },
+        {
+            "position": 7,
+            "title": "Asus ROG Strix G17 Black 17.3\" Gaming Laptop AMD Ryzen 7 6800h 16GB Ram 512gb SSD ...",
+            "link": "https://www.google.com/url?url=https://www.bhphotovideo.com/c/product/1692345-REG/asus_g713rc_rs73_15_6_rog_gaming_laptop.html%3Fkw%3DASG713RCRS73%26ap%3Dy%26smp%3Dy%26BI%3DE6540%26srsltid%3DAWLEVJz996RSo2hJCCZQE3ealEWsBY1OrTyT4uPT-g57rw1EEAem88-vTNQ&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECN4J&usg=AOvVaw0t10ElRTKjxiSAR-V9LPX3",
+            "product_link": "https://www.google.com/shopping/product/952394382055611378",
+            "product_id": "952394382055611378",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=952394382055611378",
+            "source": "B&H Photo-Video-Audio",
+            "price": "$1,249.99",
+            "extracted_price": 1249.99,
+            "extensions": [
+                "SPECIAL OFFER",
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSMlWDbYL8RyEep-ESi4lYeaAYtiUoeU9IAawB_u0St5LptxMWfDTjVULNcgsogeGMoScY6EW8kJ-07w2O5XZ57cyiBJ5CFU0w-usyvLkY&usqp=CAE",
+            "tag": "SPECIAL OFFER",
+            "delivery": "Free delivery by Sun, May 22"
+        },
+        {
+            "position": 8,
+            "title": "Dell Alienware Area 51M 17.3\" 16GB 1TB SSD Core i7-10700K 3.6Ghz Win10H, Lunar ...",
+            "link": "https://www.google.com/url?url=https://www.backmarket.com/tested-and-certified-used-dell-area-51m-173-inch-intel-core-i7-10700k-16gb-1000gb-nvidia-geforce-rtx-2070/366948.html%3Fshopping%3Dgmc&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECPIJ&usg=AOvVaw1mkBC67yo6qnCbFHvgObd7",
+            "product_link": "https://www.google.com/shopping/product/8974204787772168251",
+            "product_id": "8974204787772168251",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=8974204787772168251",
+            "source": "Back Market",
+            "price": "$2,139.64",
+            "extracted_price": 2139.64,
+            "rating": 3.2,
+            "reviews": 6,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSx0bWa5bA8SSSVaGl4XT8k0Qsl5JJzKqe2cQ3k_iWPYJ8L2KhxYTTlDjXQjYsw1a2PVj80ssK0_DfNLGu_8Ztp3wok-jG9-uxbnSOSliD8OVpuBIlQ8ZzL_g&usqp=CAE",
+            "delivery": "Delivery by Wed, May 25"
+        },
+        {
+            "position": 9,
+            "title": "Acer Nitro 5 AN515-45-R92M 15.6\" Gaming Laptop Computer - Black; AMD Ryzen 7 ...",
+            "link": "https://www.google.com/url?url=https://www.mddcprint.com/products/nitro-5-an515-45-r92m-gaming-laptop-16gb-ddr4-512gb-nvme-ssd-black%3Fcurrency%3DUSD%26variant%3D39752251900002%26utm_medium%3Dcpc%26utm_source%3Dgoogle%26utm_campaign%3DGoogle%2520Shopping&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECIMK&usg=AOvVaw2Y-ZRfgLYW_Yk-N-9YrTnX",
+            "product_link": "https://www.google.com/shopping/product/11989256127299832656",
+            "product_id": "11989256127299832656",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=11989256127299832656",
+            "source": "www.mddcprint.com",
+            "price": "$1,060.99",
+            "extracted_price": 1060.99,
+            "rating": 4.3,
+            "reviews": 4040,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTLen5R0lyeoLuNbSRVl9xc90YV9gmfk6jkx7yHx4PcQOEJ_Jbv4Q4jAzHp57LNYqlEVYCy8g1ggFbTknAIg4DC8zL4msh4OHXtUpigvxzufK0ASX6vIzMg&usqp=CAE",
+            "delivery": "Delivery by Sun, Jun 26"
+        },
+        {
+            "position": 10,
+            "title": "Asus ROG G15 Advantage Laptop (amd Ryzen 9 5900HX, 16GB Ram, 512gb Ssd, AMD RX ...",
+            "link": "https://www.google.com/url?url=https://www.bestbuy.com/site/asus-rog-strix-g15-advantage-edition-15-6-fhd-gaming-laptop-amd-ryzen-9-5900hx-16gb-memory-radeonrx-6800m-512gb-ssd/6466550.p%3FskuId%3D6466550%26ref%3DNS%26loc%3D101%26extStoreId%3D142&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQ_uQECJgK&usg=AOvVaw3MR_eENFPZqoiIMupItH76",
+            "product_link": "https://www.google.com/shopping/product/8855745501563239775",
+            "product_id": "8855745501563239775",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=8855745501563239775",
+            "source": "Best Buy",
+            "price": "$1,649.99",
+            "extracted_price": 1649.99,
+            "rating": 4.3,
+            "reviews": 1147,
+            "extensions": [
+                "Touchscreen",
+                "1920 x 1080"
+            ],
+            "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTW-JxOy8ASVoW-BA6Bi0y2wj46JaDR1mt5KF-TXKQuVPgPWevgA1-mzUMfRmSB-5kyV-qfTu6vyvzGokfGF5nVvn0Dzop6-qyQL298-dg&usqp=CAE",
+            "tag": "CURBSIDE",
+            "delivery": "35.2 mi \u00b7 In stock"
+        },
+        {
+            "position": 11,
+            "title": "Asus ROG Strix G15 15.6\" Laptop, AMD Ryzen 7, 16GB Memory, 1TB Ssd, Windows 10 ...",
+            "link": "https://www.google.com/url?url=https://www.officedepot.com/a/products/3150940/ASUS-ROG-Strix-G15-G513QE-ES76/%3Futm_source%3Dgoogle%26utm_medium%3Dsag&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECKgK&usg=AOvVaw0WWxZLz8Wv-w_U7pieUcyy",
+            "product_link": "https://www.google.com/shopping/product/3496731086545078126",
+            "product_id": "3496731086545078126",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=3496731086545078126",
+            "source": "Office Depot",
+            "price": "$1,299.00",
+            "extracted_price": 1299.0,
+            "rating": 4.4,
+            "reviews": 313,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQobB_zOO2SYR0dWZNYHIPNSUsFSIFT3Tl_lfLGG1WZPFFh-__ydhHbT-QcH9JzbSXuVkl6vZioGzpkzzv8zmETblOqksGDfI1BSJrBljTj&usqp=CAE",
+            "delivery": "Free delivery"
+        },
+        {
+            "position": 12,
+            "title": "Acer Nitro 5 15.6 inch Full HD Laptop 8GB 512gb SSD Windows 10 Home - Black",
+            "link": "https://www.google.com/url?url=https://www.walmart.com/ip/Acer-AN5155555M1-Nitro-5-15-6-inch-Full-HD-Laptop-8GB-512GB-SSD-Windows-10-Home-Black/650997499%3Fwmlspartner%3Dwlpa%26selectedSellerId%3D14771&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECLkK&usg=AOvVaw1l2yO6zLnGcXyf5Ou_aDe2",
+            "product_link": "https://www.google.com/shopping/product/7751262405293292732",
+            "product_id": "7751262405293292732",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=7751262405293292732",
+            "source": "Walmart - Hooray Tech Inc",
+            "price": "$815.00",
+            "extracted_price": 815.0,
+            "rating": 4.3,
+            "reviews": 4040,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTyRh0dCpajY8SFpTbRfKbp7J6hySoNL34LpqidQ1K6xVC4lvemzJQ8DYWARIkaXaAxOj4pMuYqmeB0KWpdxyq8CqR6O7_zl2gA0kPbKPVZ&usqp=CAE",
+            "delivery": "Free delivery"
+        },
+        {
+            "position": 13,
+            "title": "TUF Gaming F17 Fx706 FX706HCB-ES51 17.3\" Gaming Notebook - Full HD - 1920 x 1080 ...",
+            "link": "https://www.google.com/url?url=https://www.neweggbusiness.com/Product/Product.aspx%3FItem%3D9B-34-236-136%26nm_mc%3DKNC-GoogleBiz%26cm_mmc%3DKNC-GoogleBiz-_-Gaming%2520Laptops-_-ASUS-_-9B34236136%26source%3Dregion&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECMkK&usg=AOvVaw1OmN3DLXceCHtitgI2b1_a",
+            "product_link": "https://www.google.com/shopping/product/16644394094847272713",
+            "product_id": "16644394094847272713",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=16644394094847272713",
+            "source": "Newegg Business",
+            "price": "$949.99",
+            "extracted_price": 949.99,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ9foiUjrqna8ocXWgI0ZZoSatDW5KwoBB6OU_FRM7PJSv9ifhmoEc1UcazPNZksT67Sm7RhsXLDsu8HuDCK0tAqiySAKBXZ4ae056TViLx&usqp=CAE",
+            "delivery": "Free delivery"
+        },
+        {
+            "position": 14,
+            "title": "Acer Nitro 5 Gmaing Laptop - 16/512GB - Intel Core i5 - Windows 10 Home",
+            "link": "https://www.google.com/url?url=https://www.shopping.com/item.html%3Fid%3Dv1-334109416874-0%26offer%3Dtrue%26provider%3D0%26itemId%3Dv1-334109416874-0%26a%3DitemName_Acer%2BNitro%2B5%2B15.6%2522%2BFHD%252C%2Bi5-10300H%252C%2B16GB%252C%2B512GB%2BSSD%252C%2BRTX%2B3050%252CW10H%252CObsidian%2BBlack&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECNsK&usg=AOvVaw3pzvxjwLk4s23HgA_TSEPQ",
+            "product_link": "https://www.google.com/shopping/product/2796657880677531865",
+            "product_id": "2796657880677531865",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=2796657880677531865",
+            "source": "Shopping.com",
+            "price": "$849.99",
+            "extracted_price": 849.99,
+            "rating": 4.3,
+            "reviews": 4040,
+            "extensions": [
+                "LOW PRICE",
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT0YDPCAsRh0pyKNeooAB12nXL5VBA6OeS_EhnXOJKxBDetSjuNjoWwkSavDjnKcEAmvVS0TAPpHpldnNQSGexllWd5TrEsezaKSyQhtnxNgFdImtBZoMb9&usqp=CAE",
+            "tag": "LOW PRICE",
+            "delivery": "+Shipping"
+        },
+        {
+            "position": 15,
+            "title": "Acer Nitro 5 AN515-45 - 15.6-inch - Ryzen 7 5800h - 16 GB Ram - 256 GB SSD - US Intl",
+            "link": "https://www.google.com/url?url=https://www.gamestop.com/pc-gaming/laptop-pc-hardware/products/acer-nitro-5-an515-45-15.6-in-gaming-laptop-amd-ryzen-7-5800h-nvidia-geforce-gtx-1650-16gb-ram-256gb-ssd-an515-45-r1jf/332241.html%3Futm_source%3Dgoogle%26utm_medium%3Dfeeds%26utm_campaign%3Dunpaid_listings%26a%3D1&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECOwK&usg=AOvVaw1cB7-mOtRYl8vAqABCTUNU",
+            "product_link": "https://www.google.com/shopping/product/4158581307880011204",
+            "product_id": "4158581307880011204",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=4158581307880011204",
+            "source": "Gamestop",
+            "price": "$1,057.99",
+            "extracted_price": 1057.99,
+            "rating": 4.3,
+            "reviews": 4040,
+            "extensions": [
+                "Windows OS",
+                "Octa Core"
+            ],
+            "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSuXbOk6BMfn7zZCcQgjbAYgrtfmOHpAJF4ve6Qi4XdvnvtDCuXgNsKNhwgQ4Rw2JYK1y0FQMWLtCn38fpr8kvqnqEOjOGhwWtSvYnLy4Km&usqp=CAE",
+            "delivery": "Free delivery by May 25 & Free 30-day returns"
+        },
+        {
+            "position": 16,
+            "title": "Lenovo 81SX0005US Legion Y540-15IRH Gaming Notebook",
+            "link": "https://www.google.com/url?url=https://www.colamco.com/product/lenovo-81sx0005us-1773167%3Futm_source%3Dfroogle%26utm_medium%3Dreferral&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECPwK&usg=AOvVaw3WYctGTvsn6Lu0BAJ_0QOr",
+            "product_link": "https://www.google.com/shopping/product/10534551344595430054",
+            "product_id": "10534551344595430054",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=10534551344595430054",
+            "source": "Colamco",
+            "price": "$1,328.57",
+            "extracted_price": 1328.57,
+            "rating": 4.5,
+            "reviews": 1061,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTon5b6PCa8Okv-6FjjUXyrLT8dX9ObqwCRuKY9IFSczGzu86fAZMONb0ytvyDG_yL_WINJLETjcD2pCR8X8_nyc3Nx3AZxWl_zaaVmneM&usqp=CAE",
+            "delivery": "Free delivery"
+        },
+        {
+            "position": 17,
+            "title": "Acer Nitro 5 AN515-55 AN515-55-57BK 15.6\" Gaming Notebook - Full HD -",
+            "link": "https://www.google.com/url?url=https://www.backmarket.com/tested-and-certified-used-acer-an515-55-57bk-156-inch-i5-10300h-16-gb-ssd-512-gb/340124.html%3Fshopping%3Dgmc&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECIwL&usg=AOvVaw1n27GyCwwD0hsjzDpy_rYd",
+            "product_link": "https://www.google.com/shopping/product/14580662712700061616",
+            "product_id": "14580662712700061616",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=14580662712700061616",
+            "source": "Back Market",
+            "price": "$818.99",
+            "extracted_price": 818.99,
+            "rating": 4.3,
+            "reviews": 4040,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSAE3HnxRpSrxkPllSWqfMUMPEREoPWdAeLXVEFcK8Ke4ZrSFEMEQQE0Bc5wa8ywUbfVJbCuvBRVAID04K21aeghY6AVwHrCmtYEXAzWN8&usqp=CAE",
+            "delivery": "Delivery by Wed, Jun 1"
+        },
+        {
+            "position": 18,
+            "title": "Adata Xpg Xenia 15.6'' Gaming Notebook - Full Hd - 1920 X 1080 - Intel Core I7 ...",
+            "link": "https://www.google.com/url?url=/shopping/product/3433335468856712695%3Foq%3Dlaptop%26q%3Dlaptop%26prds%3Deto:16334699340781481875_1,rsk:PC_2574877946128190524&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECJ8L&usg=AOvVaw3ixsg7cUej_Jhu58jjk4mB",
+            "product_link": "https://www.google.com/shopping/product/3433335468856712695",
+            "product_id": "3433335468856712695",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=3433335468856712695",
+            "source": "Electronic Express",
+            "price": "$1,099.00",
+            "extracted_price": 1099.0,
+            "rating": 3.9,
+            "reviews": 12,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTkSkCpZ6tlj3ErsEH0fOl32MHav6ffTdeaXuHBA1j6vxBC1Uak_AIkgd3mGPU13doDWmn5ggvey-KPNFFPdRYualwscuItLSJPscgC8QKHKjKRYsitMW4ttg&usqp=CAE",
+            "delivery": "Google Guarantee \u00b7 Free 60-day returns"
+        },
+        {
+            "position": 19,
+            "title": "Asus TUF Gaming F15 TUF506HE-DS74 - 15.6-inch - Core i7 11800H - 16 GB Ram - 512 ...",
+            "link": "https://www.google.com/url?url=https://www.abt.com/Asus-TUF-Gaming-F15-TUF506-15.6-Eclipse-Gray-Gaming-Notebook-Intel-i7-11800H-16GB-RAM-512GB-SSD-NVIDIA-GeForce-RTX-3050-Ti-TUF506HEDS74/p/162607.html%3Futm_source%3Dgoogle%26utm_medium%3Dsc_organic%26utm_campaign%3Dsurfaces%2520across%2520google%26utm_source%3Dgoogle%26utm_medium%3Dsc_organic%26utm_campaign%3Dsurfaces%2520across%2520google&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECLIL&usg=AOvVaw03VhwgGpTaoPlAI_0c3p5F",
+            "product_link": "https://www.google.com/shopping/product/2581611532815521595",
+            "product_id": "2581611532815521595",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=2581611532815521595",
+            "source": "Abt Electronics & Appliances",
+            "price": "$1,299.00",
+            "extracted_price": 1299.0,
+            "rating": 5.0,
+            "reviews": 2,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSubCVRwCRaahx5T-wShzMIk37j_5_V3p16hn7MToymzIkMtvbuG8UQyyBoX27QpiJAk9Bfc9ObWiQT6vluBYxYBJDZLPKzI7nAuI40Dd9DTmlMU8FL4Lpelg&usqp=CAE",
+            "delivery": "Free delivery"
+        },
+        {
+            "position": 20,
+            "title": "Gigabyte - 15.6\" Gaming Laptop - Intel Core i7 - 16GB Memory - Nvidia GeForce GTX ...",
+            "link": "https://www.google.com/url?url=https://www.neobits.com/gigabyte_technology_aero_15x_v8_bk4_15_6_144hz_fhd_p12595845.html%3Fatc%3Dgbs&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECMIL&usg=AOvVaw3GPJ4fDNIddoRnv7yXl2Pr",
+            "product_link": "https://www.google.com/shopping/product/16877167870991979824",
+            "product_id": "16877167870991979824",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=16877167870991979824",
+            "source": "Neobits.com",
+            "price": "$2,205.71",
+            "extracted_price": 2205.71,
+            "rating": 4.3,
+            "reviews": 174,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS7a5_jnf5AHCroLEwzzMR5j3a7D87qVHckTixa3Q62J89euzaS0ZhVqLbGuuENdZn3TOYxfUjkmiWNps9ex-RPnuiqG-V8mzgosWzT9b9gSvbhY1Wj49ba&usqp=CAE",
+            "delivery": "Delivery by Thu, May 26"
+        },
+        {
+            "position": 21,
+            "title": "TUF Gaming F17 Gaming Laptop, 17.3\u201d.",
+            "link": "https://www.google.com/url?url=https://www.brandsmartusa.com/asus/250156/17-3-tuf-f17-intel-core-i5-10300h-nvidia-geforce-gtx-1650ti-512gb-ssd-8gb-ram-gaming-laptop.htm&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECNEL&usg=AOvVaw0UNzmQcJxFeIYLuhmC93ga",
+            "product_link": "https://www.google.com/shopping/product/2445220981642331414",
+            "product_id": "2445220981642331414",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=2445220981642331414",
+            "source": "BrandsMart USA",
+            "price": "$899.88",
+            "extracted_price": 899.88,
+            "rating": 4.2,
+            "reviews": 109,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSzk-sJZn-yoyF98ZvFAz4QaxzpoQRFVoOmhGn1Coy-LGIB-Bg9v4HeqokxJKPT-7YEnXN03xuIPS7igWFq5KT8vP6bLmNpg702lNk40Jql8E8ibpgd5JW7&usqp=CAE",
+            "delivery": "Delivery by Sun, Jun 5"
+        },
+        {
+            "position": 22,
+            "title": "Asus TUF Gaming A15 TUF506IH-RS53 - 15.6-inch - Ryzen 5 4600h - 8 GB Ram - 512 GB SSD",
+            "link": "https://www.google.com/url?url=http://www.nextwarehouse.com/item/%3F3983924_g10e&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECOAL&usg=AOvVaw1Z3nKaRiBaF1h9Y6egfUtG",
+            "product_link": "https://www.google.com/shopping/product/752273577815578616",
+            "product_id": "752273577815578616",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=752273577815578616",
+            "source": "NextWarehouse.com",
+            "price": "$918.62",
+            "extracted_price": 918.62,
+            "rating": 4.5,
+            "reviews": 19,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTPbV7xdSvNhSxn7KojFmRiSjSHPBTO-uESZ26tMjbD0gVrahbPyUHzDQkxawNVm6_bDUVTKznjxnVdGz3FZNSV_cf0PnN6IWYEN-bVlZwl&usqp=CAE",
+            "delivery": "Free delivery"
+        },
+        {
+            "position": 23,
+            "title": "MSI GP76 10UE-013CA Leopard 17.3 inch 16GB 1TB SSD Core i7-10750H 2.6GHz Win10H ...",
+            "link": "https://www.google.com/url?url=https://www.walmart.com/ip/MSI-GP76-10UE-013CA-Leopard-17-3-16GB-1TB-SSD-Core-i7-10750H-2-6GHz-Win10H-Black-Certified-Refurbished/538593998%3Fwmlspartner%3Dwlpa%26selectedSellerId%3D101032740&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECO8L&usg=AOvVaw1VlecJt-9SY0PZLbigULez",
+            "product_link": "https://www.google.com/shopping/product/7897752980043601923",
+            "product_id": "7897752980043601923",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=7897752980043601923",
+            "source": "Walmart - eTechtronics",
+            "price": "$1,429.63",
+            "extracted_price": 1429.63,
+            "rating": 4.7,
+            "reviews": 38,
+            "extensions": [
+                "Windows OS",
+                "Hexa Core"
+            ],
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRjF2ALVmRvL2cORNP-gnD90Jkc3T92PbGIo-oTdxmCemEUaT7dxNlt6aMDFewTrMsvLynOKdejmj9xLBPHU2stBmnxEdLwdu1swfPJqE8&usqp=CAE",
+            "delivery": "Free delivery"
+        },
+        {
+            "position": 24,
+            "title": "2021 Asus TUF Gaming F17",
+            "link": "https://www.google.com/url?url=https://shop.asus.com/us/90nr0734-m002h0-2021-asus-tuf-gaming-f17.html&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECP8L&usg=AOvVaw2qNrnK04n_R8SNla28kgjW",
+            "product_link": "https://www.google.com/shopping/product/1231744303915740631",
+            "product_id": "1231744303915740631",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=1231744303915740631",
+            "source": "ASUS Store US",
+            "price": "$949.99",
+            "extracted_price": 949.99,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS1AnyiMZfTwfA7dstRw2ITk3BEals0KxKoDSEcZaZYv9rugD_BsSFJaZCJSefrZDowTZpUcgK29AaiWusCsiomyYmldsft__hE5MrtpyiP_SU4h0vPF0K_KQ&usqp=CAE",
+            "delivery": "Free delivery by Mon, Jun 6"
+        },
+        {
+            "position": 25,
+            "title": "Acer Nitro 5 AN515-45-R1XY Laptop",
+            "link": "https://www.google.com/url?url=https://www.ebay.com/itm/265475078777%3Fchn%3Dps%26mkevt%3D1%26mkcid%3D28&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECI4M&usg=AOvVaw2_pl7ofJpoP0CX0v5Ekh8k",
+            "product_link": "https://www.google.com/shopping/product/16972740042571222789",
+            "product_id": "16972740042571222789",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=16972740042571222789",
+            "source": "eBay - acer",
+            "price": "$1,019.99",
+            "extracted_price": 1019.99,
+            "rating": 4.3,
+            "reviews": 4040,
+            "extensions": [
+                "Windows OS",
+                "Octa Core"
+            ],
+            "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQfnxZZdAqcI5TzunyUedTMxEdWeUXW8-Xog_zfgwDbmX0F9s6Kik6qUWwmxcIjCyMcLEy3AHyWbajt8vYknrcxtBD7Y-f4ypdPCEizscRkurJqaMiRwcJ9Fw&usqp=CAE",
+            "delivery": "Free delivery by Tue, May 31"
+        },
+        {
+            "position": 26,
+            "title": "TUF Gaming A17 TUF706 Tuf706he-ds74 17.3\" Gaming Notebook - Full HD -",
+            "link": "https://www.google.com/url?url=https://www.colamco.com/product/tuf-gaming-a17-tuf706-tuf706he-ds74-gaming-notebook-tuf706he-ds74-2126183%3Futm_source%3Dfroogle%26utm_medium%3Dreferral&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECJ8M&usg=AOvVaw3TWIWM-O1DFE_TsEMtW00Z",
+            "product_link": "https://www.google.com/shopping/product/8796164008737734329",
+            "product_id": "8796164008737734329",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=8796164008737734329",
+            "source": "Colamco",
+            "price": "$1,466.34",
+            "extracted_price": 1466.34,
+            "rating": 4.7,
+            "reviews": 6,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRHg1IvWZLB1E36I2tqHDLCvhCW9Y3QwblxLm4ovTXGWP_HYG7tQOpofzD9zB7j9jLZHgzrMtfZqL0mfaj-Bphmlq0ENXhmrW4-26il1ZL3&usqp=CAE",
+            "delivery": "Free delivery"
+        },
+        {
+            "position": 27,
+            "title": "Asus TUF Gaming A15 Tuf506iv-xs76 - 15.6-inch - Ryzen 7 4800h - 16 GB Ram - 1 TB SSD",
+            "link": "https://www.google.com/url?url=https://www.consutronix.com/7UA959.html&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECK4M&usg=AOvVaw2CEA5q_9E_437Pq8XozHLP",
+            "product_link": "https://www.google.com/shopping/product/9217378168900969169",
+            "product_id": "9217378168900969169",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=9217378168900969169",
+            "source": "Consutronix",
+            "price": "$1,398.07",
+            "extracted_price": 1398.07,
+            "rating": 4.7,
+            "reviews": 3,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRpZYjvcuDaa6UhYLO02JLTvZ2XG6x-zjmNFUuXeBBPIG6E6BtmqDb_8PwWXZIIn65r-3SBwSeA2N873GFmNKH4tZoN3d_M3ifoAeh73P6_c3ftp2oarYm9&usqp=CAE",
+            "delivery": "$28.27 delivery"
+        },
+        {
+            "position": 28,
+            "title": "Acer Nitro 5 AN515-44-R078 - 15.6 - Ryzen 5 4600h - 8 GB Ram - 256 GB SSD",
+            "link": "https://www.google.com/url?url=https://www.newegg.com/p/1B4-00E1-00UA3%3Fitem%3D9SIAMG8CNZ7783%26nm_mc%3Dknc-googleadwords%26cm_mmc%3Dknc-googleadwords-_-accessories%2520-%2520general-_-acer%2520america-_-9SIAMG8CNZ7783%26source%3Dregion&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECLwM&usg=AOvVaw3MOZ2qO8dgVxa3-jPkcCtl",
+            "product_link": "https://www.google.com/shopping/product/9529018030689946332",
+            "product_id": "9529018030689946332",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=9529018030689946332",
+            "source": "Newegg.com - AS Group LLC",
+            "price": "$1,589.42",
+            "extracted_price": 1589.42,
+            "extensions": [
+                "Windows OS",
+                "Hexa Core"
+            ],
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSY-CaLyRw9vedqn-j-drFzEuSLC9N_bdKAOT2c7FyYs22xURxvR32jRhxhw2xpBW0rL9dgx4uNbj-_aXXWzK8blwiy-YqRDNqTCpbvj1g&usqp=CAE",
+            "delivery": "$26.60 delivery"
+        },
+        {
+            "position": 29,
+            "title": "Nitro 5 Gaming Laptop - AN515-45-R9FU",
+            "link": "https://www.google.com/url?url=https://www.shopping.com/item.html%3Fid%3Dv1-334095639864-0%26offer%3Dtrue%26provider%3D0%26itemId%3Dv1-334095639864-0%26a%3DitemName_New%2BAcer%2BNitro%2B5%2B15.6%27%27%2BFHD%2B144Hz%2BLaptop%2BRyzen%2B7%2B5800H%2B16GB%2B512GB%2BSSD%2BRTX%2B3070&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECM4M&usg=AOvVaw3u5aysCeMu5N4Z8vdHitHS",
+            "product_link": "https://www.google.com/shopping/product/13548204402800636899",
+            "product_id": "13548204402800636899",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=13548204402800636899",
+            "source": "Shopping.com",
+            "price": "$1,439.49",
+            "extracted_price": 1439.49,
+            "rating": 4.3,
+            "reviews": 4040,
+            "extensions": [
+                "LOW PRICE",
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTQpVolg2R0VRoFa9CVI1uEN2_-EoHtYgCFz1jidyxFVvL9PFGtV4HXM57LSX2j_jdeEFr3I5LZUG--T2r3P1_D4IKwMafB&usqp=CAE",
+            "tag": "LOW PRICE",
+            "delivery": "+Shipping"
+        },
+        {
+            "position": 30,
+            "title": "Asus - TUF A15 TUF506IV-AS76 15.6\" Gaming Notebook AMD Ryzen 7 4800h 16GB Ram 1TB SSD",
+            "link": "https://www.google.com/url?url=https://www.govgroup.com/tuf-tuf506iv-as76-a15-gaming-notebook-3211181-prd1.htm%3FproductFeedId%3D0&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECOAM&usg=AOvVaw0pYTTcVmeSWOPWNjMRx8uz",
+            "product_link": "https://www.google.com/shopping/product/14354609980316754693",
+            "product_id": "14354609980316754693",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=14354609980316754693",
+            "source": "Gov Group",
+            "price": "$1,336.41",
+            "extracted_price": 1336.41,
+            "rating": 4.5,
+            "reviews": 478,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTME4NDDIzcXdHIK_OK-MquGPLkuba7KsBg9Zw6zDV_40VWnRC-0BgWNF_AKIWv3pEegHv6AO-6WMZEeotWoQeRdQ1wDooJziJSnj5VZXg0&usqp=CAE",
+            "delivery": "Delivery by Tue, Jun 7"
+        },
+        {
+            "position": 31,
+            "title": "Lenovo 81sx000sus 15.6 in. Legion Y540 i7 16GB 256GB Gaming Notebook",
+            "link": "https://www.google.com/url?url=https://www.hdvisionworks.com/Lenovo-Laptop-p/81SX000SUS.htm%3Futm_source%3Dplas&rct=j&q=&esrc=s&sa=U&ved=0ahUKEwiK3IeEwOz3AhUigXIEHX02A7AQguUECPEM&usg=AOvVaw1b9ML3JGnapVIyCRRjN3m9",
+            "product_link": "https://www.google.com/shopping/product/1713237447301841121",
+            "product_id": "1713237447301841121",
+            "serpapi_product_api": "https://serpapi.com/search.json?device=desktop&engine=google_product&gl=us&google_domain=google.com&hl=en&product_id=1713237447301841121",
+            "source": "HDvisionworks.com",
+            "price": "$1,048.00",
+            "extracted_price": 1048.0,
+            "rating": 4.5,
+            "reviews": 1061,
+            "extensions": [
+                "1920 x 1080",
+                "Windows OS"
+            ],
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQZMPZXmph6g5PKavcLI5eh7eBbUFz7RS_2Ztg3jSsz2zhvODnuFjB3ptMgilRVsE7wdiCaHJ8R-MwRgbnUu7gZ33l-lF9LlS3s3CZOh9I&usqp=CAE",
+            "delivery": "Free delivery"
+        }
+    ]
+}

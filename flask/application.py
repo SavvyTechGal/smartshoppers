@@ -84,15 +84,16 @@ def get_user():
 def add_answer():
     if request.method == 'POST':
         params = request.get_json()
-        email, id, answer = params['email'].strip(), params['id'].strip(), params['answer'].strip()
+        email, id, answer, rank = params['email'].strip(), params['id'].strip(), params['answer'], params['rank'].strip()
         conn = get_db_connection()
         cur = conn.cursor()
         #insert into RDS DATABASE -> CHECK TABLEPLUS 
-        cur.execute('INSERT INTO answers (email, id, answer)'
-            'VALUES (%s, %s, %s)', #removed one of the values
+        cur.execute('INSERT INTO answers (email, id, answer, rank)'
+            'VALUES (%s, %s, %s, %s)', #removed one of the values
             (email,
              id,
-             answer
+             answer,
+             rank
             )
         )
         conn.commit()
@@ -148,7 +149,8 @@ def get_products():
             SELECT 
             email, 
             id, 
-            answer
+            answer,
+            rank
             FROM answers 
             WHERE email = %s;
             """,
@@ -160,8 +162,8 @@ def get_products():
         cur.close()
         conn.close() 
         answers_json = json.dumps(answers)
-        print("test", answers_json)
-        products = gs_api('test')
+        # print("test", answers_json)
+        products = gs_api(answers_json)
         return products
     else:
         return gs_api('test')
