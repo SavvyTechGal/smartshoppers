@@ -1,10 +1,10 @@
 {
   "name": "smart-shoppers",
-  "version": "14",
+  "version": "14.0.0",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build --prod",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI"
   },
@@ -37,10 +37,11 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "ng-recaptcha": "^9.0.0",
     "ng2-charts": "^3.0.8",
+    "path": "^0.12.7",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4",
-    "typescript": "~4.5.2"
+    "typescript": "~4.5.2",
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.5",

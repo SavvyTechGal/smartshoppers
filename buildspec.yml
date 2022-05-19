@@ -3,18 +3,13 @@ phases:
   install:
     runtime-versions:
       nodejs: 14
-    commands:
-      - cd Angular
-      - echo Installing source NPM dependencies...
-      - npm install -y npm@latest
-      - npm install -g @angular/cli
-      - rm package-lock.json
-      - cd ..
   pre_build:
     commands:
       - cd Angular
       - echo Installing source NPM dependencies
+      - npm install --save-dev @angular-devkit/build-angular
       - npm install 
+      - npm install -g @angular/cli@latest
       - cd ..
   build:
     commands:
@@ -25,9 +20,10 @@ phases:
 artifacts:
   files:
     - 'dist/smart-shoppers/**'
+    - 'dist/smart-shoppers/assets/**'
     - 'package.json'
     - 'server.js'
     - 'cert.pem'
     - 'key.pem'
-  discard-paths: yes
+  # discard-paths: yes
   base-directory: 'Angular'
