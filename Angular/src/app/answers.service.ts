@@ -40,6 +40,7 @@ export class AnswersService {
     }
 };
 //IGNORE END
+  confirmedBudget: string = ''; //to receive budget from budget-range component, and share it with any component
 
   constructor(public auth:AuthService, public HttpClient:HttpClient) { 
     this.jsonFormat = <JSON>this.arrayObject; //convert object into json format
@@ -47,7 +48,7 @@ export class AnswersService {
 
   postAnswer(email: string, id: string, answer: any, rank: string) { //changed id from number to string; answers cannot be bools/numbers
     let request =
-    this.HttpClient.post(`http://127.0.0.1:5000/addanswer`,
+    this.HttpClient.post(`http://smartshoppersflask.us-east-1.elasticbeanstalk.com/addanswer`,
     {
       "email": email,
       "id" : id,

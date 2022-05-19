@@ -2,24 +2,32 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 14.x
-      python: 3.8.6
+      nodejs: 14
+    commands:
+      - cd Angular
+      - echo Installing source NPM dependencies...
+      - npm install -y npm@latest
+      - npm install -g @angular/cli
+      - rm package-lock.json
+      - cd ..
   pre_build:
     commands:
-      - echo change to Angular directory 
-      - cd Angular 
+      - cd Angular
       - echo Installing source NPM dependencies
       - npm install 
-      - npm install -g @angular/cli
-      - echo change to root directory 
-      - cd .. 
-      - echo change to flask directory 
-      - cd flask
-      - echo Installing source Python dependencies
-      - pip install -r requirements.txt
-      - echo Installing source Python dependencies
-      - flask run app.py
+      - cd ..
   build:
     commands:
+      - cd Angular
       - echo Build started on `date`
-      - ng build --prod --aot
+      - ng build
+  
+artifacts:
+  files:
+    - 'dist/smart-shoppers/**'
+    - 'package.json'
+    - 'server.js'
+    - 'cert.pem'
+    - 'key.pem'
+  discard-paths: yes
+  base-directory: 'Angular'
