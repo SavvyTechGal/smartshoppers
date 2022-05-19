@@ -1,6 +1,11 @@
 version: 0.2
 env:
-  
+  variables:
+    RDS_HOSTNAME="smart-shoppers.cqq5zn6lxhjd.us-east-1.rds.amazonaws.com"
+    RDS_USERNAME="smartshoppers"
+    RDS_PASSWORD="Smartsho33ers2022"
+    RDS_DB_NAME="postgres"
+    RDS_PORT=5432
 phases:
   install:
     runtime-versions:
