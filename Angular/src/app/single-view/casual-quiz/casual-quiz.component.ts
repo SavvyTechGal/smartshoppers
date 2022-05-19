@@ -124,6 +124,7 @@ export class CasualQuizComponent implements OnInit {
     // this.answerService.postAnswer(this.userEmail, '6', this.AnswersObject.charges, this.AnswersObject.chargesRank);
     // this.answerService.postAnswer(this.userEmail, '7', this.AnswersObject.speed, this.AnswersObject.speedRank);
     // this.answerService.postAnswer(this.userEmail, '8', this.AnswersObject.heated, this.AnswersObject.heatedRank);
+    // this.answerService.postAnswer(this.userEmail, '21', this.AnswersObject.budget, '1');
   }
 
   constructor( public answerService: AnswersService, public auth: AuthService, public userInfo: UserService) { }
