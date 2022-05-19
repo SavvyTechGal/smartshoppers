@@ -10,7 +10,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class ProductService {
 
   //private _url: string = "/assets/mock_data/products.json"; //replace url for flask
-  private baseURL = `smartshoppersflaskv2.us-east-1.elasticbeanstalk.com/`
+  private baseURL = `https://smartshoppersflaskv2.us-east-1.elasticbeanstalk.com/`
   
   constructor(private HttpClient: HttpClient) { }
 
