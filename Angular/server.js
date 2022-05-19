@@ -7,6 +7,7 @@ const app = express();
 
 //Set the base path to the angular-test dist folder
 app.use(express.static(path.join(__dirname, 'dist/smart-shoppers')));
+app.use(express.static('assets'));
 
 //Any routes will be redirected to the angular app
 app.get('*', function(req, res) {
