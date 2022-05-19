@@ -62,7 +62,7 @@ export class SingleViewComponent implements OnInit {
       this.designer = true;
     }
     
-    if(this.currentRole === 'Casual User') {
+    if(this.currentRole === 'Casual User' || this.currentRole === 'Other') {
       this.casualUser = true;
     }
     if(this.currentRole === 'Student') {
