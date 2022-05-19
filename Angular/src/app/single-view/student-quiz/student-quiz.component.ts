@@ -45,8 +45,6 @@ export class StudentQuizComponent implements OnInit {
 
   onSubmit(quizanswers: { value: any; }) //takes in all answers (checkbox and dropdown values) from the questionnaire
   {
-    console.log('User email: ', this.userEmail);
-
     if(quizanswers.value.longCommute) {
       this.AnswersObject.longCommute = 'yes';
     }
@@ -95,7 +93,7 @@ export class StudentQuizComponent implements OnInit {
     this.AnswersObject.heatedRank = (quizanswers.value.heatedRank).toString();
     
     this.submitted = true;
-    console.log(this.AnswersObject); //print out responses
+    //console.log(this.AnswersObject); //print out responses
     //-----END
 
     // this.answerService.postAnswer(this.userEmail, '15', this.AnswersObject.longCommute, this.AnswersObject.longCommuteRank);

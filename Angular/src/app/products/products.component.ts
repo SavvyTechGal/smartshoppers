@@ -38,15 +38,12 @@ export class ProductsComponent implements OnInit {
 
   onSubmit(sortForm: { value: any; }) {  //sorting form
     let sort = sortForm.value.sortSel;
-    console.log(`chose: ${sort}`);
     
     if(sort == 'Best Fit') {
-      console.log('1');
       this.products = [...this.bestFitSorted];
       this.pageSlice = this.products.slice(this.currentStartIndex, this.currentEndIndex);
     }
     else if(sort == 'Price: Low to High') {
-      console.log('2');
       if(this.lowSorted.length == 0) {  //not sorted yet
         this.lowSorted = [...this.products];
         this.lowSorted.sort(function(a,b) {
@@ -66,7 +63,6 @@ export class ProductsComponent implements OnInit {
 
     }
     else if(sort == 'Price: High to Low') {
-      console.log('3');
       if(this.highSorted.length == 0) {  //not sorted yet
         this.highSorted = [...this.products];
         this.highSorted.sort(function(a,b) {
@@ -85,7 +81,6 @@ export class ProductsComponent implements OnInit {
       }
     }
     else if(sort == 'High Rating') {
-      console.log('4');
       if(this.ratingSorted.length == 0) {  //not sorted yet
         this.ratingSorted = [...this.products];
         this.ratingSorted.sort(function(a,b) {
@@ -123,7 +118,6 @@ export class ProductsComponent implements OnInit {
   //save product to user's saved data
   saveProduct(product: ProductClass): void {
     this._productService.saveProduct(product,this.userEmail);
-    console.log(product.rating);
     // .subscribe(data => {
     //   console.log(data);
     // });
@@ -139,8 +133,7 @@ export class ProductsComponent implements OnInit {
         this.userEmail = profile?.email as string;  //saving email to variable
         this._productService.getProducts(this.userEmail) //calling service to get data from json
         .subscribe(data => {
-          //this.products = data;
-          console.log(data.length);
+          //console.log(data.length);
           for(let i = 0; i < data.length; i++) {
             const newProduct = new ProductClass(data[i].title, data[i].price, 
               data[i].thumbnail, data[i].source, data[i].rating, data[i].link, data[i].extensions);

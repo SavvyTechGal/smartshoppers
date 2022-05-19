@@ -51,7 +51,6 @@ export class GamerQuizComponent implements OnInit {
 
   onSubmit(quizanswers: { value: any; }) //takes in all answers (just checkboxes) from the questionnaire
   {
-    console.log('User email: ', this.userEmail);
     for(const brand in this.brandKeys) {
       let key = this.brandKeys[brand];
       if((quizanswers.value)[key]) {
@@ -114,7 +113,7 @@ export class GamerQuizComponent implements OnInit {
     this.AnswersObject.heatedRank = (quizanswers.value.heatedRank).toString();
     
     this.submitted = true;
-    console.log(this.AnswersObject); //print out responses
+    //console.log(this.AnswersObject); //print out responses
 
     // this.answerService.postAnswer(this.userEmail, '9', this.AnswersObject.stream, this.AnswersObject.streamRank);
     // this.answerService.postAnswer(this.userEmail, '10', this.AnswersObject.ports, this.AnswersObject.portsRank);

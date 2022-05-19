@@ -45,8 +45,6 @@ export class SingleViewComponent implements OnInit {
       }
       else {    //if user returned 
         this.currentRole = Object.values(data)[3];
-        console.log(Object.values(data)[3]);
-        console.log(this.currentRole);
       }
     });
     this.displayRole = true;

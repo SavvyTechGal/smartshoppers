@@ -16,16 +16,12 @@ export class EditProfileComponent implements OnInit {
 
   public saved: boolean = false;
 
-  // public fname:string = 'kate';
-  // public lname:string = 'fdgd';
-  // public role:string = 'Student';
-
   //takes form values + sends to backend to add user
   onSubmit(editForm: { value: any; }) {  
     let fname = editForm.value.firstname;
     let lname = editForm.value.lastname;
     let role = editForm.value.roleSel;
-    console.log(`email in signup: ${this.userEmail}`);
+    //console.log(`email in signup: ${this.userEmail}`);
     this.userService.editUser(fname,lname,role,this.userEmail);  //PUT to user db
     //.subscribe((data) => {
     // console.log(data);
@@ -37,7 +33,7 @@ export class EditProfileComponent implements OnInit {
 
   getUser(email: string): void {
 
-    console.log(email);
+    //console.log(email);
     this.userService.getUser(this.userEmail)
     .subscribe((data) => {
       if(data == null) {
@@ -61,7 +57,7 @@ export class EditProfileComponent implements OnInit {
     this.auth.user$.subscribe(
       (profile) => { 
         this.userEmail = profile?.email as string;  //saving email to variable
-        console.log(this.userEmail);
+        //console.log(this.userEmail);
         this.getUser(this.userEmail); 
        }
    )

@@ -55,7 +55,6 @@ export class EditQuestionnaireComponent implements OnInit {
   constructor(public auth: AuthService) { }
 
   onSubmit(editQuestionForm: { value: any; }) {  
-    //console.log(editQuestionForm.value);
     this.TestanswersObject.role = editQuestionForm.value.role;
     this.TestanswersObject.budget = editQuestionForm.value.budget;
     for(const brand in this.brandKeys) {
@@ -119,8 +118,8 @@ export class EditQuestionnaireComponent implements OnInit {
 
     this.TestanswersObject.workRank = (editQuestionForm.value.workRank).toString();
 
-    console.log('printing answers -----');
-    console.log(this.TestanswersObject);
+    //console.log('printing answers -----');
+    //console.log(this.TestanswersObject);
 
     //PUT request to backend + redirect to product display page
     //this.updateUserResponses(email,answers)
@@ -141,7 +140,7 @@ export class EditQuestionnaireComponent implements OnInit {
     this.auth.user$.subscribe(
       (profile) => { 
         this.userEmail = profile?.email as string;  //saving email to variable
-        console.log(this.userEmail);
+        //console.log(this.userEmail);
         
        }
    )
